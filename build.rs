@@ -11,13 +11,16 @@ fn build_linux() {
 	let prev_cflags = env::var("CFLAGS").unwrap_or("".to_string());
 	let cflags = format!("{} {} -I{}",prev_cflags,"-fPIC",freetype_include);
 	let freetype_native_dir = Path::new(&freetype_dir).join("freetype-gl");
-	let build_dir = freetype_native_dir.join("build");
+	let build_dir = freetype_native_dir.join("build_linux");
+	fs::remove_dir_all(&build_dir).is_ok();
 	fs::create_dir(&build_dir).is_ok();
 	Command::new("cmake")
 		.arg("..")
-		.arg(format!("-DFREETYPE_INCLUDE_DIR_freetype2={}",freetype_include))
+		.arg(format!("-DFREETYPE_INCLUDE_DIRS={}",freetype_include))
 		.arg(format!("-DFREETYPE_LIBRARY={}",freetype_lib))
 		.arg(format!("-Dfreetype-gl_BUILD_DEMOS=OFF"))
+		.arg(format!("-Dfreetype-gl_BUILD_TESTS=OFF"))
+		.arg(format!("-Dfreetype-gl_WITH_GLEW=OFF"))
 		.env("CFLAGS",&cflags)
 		.current_dir(&build_dir)
 		.status().unwrap();
@@ -28,6 +31,11 @@ fn build_linux() {
 	let dest_path = Path::new(&out_dir).join("libfreetype-gl.a");
 	fs::copy(build_dir.join("libfreetype-gl.a"),dest_path).unwrap();
 	println!("cargo:rustc-flags= -L native={}",out_dir);
+	println!("cargo:rerun-if-changed=build.rs");
+	println!("cargo:rerun-if-changed=src/lib.rs");
+	println!("cargo:rerun-if-changed=src");
+	println!("cargo:rerun-if-changed=freetype-gl/texture-font.c");
+	println!("cargo:rerun-if-changed=freetype-gl/texture-font.h");
 }
 
 
@@ -40,13 +48,16 @@ fn build_emscripten() {
 	let cflags = format!("{} {} -I{}",prev_cflags,"-fPIC",freetype_include);
 	let freetype_native_dir = Path::new(&freetype_dir).join("freetype-gl");
 	let build_dir = freetype_native_dir.join("build_emscripten");
+	// fs::remove_dir_all(&build_dir).is_ok();
 	fs::create_dir(&build_dir).is_ok();
 	Command::new("emcmake")
 		.arg("cmake")
 		.arg("..")
-		.arg(format!("-DFREETYPE_INCLUDE_DIR_freetype2={}",freetype_include))
+		.arg(format!("-DFREETYPE_INCLUDE_DIRS={}",freetype_include))
 		.arg(format!("-DFREETYPE_LIBRARY={}",freetype_lib))
-		.arg(format!("-DBUILD_DEMOS=OFF"))
+		.arg(format!("-Dfreetype-gl_BUILD_DEMOS=OFF"))
+		.arg(format!("-Dfreetype-gl_BUILD_TESTS=OFF"))
+		.arg(format!("-Dfreetype-gl_WITH_GLEW=OFF"))
 		.env("CFLAGS",&cflags)
 		.current_dir(&build_dir)
 		.status().unwrap();
@@ -58,17 +69,20 @@ fn build_emscripten() {
 	let dest_path = Path::new(&out_dir).join("libfreetype-gl.a");
 	fs::copy(build_dir.join("libfreetype-gl.a"),dest_path).unwrap();
 	println!("cargo:rustc-flags= -L native={}",out_dir);
+	println!("cargo:rerun-if-changed=build.rs");
+	println!("cargo:rerun-if-changed=src/lib.rs");
+	println!("cargo:rerun-if-changed=src");
+	println!("cargo:rerun-if-changed=freetype-gl/texture-font.c");
+	println!("cargo:rerun-if-changed=freetype-gl/texture-font.h");
 }
-
 
 fn main(){
 	let target_triple = env::var("TARGET").unwrap();
-	let target_os = target_triple.split("-").last().unwrap();
-	if target_os == "linux" {
+	if target_triple.contains("linux") {
 		build_linux()
-	}else if target_os == "emscripten" {
+	}else if target_triple.contains("emscripten") {
 		build_emscripten()
 	}else{
-		panic!("target OS {} not suported yet", target_os);
+		panic!("target OS {} not suported yet", target_triple);
 	}
 }

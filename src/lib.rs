@@ -1,335 +1,328 @@
-extern crate libc;
-
-use libc::*;
 use std::ffi::CString;
+use std::os::raw::{c_char, c_void};
+use std::mem;
+use std::slice;
 
-pub type Vector = c_void;
+mod ffi;
 
-#[derive(Clone,Debug)]
-#[repr(C)]
-pub enum Location{
-    File = 0,
-    Memory,
+pub struct TextureFont{
+    font: *mut ffi::texture_font_t
 }
 
-#[derive(Clone,Debug)]
-#[repr(C)]
-pub struct FilenameOrMemory{
-    filename_or_memory: *const c_void,
-    size: c_uint
+impl Drop for TextureFont{
+    fn drop(&mut self){
+        unsafe{ ffi::texture_font_delete(self.font) }
+    }
 }
 
-#[repr(C)]
-pub struct TextureAtlas
-{
-    /**
-     * Allocated nodes
-     */
-    pub nodes: *const Vector,
-
-    /**
-     *  Width (in pixels) of the underlying texture
-     */
-    pub width: size_t,
-
-    /**
-     * Height (in pixels) of the underlying texture
-     */
-    pub height: size_t,
-
-    /**
-     * Depth (in bytes) of the underlying texture
-     */
-    pub depth: size_t,
-
-    /**
-     * Allocated surface size
-     */
-    pub used: size_t,
-
-    /**
-     * Texture identity (OpenGL)
-     */
-    pub id: c_uint,
-
-    /**
-     * Atlas data
-     */
-    pub data: *mut c_uchar
-
-}
-
-#[derive(Clone,Debug)]
-#[repr(C)]
-pub struct TextureGlyph
-{
-    /**
-     * Wide character this glyph represents
-     */
-    pub charcode: wchar_t,
-
-    /**
-     * Glyph id (used for display lists)
-     */
-    pub id: c_uint,
-
-    /**
-     * Glyph's width in pixels.
-     */
-    pub width: size_t,
-
-    /**
-     * Glyph's height in pixels.
-     */
-    pub height: size_t,
-
-    /**
-     * Glyph's left bearing expressed in integer pixels.
-     */
-    pub offset_x: c_int,
-
-    /**
-     * Glyphs's top bearing expressed in integer pixels.
-     *
-     * Remember that this is the distance from the baseline to the top-most
-     * glyph scanline, upwards y coordinates being positive.
-     */
-    pub offset_y: c_int,
-
-    /**
-     * For horizontal text layouts, this is the horizontal distance (in
-     * fractional pixels) used to increment the pen position when the glyph is
-     * drawn as part of a string of text.
-     */
-    pub advance_x: c_float,
-
-    /**
-     * For vertical text layouts, this is the vertical distance (in fractional
-     * pixels) used to increment the pen position when the glyph is drawn as
-     * part of a string of text.
-     */
-    pub advance_y: c_float,
-
-    /**
-     * First normalized texture coordinate (x) of top-left corner
-     */
-    pub s0: c_float,
-
-    /**
-     * Second normalized texture coordinate (y) of top-left corner
-     */
-    pub t0: c_float,
-
-    /**
-     * First normalized texture coordinate (x) of bottom-right corner
-     */
-    pub s1: c_float,
-
-    /**
-     * Second normalized texture coordinate (y) of bottom-right corner
-     */
-    pub t1: c_float,
-
-    /**
-     * A vector of kerning pairs relative to this glyph.
-     */
-    pub kerning: *const Vector,
-
-    /**
-     * Glyph outline type (0 = None, 1 = line, 2 = inner, 3 = outer)
-     */
-    pub outline_type: c_int,
-
-    /**
-     * Glyph outline thickness
-     */
-    pub outline_thickness: c_float
-
-}
-
-#[derive(Clone,Debug)]
-#[repr(C)]
-pub struct TextureFont
-{
-    /**
-     * Vector of glyphs contained in this font.
-     */
-    pub glyphs: *const Vector,
-
-    /**
-     * Atlas structure to store glyphs data.
-     */
-    pub atlas: *const TextureAtlas,
-
-    /**
-     * font location
-     */
-    pub location: Location,
-
-    pub filename_or_memory: FilenameOrMemory,
-
-    /**
-     * Font size
-     */
-    pub size: c_float,
-
-    /**
-     * Whether to use autohint when rendering font
-     */
-    pub hinting: c_int,
-
-    /**
-     * Outline type (0 = None, 1 = line, 2 = inner, 3 = outer)
-     */
-    pub outline_type: c_int,
-
-    /**
-     * Outline thickness
-     */
-    pub outline_thickness: c_float,
-
-    /**
-     * Whether to use our own lcd filter.
-     */
-    pub filtering: c_int,
-
-    /**
-     * Whether to use kerning if available
-     */
-    pub kerning: c_int,
-
-    /**
-     * LCD filter weights
-     */
-    pub lcd_weights: [c_uchar;5],
-
-    /**
-     * This field is simply used to compute a default line spacing (i.e., the
-     * baseline-to-baseline distance) when writing text with this font. Note
-     * that it usually is larger than the sum of the ascender and descender
-     * taken as absolute values. There is also no guarantee that no glyphs
-     * extend above or below subsequent baselines when using this distance.
-     */
-    pub height: c_float,
-
-    /**
-     * This field is the distance that must be placed between two lines of
-     * text. The baseline-to-baseline distance should be computed as:
-     * ascender - descender + linegap
-     */
-    pub linegap: c_float,
-
-    /**
-     * The ascender is the vertical distance from the horizontal baseline to
-     * the highest 'character' coordinate in a font face. Unfortunately, font
-     * formats define the ascender differently. For some, it represents the
-     * ascent of all capital latin characters (without accents), for others it
-     * is the ascent of the highest accented character, and finally, other
-     * formats define it as being equal to bbox.yMax.
-     */
-    pub ascender: c_float,
-
-    /**
-     * The descender is the vertical distance from the horizontal baseline to
-     * the lowest 'character' coordinate in a font face. Unfortunately, font
-     * formats define the descender differently. For some, it represents the
-     * descent of all capital latin characters (without accents), for others it
-     * is the ascent of the lowest accented character, and finally, other
-     * formats define it as being equal to bbox.yMin. This field is negative
-     * for values below the baseline.
-     */
-    pub descender: c_float,
-
-    /**
-     * The position of the underline line for this face. It is the center of
-     * the underlining stem. Only relevant for scalable formats.
-     */
-    pub underline_position: c_float,
-
-    /**
-     * The thickness of the underline for this face. Only relevant for scalable
-     * formats.
-     */
-    pub underline_thickness: c_float
-
-}
-
-#[link(name = "freetype-gl")]
-#[link(name = "freetype")]
-#[link(name = "z")]
-#[link(name = "GL")]
-extern{
-  	fn texture_atlas_new( width: c_uint,
-                     height: c_uint,
-                     depth: c_uint ) -> *const TextureAtlas;
-
-  	fn texture_font_new_from_file( atlas: *const TextureAtlas,
-                              pt_size: c_float,
-                              filename: *const c_char ) -> *const TextureFont;
-
-    fn texture_font_new_from_memory( atlas: *const TextureAtlas,
-                                pt_size: c_float,
-                                memory_base: *const c_void,
-                                memory_size: size_t ) -> *const TextureFont;
-
-
-  	fn texture_font_load_glyphs( font: *const TextureFont,
-                            charcodes: *const wchar_t ) -> size_t;
-
-
-    fn texture_font_get_glyph( font: *const TextureFont,
-	                          charcode: wchar_t ) -> *const TextureGlyph;
-
-    fn texture_glyph_get_kerning( glyph: *const TextureGlyph,
-		                        charcode: wchar_t ) -> c_float;
+unsafe fn char_to_utf8(c: char) -> Vec<u8>{
+    let c = c.to_string();
+    CString::from_vec_unchecked(c.as_bytes().to_vec()).as_bytes().to_vec()
 }
 
 impl TextureFont{
-		pub fn load(path: &str, pt_size: f32, depth: u32) -> TextureFont{
-            unsafe{
-                let tex_atlas = texture_atlas_new(512,512,depth);
-                println!("allocated tex atlas  {},{}x{}", (*tex_atlas).width, (*tex_atlas).height, (*tex_atlas).depth);
-                let c_path = CString::new(path.as_bytes()).unwrap().as_ptr();
-                let tex_font = texture_font_new_from_file( tex_atlas, pt_size, c_path);
+	pub fn load(path: &str, pt_size: f32, depth: usize) -> TextureFont{
+        unsafe{
+            let tex_atlas = ffi::texture_atlas_new(512, 512, depth);
+            // println!("allocated tex atlas  {},{}x{}", (*tex_atlas).width, (*tex_atlas).height, (*tex_atlas).depth);
+            let path = CString::new(path.as_bytes()).unwrap();
+            let c_path = path.as_ptr();
+            let tex_font = ffi::texture_font_new_from_file( tex_atlas, pt_size, c_path);
 
-                let mut glyphs_i32: Vec<wchar_t> = Vec::new();
-                for c in 32 as wchar_t..255{
-                    glyphs_i32.push(c);
-                }
-                glyphs_i32.push(0i32);
-                texture_font_load_glyphs(tex_font, &glyphs_i32[0]);
-                (*tex_font).clone()
+            let latin1 = (32 as u8 .. 255).collect::<Vec<_>>();
+            let glyphs_i32 = CString::new(latin1).unwrap();
+            ffi::texture_font_load_glyphs(tex_font, glyphs_i32.into_raw());
+
+            // println!("loaded {} glyphs", ffi::vector_size((*tex_font).glyphs));
+
+            TextureFont{
+                font: tex_font
             }
-		}
+        }
+	}
 
-		pub fn load_from_memory(font_data: Vec<u8>, pt_size: f32, depth: u32) -> TextureFont{
-            unsafe{
-                let tex_atlas = texture_atlas_new(512,512,depth);
-                println!("allocated tex atlas  {},{}x{}", (*tex_atlas).width, (*tex_atlas).height, (*tex_atlas).depth);
-                let tex_font = texture_font_new_from_memory( tex_atlas, pt_size, font_data.as_ptr() as *const c_void, font_data.len() as size_t);
+	pub fn load_from_memory(font_data: Vec<u8>, pt_size: f32, depth: usize) -> TextureFont{
+        unsafe{
+            let tex_atlas = ffi::texture_atlas_new(512,512,depth);
+            // println!("allocated tex atlas  {},{}x{}", (*tex_atlas).width, (*tex_atlas).height, (*tex_atlas).depth);
+            let tex_font = ffi::texture_font_new_from_memory(
+                tex_atlas,
+                pt_size,
+                font_data.as_ptr() as *const c_void,
+                font_data.len() as usize);
 
-                let mut glyphs_i32: Vec<wchar_t> = Vec::new();
-                for c in 32 as wchar_t..255{
-                    glyphs_i32.push(c as wchar_t);
-                }
-                glyphs_i32.push(0i32);
-                texture_font_load_glyphs(tex_font, &glyphs_i32[0]);
-                (*tex_font).clone()
+            let latin1 = (32 as u8 .. 255).collect::<Vec<_>>();
+            let glyphs_i32 = CString::new(latin1).unwrap();
+            ffi::texture_font_load_glyphs(tex_font, glyphs_i32.into_raw());
+
+            // println!("loaded {} glyphs", ffi::vector_size((*tex_font).glyphs));
+
+            TextureFont{
+                font: tex_font
             }
-		}
+        }
+	}
 
-		pub fn get_glyph(&self, c: wchar_t) -> TextureGlyph{
-            unsafe{
-                let glyph = texture_font_get_glyph(self,c as wchar_t);
-                (*glyph).clone()
+    #[inline]
+	pub fn glyph(&self, c: char) -> TextureGlyph{
+        unsafe{
+            let glyph = ffi::texture_font_get_glyph(self.font, char_to_utf8(c).as_ptr() as *const c_char);
+            TextureGlyph{
+                glyph
             }
-		}
+        }
+	}
+
+    /// Font size
+    #[inline]
+    pub fn size(&self) -> f32{
+		unsafe{ (*self.font).size }
+	}
+
+    /// Whether to use autohint when rendering font
+    #[inline]
+    pub fn hinting(&self) -> i32{
+		unsafe{ (*self.font).hinting }
+	}
+
+    /// Mode the font is rendering its next glyph
+    #[inline]
+    pub fn rendermode(&self) -> RenderMode{
+		unsafe{ mem::transmute((*self.font).rendermode) }
+	}
+
+    /// Outline thickness
+    #[inline]
+    pub fn outline_thickness(&self) -> f32{
+		unsafe{ (*self.font).outline_thickness }
+	}
+
+    /// Whether to use our own lcd filter.
+    #[inline]
+    pub fn filtering(&self) -> i32{
+		unsafe{ (*self.font).filtering }
+	}
+
+    /// LCD filter weights
+    #[inline]
+    pub fn lcd_weights(&self) -> [ :: std :: os :: raw :: c_uchar ; 5usize ]{
+		unsafe{ (*self.font).lcd_weights }
+	}
+
+    /// Whether to use kerning if available
+    #[inline]
+    pub fn kerning(&self) -> i32{
+		unsafe{ (*self.font).kerning }
+	}
+
+    /// This field is simply used to compute a default line spacing (i.e., the
+    /// baseline-to-baseline distance) when writing text with this font. Note
+    /// that it usually is larger than the sum of the ascender and descender
+    /// taken as absolute values. There is also no guarantee that no glyphs
+    /// extend above or below subsequent baselines when using this distance.
+    #[inline]
+    pub fn height(&self) -> f32{
+		unsafe{ (*self.font).height }
+	}
+
+    /// This field is the distance that must be placed between two lines of
+    /// text. The baseline-to-baseline distance should be computed as:
+    /// ascender - descender + linegap
+    #[inline]
+    pub fn linegap(&self) -> f32{
+		unsafe{ (*self.font).linegap }
+	}
+
+    /// The ascender is the vertical distance from the horizontal baseline to
+    /// the highest 'character' coordinate in a font face. Unfortunately, font
+    /// formats define the ascender differently. For some, it represents the
+    /// ascent of all capital latin characters (without accents), for others it
+    /// is the ascent of the highest accented character, and finally, other
+    /// formats define it as being equal to bbox.yMax.
+    #[inline]
+    pub fn ascender(&self) -> f32{
+		unsafe{ (*self.font).ascender }
+	}
+
+    /// The descender is the vertical distance from the horizontal baseline to
+    /// the lowest 'character' coordinate in a font face. Unfortunately, font
+    /// formats define the descender differently. For some, it represents the
+    /// descent of all capital latin characters (without accents), for others it
+    /// is the ascent of the lowest accented character, and finally, other
+    /// formats define it as being equal to bbox.yMin. This field is negative
+    /// for values below the baseline.
+    #[inline]
+    pub fn descender(&self) -> f32{
+		unsafe{ (*self.font).descender }
+	}
+
+    /// The position of the underline line for this face. It is the center of
+    /// the underlining stem. Only relevant for scalable formats.
+    #[inline]
+    pub fn underline_position(&self) -> f32{
+		unsafe{ (*self.font).underline_position }
+	}
+
+    /// The thickness of the underline for this face. Only relevant for scalable
+    /// formats.
+    #[inline]
+    pub fn underline_thickness(&self) -> f32{
+		unsafe{ (*self.font).underline_thickness }
+	}
+
+    #[inline]
+    pub fn atlas(&self) -> TextureAtlas{
+        TextureAtlas{ atlas: unsafe{ (*self.font).atlas } }
+    }
+}
+
+#[repr(u32)]
+pub enum RenderMode{
+    Normal = 0,
+    OutlineEdge = 1,
+    OutlinePositive = 2,
+    OutlineNegatice = 3,
+    SignedDistanceField = 4,
+}
+
+pub struct TextureGlyph{
+    glyph: *mut ffi::texture_glyph_t
 }
 
 impl TextureGlyph{
-		pub fn get_kerning(&self, c: char) -> f32{
-            unsafe{
-                texture_glyph_get_kerning(self,c as wchar_t)
-            }
-		}
+    #[inline]
+	pub fn kerning(&self, c: char) -> f32{
+        unsafe{
+            ffi::texture_glyph_get_kerning(self.glyph, char_to_utf8(c).as_ptr() as *const c_char)
+        }
+	}
+
+    /// Unicode codepoint this glyph represents in UTF-32 LE encoding.
+    #[inline]
+    pub fn codepoint(&self) -> u32 {
+        unsafe{ (*self.glyph).codepoint }
+    }
+
+    /// Glyph's width in pixels.
+    #[inline]
+    pub fn width(&self) ->  usize{
+        unsafe{ (*self.glyph).width }
+    }
+
+    /// Glyph's height in pixels.
+    #[inline]
+    pub fn height(&self) ->  usize{
+        unsafe{ (*self.glyph).height }
+    }
+
+    /// Glyph's left bearing expressed in integer pixels.
+    #[inline]
+    pub fn offset_x(&self) ->  i32{
+        unsafe{ (*self.glyph).offset_x }
+    }
+
+    /// Glyphs's top bearing expressed in integer pixels.
+    ///
+    /// Remember that this is the distance from the baseline to the top-most
+    /// glyph scanline, upwards y coordinates being positive.
+    #[inline]
+    pub fn offset_y(&self) ->  i32{
+        unsafe{ (*self.glyph).offset_y }
+    }
+
+    /// For horizontal text layouts, this is the horizontal distance (in
+    /// fractional pixels) used to increment the pen position when the glyph is
+    /// drawn as part of a string of text.
+    #[inline]
+    pub fn advance_x(&self) ->  f32{
+        unsafe{ (*self.glyph).advance_x }
+    }
+
+    /// For vertical text layouts, this is the vertical distance (in fractional
+   /// pixels) used to increment therendermode_t pen position when the glyph is drawn as
+   /// part of a string of text.
+   #[inline]
+    pub fn advance_y(&self) ->  f32 {
+        unsafe{ (*self.glyph).advance_y }
+    }
+
+    /// First normalized texture coordinate (x) of top-left corner
+    #[inline]
+    pub fn s0(&self) ->  f32 {
+        unsafe{ (*self.glyph).s0 }
+    }
+
+    /// Second normalized texture coordinate (y) of top-left corner
+    #[inline]
+    pub fn t0(&self) ->  f32 {
+        unsafe{ (*self.glyph).t0 }
+    }
+
+    /// First normalized texture coordinate (x) of bottom-right corner
+    #[inline]
+    pub fn s1(&self) ->  f32 {
+        unsafe{ (*self.glyph).s1 }
+    }
+
+    /// Second normalized texture coordinate (y) of bottom-right corner
+    #[inline]
+    pub fn t1(&self) ->  f32 {
+        unsafe{ (*self.glyph).t1 }
+    }
+
+    /// Mode this glyph was rendered
+    #[inline]
+    pub fn rendermode(&self) ->  RenderMode {
+        unsafe{ mem::transmute((*self.glyph).rendermode) }
+    }
+
+    /// Glyph outline thickness
+    #[inline]
+    pub fn outline_thickness(&self) -> f32{
+        unsafe{ (*self.glyph).outline_thickness }
+    }
+}
+
+
+pub struct TextureAtlas{
+    atlas: *mut ffi::texture_atlas_t
+}
+
+impl TextureAtlas{
+    /// Width (in pixels) of the underlying texture
+    #[inline]
+	pub fn width(&self) -> usize{
+		unsafe{ (*self.atlas).width }
+	}
+
+    /// Height (in pixels) of the underlying texture
+    #[inline]
+	pub fn height(&self) -> usize{
+		unsafe{ (*self.atlas).height }
+	}
+
+    /// Depth (in bytes) of the underlying texture
+    #[inline]
+	pub fn depth(&self) -> usize{
+		unsafe{ (*self.atlas).depth }
+	}
+
+    /// Allocated surface size
+    #[inline]
+	pub fn used(&self) -> usize{
+		unsafe{ (*self.atlas).used }
+	}
+
+    /// Texture identity (OpenGL)
+    #[inline]
+	pub fn id(&self) -> u32{
+		unsafe{ (*self.atlas).id }
+	}
+
+    /// Atlas data
+    #[inline]
+	pub fn data(&self) -> &[u8]{
+		unsafe{ slice::from_raw_parts((*self.atlas).data, self.width() * self.height() * self.depth()) }
+	}
+
 }
