@@ -1,4 +1,7 @@
 freetype-gl/build*
+freetype-gl/.git*
+freetype-gl/windows
+freetype-gl/docs
 target
 Cargo.lock
 
