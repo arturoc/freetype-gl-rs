@@ -1,2 +1,4 @@
 freetype-gl/build*
 target
+Cargo.lock
+
