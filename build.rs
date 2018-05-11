@@ -21,6 +21,7 @@ fn build_linux() {
 		.arg(format!("-Dfreetype-gl_BUILD_DEMOS=OFF"))
 		.arg(format!("-Dfreetype-gl_BUILD_TESTS=OFF"))
 		.arg(format!("-Dfreetype-gl_WITH_GLEW=OFF"))
+		.arg(format!("-Dfreetype-gl_BUILD_APIDOC=OFF"))
 		.env("CFLAGS",&cflags)
 		.current_dir(&build_dir)
 		.status().unwrap();
