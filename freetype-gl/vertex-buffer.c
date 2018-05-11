@@ -1,35 +1,7 @@
-/* ============================================================================
- * Freetype GL - A C OpenGL Freetype engine
- * Platform:    Any
- * WWW:         http://code.google.com/p/freetype-gl/
- * ----------------------------------------------------------------------------
- * Copyright 2011,2012 Nicolas P. Rougier. All rights reserved.
+/* Freetype GL - A C OpenGL Freetype engine
  *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- *  1. Redistributions of source code must retain the above copyright notice,
- *     this list of conditions and the following disclaimer.
- *
- *  2. Redistributions in binary form must reproduce the above copyright
- *     notice, this list of conditions and the following disclaimer in the
- *     documentation and/or other materials provided with the distribution.
- *
- * THIS SOFTWARE IS PROVIDED BY NICOLAS P. ROUGIER ''AS IS'' AND ANY EXPRESS OR
- * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
- * EVENT SHALL NICOLAS P. ROUGIER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
- * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
- * The views and conclusions contained in the software and documentation are
- * those of the authors and should not be interpreted as representing official
- * policies, either expressed or implied, of Nicolas P. Rougier.
- * ============================================================================
+ * Distributed under the OSI-approved BSD 2-Clause License.  See accompanying
+ * file `LICENSE` for more details.
  */
 #include <assert.h>
 #include <string.h>
@@ -241,8 +213,8 @@ vertex_buffer_print( vertex_buffer_t * self )
         default:                j=8; break;
         }
         fprintf(stderr, "%s : %dx%s (+%p)\n",
-                self->attributes[i]->name, 
-                self->attributes[i]->size, 
+                self->attributes[i]->name,
+                self->attributes[i]->size,
                 gltypes[j],
                 self->attributes[i]->pointer);
 
@@ -335,7 +307,7 @@ vertex_buffer_render_setup ( vertex_buffer_t *self, GLenum mode )
 #ifdef FREETYPE_GL_USE_VAO
     // Unbind so no existing VAO-state is overwritten,
     // (e.g. the GL_ELEMENT_ARRAY_BUFFER-binding).
-    glBindVertexArray( 0 ); 
+    glBindVertexArray( 0 );
 #endif
 
     if( self->state != CLEAN )
@@ -410,6 +382,21 @@ vertex_buffer_render_finish ( vertex_buffer_t *self )
 #ifdef FREETYPE_GL_USE_VAO
     glBindVertexArray( 0 );
 #else
+    int i;
+
+    for( i=0; i<MAX_VERTEX_ATTRIBUTE; ++i )
+    {
+        vertex_attribute_t *attribute = self->attributes[i];
+        if( attribute == 0 )
+        {
+            continue;
+        }
+        else
+        {
+            glDisableVertexAttribArray( attribute->index );
+        }
+    }
+
     glBindBuffer( GL_ARRAY_BUFFER, 0 );
     glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, 0 );
 #endif
@@ -420,12 +407,12 @@ vertex_buffer_render_finish ( vertex_buffer_t *self )
 void
 vertex_buffer_render_item ( vertex_buffer_t *self,
                             size_t index )
-{ 
+{
     ivec4 * item = (ivec4 *) vector_get( self->items, index );
     assert( self );
     assert( index < vector_size( self->items ) );
 
- 
+
     if( self->indices->size )
     {
         size_t start = item->istart;
@@ -459,7 +446,7 @@ vertex_buffer_render ( vertex_buffer_t *self, GLenum mode )
     }
     vertex_buffer_render_finish( self );
 }
-    
+
 
 
 // ----------------------------------------------------------------------------
@@ -561,7 +548,7 @@ vertex_buffer_erase_vertices( vertex_buffer_t *self,
     assert( self );
     assert( self->vertices );
     assert( first < self->vertices->size );
-    assert( (first+last) <= self->vertices->size );
+    assert( last <= self->vertices->size );
     assert( last > first );
 
     self->state |= DIRTY;
@@ -572,7 +559,7 @@ vertex_buffer_erase_vertices( vertex_buffer_t *self,
             *(GLuint *)(vector_get( self->indices, i )) -= (last-first);
         }
     }
-    vector_erase_range( self->vertices, first, last );    
+    vector_erase_range( self->vertices, first, last );
 }
 
 
@@ -580,7 +567,7 @@ vertex_buffer_erase_vertices( vertex_buffer_t *self,
 // ----------------------------------------------------------------------------
 size_t
 vertex_buffer_push_back( vertex_buffer_t * self,
-                         const void * vertices, const size_t vcount,  
+                         const void * vertices, const size_t vcount,
                          const GLuint * indices, const size_t icount )
 {
     return vertex_buffer_insert( self, vector_size( self->items ),
@@ -590,7 +577,7 @@ vertex_buffer_push_back( vertex_buffer_t * self,
 // ----------------------------------------------------------------------------
 size_t
 vertex_buffer_insert( vertex_buffer_t * self, const size_t index,
-                      const void * vertices, const size_t vcount,  
+                      const void * vertices, const size_t vcount,
                       const GLuint * indices, const size_t icount )
 {
     size_t vstart, istart, i;
@@ -614,7 +601,7 @@ vertex_buffer_insert( vertex_buffer_t * self, const size_t index,
     {
         *(GLuint *)(vector_get( self->indices, istart+i )) += vstart;
     }
-    
+
     // Insert item
     item.x = vstart;
     item.y = vcount;
@@ -632,8 +619,9 @@ vertex_buffer_erase( vertex_buffer_t * self,
                      const size_t index )
 {
     ivec4 * item;
-    size_t vstart, vcount, istart, icount, i;
-    
+    int vstart;
+    size_t vcount, istart, icount, i;
+
     assert( self );
     assert( index < vector_size( self->items ) );
 
