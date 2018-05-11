@@ -58,6 +58,7 @@ fn build_emscripten() {
 		.arg(format!("-DFREETYPE_LIBRARY={}",freetype_lib))
 		.arg(format!("-Dfreetype-gl_BUILD_DEMOS=OFF"))
 		.arg(format!("-Dfreetype-gl_BUILD_TESTS=OFF"))
+		.arg(format!("-Dfreetype-gl_BUILD_APIDOC=OFF"))
 		.arg(format!("-Dfreetype-gl_WITH_GLEW=OFF"))
 		.env("CFLAGS",&cflags)
 		.current_dir(&build_dir)
