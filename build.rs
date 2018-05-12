@@ -3,7 +3,7 @@ use std::env;
 use std::fs;
 use std::path::Path;
 
-fn build_linux() {
+fn build_unix() {
 	let freetype_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
 	let freetype_include = env::var("DEP_FREETYPE2_INCLUDE_SEARCH").unwrap_or("/usr/include".to_string());
 	let freetype_link = env::var("DEP_FREETYPE2_LINK_SEARCH").unwrap_or("/usr/lib/".to_string());
@@ -81,7 +81,9 @@ fn build_emscripten() {
 fn main(){
 	let target_triple = env::var("TARGET").unwrap();
 	if target_triple.contains("linux") {
-		build_linux()
+		build_unix()
+	}else if target_triple.contains("darwin") {
+		build_unix()
 	}else if target_triple.contains("emscripten") {
 		build_emscripten()
 	}else{
