@@ -1,3 +1,5 @@
+extern crate cmake;
+
 use std::process::Command;
 use std::env;
 use std::fs;
@@ -78,12 +80,46 @@ fn build_emscripten() {
 	println!("cargo:rerun-if-changed=freetype-gl/texture-font.h");
 }
 
+fn build_windows(){
+	// panic!("{:#?}", env::vars().collect::<Vec<_>>());
+	let freetype_root = env::var("DEP_FREETYPE2_ROOT").unwrap();
+	let freetype_root = Path::new(&freetype_root);
+	let freetype_include = freetype_root.join("include");
+	let freetype_link = freetype_root.join("lib");
+	let freetype_lib = freetype_link.join("freetype.lib");
+	let dst = cmake::Config::new("freetype-gl")
+				.define("FREETYPE_INCLUDE_DIRS", freetype_include)
+				.define("FREETYPE_LIBRARY", freetype_lib)
+                .define("freetype-gl_BUILD_DEMOS", "OFF")
+				.define("freetype-gl_BUILD_TESTS", "OFF")
+				.define("freetype-gl_WITH_GLEW", "OFF")
+				.define("freetype-gl_BUILD_APIDOC", "OFF")
+				.build_target("freetype-gl")
+                .build();
+	
+	#[cfg(debug_assertions)]
+	{
+		let lib_dir = dst.join("build").join("Debug");
+		println!("cargo:rustc-link-search=native={}", lib_dir.display());
+	}
+
+	#[cfg(not(debug_assertions))]
+	{
+		let lib_dir = dst.join("build").join("Release");
+		println!("cargo:rustc-link-search=native={}", lib_dir.display());
+	}
+
+	println!("cargo:rustc-link-lib=static=freetype-gl");
+}
+
 fn main(){
 	let target_triple = env::var("TARGET").unwrap();
 	if target_triple.contains("linux") {
 		build_unix()
 	}else if target_triple.contains("darwin") {
 		build_unix()
+	}else if target_triple.contains("windows") {
+		build_windows()
 	}else if target_triple.contains("emscripten") {
 		build_emscripten()
 	}else{
