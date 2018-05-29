@@ -13,7 +13,7 @@ name = "freetypegl"
 path = "src/lib.rs"
 
 [dependencies]
-freetype-src-sys = "0.1.2"
+freetype-src-sys = "0.1"
 
 [build-dependencies]
 cmake = "0.1"
