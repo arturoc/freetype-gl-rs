@@ -1,6 +1,6 @@
 [package]
 name    = "freetypegl"
-version = "0.3.2"
+version = "0.3.3"
 authors = [ "Arturo Castro <mail@arturocastro.net>" ] # FIXME: add the contributors.
 description = "Rust build helpers and bindings for freetype-gl."
 license-file = "freetype-gl/LICENSE"
@@ -17,6 +17,3 @@ freetype-src-sys = "0.1.2"
 
 [build-dependencies]
 cmake = "0.1"
-
-[patch.crates-io]
-freetype-src-sys={path = "../freetype-sys"}
