@@ -5,6 +5,11 @@ use std::slice;
 
 mod ffi;
 
+#[cfg(all(debug_assertions, windows))]
+mod link_windowsd;
+#[cfg(any(not(debug_assertions), not(windows)))]
+mod link;
+
 pub struct TextureFont{
     font: *mut ffi::texture_font_t
 }
