@@ -3,7 +3,7 @@ name    = "freetypegl"
 version = "0.3.6"
 authors = [ "Arturo Castro <mail@arturocastro.net>" ] # FIXME: add the contributors.
 description = "Rust build helpers and bindings for freetype-gl."
-license-file = "freetype-gl/LICENSE"
+license-file = "LICENSE"
 homepage = "https://github.com/arturoc/freetype-gl-rs"
 repository = "https://github.com/arturoc/freetype-gl-rs"
 
