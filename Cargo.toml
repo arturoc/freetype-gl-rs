@@ -1,6 +1,6 @@
 [package]
 name    = "freetypegl"
-version = "0.3.4"
+version = "0.3.5"
 authors = [ "Arturo Castro <mail@arturocastro.net>" ] # FIXME: add the contributors.
 description = "Rust build helpers and bindings for freetype-gl."
 license-file = "freetype-gl/LICENSE"

@@ -13,11 +13,12 @@ fn build_unix() {
 	let prev_cflags = env::var("CFLAGS").unwrap_or("".to_string());
 	let cflags = format!("{} {} -I{}",prev_cflags,"-fPIC",freetype_include);
 	let freetype_native_dir = Path::new(&freetype_dir).join("freetype-gl");
-	let build_dir = freetype_native_dir.join("build_linux");
+	let out_dir = env::var("OUT_DIR").unwrap();
+	let build_dir = Path::new(&out_dir).join("build");
 	fs::remove_dir_all(&build_dir).is_ok();
 	fs::create_dir(&build_dir).is_ok();
 	Command::new("cmake")
-		.arg("..")
+		.arg(freetype_native_dir)
 		.arg(format!("-DFREETYPE_INCLUDE_DIRS={}",freetype_include))
 		.arg(format!("-DFREETYPE_LIBRARY={}",freetype_lib))
 		.arg(format!("-Dfreetype-gl_BUILD_DEMOS=OFF"))
@@ -50,12 +51,13 @@ fn build_emscripten() {
 	let prev_cflags = env::var("CFLAGS").unwrap_or("".to_string());
 	let cflags = format!("{} {} -I{}",prev_cflags,"-fPIC",freetype_include);
 	let freetype_native_dir = Path::new(&freetype_dir).join("freetype-gl");
-	let build_dir = freetype_native_dir.join("build_emscripten");
+	let out_dir = env::var("OUT_DIR").unwrap();
+	let build_dir = Path::new(&out_dir).join("build");
 	// fs::remove_dir_all(&build_dir).is_ok();
 	fs::create_dir(&build_dir).is_ok();
 	Command::new("emcmake")
 		.arg("cmake")
-		.arg("..")
+		.arg(freetype_native_dir)
 		.arg(format!("-DFREETYPE_INCLUDE_DIRS={}",freetype_include))
 		.arg(format!("-DFREETYPE_LIBRARY={}",freetype_lib))
 		.arg(format!("-Dfreetype-gl_BUILD_DEMOS=OFF"))
@@ -69,7 +71,6 @@ fn build_emscripten() {
 		.arg("make")
 		.current_dir(&build_dir)
 		.status().unwrap();
-	let out_dir = env::var("OUT_DIR").unwrap();
 	let dest_path = Path::new(&out_dir).join("libfreetype-gl.a");
 	fs::copy(build_dir.join("libfreetype-gl.a"),dest_path).unwrap();
 	println!("cargo:rustc-flags= -L native={}",out_dir);
@@ -96,7 +97,7 @@ fn build_windows(){
 				.define("freetype-gl_BUILD_APIDOC", "OFF")
 				.build_target("freetype-gl")
                 .build();
-	
+
 	#[cfg(debug_assertions)]
 	{
 		let lib_dir = dst.join("build").join("Debug");
@@ -121,6 +122,8 @@ fn main(){
 	}else if target_triple.contains("windows") {
 		build_windows()
 	}else if target_triple.contains("emscripten") {
+		build_emscripten()
+	}else if target_triple.contains("wasm32"){
 		build_emscripten()
 	}else{
 		panic!("target OS {} not suported yet", target_triple);
