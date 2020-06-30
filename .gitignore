@@ -4,4 +4,4 @@ freetype-gl/windows
 freetype-gl/docs
 target
 Cargo.lock
-
+.history

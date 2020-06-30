@@ -4,908 +4,14869 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 
-
-pub const _FEATURES_H : :: std :: os :: raw :: c_uint = 1 ; pub const _DEFAULT_SOURCE : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_ISOC11 : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_ISOC99 : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_ISOC95 : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_POSIX_IMPLICITLY : :: std :: os :: raw :: c_uint = 1 ; pub const _POSIX_SOURCE : :: std :: os :: raw :: c_uint = 1 ; pub const _POSIX_C_SOURCE : :: std :: os :: raw :: c_uint = 200809 ; pub const __USE_POSIX : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_POSIX2 : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_POSIX199309 : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_POSIX199506 : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_XOPEN2K : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_XOPEN2K8 : :: std :: os :: raw :: c_uint = 1 ; pub const _ATFILE_SOURCE : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_MISC : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_ATFILE : :: std :: os :: raw :: c_uint = 1 ; pub const __USE_FORTIFY_LEVEL : :: std :: os :: raw :: c_uint = 0 ; pub const __GLIBC_USE_DEPRECATED_GETS : :: std :: os :: raw :: c_uint = 0 ; pub const _STDC_PREDEF_H : :: std :: os :: raw :: c_uint = 1 ; pub const __STDC_IEC_559__ : :: std :: os :: raw :: c_uint = 1 ; pub const __STDC_IEC_559_COMPLEX__ : :: std :: os :: raw :: c_uint = 1 ; pub const __STDC_ISO_10646__ : :: std :: os :: raw :: c_uint = 201706 ; pub const __STDC_NO_THREADS__ : :: std :: os :: raw :: c_uint = 1 ; pub const __GNU_LIBRARY__ : :: std :: os :: raw :: c_uint = 6 ; pub const __GLIBC__ : :: std :: os :: raw :: c_uint = 2 ; pub const __GLIBC_MINOR__ : :: std :: os :: raw :: c_uint = 26 ; pub const _SYS_CDEFS_H : :: std :: os :: raw :: c_uint = 1 ; pub const __glibc_c99_flexarr_available : :: std :: os :: raw :: c_uint = 1 ; pub const __WORDSIZE : :: std :: os :: raw :: c_uint = 64 ; pub const __WORDSIZE_TIME64_COMPAT32 : :: std :: os :: raw :: c_uint = 1 ; pub const __SYSCALL_WORDSIZE : :: std :: os :: raw :: c_uint = 64 ; pub const __HAVE_GENERIC_SELECTION : :: std :: os :: raw :: c_uint = 1 ; pub const __GLIBC_USE_LIB_EXT2 : :: std :: os :: raw :: c_uint = 0 ; pub const __GLIBC_USE_IEC_60559_BFP_EXT : :: std :: os :: raw :: c_uint = 0 ; pub const __GLIBC_USE_IEC_60559_FUNCS_EXT : :: std :: os :: raw :: c_uint = 0 ; pub const __GLIBC_USE_IEC_60559_TYPES_EXT : :: std :: os :: raw :: c_uint = 0 ; pub const _STDLIB_H : :: std :: os :: raw :: c_uint = 1 ; pub const WNOHANG : :: std :: os :: raw :: c_uint = 1 ; pub const WUNTRACED : :: std :: os :: raw :: c_uint = 2 ; pub const WSTOPPED : :: std :: os :: raw :: c_uint = 2 ; pub const WEXITED : :: std :: os :: raw :: c_uint = 4 ; pub const WCONTINUED : :: std :: os :: raw :: c_uint = 8 ; pub const WNOWAIT : :: std :: os :: raw :: c_uint = 16777216 ; pub const __WNOTHREAD : :: std :: os :: raw :: c_uint = 536870912 ; pub const __WALL : :: std :: os :: raw :: c_uint = 1073741824 ; pub const __WCLONE : :: std :: os :: raw :: c_uint = 2147483648 ; pub const __ENUM_IDTYPE_T : :: std :: os :: raw :: c_uint = 1 ; pub const __W_CONTINUED : :: std :: os :: raw :: c_uint = 65535 ; pub const __WCOREFLAG : :: std :: os :: raw :: c_uint = 128 ; pub const __HAVE_FLOAT128 : :: std :: os :: raw :: c_uint = 0 ; pub const __HAVE_DISTINCT_FLOAT128 : :: std :: os :: raw :: c_uint = 0 ; pub const __ldiv_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const __lldiv_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const RAND_MAX : :: std :: os :: raw :: c_uint = 2147483647 ; pub const EXIT_FAILURE : :: std :: os :: raw :: c_uint = 1 ; pub const EXIT_SUCCESS : :: std :: os :: raw :: c_uint = 0 ; pub const _SYS_TYPES_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_TYPES_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_TYPESIZES_H : :: std :: os :: raw :: c_uint = 1 ; pub const __OFF_T_MATCHES_OFF64_T : :: std :: os :: raw :: c_uint = 1 ; pub const __INO_T_MATCHES_INO64_T : :: std :: os :: raw :: c_uint = 1 ; pub const __RLIM_T_MATCHES_RLIM64_T : :: std :: os :: raw :: c_uint = 1 ; pub const __FD_SETSIZE : :: std :: os :: raw :: c_uint = 1024 ; pub const __clock_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const __clockid_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const __time_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const __timer_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_STDINT_INTN_H : :: std :: os :: raw :: c_uint = 1 ; pub const __BIT_TYPES_DEFINED__ : :: std :: os :: raw :: c_uint = 1 ; pub const _ENDIAN_H : :: std :: os :: raw :: c_uint = 1 ; pub const __LITTLE_ENDIAN : :: std :: os :: raw :: c_uint = 1234 ; pub const __BIG_ENDIAN : :: std :: os :: raw :: c_uint = 4321 ; pub const __PDP_ENDIAN : :: std :: os :: raw :: c_uint = 3412 ; pub const __BYTE_ORDER : :: std :: os :: raw :: c_uint = 1234 ; pub const __FLOAT_WORD_ORDER : :: std :: os :: raw :: c_uint = 1234 ; pub const LITTLE_ENDIAN : :: std :: os :: raw :: c_uint = 1234 ; pub const BIG_ENDIAN : :: std :: os :: raw :: c_uint = 4321 ; pub const PDP_ENDIAN : :: std :: os :: raw :: c_uint = 3412 ; pub const BYTE_ORDER : :: std :: os :: raw :: c_uint = 1234 ; pub const _BITS_BYTESWAP_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_UINTN_IDENTITY_H : :: std :: os :: raw :: c_uint = 1 ; pub const _SYS_SELECT_H : :: std :: os :: raw :: c_uint = 1 ; pub const __FD_ZERO_STOS : & 'static [ u8 ; 6usize ] = b"stosq\0" ; pub const __sigset_t_defined : :: std :: os :: raw :: c_uint = 1 ; pub const __timeval_defined : :: std :: os :: raw :: c_uint = 1 ; pub const __timespec_defined : :: std :: os :: raw :: c_uint = 1 ; pub const FD_SETSIZE : :: std :: os :: raw :: c_uint = 1024 ; pub const _SYS_SYSMACROS_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_SYSMACROS_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_PTHREADTYPES_COMMON_H : :: std :: os :: raw :: c_uint = 1 ; pub const _THREAD_SHARED_TYPES_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_PTHREADTYPES_ARCH_H : :: std :: os :: raw :: c_uint = 1 ; pub const __SIZEOF_PTHREAD_MUTEX_T : :: std :: os :: raw :: c_uint = 40 ; pub const __SIZEOF_PTHREAD_ATTR_T : :: std :: os :: raw :: c_uint = 56 ; pub const __SIZEOF_PTHREAD_RWLOCK_T : :: std :: os :: raw :: c_uint = 56 ; pub const __SIZEOF_PTHREAD_BARRIER_T : :: std :: os :: raw :: c_uint = 32 ; pub const __SIZEOF_PTHREAD_MUTEXATTR_T : :: std :: os :: raw :: c_uint = 4 ; pub const __SIZEOF_PTHREAD_COND_T : :: std :: os :: raw :: c_uint = 48 ; pub const __SIZEOF_PTHREAD_CONDATTR_T : :: std :: os :: raw :: c_uint = 4 ; pub const __SIZEOF_PTHREAD_RWLOCKATTR_T : :: std :: os :: raw :: c_uint = 8 ; pub const __SIZEOF_PTHREAD_BARRIERATTR_T : :: std :: os :: raw :: c_uint = 4 ; pub const __PTHREAD_MUTEX_LOCK_ELISION : :: std :: os :: raw :: c_uint = 1 ; pub const __PTHREAD_RWLOCK_INT_FLAGS_SHARED : :: std :: os :: raw :: c_uint = 1 ; pub const __PTHREAD_MUTEX_HAVE_PREV : :: std :: os :: raw :: c_uint = 1 ; pub const __have_pthread_attr_t : :: std :: os :: raw :: c_uint = 1 ; pub const _ALLOCA_H : :: std :: os :: raw :: c_uint = 1 ; pub const _STDINT_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_WCHAR_H : :: std :: os :: raw :: c_uint = 1 ; pub const _BITS_STDINT_UINTN_H : :: std :: os :: raw :: c_uint = 1 ; pub const INT8_MIN : :: std :: os :: raw :: c_int = -128 ; pub const INT16_MIN : :: std :: os :: raw :: c_int = -32768 ; pub const INT32_MIN : :: std :: os :: raw :: c_int = -2147483648 ; pub const INT8_MAX : :: std :: os :: raw :: c_uint = 127 ; pub const INT16_MAX : :: std :: os :: raw :: c_uint = 32767 ; pub const INT32_MAX : :: std :: os :: raw :: c_uint = 2147483647 ; pub const UINT8_MAX : :: std :: os :: raw :: c_uint = 255 ; pub const UINT16_MAX : :: std :: os :: raw :: c_uint = 65535 ; pub const UINT32_MAX : :: std :: os :: raw :: c_uint = 4294967295 ; pub const INT_LEAST8_MIN : :: std :: os :: raw :: c_int = -128 ; pub const INT_LEAST16_MIN : :: std :: os :: raw :: c_int = -32768 ; pub const INT_LEAST32_MIN : :: std :: os :: raw :: c_int = -2147483648 ; pub const INT_LEAST8_MAX : :: std :: os :: raw :: c_uint = 127 ; pub const INT_LEAST16_MAX : :: std :: os :: raw :: c_uint = 32767 ; pub const INT_LEAST32_MAX : :: std :: os :: raw :: c_uint = 2147483647 ; pub const UINT_LEAST8_MAX : :: std :: os :: raw :: c_uint = 255 ; pub const UINT_LEAST16_MAX : :: std :: os :: raw :: c_uint = 65535 ; pub const UINT_LEAST32_MAX : :: std :: os :: raw :: c_uint = 4294967295 ; pub const INT_FAST8_MIN : :: std :: os :: raw :: c_int = -128 ; pub const INT_FAST16_MIN : :: std :: os :: raw :: c_longlong = -9223372036854775808 ; pub const INT_FAST32_MIN : :: std :: os :: raw :: c_longlong = -9223372036854775808 ; pub const INT_FAST8_MAX : :: std :: os :: raw :: c_uint = 127 ; pub const INT_FAST16_MAX : :: std :: os :: raw :: c_ulonglong = 9223372036854775807 ; pub const INT_FAST32_MAX : :: std :: os :: raw :: c_ulonglong = 9223372036854775807 ; pub const UINT_FAST8_MAX : :: std :: os :: raw :: c_uint = 255 ; pub const UINT_FAST16_MAX : :: std :: os :: raw :: c_int = -1 ; pub const UINT_FAST32_MAX : :: std :: os :: raw :: c_int = -1 ; pub const INTPTR_MIN : :: std :: os :: raw :: c_longlong = -9223372036854775808 ; pub const INTPTR_MAX : :: std :: os :: raw :: c_ulonglong = 9223372036854775807 ; pub const UINTPTR_MAX : :: std :: os :: raw :: c_int = -1 ; pub const PTRDIFF_MIN : :: std :: os :: raw :: c_longlong = -9223372036854775808 ; pub const PTRDIFF_MAX : :: std :: os :: raw :: c_ulonglong = 9223372036854775807 ; pub const SIG_ATOMIC_MIN : :: std :: os :: raw :: c_int = -2147483648 ; pub const SIG_ATOMIC_MAX : :: std :: os :: raw :: c_uint = 2147483647 ; pub const SIZE_MAX : :: std :: os :: raw :: c_int = -1 ; pub const WINT_MIN : :: std :: os :: raw :: c_uint = 0 ; pub const WINT_MAX : :: std :: os :: raw :: c_uint = 4294967295 ; pub type wchar_t = :: std :: os :: raw :: c_int ; pub const idtype_t_P_ALL : idtype_t = 0 ; pub const idtype_t_P_PID : idtype_t = 1 ; pub const idtype_t_P_PGID : idtype_t = 2 ; pub type idtype_t = :: std :: os :: raw :: c_uint ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct div_t { pub quot : :: std :: os :: raw :: c_int , pub rem : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_div_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < div_t > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( div_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < div_t > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( div_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const div_t ) ) . quot as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( div_t ) , "::" , stringify ! ( quot ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const div_t ) ) . rem as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( div_t ) , "::" , stringify ! ( rem ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ldiv_t { pub quot : :: std :: os :: raw :: c_long , pub rem : :: std :: os :: raw :: c_long , } # [ test ] fn bindgen_test_layout_ldiv_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ldiv_t > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ldiv_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ldiv_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( ldiv_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ldiv_t ) ) . quot as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ldiv_t ) , "::" , stringify ! ( quot ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ldiv_t ) ) . rem as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ldiv_t ) , "::" , stringify ! ( rem ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct lldiv_t { pub quot : :: std :: os :: raw :: c_longlong , pub rem : :: std :: os :: raw :: c_longlong , } # [ test ] fn bindgen_test_layout_lldiv_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < lldiv_t > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( lldiv_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < lldiv_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( lldiv_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const lldiv_t ) ) . quot as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( lldiv_t ) , "::" , stringify ! ( quot ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const lldiv_t ) ) . rem as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( lldiv_t ) , "::" , stringify ! ( rem ) ) ) ; } extern "C" {
- pub fn __ctype_get_mb_cur_max ( ) -> usize ;
-} extern "C" {
- pub fn atof ( __nptr : * const :: std :: os :: raw :: c_char , ) -> f64 ;
-} extern "C" {
- pub fn atoi ( __nptr : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn atol ( __nptr : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn atoll ( __nptr : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_longlong ;
-} extern "C" {
- pub fn strtod ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , ) -> f64 ;
-} extern "C" {
- pub fn strtof ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , ) -> f32 ;
-} extern "C" {
- pub fn strtold ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , ) -> f64 ;
-} extern "C" {
- pub fn strtol ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , __base : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn strtoul ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , __base : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_ulong ;
-} extern "C" {
- pub fn strtoq ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , __base : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_longlong ;
-} extern "C" {
- pub fn strtouq ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , __base : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_ulonglong ;
-} extern "C" {
- pub fn strtoll ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , __base : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_longlong ;
-} extern "C" {
- pub fn strtoull ( __nptr : * const :: std :: os :: raw :: c_char , __endptr : * mut * mut :: std :: os :: raw :: c_char , __base : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_ulonglong ;
-} extern "C" {
- pub fn l64a ( __n : :: std :: os :: raw :: c_long , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn a64l ( __s : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_long ;
-} pub type __u_char = :: std :: os :: raw :: c_uchar ; pub type __u_short = :: std :: os :: raw :: c_ushort ; pub type __u_int = :: std :: os :: raw :: c_uint ; pub type __u_long = :: std :: os :: raw :: c_ulong ; pub type __int8_t = :: std :: os :: raw :: c_schar ; pub type __uint8_t = :: std :: os :: raw :: c_uchar ; pub type __int16_t = :: std :: os :: raw :: c_short ; pub type __uint16_t = :: std :: os :: raw :: c_ushort ; pub type __int32_t = :: std :: os :: raw :: c_int ; pub type __uint32_t = :: std :: os :: raw :: c_uint ; pub type __int64_t = :: std :: os :: raw :: c_long ; pub type __uint64_t = :: std :: os :: raw :: c_ulong ; pub type __quad_t = :: std :: os :: raw :: c_long ; pub type __u_quad_t = :: std :: os :: raw :: c_ulong ; pub type __intmax_t = :: std :: os :: raw :: c_long ; pub type __uintmax_t = :: std :: os :: raw :: c_ulong ; pub type __dev_t = :: std :: os :: raw :: c_ulong ; pub type __uid_t = :: std :: os :: raw :: c_uint ; pub type __gid_t = :: std :: os :: raw :: c_uint ; pub type __ino_t = :: std :: os :: raw :: c_ulong ; pub type __ino64_t = :: std :: os :: raw :: c_ulong ; pub type __mode_t = :: std :: os :: raw :: c_uint ; pub type __nlink_t = :: std :: os :: raw :: c_ulong ; pub type __off_t = :: std :: os :: raw :: c_long ; pub type __off64_t = :: std :: os :: raw :: c_long ; pub type __pid_t = :: std :: os :: raw :: c_int ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __fsid_t { pub __val : [ :: std :: os :: raw :: c_int ; 2usize ] , } # [ test ] fn bindgen_test_layout___fsid_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __fsid_t > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( __fsid_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __fsid_t > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( __fsid_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __fsid_t ) ) . __val as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __fsid_t ) , "::" , stringify ! ( __val ) ) ) ; } pub type __clock_t = :: std :: os :: raw :: c_long ; pub type __rlim_t = :: std :: os :: raw :: c_ulong ; pub type __rlim64_t = :: std :: os :: raw :: c_ulong ; pub type __id_t = :: std :: os :: raw :: c_uint ; pub type __time_t = :: std :: os :: raw :: c_long ; pub type __useconds_t = :: std :: os :: raw :: c_uint ; pub type __suseconds_t = :: std :: os :: raw :: c_long ; pub type __daddr_t = :: std :: os :: raw :: c_int ; pub type __key_t = :: std :: os :: raw :: c_int ; pub type __clockid_t = :: std :: os :: raw :: c_int ; pub type __timer_t = * mut :: std :: os :: raw :: c_void ; pub type __blksize_t = :: std :: os :: raw :: c_long ; pub type __blkcnt_t = :: std :: os :: raw :: c_long ; pub type __blkcnt64_t = :: std :: os :: raw :: c_long ; pub type __fsblkcnt_t = :: std :: os :: raw :: c_ulong ; pub type __fsblkcnt64_t = :: std :: os :: raw :: c_ulong ; pub type __fsfilcnt_t = :: std :: os :: raw :: c_ulong ; pub type __fsfilcnt64_t = :: std :: os :: raw :: c_ulong ; pub type __fsword_t = :: std :: os :: raw :: c_long ; pub type __ssize_t = :: std :: os :: raw :: c_long ; pub type __syscall_slong_t = :: std :: os :: raw :: c_long ; pub type __syscall_ulong_t = :: std :: os :: raw :: c_ulong ; pub type __loff_t = __off64_t ; pub type __qaddr_t = * mut __quad_t ; pub type __caddr_t = * mut :: std :: os :: raw :: c_char ; pub type __intptr_t = :: std :: os :: raw :: c_long ; pub type __socklen_t = :: std :: os :: raw :: c_uint ; pub type __sig_atomic_t = :: std :: os :: raw :: c_int ; pub type u_char = __u_char ; pub type u_short = __u_short ; pub type u_int = __u_int ; pub type u_long = __u_long ; pub type quad_t = __quad_t ; pub type u_quad_t = __u_quad_t ; pub type fsid_t = __fsid_t ; pub type loff_t = __loff_t ; pub type ino_t = __ino_t ; pub type dev_t = __dev_t ; pub type gid_t = __gid_t ; pub type mode_t = __mode_t ; pub type nlink_t = __nlink_t ; pub type uid_t = __uid_t ; pub type off_t = __off_t ; pub type pid_t = __pid_t ; pub type id_t = __id_t ; pub type daddr_t = __daddr_t ; pub type caddr_t = __caddr_t ; pub type key_t = __key_t ; pub type clock_t = __clock_t ; pub type clockid_t = __clockid_t ; pub type time_t = __time_t ; pub type timer_t = __timer_t ; pub type ulong = :: std :: os :: raw :: c_ulong ; pub type ushort = :: std :: os :: raw :: c_ushort ; pub type uint = :: std :: os :: raw :: c_uint ; pub type u_int8_t = :: std :: os :: raw :: c_uchar ; pub type u_int16_t = :: std :: os :: raw :: c_ushort ; pub type u_int32_t = :: std :: os :: raw :: c_uint ; pub type u_int64_t = :: std :: os :: raw :: c_ulong ; pub type register_t = :: std :: os :: raw :: c_long ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __sigset_t { pub __val : [ :: std :: os :: raw :: c_ulong ; 16usize ] , } # [ test ] fn bindgen_test_layout___sigset_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __sigset_t > ( ) , 128usize , concat ! ( "Size of: " , stringify ! ( __sigset_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __sigset_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __sigset_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __sigset_t ) ) . __val as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __sigset_t ) , "::" , stringify ! ( __val ) ) ) ; } pub type sigset_t = __sigset_t ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct timeval { pub tv_sec : __time_t , pub tv_usec : __suseconds_t , } # [ test ] fn bindgen_test_layout_timeval ( ) { assert_eq ! ( :: std :: mem :: size_of :: < timeval > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( timeval ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < timeval > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( timeval ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const timeval ) ) . tv_sec as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( timeval ) , "::" , stringify ! ( tv_sec ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const timeval ) ) . tv_usec as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( timeval ) , "::" , stringify ! ( tv_usec ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct timespec { pub tv_sec : __time_t , pub tv_nsec : __syscall_slong_t , } # [ test ] fn bindgen_test_layout_timespec ( ) { assert_eq ! ( :: std :: mem :: size_of :: < timespec > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( timespec ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < timespec > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( timespec ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const timespec ) ) . tv_sec as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( timespec ) , "::" , stringify ! ( tv_sec ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const timespec ) ) . tv_nsec as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( timespec ) , "::" , stringify ! ( tv_nsec ) ) ) ; } pub type suseconds_t = __suseconds_t ; pub type __fd_mask = :: std :: os :: raw :: c_long ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct fd_set { pub __fds_bits : [ __fd_mask ; 16usize ] , } # [ test ] fn bindgen_test_layout_fd_set ( ) { assert_eq ! ( :: std :: mem :: size_of :: < fd_set > ( ) , 128usize , concat ! ( "Size of: " , stringify ! ( fd_set ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < fd_set > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( fd_set ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const fd_set ) ) . __fds_bits as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( fd_set ) , "::" , stringify ! ( __fds_bits ) ) ) ; } pub type fd_mask = __fd_mask ; extern "C" {
- pub fn select ( __nfds : :: std :: os :: raw :: c_int , __readfds : * mut fd_set , __writefds : * mut fd_set , __exceptfds : * mut fd_set , __timeout : * mut timeval , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn pselect ( __nfds : :: std :: os :: raw :: c_int , __readfds : * mut fd_set , __writefds : * mut fd_set , __exceptfds : * mut fd_set , __timeout : * const timespec , __sigmask : * const __sigset_t , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn gnu_dev_major ( __dev : __dev_t , ) -> :: std :: os :: raw :: c_uint ;
-} extern "C" {
- pub fn gnu_dev_minor ( __dev : __dev_t , ) -> :: std :: os :: raw :: c_uint ;
-} extern "C" {
- pub fn gnu_dev_makedev ( __major : :: std :: os :: raw :: c_uint , __minor : :: std :: os :: raw :: c_uint , ) -> __dev_t ;
-} pub type blksize_t = __blksize_t ; pub type blkcnt_t = __blkcnt_t ; pub type fsblkcnt_t = __fsblkcnt_t ; pub type fsfilcnt_t = __fsfilcnt_t ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __pthread_rwlock_arch_t { pub __readers : :: std :: os :: raw :: c_uint , pub __writers : :: std :: os :: raw :: c_uint , pub __wrphase_futex : :: std :: os :: raw :: c_uint , pub __writers_futex : :: std :: os :: raw :: c_uint , pub __pad3 : :: std :: os :: raw :: c_uint , pub __pad4 : :: std :: os :: raw :: c_uint , pub __cur_writer : :: std :: os :: raw :: c_int , pub __shared : :: std :: os :: raw :: c_int , pub __rwelision : :: std :: os :: raw :: c_schar , pub __pad1 : [ :: std :: os :: raw :: c_uchar ; 7usize ] , pub __pad2 : :: std :: os :: raw :: c_ulong , pub __flags : :: std :: os :: raw :: c_uint , } # [ test ] fn bindgen_test_layout___pthread_rwlock_arch_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_rwlock_arch_t > ( ) , 56usize , concat ! ( "Size of: " , stringify ! ( __pthread_rwlock_arch_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_rwlock_arch_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __pthread_rwlock_arch_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __readers as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __readers ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __writers as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __writers ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __wrphase_futex as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __wrphase_futex ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __writers_futex as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __writers_futex ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __pad3 as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __pad3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __pad4 as * const _ as usize } , 20usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __pad4 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __cur_writer as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __cur_writer ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __shared as * const _ as usize } , 28usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __shared ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __rwelision as * const _ as usize } , 32usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __rwelision ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __pad1 as * const _ as usize } , 33usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __pad1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __pad2 as * const _ as usize } , 40usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __pad2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_rwlock_arch_t ) ) . __flags as * const _ as usize } , 48usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_rwlock_arch_t ) , "::" , stringify ! ( __flags ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __pthread_internal_list { pub __prev : * mut __pthread_internal_list , pub __next : * mut __pthread_internal_list , } # [ test ] fn bindgen_test_layout___pthread_internal_list ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_internal_list > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( __pthread_internal_list ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_internal_list > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __pthread_internal_list ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_internal_list ) ) . __prev as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_internal_list ) , "::" , stringify ! ( __prev ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_internal_list ) ) . __next as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_internal_list ) , "::" , stringify ! ( __next ) ) ) ; } pub type __pthread_list_t = __pthread_internal_list ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __pthread_mutex_s { pub __lock : :: std :: os :: raw :: c_int , pub __count : :: std :: os :: raw :: c_uint , pub __owner : :: std :: os :: raw :: c_int , pub __nusers : :: std :: os :: raw :: c_uint , pub __kind : :: std :: os :: raw :: c_int , pub __spins : :: std :: os :: raw :: c_short , pub __elision : :: std :: os :: raw :: c_short , pub __list : __pthread_list_t , } # [ test ] fn bindgen_test_layout___pthread_mutex_s ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_mutex_s > ( ) , 40usize , concat ! ( "Size of: " , stringify ! ( __pthread_mutex_s ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_mutex_s > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __pthread_mutex_s ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __lock as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __lock ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __count as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __count ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __owner as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __owner ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __nusers as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __nusers ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __kind as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __kind ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __spins as * const _ as usize } , 20usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __spins ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __elision as * const _ as usize } , 22usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __elision ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_mutex_s ) ) . __list as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_mutex_s ) , "::" , stringify ! ( __list ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub struct __pthread_cond_s { pub __bindgen_anon_1 : __pthread_cond_s__bindgen_ty_1 , pub __bindgen_anon_2 : __pthread_cond_s__bindgen_ty_2 , pub __g_refs : [ :: std :: os :: raw :: c_uint ; 2usize ] , pub __g_size : [ :: std :: os :: raw :: c_uint ; 2usize ] , pub __g1_orig_size : :: std :: os :: raw :: c_uint , pub __wrefs : :: std :: os :: raw :: c_uint , pub __g_signals : [ :: std :: os :: raw :: c_uint ; 2usize ] , } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union __pthread_cond_s__bindgen_ty_1 { pub __wseq : :: std :: os :: raw :: c_ulonglong , pub __wseq32 : __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 , _bindgen_union_align : u64 , } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 { pub __low : :: std :: os :: raw :: c_uint , pub __high : :: std :: os :: raw :: c_uint , } # [ test ] fn bindgen_test_layout___pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ) ) . __low as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ) , "::" , stringify ! ( __low ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ) ) . __high as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 ) , "::" , stringify ! ( __high ) ) ) ; } # [ test ] fn bindgen_test_layout___pthread_cond_s__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_cond_s__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( __pthread_cond_s__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_cond_s__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __pthread_cond_s__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_1 ) ) . __wseq as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_1 ) , "::" , stringify ! ( __wseq ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_1 ) ) . __wseq32 as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_1 ) , "::" , stringify ! ( __wseq32 ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union __pthread_cond_s__bindgen_ty_2 { pub __g1_start : :: std :: os :: raw :: c_ulonglong , pub __g1_start32 : __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 , _bindgen_union_align : u64 , } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 { pub __low : :: std :: os :: raw :: c_uint , pub __high : :: std :: os :: raw :: c_uint , } # [ test ] fn bindgen_test_layout___pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ) ) . __low as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ) , "::" , stringify ! ( __low ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ) ) . __high as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 ) , "::" , stringify ! ( __high ) ) ) ; } # [ test ] fn bindgen_test_layout___pthread_cond_s__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_cond_s__bindgen_ty_2 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( __pthread_cond_s__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_cond_s__bindgen_ty_2 > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __pthread_cond_s__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_2 ) ) . __g1_start as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_2 ) , "::" , stringify ! ( __g1_start ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s__bindgen_ty_2 ) ) . __g1_start32 as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s__bindgen_ty_2 ) , "::" , stringify ! ( __g1_start32 ) ) ) ; } # [ test ] fn bindgen_test_layout___pthread_cond_s ( ) { assert_eq ! ( :: std :: mem :: size_of :: < __pthread_cond_s > ( ) , 48usize , concat ! ( "Size of: " , stringify ! ( __pthread_cond_s ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < __pthread_cond_s > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( __pthread_cond_s ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s ) ) . __g_refs as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s ) , "::" , stringify ! ( __g_refs ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s ) ) . __g_size as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s ) , "::" , stringify ! ( __g_size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s ) ) . __g1_orig_size as * const _ as usize } , 32usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s ) , "::" , stringify ! ( __g1_orig_size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s ) ) . __wrefs as * const _ as usize } , 36usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s ) , "::" , stringify ! ( __wrefs ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const __pthread_cond_s ) ) . __g_signals as * const _ as usize } , 40usize , concat ! ( "Alignment of field: " , stringify ! ( __pthread_cond_s ) , "::" , stringify ! ( __g_signals ) ) ) ; } pub type pthread_t = :: std :: os :: raw :: c_ulong ; # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_mutexattr_t { pub __size : [ :: std :: os :: raw :: c_char ; 4usize ] , pub __align : :: std :: os :: raw :: c_int , _bindgen_union_align : u32 , } # [ test ] fn bindgen_test_layout_pthread_mutexattr_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_mutexattr_t > ( ) , 4usize , concat ! ( "Size of: " , stringify ! ( pthread_mutexattr_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_mutexattr_t > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( pthread_mutexattr_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_mutexattr_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_mutexattr_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_mutexattr_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_mutexattr_t ) , "::" , stringify ! ( __align ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_condattr_t { pub __size : [ :: std :: os :: raw :: c_char ; 4usize ] , pub __align : :: std :: os :: raw :: c_int , _bindgen_union_align : u32 , } # [ test ] fn bindgen_test_layout_pthread_condattr_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_condattr_t > ( ) , 4usize , concat ! ( "Size of: " , stringify ! ( pthread_condattr_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_condattr_t > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( pthread_condattr_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_condattr_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_condattr_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_condattr_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_condattr_t ) , "::" , stringify ! ( __align ) ) ) ; } pub type pthread_key_t = :: std :: os :: raw :: c_uint ; pub type pthread_once_t = :: std :: os :: raw :: c_int ; # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_attr_t { pub __size : [ :: std :: os :: raw :: c_char ; 56usize ] , pub __align : :: std :: os :: raw :: c_long ,  } # [ test ] fn bindgen_test_layout_pthread_attr_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_attr_t > ( ) , 56usize , concat ! ( "Size of: " , stringify ! ( pthread_attr_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_attr_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( pthread_attr_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_attr_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_attr_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_attr_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_attr_t ) , "::" , stringify ! ( __align ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_mutex_t { pub __data : __pthread_mutex_s , pub __size : [ :: std :: os :: raw :: c_char ; 40usize ] , pub __align : :: std :: os :: raw :: c_long ,  } # [ test ] fn bindgen_test_layout_pthread_mutex_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_mutex_t > ( ) , 40usize , concat ! ( "Size of: " , stringify ! ( pthread_mutex_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_mutex_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( pthread_mutex_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_mutex_t ) ) . __data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_mutex_t ) , "::" , stringify ! ( __data ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_mutex_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_mutex_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_mutex_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_mutex_t ) , "::" , stringify ! ( __align ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_cond_t { pub __data : __pthread_cond_s , pub __size : [ :: std :: os :: raw :: c_char ; 48usize ] , pub __align : :: std :: os :: raw :: c_longlong ,  } # [ test ] fn bindgen_test_layout_pthread_cond_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_cond_t > ( ) , 48usize , concat ! ( "Size of: " , stringify ! ( pthread_cond_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_cond_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( pthread_cond_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_cond_t ) ) . __data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_cond_t ) , "::" , stringify ! ( __data ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_cond_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_cond_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_cond_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_cond_t ) , "::" , stringify ! ( __align ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_rwlock_t { pub __data : __pthread_rwlock_arch_t , pub __size : [ :: std :: os :: raw :: c_char ; 56usize ] , pub __align : :: std :: os :: raw :: c_long ,  } # [ test ] fn bindgen_test_layout_pthread_rwlock_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_rwlock_t > ( ) , 56usize , concat ! ( "Size of: " , stringify ! ( pthread_rwlock_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_rwlock_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( pthread_rwlock_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_rwlock_t ) ) . __data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_rwlock_t ) , "::" , stringify ! ( __data ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_rwlock_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_rwlock_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_rwlock_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_rwlock_t ) , "::" , stringify ! ( __align ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_rwlockattr_t { pub __size : [ :: std :: os :: raw :: c_char ; 8usize ] , pub __align : :: std :: os :: raw :: c_long , _bindgen_union_align : u64 , } # [ test ] fn bindgen_test_layout_pthread_rwlockattr_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_rwlockattr_t > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( pthread_rwlockattr_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_rwlockattr_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( pthread_rwlockattr_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_rwlockattr_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_rwlockattr_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_rwlockattr_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_rwlockattr_t ) , "::" , stringify ! ( __align ) ) ) ; } pub type pthread_spinlock_t = :: std :: os :: raw :: c_int ; # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_barrier_t { pub __size : [ :: std :: os :: raw :: c_char ; 32usize ] , pub __align : :: std :: os :: raw :: c_long ,  } # [ test ] fn bindgen_test_layout_pthread_barrier_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_barrier_t > ( ) , 32usize , concat ! ( "Size of: " , stringify ! ( pthread_barrier_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_barrier_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( pthread_barrier_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_barrier_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_barrier_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_barrier_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_barrier_t ) , "::" , stringify ! ( __align ) ) ) ; } # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union pthread_barrierattr_t { pub __size : [ :: std :: os :: raw :: c_char ; 4usize ] , pub __align : :: std :: os :: raw :: c_int , _bindgen_union_align : u32 , } # [ test ] fn bindgen_test_layout_pthread_barrierattr_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < pthread_barrierattr_t > ( ) , 4usize , concat ! ( "Size of: " , stringify ! ( pthread_barrierattr_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < pthread_barrierattr_t > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( pthread_barrierattr_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_barrierattr_t ) ) . __size as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_barrierattr_t ) , "::" , stringify ! ( __size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const pthread_barrierattr_t ) ) . __align as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( pthread_barrierattr_t ) , "::" , stringify ! ( __align ) ) ) ; } extern "C" {
- pub fn random ( ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn srandom ( __seed : :: std :: os :: raw :: c_uint , ) ;
-} extern "C" {
- pub fn initstate ( __seed : :: std :: os :: raw :: c_uint , __statebuf : * mut :: std :: os :: raw :: c_char , __statelen : usize , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn setstate ( __statebuf : * mut :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct random_data { pub fptr : * mut i32 , pub rptr : * mut i32 , pub state : * mut i32 , pub rand_type : :: std :: os :: raw :: c_int , pub rand_deg : :: std :: os :: raw :: c_int , pub rand_sep : :: std :: os :: raw :: c_int , pub end_ptr : * mut i32 , } # [ test ] fn bindgen_test_layout_random_data ( ) { assert_eq ! ( :: std :: mem :: size_of :: < random_data > ( ) , 48usize , concat ! ( "Size of: " , stringify ! ( random_data ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < random_data > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( random_data ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . fptr as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( fptr ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . rptr as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( rptr ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . state as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( state ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . rand_type as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( rand_type ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . rand_deg as * const _ as usize } , 28usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( rand_deg ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . rand_sep as * const _ as usize } , 32usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( rand_sep ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const random_data ) ) . end_ptr as * const _ as usize } , 40usize , concat ! ( "Alignment of field: " , stringify ! ( random_data ) , "::" , stringify ! ( end_ptr ) ) ) ; } extern "C" {
- pub fn random_r ( __buf : * mut random_data , __result : * mut i32 , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn srandom_r ( __seed : :: std :: os :: raw :: c_uint , __buf : * mut random_data , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn initstate_r ( __seed : :: std :: os :: raw :: c_uint , __statebuf : * mut :: std :: os :: raw :: c_char , __statelen : usize , __buf : * mut random_data , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn setstate_r ( __statebuf : * mut :: std :: os :: raw :: c_char , __buf : * mut random_data , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn rand ( ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn srand ( __seed : :: std :: os :: raw :: c_uint , ) ;
-} extern "C" {
- pub fn rand_r ( __seed : * mut :: std :: os :: raw :: c_uint , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn drand48 ( ) -> f64 ;
-} extern "C" {
- pub fn erand48 ( __xsubi : * mut :: std :: os :: raw :: c_ushort , ) -> f64 ;
-} extern "C" {
- pub fn lrand48 ( ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn nrand48 ( __xsubi : * mut :: std :: os :: raw :: c_ushort , ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn mrand48 ( ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn jrand48 ( __xsubi : * mut :: std :: os :: raw :: c_ushort , ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn srand48 ( __seedval : :: std :: os :: raw :: c_long , ) ;
-} extern "C" {
- pub fn seed48 ( __seed16v : * mut :: std :: os :: raw :: c_ushort , ) -> * mut :: std :: os :: raw :: c_ushort ;
-} extern "C" {
- pub fn lcong48 ( __param : * mut :: std :: os :: raw :: c_ushort , ) ;
-} # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct drand48_data { pub __x : [ :: std :: os :: raw :: c_ushort ; 3usize ] , pub __old_x : [ :: std :: os :: raw :: c_ushort ; 3usize ] , pub __c : :: std :: os :: raw :: c_ushort , pub __init : :: std :: os :: raw :: c_ushort , pub __a : :: std :: os :: raw :: c_ulonglong , } # [ test ] fn bindgen_test_layout_drand48_data ( ) { assert_eq ! ( :: std :: mem :: size_of :: < drand48_data > ( ) , 24usize , concat ! ( "Size of: " , stringify ! ( drand48_data ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < drand48_data > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( drand48_data ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const drand48_data ) ) . __x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( drand48_data ) , "::" , stringify ! ( __x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const drand48_data ) ) . __old_x as * const _ as usize } , 6usize , concat ! ( "Alignment of field: " , stringify ! ( drand48_data ) , "::" , stringify ! ( __old_x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const drand48_data ) ) . __c as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( drand48_data ) , "::" , stringify ! ( __c ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const drand48_data ) ) . __init as * const _ as usize } , 14usize , concat ! ( "Alignment of field: " , stringify ! ( drand48_data ) , "::" , stringify ! ( __init ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const drand48_data ) ) . __a as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( drand48_data ) , "::" , stringify ! ( __a ) ) ) ; } extern "C" {
- pub fn drand48_r ( __buffer : * mut drand48_data , __result : * mut f64 , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn erand48_r ( __xsubi : * mut :: std :: os :: raw :: c_ushort , __buffer : * mut drand48_data , __result : * mut f64 , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn lrand48_r ( __buffer : * mut drand48_data , __result : * mut :: std :: os :: raw :: c_long , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn nrand48_r ( __xsubi : * mut :: std :: os :: raw :: c_ushort , __buffer : * mut drand48_data , __result : * mut :: std :: os :: raw :: c_long , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mrand48_r ( __buffer : * mut drand48_data , __result : * mut :: std :: os :: raw :: c_long , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn jrand48_r ( __xsubi : * mut :: std :: os :: raw :: c_ushort , __buffer : * mut drand48_data , __result : * mut :: std :: os :: raw :: c_long , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn srand48_r ( __seedval : :: std :: os :: raw :: c_long , __buffer : * mut drand48_data , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn seed48_r ( __seed16v : * mut :: std :: os :: raw :: c_ushort , __buffer : * mut drand48_data , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn lcong48_r ( __param : * mut :: std :: os :: raw :: c_ushort , __buffer : * mut drand48_data , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn malloc ( __size : usize , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn calloc ( __nmemb : usize , __size : usize , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn realloc ( __ptr : * mut :: std :: os :: raw :: c_void , __size : usize , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn free ( __ptr : * mut :: std :: os :: raw :: c_void , ) ;
-} extern "C" {
- pub fn alloca ( __size : usize , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn valloc ( __size : usize , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn posix_memalign ( __memptr : * mut * mut :: std :: os :: raw :: c_void , __alignment : usize , __size : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn aligned_alloc ( __alignment : usize , __size : usize , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn abort ( ) ;
-} extern "C" {
- pub fn atexit ( __func : :: std :: option :: Option < unsafe extern "C" fn ( ) > , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn at_quick_exit ( __func : :: std :: option :: Option < unsafe extern "C" fn ( ) > , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn on_exit ( __func : :: std :: option :: Option < unsafe extern "C" fn ( __status : :: std :: os :: raw :: c_int , __arg : * mut :: std :: os :: raw :: c_void ) > , __arg : * mut :: std :: os :: raw :: c_void , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn exit ( __status : :: std :: os :: raw :: c_int , ) ;
-} extern "C" {
- pub fn quick_exit ( __status : :: std :: os :: raw :: c_int , ) ;
-} extern "C" {
- pub fn _Exit ( __status : :: std :: os :: raw :: c_int , ) ;
-} extern "C" {
- pub fn getenv ( __name : * const :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn putenv ( __string : * mut :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn setenv ( __name : * const :: std :: os :: raw :: c_char , __value : * const :: std :: os :: raw :: c_char , __replace : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn unsetenv ( __name : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn clearenv ( ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mktemp ( __template : * mut :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn mkstemp ( __template : * mut :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mkstemps ( __template : * mut :: std :: os :: raw :: c_char , __suffixlen : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mkdtemp ( __template : * mut :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn system ( __command : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn realpath ( __name : * const :: std :: os :: raw :: c_char , __resolved : * mut :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} pub type __compar_fn_t = :: std :: option :: Option < unsafe extern "C" fn ( arg1 : * const :: std :: os :: raw :: c_void , arg2 : * const :: std :: os :: raw :: c_void ) -> :: std :: os :: raw :: c_int > ; extern "C" {
- pub fn bsearch ( __key : * const :: std :: os :: raw :: c_void , __base : * const :: std :: os :: raw :: c_void , __nmemb : usize , __size : usize , __compar : __compar_fn_t , ) -> * mut :: std :: os :: raw :: c_void ;
-} extern "C" {
- pub fn qsort ( __base : * mut :: std :: os :: raw :: c_void , __nmemb : usize , __size : usize , __compar : __compar_fn_t , ) ;
-} extern "C" {
- pub fn abs ( __x : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn labs ( __x : :: std :: os :: raw :: c_long , ) -> :: std :: os :: raw :: c_long ;
-} extern "C" {
- pub fn llabs ( __x : :: std :: os :: raw :: c_longlong , ) -> :: std :: os :: raw :: c_longlong ;
-} extern "C" {
- pub fn div ( __numer : :: std :: os :: raw :: c_int , __denom : :: std :: os :: raw :: c_int , ) -> div_t ;
-} extern "C" {
- pub fn ldiv ( __numer : :: std :: os :: raw :: c_long , __denom : :: std :: os :: raw :: c_long , ) -> ldiv_t ;
-} extern "C" {
- pub fn lldiv ( __numer : :: std :: os :: raw :: c_longlong , __denom : :: std :: os :: raw :: c_longlong , ) -> lldiv_t ;
-} extern "C" {
- pub fn ecvt ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn fcvt ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn gcvt ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __buf : * mut :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn qecvt ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn qfcvt ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn qgcvt ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __buf : * mut :: std :: os :: raw :: c_char , ) -> * mut :: std :: os :: raw :: c_char ;
-} extern "C" {
- pub fn ecvt_r ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , __buf : * mut :: std :: os :: raw :: c_char , __len : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn fcvt_r ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , __buf : * mut :: std :: os :: raw :: c_char , __len : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn qecvt_r ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , __buf : * mut :: std :: os :: raw :: c_char , __len : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn qfcvt_r ( __value : f64 , __ndigit : :: std :: os :: raw :: c_int , __decpt : * mut :: std :: os :: raw :: c_int , __sign : * mut :: std :: os :: raw :: c_int , __buf : * mut :: std :: os :: raw :: c_char , __len : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mblen ( __s : * const :: std :: os :: raw :: c_char , __n : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mbtowc ( __pwc : * mut wchar_t , __s : * const :: std :: os :: raw :: c_char , __n : usize , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn wctomb ( __s : * mut :: std :: os :: raw :: c_char , __wchar : wchar_t , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn mbstowcs ( __pwcs : * mut wchar_t , __s : * const :: std :: os :: raw :: c_char , __n : usize , ) -> usize ;
-} extern "C" {
- pub fn wcstombs ( __s : * mut :: std :: os :: raw :: c_char , __pwcs : * const wchar_t , __n : usize , ) -> usize ;
-} extern "C" {
- pub fn rpmatch ( __response : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn getsubopt ( __optionp : * mut * mut :: std :: os :: raw :: c_char , __tokens : * const * const :: std :: os :: raw :: c_char , __valuep : * mut * mut :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
- pub fn getloadavg ( __loadavg : * mut f64 , __nelem : :: std :: os :: raw :: c_int , ) -> :: std :: os :: raw :: c_int ;
-} pub type int_least8_t = :: std :: os :: raw :: c_schar ; pub type int_least16_t = :: std :: os :: raw :: c_short ; pub type int_least32_t = :: std :: os :: raw :: c_int ; pub type int_least64_t = :: std :: os :: raw :: c_long ; pub type uint_least8_t = :: std :: os :: raw :: c_uchar ; pub type uint_least16_t = :: std :: os :: raw :: c_ushort ; pub type uint_least32_t = :: std :: os :: raw :: c_uint ; pub type uint_least64_t = :: std :: os :: raw :: c_ulong ; pub type int_fast8_t = :: std :: os :: raw :: c_schar ; pub type int_fast16_t = :: std :: os :: raw :: c_long ; pub type int_fast32_t = :: std :: os :: raw :: c_long ; pub type int_fast64_t = :: std :: os :: raw :: c_long ; pub type uint_fast8_t = :: std :: os :: raw :: c_uchar ; pub type uint_fast16_t = :: std :: os :: raw :: c_ulong ; pub type uint_fast32_t = :: std :: os :: raw :: c_ulong ; pub type uint_fast64_t = :: std :: os :: raw :: c_ulong ; pub type intmax_t = __intmax_t ; pub type uintmax_t = __uintmax_t ; # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct max_align_t { pub __clang_max_align_nonce1 : :: std :: os :: raw :: c_longlong , pub __bindgen_padding_0 : u64 , pub __clang_max_align_nonce2 : f64 , } # [ test ] fn bindgen_test_layout_max_align_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < max_align_t > ( ) , 32usize , concat ! ( "Size of: " , stringify ! ( max_align_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const max_align_t ) ) . __clang_max_align_nonce1 as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( max_align_t ) , "::" , stringify ! ( __clang_max_align_nonce1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const max_align_t ) ) . __clang_max_align_nonce2 as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( max_align_t ) , "::" , stringify ! ( __clang_max_align_nonce2 ) ) ) ; }
- /// Generic vector structure.
-///
-/// @memberof vector
- # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vector_t {
- /// Pointer to dynamically allocated items.
- pub items : * mut :: std :: os :: raw :: c_void ,
- /// Number of items that can be held in currently allocated storage.
- pub capacity : usize ,
- /// Number of items.
- pub size : usize ,
- /// Size (in bytes) of a single item.
- pub item_size : usize , } # [ test ] fn bindgen_test_layout_vector_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vector_t > ( ) , 32usize , concat ! ( "Size of: " , stringify ! ( vector_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vector_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( vector_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vector_t ) ) . items as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vector_t ) , "::" , stringify ! ( items ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vector_t ) ) . capacity as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vector_t ) , "::" , stringify ! ( capacity ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vector_t ) ) . size as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( vector_t ) , "::" , stringify ! ( size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vector_t ) ) . item_size as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( vector_t ) , "::" , stringify ! ( item_size ) ) ) ; } extern "C" {
-
- /// Creates a new empty vector.
-///
-/// @param   item_size    item size in bytes
-/// @return               a new empty vector
-///
-
- pub fn vector_new ( item_size : usize , ) -> * mut vector_t ;
-} extern "C" {
-
- /// Deletes a vector.
-///
-/// @param self a vector structure
-///
-
- pub fn vector_delete ( self_ : * mut vector_t , ) ;
-} extern "C" {
-
- /// Returns a pointer to the item located at specified index.
-///
-/// @param  self  a vector structure
-/// @param  index the index of the item to be returned
-/// @return       pointer on the specified item
-
- pub fn vector_get ( self_ : * const vector_t , index : usize , ) -> * const :: std :: os :: raw :: c_void ;
-} extern "C" {
-
- /// Returns a pointer to the first item.
-///
-/// @param  self  a vector structure
-/// @return       pointer on the first item
-
- pub fn vector_front ( self_ : * const vector_t , ) -> * const :: std :: os :: raw :: c_void ;
-} extern "C" {
-
- /// Returns a pointer to the last item
-///
-/// @param  self  a vector structure
-/// @return pointer on the last item
-
- pub fn vector_back ( self_ : * const vector_t , ) -> * const :: std :: os :: raw :: c_void ;
-} extern "C" {
-
- /// Check if an item is contained within the vector.
-///
-/// @param  self  a vector structure
-/// @param  item  item to be searched in the vector
-/// @param  cmp   a pointer a comparison function
-/// @return       1 if item is contained within the vector, 0 otherwise
-
- pub fn vector_contains ( self_ : * const vector_t , item : * const :: std :: os :: raw :: c_void , cmp : :: std :: option :: Option < unsafe extern "C" fn ( arg1 : * const :: std :: os :: raw :: c_void , arg2 : * const :: std :: os :: raw :: c_void ) -> :: std :: os :: raw :: c_int > , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
-
- /// Checks whether the vector is empty.
-///
-/// @param  self  a vector structure
-/// @return       1 if the vector is empty, 0 otherwise
-
- pub fn vector_empty ( self_ : * const vector_t , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
-
- /// Returns the number of items
-///
-/// @param  self  a vector structure
-/// @return       number of items
-
- pub fn vector_size ( self_ : * const vector_t , ) -> usize ;
-} extern "C" {
-
- /// Reserve storage such that it can hold at last size items.
-///
-/// @param  self  a vector structure
-/// @param  size  the new storage capacity
-
- pub fn vector_reserve ( self_ : * mut vector_t , size : usize , ) ;
-} extern "C" {
-
- /// Returns current storage capacity
-///
-/// @param  self  a vector structure
-/// @return       storage capacity
-
- pub fn vector_capacity ( self_ : * const vector_t , ) -> usize ;
-} extern "C" {
-
- /// Decrease capacity to fit actual size.
-///
-/// @param  self  a vector structure
-
- pub fn vector_shrink ( self_ : * mut vector_t , ) ;
-} extern "C" {
-
- /// Removes all items.
-///
-/// @param  self  a vector structure
-
- pub fn vector_clear ( self_ : * mut vector_t , ) ;
-} extern "C" {
-
- /// Replace an item.
-///
-/// @param  self  a vector structure
-/// @param  index the index of the item to be replaced
-/// @param  item  the new item
-
- pub fn vector_set ( self_ : * mut vector_t , index : usize , item : * const :: std :: os :: raw :: c_void , ) ;
-} extern "C" {
-
- /// Erase an item.
-///
-/// @param  self  a vector structure
-/// @param  index the index of the item to be erased
-
- pub fn vector_erase ( self_ : * mut vector_t , index : usize , ) ;
-} extern "C" {
-
- /// Erase a range of items.
-///
-/// @param  self  a vector structure
-/// @param  first the index of the first item to be erased
-/// @param  last  the index of the last item to be erased
-
- pub fn vector_erase_range ( self_ : * mut vector_t , first : usize , last : usize , ) ;
-} extern "C" {
-
- /// Appends given item to the end of the vector.
-///
-/// @param  self a vector structure
-/// @param  item the item to be inserted
-
- pub fn vector_push_back ( self_ : * mut vector_t , item : * const :: std :: os :: raw :: c_void , ) ;
-} extern "C" {
-
- /// Removes the last item of the vector.
-///
-/// @param  self a vector structure
-
- pub fn vector_pop_back ( self_ : * mut vector_t , ) ;
-} extern "C" {
-
- /// Resizes the vector to contain size items
-///
-/// If the current size is less than size, additional items are appended and
-/// initialized with value. If the current size is greater than size, the
-/// vector is reduced to its first size elements.
-///
-/// @param  self a vector structure
-/// @param  size the new size
-
- pub fn vector_resize ( self_ : * mut vector_t , size : usize , ) ;
-} extern "C" {
-
- /// Insert a single item at specified index.
-///
-/// @param  self  a vector structure
-/// @param  index location before which to insert item
-/// @param  item  the item to be inserted
-
- pub fn vector_insert ( self_ : * mut vector_t , index : usize , item : * const :: std :: os :: raw :: c_void , ) ;
-} extern "C" {
-
- /// Insert raw data at specified index.
-///
-/// @param  self  a vector structure
-/// @param  index location before which to insert item
-/// @param  data  a pointer to the items to be inserted
-/// @param  count the number of items to be inserted
-
- pub fn vector_insert_data ( self_ : * mut vector_t , index : usize , data : * const :: std :: os :: raw :: c_void , count : usize , ) ;
-} extern "C" {
-
- /// Append raw data to the end of the vector.
-///
-/// @param  self  a vector structure
-/// @param  data  a pointer to the items to be inserted
-/// @param  count the number of items to be inserted
-
- pub fn vector_push_back_data ( self_ : * mut vector_t , data : * const :: std :: os :: raw :: c_void , count : usize , ) ;
-} extern "C" {
-
- /// Sort vector items according to cmp function.
-///
-/// @param  self  a vector structure
-/// @param  cmp   a pointer a comparison function
-
- pub fn vector_sort ( self_ : * mut vector_t , cmp : :: std :: option :: Option < unsafe extern "C" fn ( arg1 : * const :: std :: os :: raw :: c_void , arg2 : * const :: std :: os :: raw :: c_void ) -> :: std :: os :: raw :: c_int > , ) ;
+pub const _FEATURES_H: u32 = 1;
+pub const _DEFAULT_SOURCE: u32 = 1;
+pub const __GLIBC_USE_ISOC2X: u32 = 0;
+pub const __USE_ISOC11: u32 = 1;
+pub const __USE_ISOC99: u32 = 1;
+pub const __USE_ISOC95: u32 = 1;
+pub const __USE_POSIX_IMPLICITLY: u32 = 1;
+pub const _POSIX_SOURCE: u32 = 1;
+pub const _POSIX_C_SOURCE: u32 = 200809;
+pub const __USE_POSIX: u32 = 1;
+pub const __USE_POSIX2: u32 = 1;
+pub const __USE_POSIX199309: u32 = 1;
+pub const __USE_POSIX199506: u32 = 1;
+pub const __USE_XOPEN2K: u32 = 1;
+pub const __USE_XOPEN2K8: u32 = 1;
+pub const _ATFILE_SOURCE: u32 = 1;
+pub const __USE_MISC: u32 = 1;
+pub const __USE_ATFILE: u32 = 1;
+pub const __USE_FORTIFY_LEVEL: u32 = 0;
+pub const __GLIBC_USE_DEPRECATED_GETS: u32 = 0;
+pub const __GLIBC_USE_DEPRECATED_SCANF: u32 = 0;
+pub const _STDC_PREDEF_H: u32 = 1;
+pub const __STDC_IEC_559__: u32 = 1;
+pub const __STDC_IEC_559_COMPLEX__: u32 = 1;
+pub const __STDC_ISO_10646__: u32 = 201706;
+pub const __GNU_LIBRARY__: u32 = 6;
+pub const __GLIBC__: u32 = 2;
+pub const __GLIBC_MINOR__: u32 = 31;
+pub const _SYS_CDEFS_H: u32 = 1;
+pub const __glibc_c99_flexarr_available: u32 = 1;
+pub const __WORDSIZE: u32 = 64;
+pub const __WORDSIZE_TIME64_COMPAT32: u32 = 1;
+pub const __SYSCALL_WORDSIZE: u32 = 64;
+pub const __LONG_DOUBLE_USES_FLOAT128: u32 = 0;
+pub const __HAVE_GENERIC_SELECTION: u32 = 1;
+pub const __GLIBC_USE_LIB_EXT2: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT_C2X: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X: u32 = 0;
+pub const __GLIBC_USE_IEC_60559_TYPES_EXT: u32 = 0;
+pub const _STDLIB_H: u32 = 1;
+pub const WNOHANG: u32 = 1;
+pub const WUNTRACED: u32 = 2;
+pub const WSTOPPED: u32 = 2;
+pub const WEXITED: u32 = 4;
+pub const WCONTINUED: u32 = 8;
+pub const WNOWAIT: u32 = 16777216;
+pub const __WNOTHREAD: u32 = 536870912;
+pub const __WALL: u32 = 1073741824;
+pub const __WCLONE: u32 = 2147483648;
+pub const __ENUM_IDTYPE_T: u32 = 1;
+pub const __W_CONTINUED: u32 = 65535;
+pub const __WCOREFLAG: u32 = 128;
+pub const __HAVE_FLOAT128: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT128: u32 = 0;
+pub const __HAVE_FLOAT64X: u32 = 1;
+pub const __HAVE_FLOAT64X_LONG_DOUBLE: u32 = 1;
+pub const __HAVE_FLOAT16: u32 = 0;
+pub const __HAVE_FLOAT32: u32 = 1;
+pub const __HAVE_FLOAT64: u32 = 1;
+pub const __HAVE_FLOAT32X: u32 = 1;
+pub const __HAVE_FLOAT128X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT16: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT32: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT64: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT32X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT64X: u32 = 0;
+pub const __HAVE_DISTINCT_FLOAT128X: u32 = 0;
+pub const __HAVE_FLOATN_NOT_TYPEDEF: u32 = 0;
+pub const __ldiv_t_defined: u32 = 1;
+pub const __lldiv_t_defined: u32 = 1;
+pub const RAND_MAX: u32 = 2147483647;
+pub const EXIT_FAILURE: u32 = 1;
+pub const EXIT_SUCCESS: u32 = 0;
+pub const _SYS_TYPES_H: u32 = 1;
+pub const _BITS_TYPES_H: u32 = 1;
+pub const __TIMESIZE: u32 = 64;
+pub const _BITS_TYPESIZES_H: u32 = 1;
+pub const __OFF_T_MATCHES_OFF64_T: u32 = 1;
+pub const __INO_T_MATCHES_INO64_T: u32 = 1;
+pub const __RLIM_T_MATCHES_RLIM64_T: u32 = 1;
+pub const __STATFS_MATCHES_STATFS64: u32 = 1;
+pub const __FD_SETSIZE: u32 = 1024;
+pub const _BITS_TIME64_H: u32 = 1;
+pub const __clock_t_defined: u32 = 1;
+pub const __clockid_t_defined: u32 = 1;
+pub const __time_t_defined: u32 = 1;
+pub const __timer_t_defined: u32 = 1;
+pub const _BITS_STDINT_INTN_H: u32 = 1;
+pub const __BIT_TYPES_DEFINED__: u32 = 1;
+pub const _ENDIAN_H: u32 = 1;
+pub const _BITS_ENDIAN_H: u32 = 1;
+pub const __LITTLE_ENDIAN: u32 = 1234;
+pub const __BIG_ENDIAN: u32 = 4321;
+pub const __PDP_ENDIAN: u32 = 3412;
+pub const _BITS_ENDIANNESS_H: u32 = 1;
+pub const __BYTE_ORDER: u32 = 1234;
+pub const __FLOAT_WORD_ORDER: u32 = 1234;
+pub const LITTLE_ENDIAN: u32 = 1234;
+pub const BIG_ENDIAN: u32 = 4321;
+pub const PDP_ENDIAN: u32 = 3412;
+pub const BYTE_ORDER: u32 = 1234;
+pub const _BITS_BYTESWAP_H: u32 = 1;
+pub const _BITS_UINTN_IDENTITY_H: u32 = 1;
+pub const _SYS_SELECT_H: u32 = 1;
+pub const __FD_ZERO_STOS: &'static [u8; 6usize] = b"stosq\0";
+pub const __sigset_t_defined: u32 = 1;
+pub const __timeval_defined: u32 = 1;
+pub const _STRUCT_TIMESPEC: u32 = 1;
+pub const FD_SETSIZE: u32 = 1024;
+pub const _BITS_PTHREADTYPES_COMMON_H: u32 = 1;
+pub const _THREAD_SHARED_TYPES_H: u32 = 1;
+pub const _BITS_PTHREADTYPES_ARCH_H: u32 = 1;
+pub const __SIZEOF_PTHREAD_MUTEX_T: u32 = 40;
+pub const __SIZEOF_PTHREAD_ATTR_T: u32 = 56;
+pub const __SIZEOF_PTHREAD_RWLOCK_T: u32 = 56;
+pub const __SIZEOF_PTHREAD_BARRIER_T: u32 = 32;
+pub const __SIZEOF_PTHREAD_MUTEXATTR_T: u32 = 4;
+pub const __SIZEOF_PTHREAD_COND_T: u32 = 48;
+pub const __SIZEOF_PTHREAD_CONDATTR_T: u32 = 4;
+pub const __SIZEOF_PTHREAD_RWLOCKATTR_T: u32 = 8;
+pub const __SIZEOF_PTHREAD_BARRIERATTR_T: u32 = 4;
+pub const _THREAD_MUTEX_INTERNAL_H: u32 = 1;
+pub const __PTHREAD_MUTEX_HAVE_PREV: u32 = 1;
+pub const __have_pthread_attr_t: u32 = 1;
+pub const _ALLOCA_H: u32 = 1;
+pub const _STDINT_H: u32 = 1;
+pub const _BITS_WCHAR_H: u32 = 1;
+pub const _BITS_STDINT_UINTN_H: u32 = 1;
+pub const INT8_MIN: i32 = -128;
+pub const INT16_MIN: i32 = -32768;
+pub const INT32_MIN: i32 = -2147483648;
+pub const INT8_MAX: u32 = 127;
+pub const INT16_MAX: u32 = 32767;
+pub const INT32_MAX: u32 = 2147483647;
+pub const UINT8_MAX: u32 = 255;
+pub const UINT16_MAX: u32 = 65535;
+pub const UINT32_MAX: u32 = 4294967295;
+pub const INT_LEAST8_MIN: i32 = -128;
+pub const INT_LEAST16_MIN: i32 = -32768;
+pub const INT_LEAST32_MIN: i32 = -2147483648;
+pub const INT_LEAST8_MAX: u32 = 127;
+pub const INT_LEAST16_MAX: u32 = 32767;
+pub const INT_LEAST32_MAX: u32 = 2147483647;
+pub const UINT_LEAST8_MAX: u32 = 255;
+pub const UINT_LEAST16_MAX: u32 = 65535;
+pub const UINT_LEAST32_MAX: u32 = 4294967295;
+pub const INT_FAST8_MIN: i32 = -128;
+pub const INT_FAST16_MIN: i64 = -9223372036854775808;
+pub const INT_FAST32_MIN: i64 = -9223372036854775808;
+pub const INT_FAST8_MAX: u32 = 127;
+pub const INT_FAST16_MAX: u64 = 9223372036854775807;
+pub const INT_FAST32_MAX: u64 = 9223372036854775807;
+pub const UINT_FAST8_MAX: u32 = 255;
+pub const UINT_FAST16_MAX: i32 = -1;
+pub const UINT_FAST32_MAX: i32 = -1;
+pub const INTPTR_MIN: i64 = -9223372036854775808;
+pub const INTPTR_MAX: u64 = 9223372036854775807;
+pub const UINTPTR_MAX: i32 = -1;
+pub const PTRDIFF_MIN: i64 = -9223372036854775808;
+pub const PTRDIFF_MAX: u64 = 9223372036854775807;
+pub const SIG_ATOMIC_MIN: i32 = -2147483648;
+pub const SIG_ATOMIC_MAX: u32 = 2147483647;
+pub const SIZE_MAX: i32 = -1;
+pub const WINT_MIN: u32 = 0;
+pub const WINT_MAX: u32 = 4294967295;
+pub const FT_RENDER_POOL_SIZE: u32 = 16384;
+pub const FT_MAX_MODULES: u32 = 32;
+pub const TT_CONFIG_OPTION_SUBPIXEL_HINTING: u32 = 2;
+pub const TT_CONFIG_OPTION_MAX_RUNNABLE_OPCODES: u32 = 1000000;
+pub const T1_MAX_DICT_DEPTH: u32 = 5;
+pub const T1_MAX_SUBRS_CALLS: u32 = 16;
+pub const T1_MAX_CHARSTRINGS_OPERANDS: u32 = 256;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X1: u32 = 500;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y1: u32 = 400;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X2: u32 = 1000;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y2: u32 = 275;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X3: u32 = 1667;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y3: u32 = 275;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_X4: u32 = 2333;
+pub const CFF_CONFIG_OPTION_DARKENING_PARAMETER_Y4: u32 = 0;
+pub const _LIBC_LIMITS_H_: u32 = 1;
+pub const MB_LEN_MAX: u32 = 16;
+pub const _BITS_POSIX1_LIM_H: u32 = 1;
+pub const _POSIX_AIO_LISTIO_MAX: u32 = 2;
+pub const _POSIX_AIO_MAX: u32 = 1;
+pub const _POSIX_ARG_MAX: u32 = 4096;
+pub const _POSIX_CHILD_MAX: u32 = 25;
+pub const _POSIX_DELAYTIMER_MAX: u32 = 32;
+pub const _POSIX_HOST_NAME_MAX: u32 = 255;
+pub const _POSIX_LINK_MAX: u32 = 8;
+pub const _POSIX_LOGIN_NAME_MAX: u32 = 9;
+pub const _POSIX_MAX_CANON: u32 = 255;
+pub const _POSIX_MAX_INPUT: u32 = 255;
+pub const _POSIX_MQ_OPEN_MAX: u32 = 8;
+pub const _POSIX_MQ_PRIO_MAX: u32 = 32;
+pub const _POSIX_NAME_MAX: u32 = 14;
+pub const _POSIX_NGROUPS_MAX: u32 = 8;
+pub const _POSIX_OPEN_MAX: u32 = 20;
+pub const _POSIX_PATH_MAX: u32 = 256;
+pub const _POSIX_PIPE_BUF: u32 = 512;
+pub const _POSIX_RE_DUP_MAX: u32 = 255;
+pub const _POSIX_RTSIG_MAX: u32 = 8;
+pub const _POSIX_SEM_NSEMS_MAX: u32 = 256;
+pub const _POSIX_SEM_VALUE_MAX: u32 = 32767;
+pub const _POSIX_SIGQUEUE_MAX: u32 = 32;
+pub const _POSIX_SSIZE_MAX: u32 = 32767;
+pub const _POSIX_STREAM_MAX: u32 = 8;
+pub const _POSIX_SYMLINK_MAX: u32 = 255;
+pub const _POSIX_SYMLOOP_MAX: u32 = 8;
+pub const _POSIX_TIMER_MAX: u32 = 32;
+pub const _POSIX_TTY_NAME_MAX: u32 = 9;
+pub const _POSIX_TZNAME_MAX: u32 = 6;
+pub const _POSIX_CLOCKRES_MIN: u32 = 20000000;
+pub const NR_OPEN: u32 = 1024;
+pub const NGROUPS_MAX: u32 = 65536;
+pub const ARG_MAX: u32 = 131072;
+pub const LINK_MAX: u32 = 127;
+pub const MAX_CANON: u32 = 255;
+pub const MAX_INPUT: u32 = 255;
+pub const NAME_MAX: u32 = 255;
+pub const PATH_MAX: u32 = 4096;
+pub const PIPE_BUF: u32 = 4096;
+pub const XATTR_NAME_MAX: u32 = 255;
+pub const XATTR_SIZE_MAX: u32 = 65536;
+pub const XATTR_LIST_MAX: u32 = 65536;
+pub const RTSIG_MAX: u32 = 32;
+pub const _POSIX_THREAD_KEYS_MAX: u32 = 128;
+pub const PTHREAD_KEYS_MAX: u32 = 1024;
+pub const _POSIX_THREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
+pub const PTHREAD_DESTRUCTOR_ITERATIONS: u32 = 4;
+pub const _POSIX_THREAD_THREADS_MAX: u32 = 64;
+pub const AIO_PRIO_DELTA_MAX: u32 = 20;
+pub const PTHREAD_STACK_MIN: u32 = 16384;
+pub const DELAYTIMER_MAX: u32 = 2147483647;
+pub const TTY_NAME_MAX: u32 = 32;
+pub const LOGIN_NAME_MAX: u32 = 256;
+pub const HOST_NAME_MAX: u32 = 64;
+pub const MQ_PRIO_MAX: u32 = 32768;
+pub const SEM_VALUE_MAX: u32 = 2147483647;
+pub const _BITS_POSIX2_LIM_H: u32 = 1;
+pub const _POSIX2_BC_BASE_MAX: u32 = 99;
+pub const _POSIX2_BC_DIM_MAX: u32 = 2048;
+pub const _POSIX2_BC_SCALE_MAX: u32 = 99;
+pub const _POSIX2_BC_STRING_MAX: u32 = 1000;
+pub const _POSIX2_COLL_WEIGHTS_MAX: u32 = 2;
+pub const _POSIX2_EXPR_NEST_MAX: u32 = 32;
+pub const _POSIX2_LINE_MAX: u32 = 2048;
+pub const _POSIX2_RE_DUP_MAX: u32 = 255;
+pub const _POSIX2_CHARCLASS_NAME_MAX: u32 = 14;
+pub const BC_BASE_MAX: u32 = 99;
+pub const BC_DIM_MAX: u32 = 2048;
+pub const BC_SCALE_MAX: u32 = 99;
+pub const BC_STRING_MAX: u32 = 1000;
+pub const COLL_WEIGHTS_MAX: u32 = 255;
+pub const EXPR_NEST_MAX: u32 = 32;
+pub const LINE_MAX: u32 = 2048;
+pub const CHARCLASS_NAME_MAX: u32 = 2048;
+pub const RE_DUP_MAX: u32 = 32767;
+pub const _STRING_H: u32 = 1;
+pub const _BITS_TYPES_LOCALE_T_H: u32 = 1;
+pub const _BITS_TYPES___LOCALE_T_H: u32 = 1;
+pub const _STRINGS_H: u32 = 1;
+pub const _STDIO_H: u32 = 1;
+pub const __GNUC_VA_LIST: u32 = 1;
+pub const _____fpos_t_defined: u32 = 1;
+pub const ____mbstate_t_defined: u32 = 1;
+pub const _____fpos64_t_defined: u32 = 1;
+pub const ____FILE_defined: u32 = 1;
+pub const __FILE_defined: u32 = 1;
+pub const __struct_FILE_defined: u32 = 1;
+pub const _IO_EOF_SEEN: u32 = 16;
+pub const _IO_ERR_SEEN: u32 = 32;
+pub const _IO_USER_LOCK: u32 = 32768;
+pub const _IOFBF: u32 = 0;
+pub const _IOLBF: u32 = 1;
+pub const _IONBF: u32 = 2;
+pub const BUFSIZ: u32 = 8192;
+pub const EOF: i32 = -1;
+pub const SEEK_SET: u32 = 0;
+pub const SEEK_CUR: u32 = 1;
+pub const SEEK_END: u32 = 2;
+pub const P_tmpdir: &'static [u8; 5usize] = b"/tmp\0";
+pub const _BITS_STDIO_LIM_H: u32 = 1;
+pub const L_tmpnam: u32 = 20;
+pub const TMP_MAX: u32 = 238328;
+pub const FILENAME_MAX: u32 = 4096;
+pub const L_ctermid: u32 = 9;
+pub const FOPEN_MAX: u32 = 16;
+pub const _SETJMP_H: u32 = 1;
+pub const _BITS_SETJMP_H: u32 = 1;
+pub const HAVE_UNISTD_H: u32 = 1;
+pub const HAVE_FCNTL_H: u32 = 1;
+pub const HAVE_STDINT_H: u32 = 1;
+pub const FT_OUTLINE_NONE: u32 = 0;
+pub const FT_OUTLINE_OWNER: u32 = 1;
+pub const FT_OUTLINE_EVEN_ODD_FILL: u32 = 2;
+pub const FT_OUTLINE_REVERSE_FILL: u32 = 4;
+pub const FT_OUTLINE_IGNORE_DROPOUTS: u32 = 8;
+pub const FT_OUTLINE_SMART_DROPOUTS: u32 = 16;
+pub const FT_OUTLINE_INCLUDE_STUBS: u32 = 32;
+pub const FT_OUTLINE_HIGH_PRECISION: u32 = 256;
+pub const FT_OUTLINE_SINGLE_PASS: u32 = 512;
+pub const ft_outline_none: u32 = 0;
+pub const ft_outline_owner: u32 = 1;
+pub const ft_outline_even_odd_fill: u32 = 2;
+pub const ft_outline_reverse_fill: u32 = 4;
+pub const ft_outline_ignore_dropouts: u32 = 8;
+pub const ft_outline_high_precision: u32 = 256;
+pub const ft_outline_single_pass: u32 = 512;
+pub const FT_CURVE_TAG_ON: u32 = 1;
+pub const FT_CURVE_TAG_CONIC: u32 = 0;
+pub const FT_CURVE_TAG_CUBIC: u32 = 2;
+pub const FT_CURVE_TAG_HAS_SCANMODE: u32 = 4;
+pub const FT_CURVE_TAG_TOUCH_X: u32 = 8;
+pub const FT_CURVE_TAG_TOUCH_Y: u32 = 16;
+pub const FT_CURVE_TAG_TOUCH_BOTH: u32 = 24;
+pub const FT_Curve_Tag_On: u32 = 1;
+pub const FT_Curve_Tag_Conic: u32 = 0;
+pub const FT_Curve_Tag_Cubic: u32 = 2;
+pub const FT_Curve_Tag_Touch_X: u32 = 8;
+pub const FT_Curve_Tag_Touch_Y: u32 = 16;
+pub const FT_RASTER_FLAG_DEFAULT: u32 = 0;
+pub const FT_RASTER_FLAG_AA: u32 = 1;
+pub const FT_RASTER_FLAG_DIRECT: u32 = 2;
+pub const FT_RASTER_FLAG_CLIP: u32 = 4;
+pub const ft_raster_flag_default: u32 = 0;
+pub const ft_raster_flag_aa: u32 = 1;
+pub const ft_raster_flag_direct: u32 = 2;
+pub const ft_raster_flag_clip: u32 = 4;
+pub const FT_ERR_BASE: u32 = 0;
+pub const FT_FACE_FLAG_SCALABLE: u32 = 1;
+pub const FT_FACE_FLAG_FIXED_SIZES: u32 = 2;
+pub const FT_FACE_FLAG_FIXED_WIDTH: u32 = 4;
+pub const FT_FACE_FLAG_SFNT: u32 = 8;
+pub const FT_FACE_FLAG_HORIZONTAL: u32 = 16;
+pub const FT_FACE_FLAG_VERTICAL: u32 = 32;
+pub const FT_FACE_FLAG_KERNING: u32 = 64;
+pub const FT_FACE_FLAG_FAST_GLYPHS: u32 = 128;
+pub const FT_FACE_FLAG_MULTIPLE_MASTERS: u32 = 256;
+pub const FT_FACE_FLAG_GLYPH_NAMES: u32 = 512;
+pub const FT_FACE_FLAG_EXTERNAL_STREAM: u32 = 1024;
+pub const FT_FACE_FLAG_HINTER: u32 = 2048;
+pub const FT_FACE_FLAG_CID_KEYED: u32 = 4096;
+pub const FT_FACE_FLAG_TRICKY: u32 = 8192;
+pub const FT_FACE_FLAG_COLOR: u32 = 16384;
+pub const FT_FACE_FLAG_VARIATION: u32 = 32768;
+pub const FT_STYLE_FLAG_ITALIC: u32 = 1;
+pub const FT_STYLE_FLAG_BOLD: u32 = 2;
+pub const FT_OPEN_MEMORY: u32 = 1;
+pub const FT_OPEN_STREAM: u32 = 2;
+pub const FT_OPEN_PATHNAME: u32 = 4;
+pub const FT_OPEN_DRIVER: u32 = 8;
+pub const FT_OPEN_PARAMS: u32 = 16;
+pub const ft_open_memory: u32 = 1;
+pub const ft_open_stream: u32 = 2;
+pub const ft_open_pathname: u32 = 4;
+pub const ft_open_driver: u32 = 8;
+pub const ft_open_params: u32 = 16;
+pub const FT_LOAD_DEFAULT: u32 = 0;
+pub const FT_LOAD_NO_SCALE: u32 = 1;
+pub const FT_LOAD_NO_HINTING: u32 = 2;
+pub const FT_LOAD_RENDER: u32 = 4;
+pub const FT_LOAD_NO_BITMAP: u32 = 8;
+pub const FT_LOAD_VERTICAL_LAYOUT: u32 = 16;
+pub const FT_LOAD_FORCE_AUTOHINT: u32 = 32;
+pub const FT_LOAD_CROP_BITMAP: u32 = 64;
+pub const FT_LOAD_PEDANTIC: u32 = 128;
+pub const FT_LOAD_IGNORE_GLOBAL_ADVANCE_WIDTH: u32 = 512;
+pub const FT_LOAD_NO_RECURSE: u32 = 1024;
+pub const FT_LOAD_IGNORE_TRANSFORM: u32 = 2048;
+pub const FT_LOAD_MONOCHROME: u32 = 4096;
+pub const FT_LOAD_LINEAR_DESIGN: u32 = 8192;
+pub const FT_LOAD_NO_AUTOHINT: u32 = 32768;
+pub const FT_LOAD_COLOR: u32 = 1048576;
+pub const FT_LOAD_COMPUTE_METRICS: u32 = 2097152;
+pub const FT_LOAD_BITMAP_METRICS_ONLY: u32 = 4194304;
+pub const FT_LOAD_ADVANCE_ONLY: u32 = 256;
+pub const FT_LOAD_SBITS_ONLY: u32 = 16384;
+pub const FT_SUBGLYPH_FLAG_ARGS_ARE_WORDS: u32 = 1;
+pub const FT_SUBGLYPH_FLAG_ARGS_ARE_XY_VALUES: u32 = 2;
+pub const FT_SUBGLYPH_FLAG_ROUND_XY_TO_GRID: u32 = 4;
+pub const FT_SUBGLYPH_FLAG_SCALE: u32 = 8;
+pub const FT_SUBGLYPH_FLAG_XY_SCALE: u32 = 64;
+pub const FT_SUBGLYPH_FLAG_2X2: u32 = 128;
+pub const FT_SUBGLYPH_FLAG_USE_MY_METRICS: u32 = 512;
+pub const FT_FSTYPE_INSTALLABLE_EMBEDDING: u32 = 0;
+pub const FT_FSTYPE_RESTRICTED_LICENSE_EMBEDDING: u32 = 2;
+pub const FT_FSTYPE_PREVIEW_AND_PRINT_EMBEDDING: u32 = 4;
+pub const FT_FSTYPE_EDITABLE_EMBEDDING: u32 = 8;
+pub const FT_FSTYPE_NO_SUBSETTING: u32 = 256;
+pub const FT_FSTYPE_BITMAP_EMBEDDING_ONLY: u32 = 512;
+pub const FREETYPE_MAJOR: u32 = 2;
+pub const FREETYPE_MINOR: u32 = 10;
+pub const FREETYPE_PATCH: u32 = 1;
+pub type size_t = ::std::os::raw::c_ulong;
+pub type wchar_t = ::std::os::raw::c_int;
+pub const idtype_t_P_ALL: idtype_t = 0;
+pub const idtype_t_P_PID: idtype_t = 1;
+pub const idtype_t_P_PGID: idtype_t = 2;
+pub type idtype_t = u32;
+pub type _Float32 = f32;
+pub type _Float64 = f64;
+pub type _Float32x = f64;
+pub type _Float64x = u128;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct div_t {
+    pub quot: ::std::os::raw::c_int,
+    pub rem: ::std::os::raw::c_int,
 }
- /// Tuple of 4 ints.
-///
-/// Each field can be addressed using several aliases:
-/// - First component:  <b>x</b>, <b>r</b>, <b>red</b> or <b>vstart</b>
-/// - Second component: <b>y</b>, <b>g</b>, <b>green</b> or <b>vcount</b>
-/// - Third component:  <b>z</b>, <b>b</b>, <b>blue</b>, <b>width</b> or <b>istart</b>
-/// - Fourth component: <b>w</b>, <b>a</b>, <b>alpha</b>, <b>height</b> or <b>icount</b>
-///
- # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union ivec4 {
- /// < All compoments at once
- pub data : [ :: std :: os :: raw :: c_int ; 4usize ] , pub __bindgen_anon_1 : ivec4__bindgen_ty_1 , pub __bindgen_anon_2 : ivec4__bindgen_ty_2 , pub __bindgen_anon_3 : ivec4__bindgen_ty_3 , pub __bindgen_anon_4 : ivec4__bindgen_ty_4 , pub __bindgen_anon_5 : ivec4__bindgen_ty_5 ,  } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec4__bindgen_ty_1 {
- /// < Alias for first component
- pub x : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub y : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub z : :: std :: os :: raw :: c_int ,
- /// < Alias for fourht component
- pub w : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec4__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec4__bindgen_ty_1 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ivec4__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec4__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec4__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_1 ) ) . x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_1 ) , "::" , stringify ! ( x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_1 ) ) . y as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_1 ) , "::" , stringify ! ( y ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_1 ) ) . z as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_1 ) , "::" , stringify ! ( z ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_1 ) ) . w as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_1 ) , "::" , stringify ! ( w ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec4__bindgen_ty_2 {
- /// < Alias for first component
- pub x_ : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub y_ : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub width : :: std :: os :: raw :: c_int ,
- /// < Alias for fourth component
- pub height : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec4__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec4__bindgen_ty_2 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ivec4__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec4__bindgen_ty_2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec4__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_2 ) ) . x_ as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_2 ) , "::" , stringify ! ( x_ ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_2 ) ) . y_ as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_2 ) , "::" , stringify ! ( y_ ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_2 ) ) . width as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_2 ) , "::" , stringify ! ( width ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_2 ) ) . height as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_2 ) , "::" , stringify ! ( height ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec4__bindgen_ty_3 {
- /// < Alias for first component
- pub r : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub g : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub b : :: std :: os :: raw :: c_int ,
- /// < Alias for fourth component
- pub a : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec4__bindgen_ty_3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec4__bindgen_ty_3 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ivec4__bindgen_ty_3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec4__bindgen_ty_3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec4__bindgen_ty_3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_3 ) ) . r as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_3 ) , "::" , stringify ! ( r ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_3 ) ) . g as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_3 ) , "::" , stringify ! ( g ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_3 ) ) . b as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_3 ) , "::" , stringify ! ( b ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_3 ) ) . a as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_3 ) , "::" , stringify ! ( a ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec4__bindgen_ty_4 {
- /// < Alias for first component
- pub red : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub green : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub blue : :: std :: os :: raw :: c_int ,
- /// < Alias for fourth component
- pub alpha : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec4__bindgen_ty_4 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec4__bindgen_ty_4 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ivec4__bindgen_ty_4 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec4__bindgen_ty_4 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec4__bindgen_ty_4 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_4 ) ) . red as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_4 ) , "::" , stringify ! ( red ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_4 ) ) . green as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_4 ) , "::" , stringify ! ( green ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_4 ) ) . blue as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_4 ) , "::" , stringify ! ( blue ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_4 ) ) . alpha as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_4 ) , "::" , stringify ! ( alpha ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec4__bindgen_ty_5 {
- /// < Alias for first component
- pub vstart : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub vcount : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub istart : :: std :: os :: raw :: c_int ,
- /// < Alias for fourth component
- pub icount : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec4__bindgen_ty_5 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec4__bindgen_ty_5 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ivec4__bindgen_ty_5 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec4__bindgen_ty_5 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec4__bindgen_ty_5 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_5 ) ) . vstart as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_5 ) , "::" , stringify ! ( vstart ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_5 ) ) . vcount as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_5 ) , "::" , stringify ! ( vcount ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_5 ) ) . istart as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_5 ) , "::" , stringify ! ( istart ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4__bindgen_ty_5 ) ) . icount as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4__bindgen_ty_5 ) , "::" , stringify ! ( icount ) ) ) ; } # [ test ] fn bindgen_test_layout_ivec4 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec4 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( ivec4 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec4 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec4 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec4 ) ) . data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec4 ) , "::" , stringify ! ( data ) ) ) ; }
- /// Tuple of 3 ints.
-///
-/// Each field can be addressed using several aliases:
-/// - First component:  <b>x</b>, <b>r</b> or <b>red</b>
-/// - Second component: <b>y</b>, <b>g</b> or <b>green</b>
-/// - Third component:  <b>z</b>, <b>b</b> or <b>blue</b>
-///
- # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union ivec3 {
- /// < All compoments at once
- pub data : [ :: std :: os :: raw :: c_int ; 3usize ] , pub __bindgen_anon_1 : ivec3__bindgen_ty_1 , pub __bindgen_anon_2 : ivec3__bindgen_ty_2 , pub __bindgen_anon_3 : ivec3__bindgen_ty_3 ,  } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec3__bindgen_ty_1 {
- /// < Alias for first component
- pub x : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub y : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub z : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec3__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec3__bindgen_ty_1 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( ivec3__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec3__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec3__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_1 ) ) . x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_1 ) , "::" , stringify ! ( x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_1 ) ) . y as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_1 ) , "::" , stringify ! ( y ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_1 ) ) . z as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_1 ) , "::" , stringify ! ( z ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec3__bindgen_ty_2 {
- /// < Alias for first component
- pub r : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub g : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub b : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec3__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec3__bindgen_ty_2 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( ivec3__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec3__bindgen_ty_2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec3__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_2 ) ) . r as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_2 ) , "::" , stringify ! ( r ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_2 ) ) . g as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_2 ) , "::" , stringify ! ( g ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_2 ) ) . b as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_2 ) , "::" , stringify ! ( b ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec3__bindgen_ty_3 {
- /// < Alias for first component
- pub red : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub green : :: std :: os :: raw :: c_int ,
- /// < Alias for third component
- pub blue : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec3__bindgen_ty_3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec3__bindgen_ty_3 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( ivec3__bindgen_ty_3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec3__bindgen_ty_3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec3__bindgen_ty_3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_3 ) ) . red as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_3 ) , "::" , stringify ! ( red ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_3 ) ) . green as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_3 ) , "::" , stringify ! ( green ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3__bindgen_ty_3 ) ) . blue as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3__bindgen_ty_3 ) , "::" , stringify ! ( blue ) ) ) ; } # [ test ] fn bindgen_test_layout_ivec3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec3 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( ivec3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec3 ) ) . data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec3 ) , "::" , stringify ! ( data ) ) ) ; }
- /// Tuple of 2 ints.
-///
-/// Each field can be addressed using several aliases:
-/// - First component: <b>x</b>, <b>s</b> or <b>start</b>
-/// - Second component: <b>y</b>, <b>t</b> or <b>end</b>
-///
- # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union ivec2 {
- /// < All compoments at once
- pub data : [ :: std :: os :: raw :: c_int ; 2usize ] , pub __bindgen_anon_1 : ivec2__bindgen_ty_1 , pub __bindgen_anon_2 : ivec2__bindgen_ty_2 , pub __bindgen_anon_3 : ivec2__bindgen_ty_3 ,  } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec2__bindgen_ty_1 {
- /// < Alias for first component
- pub x : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub y : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec2__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec2__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( ivec2__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec2__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec2__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2__bindgen_ty_1 ) ) . x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2__bindgen_ty_1 ) , "::" , stringify ! ( x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2__bindgen_ty_1 ) ) . y as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2__bindgen_ty_1 ) , "::" , stringify ! ( y ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec2__bindgen_ty_2 {
- /// < Alias for first component
- pub s : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub t : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec2__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec2__bindgen_ty_2 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( ivec2__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec2__bindgen_ty_2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec2__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2__bindgen_ty_2 ) ) . s as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2__bindgen_ty_2 ) , "::" , stringify ! ( s ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2__bindgen_ty_2 ) ) . t as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2__bindgen_ty_2 ) , "::" , stringify ! ( t ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct ivec2__bindgen_ty_3 {
- /// < Alias for first component
- pub start : :: std :: os :: raw :: c_int ,
- /// < Alias for second component
- pub end : :: std :: os :: raw :: c_int , } # [ test ] fn bindgen_test_layout_ivec2__bindgen_ty_3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec2__bindgen_ty_3 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( ivec2__bindgen_ty_3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec2__bindgen_ty_3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec2__bindgen_ty_3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2__bindgen_ty_3 ) ) . start as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2__bindgen_ty_3 ) , "::" , stringify ! ( start ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2__bindgen_ty_3 ) ) . end as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2__bindgen_ty_3 ) , "::" , stringify ! ( end ) ) ) ; } # [ test ] fn bindgen_test_layout_ivec2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < ivec2 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( ivec2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < ivec2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( ivec2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const ivec2 ) ) . data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( ivec2 ) , "::" , stringify ! ( data ) ) ) ; }
- /// Tuple of 4 floats.
-///
-/// Each field can be addressed using several aliases:
-/// - First component:  <b>x</b>, <b>left</b>, <b>r</b> or <b>red</b>
-/// - Second component: <b>y</b>, <b>top</b>, <b>g</b> or <b>green</b>
-/// - Third component:  <b>z</b>, <b>width</b>, <b>b</b> or <b>blue</b>
-/// - Fourth component: <b>w</b>, <b>height</b>, <b>a</b> or <b>alpha</b>
- # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union vec4 {
- /// < All compoments at once
- pub data : [ f32 ; 4usize ] , pub __bindgen_anon_1 : vec4__bindgen_ty_1 , pub __bindgen_anon_2 : vec4__bindgen_ty_2 , pub __bindgen_anon_3 : vec4__bindgen_ty_3 , pub __bindgen_anon_4 : vec4__bindgen_ty_4 ,  } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec4__bindgen_ty_1 {
- /// < Alias for first component
- pub x : f32 ,
- /// < Alias for second component
- pub y : f32 ,
- /// < Alias for third component
- pub z : f32 ,
- /// < Alias for fourth component
- pub w : f32 , } # [ test ] fn bindgen_test_layout_vec4__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec4__bindgen_ty_1 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( vec4__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec4__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec4__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_1 ) ) . x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_1 ) , "::" , stringify ! ( x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_1 ) ) . y as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_1 ) , "::" , stringify ! ( y ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_1 ) ) . z as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_1 ) , "::" , stringify ! ( z ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_1 ) ) . w as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_1 ) , "::" , stringify ! ( w ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec4__bindgen_ty_2 {
- /// < Alias for first component
- pub left : f32 ,
- /// < Alias for second component
- pub top : f32 ,
- /// < Alias for third component
- pub width : f32 ,
- /// < Alias for fourth component
- pub height : f32 , } # [ test ] fn bindgen_test_layout_vec4__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec4__bindgen_ty_2 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( vec4__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec4__bindgen_ty_2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec4__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_2 ) ) . left as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_2 ) , "::" , stringify ! ( left ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_2 ) ) . top as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_2 ) , "::" , stringify ! ( top ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_2 ) ) . width as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_2 ) , "::" , stringify ! ( width ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_2 ) ) . height as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_2 ) , "::" , stringify ! ( height ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec4__bindgen_ty_3 {
- /// < Alias for first component
- pub r : f32 ,
- /// < Alias for second component
- pub g : f32 ,
- /// < Alias for third component
- pub b : f32 ,
- /// < Alias for fourth component
- pub a : f32 , } # [ test ] fn bindgen_test_layout_vec4__bindgen_ty_3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec4__bindgen_ty_3 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( vec4__bindgen_ty_3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec4__bindgen_ty_3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec4__bindgen_ty_3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_3 ) ) . r as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_3 ) , "::" , stringify ! ( r ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_3 ) ) . g as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_3 ) , "::" , stringify ! ( g ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_3 ) ) . b as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_3 ) , "::" , stringify ! ( b ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_3 ) ) . a as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_3 ) , "::" , stringify ! ( a ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec4__bindgen_ty_4 {
- /// < Alias for first component
- pub red : f32 ,
- /// < Alias for second component
- pub green : f32 ,
- /// < Alias for third component
- pub blue : f32 ,
- /// < Alias for fourth component
- pub alpha : f32 , } # [ test ] fn bindgen_test_layout_vec4__bindgen_ty_4 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec4__bindgen_ty_4 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( vec4__bindgen_ty_4 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec4__bindgen_ty_4 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec4__bindgen_ty_4 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_4 ) ) . red as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_4 ) , "::" , stringify ! ( red ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_4 ) ) . green as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_4 ) , "::" , stringify ! ( green ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_4 ) ) . blue as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_4 ) , "::" , stringify ! ( blue ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4__bindgen_ty_4 ) ) . alpha as * const _ as usize } , 12usize , concat ! ( "Alignment of field: " , stringify ! ( vec4__bindgen_ty_4 ) , "::" , stringify ! ( alpha ) ) ) ; } # [ test ] fn bindgen_test_layout_vec4 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec4 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( vec4 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec4 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec4 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec4 ) ) . data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec4 ) , "::" , stringify ! ( data ) ) ) ; }
- /// Tuple of 3 floats
-///
-/// Each field can be addressed using several aliases:
-/// - First component:  <b>x</b>, <b>r</b> or <b>red</b>
-/// - Second component: <b>y</b>, <b>g</b> or <b>green</b>
-/// - Third component:  <b>z</b>, <b>b</b> or <b>blue</b>
- # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union vec3 {
- /// < All compoments at once
- pub data : [ f32 ; 3usize ] , pub __bindgen_anon_1 : vec3__bindgen_ty_1 , pub __bindgen_anon_2 : vec3__bindgen_ty_2 , pub __bindgen_anon_3 : vec3__bindgen_ty_3 ,  } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec3__bindgen_ty_1 {
- /// < Alias for first component
- pub x : f32 ,
- /// < Alias fo second component
- pub y : f32 ,
- /// < Alias fo third component
- pub z : f32 , } # [ test ] fn bindgen_test_layout_vec3__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec3__bindgen_ty_1 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( vec3__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec3__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec3__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_1 ) ) . x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_1 ) , "::" , stringify ! ( x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_1 ) ) . y as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_1 ) , "::" , stringify ! ( y ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_1 ) ) . z as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_1 ) , "::" , stringify ! ( z ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec3__bindgen_ty_2 {
- /// < Alias for first component
- pub r : f32 ,
- /// < Alias fo second component
- pub g : f32 ,
- /// < Alias fo third component
- pub b : f32 , } # [ test ] fn bindgen_test_layout_vec3__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec3__bindgen_ty_2 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( vec3__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec3__bindgen_ty_2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec3__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_2 ) ) . r as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_2 ) , "::" , stringify ! ( r ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_2 ) ) . g as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_2 ) , "::" , stringify ! ( g ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_2 ) ) . b as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_2 ) , "::" , stringify ! ( b ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec3__bindgen_ty_3 {
- /// < Alias for first component
- pub red : f32 ,
- /// < Alias fo second component
- pub green : f32 ,
- /// < Alias fo third component
- pub blue : f32 , } # [ test ] fn bindgen_test_layout_vec3__bindgen_ty_3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec3__bindgen_ty_3 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( vec3__bindgen_ty_3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec3__bindgen_ty_3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec3__bindgen_ty_3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_3 ) ) . red as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_3 ) , "::" , stringify ! ( red ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_3 ) ) . green as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_3 ) , "::" , stringify ! ( green ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3__bindgen_ty_3 ) ) . blue as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( vec3__bindgen_ty_3 ) , "::" , stringify ! ( blue ) ) ) ; } # [ test ] fn bindgen_test_layout_vec3 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec3 > ( ) , 12usize , concat ! ( "Size of: " , stringify ! ( vec3 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec3 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec3 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec3 ) ) . data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec3 ) , "::" , stringify ! ( data ) ) ) ; }
- /// Tuple of 2 floats
-///
-/// Each field can be addressed using several aliases:
-/// - First component:  <b>x</b> or <b>s</b>
-/// - Second component: <b>y</b> or <b>t</b>
- # [ repr ( C ) ] # [ derive ( Copy , Clone ) ] pub union vec2 {
- /// < All components at once
- pub data : [ f32 ; 2usize ] , pub __bindgen_anon_1 : vec2__bindgen_ty_1 , pub __bindgen_anon_2 : vec2__bindgen_ty_2 ,  } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec2__bindgen_ty_1 {
- /// < Alias for first component
- pub x : f32 ,
- /// < Alias for second component
- pub y : f32 , } # [ test ] fn bindgen_test_layout_vec2__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec2__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( vec2__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec2__bindgen_ty_1 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec2__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec2__bindgen_ty_1 ) ) . x as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec2__bindgen_ty_1 ) , "::" , stringify ! ( x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec2__bindgen_ty_1 ) ) . y as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec2__bindgen_ty_1 ) , "::" , stringify ! ( y ) ) ) ; } # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct vec2__bindgen_ty_2 {
- /// < Alias for first component
- pub s : f32 ,
- /// < Alias for second component
- pub t : f32 , } # [ test ] fn bindgen_test_layout_vec2__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec2__bindgen_ty_2 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( vec2__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec2__bindgen_ty_2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec2__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec2__bindgen_ty_2 ) ) . s as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec2__bindgen_ty_2 ) , "::" , stringify ! ( s ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec2__bindgen_ty_2 ) ) . t as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( vec2__bindgen_ty_2 ) , "::" , stringify ! ( t ) ) ) ; } # [ test ] fn bindgen_test_layout_vec2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < vec2 > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( vec2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < vec2 > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( vec2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const vec2 ) ) . data as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( vec2 ) , "::" , stringify ! ( data ) ) ) ; }
- /// A texture atlas is used to pack several small regions into a single texture.
- # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct texture_atlas_t {
- /// Allocated nodes
- pub nodes : * mut vector_t ,
- /// Width (in pixels) of the underlying texture
- pub width : usize ,
- /// Height (in pixels) of the underlying texture
- pub height : usize ,
- /// Depth (in bytes) of the underlying texture
- pub depth : usize ,
- /// Allocated surface size
- pub used : usize ,
- /// Texture identity (OpenGL)
- pub id : :: std :: os :: raw :: c_uint ,
- /// Atlas data
- pub data : * mut :: std :: os :: raw :: c_uchar , } # [ test ] fn bindgen_test_layout_texture_atlas_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < texture_atlas_t > ( ) , 56usize , concat ! ( "Size of: " , stringify ! ( texture_atlas_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < texture_atlas_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( texture_atlas_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . nodes as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( nodes ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . width as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( width ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . height as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( height ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . depth as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( depth ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . used as * const _ as usize } , 32usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( used ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . id as * const _ as usize } , 40usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( id ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_atlas_t ) ) . data as * const _ as usize } , 48usize , concat ! ( "Alignment of field: " , stringify ! ( texture_atlas_t ) , "::" , stringify ! ( data ) ) ) ; } extern "C" {
-
- /// Creates a new empty texture atlas.
-///
-/// @param   width   width of the atlas
-/// @param   height  height of the atlas
-/// @param   depth   bit depth of the atlas
-/// @return          a new empty texture atlas.
-///
-
- pub fn texture_atlas_new ( width : usize , height : usize , depth : usize , ) -> * mut texture_atlas_t ;
-} extern "C" {
-
- /// Deletes a texture atlas.
-///
-/// @param self a texture atlas structure
-///
-
- pub fn texture_atlas_delete ( self_ : * mut texture_atlas_t , ) ;
-} extern "C" {
-
- /// Allocate a new region in the atlas.
-///
-/// @param self   a texture atlas structure
-/// @param width  width of the region to allocate
-/// @param height height of the region to allocate
-/// @return       Coordinates of the allocated region
-///
-
- pub fn texture_atlas_get_region ( self_ : * mut texture_atlas_t , width : usize , height : usize , ) -> ivec4 ;
-} extern "C" {
-
- /// Upload data to the specified atlas region.
-///
-/// @param self   a texture atlas structure
-/// @param x      x coordinate the region
-/// @param y      y coordinate the region
-/// @param width  width of the region
-/// @param height height of the region
-/// @param data   data to be uploaded into the specified region
-/// @param stride stride of the data
-///
-
- pub fn texture_atlas_set_region ( self_ : * mut texture_atlas_t , x : usize , y : usize , width : usize , height : usize , data : * const :: std :: os :: raw :: c_uchar , stride : usize , ) ;
-} extern "C" {
-
- /// Remove all allocated regions from the atlas.
-///
-/// @param self   a texture atlas structure
-
- pub fn texture_atlas_clear ( self_ : * mut texture_atlas_t , ) ;
-} pub const rendermode_t_RENDER_NORMAL : rendermode_t = 0 ; pub const rendermode_t_RENDER_OUTLINE_EDGE : rendermode_t = 1 ; pub const rendermode_t_RENDER_OUTLINE_POSITIVE : rendermode_t = 2 ; pub const rendermode_t_RENDER_OUTLINE_NEGATIVE : rendermode_t = 3 ; pub const rendermode_t_RENDER_SIGNED_DISTANCE_FIELD : rendermode_t = 4 ; pub type rendermode_t = :: std :: os :: raw :: c_uint ;
- /// A structure that hold a kerning value relatively to a Unicode
-/// codepoint.
-///
-/// This structure cannot be used alone since the (necessary) right
-/// Unicode codepoint is implicitely held by the owner of this structure.
- # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct kerning_t {
- /// Left Unicode codepoint in the kern pair in UTF-32 LE encoding.
- pub codepoint : u32 ,
- /// Kerning value (in fractional pixels).
- pub kerning : f32 , } # [ test ] fn bindgen_test_layout_kerning_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < kerning_t > ( ) , 8usize , concat ! ( "Size of: " , stringify ! ( kerning_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < kerning_t > ( ) , 4usize , concat ! ( "Alignment of " , stringify ! ( kerning_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const kerning_t ) ) . codepoint as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( kerning_t ) , "::" , stringify ! ( codepoint ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const kerning_t ) ) . kerning as * const _ as usize } , 4usize , concat ! ( "Alignment of field: " , stringify ! ( kerning_t ) , "::" , stringify ! ( kerning ) ) ) ; }
- /// A structure that describe a glyph.
- # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ] pub struct texture_glyph_t {
- /// Unicode codepoint this glyph represents in UTF-32 LE encoding.
- pub codepoint : u32 ,
- /// Glyph's width in pixels.
- pub width : usize ,
- /// Glyph's height in pixels.
- pub height : usize ,
- /// Glyph's left bearing expressed in integer pixels.
- pub offset_x : :: std :: os :: raw :: c_int ,
- /// Glyphs's top bearing expressed in integer pixels.
-    ///
-    /// Remember that this is the distance from the baseline to the top-most
-    /// glyph scanline, upwards y coordinates being positive.
- pub offset_y : :: std :: os :: raw :: c_int ,
- /// For horizontal text layouts, this is the horizontal distance (in
-    /// fractional pixels) used to increment the pen position when the glyph is
-    /// drawn as part of a string of text.
- pub advance_x : f32 ,
- /// For vertical text layouts, this is the vertical distance (in fractional
-    /// pixels) used to increment the pen position when the glyph is drawn as
-    /// part of a string of text.
- pub advance_y : f32 ,
- /// First normalized texture coordinate (x) of top-left corner
- pub s0 : f32 ,
- /// Second normalized texture coordinate (y) of top-left corner
- pub t0 : f32 ,
- /// First normalized texture coordinate (x) of bottom-right corner
- pub s1 : f32 ,
- /// Second normalized texture coordinate (y) of bottom-right corner
- pub t1 : f32 ,
- /// A vector of kerning pairs relative to this glyph.
- pub kerning : * mut vector_t ,
- /// Mode this glyph was rendered
- pub rendermode : rendermode_t ,
- /// Glyph outline thickness
- pub outline_thickness : f32 , } # [ test ] fn bindgen_test_layout_texture_glyph_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < texture_glyph_t > ( ) , 72usize , concat ! ( "Size of: " , stringify ! ( texture_glyph_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < texture_glyph_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( texture_glyph_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . codepoint as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( codepoint ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . width as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( width ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . height as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( height ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . offset_x as * const _ as usize } , 24usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( offset_x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . offset_y as * const _ as usize } , 28usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( offset_y ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . advance_x as * const _ as usize } , 32usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( advance_x ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . advance_y as * const _ as usize } , 36usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( advance_y ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . s0 as * const _ as usize } , 40usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( s0 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . t0 as * const _ as usize } , 44usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( t0 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . s1 as * const _ as usize } , 48usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( s1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . t1 as * const _ as usize } , 52usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( t1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . kerning as * const _ as usize } , 56usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( kerning ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . rendermode as * const _ as usize } , 64usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( rendermode ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_glyph_t ) ) . outline_thickness as * const _ as usize } , 68usize , concat ! ( "Alignment of field: " , stringify ! ( texture_glyph_t ) , "::" , stringify ! ( outline_thickness ) ) ) ; }
- /// Texture font structure.
- # [ repr ( C ) ] # [ derive ( Debug, Copy , Clone ) ] pub struct texture_font_t {
- /// This field is simply used to compute a default line spacing (i.e., the
-    /// baseline-to-baseline distance) when writing text with this font. Note
-    /// that it usually is larger than the sum of the ascender and descender
-    /// taken as absolute values. There is also no guarantee that no glyphs
-    /// extend above or below subsequent baselines when using this distance.
- pub height : f32 ,
-
- /// Vector of glyphs contained in this font.
- pub glyphs : * mut vector_t ,
-
- /// Atlas structure to store glyphs data.
- pub atlas : * mut texture_atlas_t ,
-
- /// Font size
- pub size : f32 ,
-
- /// Whether to use autohint when rendering font
- pub hinting : :: std :: os :: raw :: c_int ,
- /// Mode the font is rendering its next glyph
- pub rendermode : rendermode_t ,
- /// Outline thickness
- pub outline_thickness : f32 ,
- /// Whether to use our own lcd filter.
- pub filtering : :: std :: os :: raw :: c_int ,
- /// LCD filter weights
- pub lcd_weights : [ :: std :: os :: raw :: c_uchar ; 5usize ] ,
- /// Whether to use kerning if available
- pub kerning : :: std :: os :: raw :: c_int ,
- /// This field is the distance that must be placed between two lines of
-    /// text. The baseline-to-baseline distance should be computed as:
-    /// ascender - descender + linegap
- pub linegap : f32 ,
- /// The ascender is the vertical distance from the horizontal baseline to
-    /// the highest 'character' coordinate in a font face. Unfortunately, font
-    /// formats define the ascender differently. For some, it represents the
-    /// ascent of all capital latin characters (without accents), for others it
-    /// is the ascent of the highest accented character, and finally, other
-    /// formats define it as being equal to bbox.yMax.
- pub ascender : f32 ,
- /// The descender is the vertical distance from the horizontal baseline to
-    /// the lowest 'character' coordinate in a font face. Unfortunately, font
-    /// formats define the descender differently. For some, it represents the
-    /// descent of all capital latin characters (without accents), for others it
-    /// is the ascent of the lowest accented character, and finally, other
-    /// formats define it as being equal to bbox.yMin. This field is negative
-    /// for values below the baseline.
- pub descender : f32 ,
- /// The position of the underline line for this face. It is the center of
-    /// the underlining stem. Only relevant for scalable formats.
- pub underline_position : f32 ,
- /// The thickness of the underline for this face. Only relevant for scalable
-    /// formats.
- pub underline_thickness : f32 ,
-
- pub location : texture_font_t__bindgen_ty_1 ,
-
- pub memory : texture_font_t__bindgen_ty_2__bindgen_ty_1 ,
+#[test]
+fn bindgen_test_layout_div_t() {
+    assert_eq!(
+        ::std::mem::size_of::<div_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(div_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<div_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(div_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<div_t>())).quot as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(div_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<div_t>())).rem as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(div_t),
+            "::",
+            stringify!(rem)
+        )
+    );
 }
-
- pub const texture_font_t_TEXTURE_FONT_FILE : texture_font_t__bindgen_ty_1 = 0 ;
- pub const texture_font_t_TEXTURE_FONT_MEMORY : texture_font_t__bindgen_ty_1 = 1 ;
- pub type texture_font_t__bindgen_ty_1 = :: std :: os :: raw :: c_uint ;
-
- # [ repr ( C ) ]
- # [ derive ( Copy , Clone ) ]
- #[cfg(not(target_os = "emscripten"))]
- pub union texture_font_t__bindgen_ty_2 {
-     /// Font filename, for when location == TEXTURE_FONT_FILE
-     pub filename : * mut :: std :: os :: raw :: c_char ,
-     pub memory : texture_font_t__bindgen_ty_2__bindgen_ty_1 ,
-
- }
-
- # [ repr ( C ) ]
- # [ derive ( Copy , Clone ) ]
- #[cfg(target_os = "emscripten")]
- pub union texture_font_t__bindgen_ty_2 {
-     /// Font filename, for when location == TEXTURE_FONT_FILE
-     pub filename : * mut :: std :: os :: raw :: c_char ,
-     pub memory : texture_font_t__bindgen_ty_2__bindgen_ty_1 ,
- }
-
- /// Font memory address, for when location == TEXTURE_FONT_MEMORY
- # [ repr ( C ) ] # [ derive ( Debug , Copy , Clone ) ]
- pub struct texture_font_t__bindgen_ty_2__bindgen_ty_1 {
-     pub base : * const :: std :: os :: raw :: c_void ,
-     pub size : usize ,
- }
-
- # [ test ] fn bindgen_test_layout_texture_font_t__bindgen_ty_2__bindgen_ty_1 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < texture_font_t__bindgen_ty_2__bindgen_ty_1 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( texture_font_t__bindgen_ty_2__bindgen_ty_1 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < texture_font_t__bindgen_ty_2__bindgen_ty_1 > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( texture_font_t__bindgen_ty_2__bindgen_ty_1 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t__bindgen_ty_2__bindgen_ty_1 ) ) . base as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t__bindgen_ty_2__bindgen_ty_1 ) , "::" , stringify ! ( base ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t__bindgen_ty_2__bindgen_ty_1 ) ) . size as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t__bindgen_ty_2__bindgen_ty_1 ) , "::" , stringify ! ( size ) ) ) ; } # [ test ] fn bindgen_test_layout_texture_font_t__bindgen_ty_2 ( ) { assert_eq ! ( :: std :: mem :: size_of :: < texture_font_t__bindgen_ty_2 > ( ) , 16usize , concat ! ( "Size of: " , stringify ! ( texture_font_t__bindgen_ty_2 ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < texture_font_t__bindgen_ty_2 > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( texture_font_t__bindgen_ty_2 ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t__bindgen_ty_2 ) ) . filename as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t__bindgen_ty_2 ) , "::" , stringify ! ( filename ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t__bindgen_ty_2 ) ) . memory as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t__bindgen_ty_2 ) , "::" , stringify ! ( memory ) ) ) ; } # [ test ] fn bindgen_test_layout_texture_font_t ( ) { assert_eq ! ( :: std :: mem :: size_of :: < texture_font_t > ( ) , 96usize , concat ! ( "Size of: " , stringify ! ( texture_font_t ) ) ) ; assert_eq ! ( :: std :: mem :: align_of :: < texture_font_t > ( ) , 8usize , concat ! ( "Alignment of " , stringify ! ( texture_font_t ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . glyphs as * const _ as usize } , 0usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( glyphs ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . atlas as * const _ as usize } , 8usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( atlas ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . location as * const _ as usize } , 16usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( location ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . size as * const _ as usize } , 40usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( size ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . hinting as * const _ as usize } , 44usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( hinting ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . rendermode as * const _ as usize } , 48usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( rendermode ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . outline_thickness as * const _ as usize } , 52usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( outline_thickness ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . filtering as * const _ as usize } , 56usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( filtering ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . lcd_weights as * const _ as usize } , 60usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( lcd_weights ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . kerning as * const _ as usize } , 68usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( kerning ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . height as * const _ as usize } , 72usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( height ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . linegap as * const _ as usize } , 76usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( linegap ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . ascender as * const _ as usize } , 80usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( ascender ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . descender as * const _ as usize } , 84usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( descender ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . underline_position as * const _ as usize } , 88usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( underline_position ) ) ) ; assert_eq ! ( unsafe { & ( * ( 0 as * const texture_font_t ) ) . underline_thickness as * const _ as usize } , 92usize , concat ! ( "Alignment of field: " , stringify ! ( texture_font_t ) , "::" , stringify ! ( underline_thickness ) ) ) ; }
-
-
-extern "C" {
-
- /// This function creates a new texture font from given filename and size.  The
-/// texture atlas is used to store glyph on demand. Note the depth of the atlas
-/// will determine if the font is rendered as alpha channel only (depth = 1) or
-/// RGB (depth = 3) that correspond to subpixel rendering (if available on your
-/// freetype implementation).
-///
-/// @param atlas     A texture atlas
-/// @param pt_size   Size of font to be created (in points)
-/// @param filename  A font filename
-///
-/// @return A new empty font (no glyph inside yet)
-///
-
- pub fn texture_font_new_from_file ( atlas : * mut texture_atlas_t , pt_size : f32 , filename : * const :: std :: os :: raw :: c_char , ) -> * mut texture_font_t ;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ldiv_t {
+    pub quot: ::std::os::raw::c_long,
+    pub rem: ::std::os::raw::c_long,
+}
+#[test]
+fn bindgen_test_layout_ldiv_t() {
+    assert_eq!(
+        ::std::mem::size_of::<ldiv_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(ldiv_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ldiv_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(ldiv_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ldiv_t>())).quot as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ldiv_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ldiv_t>())).rem as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ldiv_t),
+            "::",
+            stringify!(rem)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct lldiv_t {
+    pub quot: ::std::os::raw::c_longlong,
+    pub rem: ::std::os::raw::c_longlong,
+}
+#[test]
+fn bindgen_test_layout_lldiv_t() {
+    assert_eq!(
+        ::std::mem::size_of::<lldiv_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(lldiv_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<lldiv_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(lldiv_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<lldiv_t>())).quot as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(lldiv_t),
+            "::",
+            stringify!(quot)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<lldiv_t>())).rem as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(lldiv_t),
+            "::",
+            stringify!(rem)
+        )
+    );
 }
 extern "C" {
-
- /// This function creates a new texture font from a memory location and size.
-/// The texture atlas is used to store glyph on demand. Note the depth of the
-/// atlas will determine if the font is rendered as alpha channel only
-/// (depth = 1) or RGB (depth = 3) that correspond to subpixel rendering (if
-/// available on your freetype implementation).
-///
-/// @param atlas       A texture atlas
-/// @param pt_size     Size of font to be created (in points)
-/// @param memory_base Start of the font file in memory
-/// @param memory_size Size of the font file memory region, in bytes
-///
-/// @return A new empty font (no glyph inside yet)
-///
-
- pub fn texture_font_new_from_memory ( atlas : * mut texture_atlas_t , pt_size : f32 , memory_base : * const :: std :: os :: raw :: c_void , memory_size : usize , ) -> * mut texture_font_t ;
-} extern "C" {
-
- /// Delete a texture font. Note that this does not delete the glyph from the
-/// texture atlas.
-///
-/// @param self a valid texture font
-
- pub fn texture_font_delete ( self_ : * mut texture_font_t , ) ;
-} extern "C" {
-
- /// Request a new glyph from the font. If it has not been created yet, it will
-/// be.
-///
-/// @param self      A valid texture font
-/// @param codepoint Character codepoint to be loaded in UTF-8 encoding.
-///
-/// @return A pointer on the new glyph or 0 if the texture atlas is not big
-/// enough
-///
-
- pub fn texture_font_get_glyph ( self_ : * mut texture_font_t , codepoint : * const :: std :: os :: raw :: c_char , ) -> * mut texture_glyph_t ;
-} extern "C" {
-
- /// Request an already loaded glyph from the font.
-///
-/// @param self      A valid texture font
-/// @param codepoint Character codepoint to be found in UTF-8 encoding.
-///
-/// @return A pointer on the glyph or 0 if the glyph is not loaded
-
- pub fn texture_font_find_glyph ( self_ : * mut texture_font_t , codepoint : * const :: std :: os :: raw :: c_char , ) -> * mut texture_glyph_t ;
-} extern "C" {
-
- /// Request the loading of a given glyph.
-///
-/// @param self       A valid texture font
-/// @param codepoints Character codepoint to be loaded in UTF-8 encoding.
-///
-/// @return One if the glyph could be loaded, zero if not.
-
- pub fn texture_font_load_glyph ( self_ : * mut texture_font_t , codepoint : * const :: std :: os :: raw :: c_char , ) -> :: std :: os :: raw :: c_int ;
-} extern "C" {
-
- /// Request the loading of several glyphs at once.
-///
-/// @param self       A valid texture font
-/// @param codepoints Character codepoints to be loaded in UTF-8 encoding. May
-/// contain duplicates.
-///
-/// @return Number of missed glyph if the texture is not big enough to hold
-/// every glyphs.
-
- pub fn texture_font_load_glyphs ( self_ : * mut texture_font_t , codepoints : * const :: std :: os :: raw :: c_char , ) -> usize ;
-} extern "C" {
- pub fn texture_font_enlarge_atlas ( self_ : * mut texture_font_t , width_new : usize , height_new : usize , ) ;
-} extern "C" {
-
- /// Get the kerning between two horizontal glyphs.
-///
-/// @param self      A valid texture glyph
-/// @param codepoint Character codepoint of the peceding character in UTF-8 encoding.
-///
-/// @return x kerning value
-
- pub fn texture_glyph_get_kerning ( self_ : * const texture_glyph_t , codepoint : * const :: std :: os :: raw :: c_char , ) -> f32 ;
-} extern "C" {
-
- /// Creates a new empty glyph
-///
-/// @return a new empty glyph (not valid)
-
- pub fn texture_glyph_new ( ) -> * mut texture_glyph_t ;
+    pub fn __ctype_get_mb_cur_max() -> size_t;
+}
+extern "C" {
+    pub fn atof(__nptr: *const ::std::os::raw::c_char) -> f64;
+}
+extern "C" {
+    pub fn atoi(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn atol(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn atoll(__nptr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn strtod(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> f64;
+}
+extern "C" {
+    pub fn strtof(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> f32;
+}
+extern "C" {
+    pub fn strtold(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+    ) -> u128;
+}
+extern "C" {
+    pub fn strtol(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn strtoul(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn strtoq(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn strtouq(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulonglong;
+}
+extern "C" {
+    pub fn strtoll(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn strtoull(
+        __nptr: *const ::std::os::raw::c_char,
+        __endptr: *mut *mut ::std::os::raw::c_char,
+        __base: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_ulonglong;
+}
+extern "C" {
+    pub fn l64a(__n: ::std::os::raw::c_long) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn a64l(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+}
+pub type __u_char = ::std::os::raw::c_uchar;
+pub type __u_short = ::std::os::raw::c_ushort;
+pub type __u_int = ::std::os::raw::c_uint;
+pub type __u_long = ::std::os::raw::c_ulong;
+pub type __int8_t = ::std::os::raw::c_schar;
+pub type __uint8_t = ::std::os::raw::c_uchar;
+pub type __int16_t = ::std::os::raw::c_short;
+pub type __uint16_t = ::std::os::raw::c_ushort;
+pub type __int32_t = ::std::os::raw::c_int;
+pub type __uint32_t = ::std::os::raw::c_uint;
+pub type __int64_t = ::std::os::raw::c_long;
+pub type __uint64_t = ::std::os::raw::c_ulong;
+pub type __int_least8_t = __int8_t;
+pub type __uint_least8_t = __uint8_t;
+pub type __int_least16_t = __int16_t;
+pub type __uint_least16_t = __uint16_t;
+pub type __int_least32_t = __int32_t;
+pub type __uint_least32_t = __uint32_t;
+pub type __int_least64_t = __int64_t;
+pub type __uint_least64_t = __uint64_t;
+pub type __quad_t = ::std::os::raw::c_long;
+pub type __u_quad_t = ::std::os::raw::c_ulong;
+pub type __intmax_t = ::std::os::raw::c_long;
+pub type __uintmax_t = ::std::os::raw::c_ulong;
+pub type __dev_t = ::std::os::raw::c_ulong;
+pub type __uid_t = ::std::os::raw::c_uint;
+pub type __gid_t = ::std::os::raw::c_uint;
+pub type __ino_t = ::std::os::raw::c_ulong;
+pub type __ino64_t = ::std::os::raw::c_ulong;
+pub type __mode_t = ::std::os::raw::c_uint;
+pub type __nlink_t = ::std::os::raw::c_ulong;
+pub type __off_t = ::std::os::raw::c_long;
+pub type __off64_t = ::std::os::raw::c_long;
+pub type __pid_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __fsid_t {
+    pub __val: [::std::os::raw::c_int; 2usize],
+}
+#[test]
+fn bindgen_test_layout___fsid_t() {
+    assert_eq!(
+        ::std::mem::size_of::<__fsid_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(__fsid_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__fsid_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__fsid_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__fsid_t>())).__val as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__fsid_t),
+            "::",
+            stringify!(__val)
+        )
+    );
+}
+pub type __clock_t = ::std::os::raw::c_long;
+pub type __rlim_t = ::std::os::raw::c_ulong;
+pub type __rlim64_t = ::std::os::raw::c_ulong;
+pub type __id_t = ::std::os::raw::c_uint;
+pub type __time_t = ::std::os::raw::c_long;
+pub type __useconds_t = ::std::os::raw::c_uint;
+pub type __suseconds_t = ::std::os::raw::c_long;
+pub type __daddr_t = ::std::os::raw::c_int;
+pub type __key_t = ::std::os::raw::c_int;
+pub type __clockid_t = ::std::os::raw::c_int;
+pub type __timer_t = *mut ::std::os::raw::c_void;
+pub type __blksize_t = ::std::os::raw::c_long;
+pub type __blkcnt_t = ::std::os::raw::c_long;
+pub type __blkcnt64_t = ::std::os::raw::c_long;
+pub type __fsblkcnt_t = ::std::os::raw::c_ulong;
+pub type __fsblkcnt64_t = ::std::os::raw::c_ulong;
+pub type __fsfilcnt_t = ::std::os::raw::c_ulong;
+pub type __fsfilcnt64_t = ::std::os::raw::c_ulong;
+pub type __fsword_t = ::std::os::raw::c_long;
+pub type __ssize_t = ::std::os::raw::c_long;
+pub type __syscall_slong_t = ::std::os::raw::c_long;
+pub type __syscall_ulong_t = ::std::os::raw::c_ulong;
+pub type __loff_t = __off64_t;
+pub type __caddr_t = *mut ::std::os::raw::c_char;
+pub type __intptr_t = ::std::os::raw::c_long;
+pub type __socklen_t = ::std::os::raw::c_uint;
+pub type __sig_atomic_t = ::std::os::raw::c_int;
+pub type u_char = __u_char;
+pub type u_short = __u_short;
+pub type u_int = __u_int;
+pub type u_long = __u_long;
+pub type quad_t = __quad_t;
+pub type u_quad_t = __u_quad_t;
+pub type fsid_t = __fsid_t;
+pub type loff_t = __loff_t;
+pub type ino_t = __ino_t;
+pub type dev_t = __dev_t;
+pub type gid_t = __gid_t;
+pub type mode_t = __mode_t;
+pub type nlink_t = __nlink_t;
+pub type uid_t = __uid_t;
+pub type off_t = __off_t;
+pub type pid_t = __pid_t;
+pub type id_t = __id_t;
+pub type ssize_t = __ssize_t;
+pub type daddr_t = __daddr_t;
+pub type caddr_t = __caddr_t;
+pub type key_t = __key_t;
+pub type clock_t = __clock_t;
+pub type clockid_t = __clockid_t;
+pub type time_t = __time_t;
+pub type timer_t = __timer_t;
+pub type ulong = ::std::os::raw::c_ulong;
+pub type ushort = ::std::os::raw::c_ushort;
+pub type uint = ::std::os::raw::c_uint;
+pub type u_int8_t = __uint8_t;
+pub type u_int16_t = __uint16_t;
+pub type u_int32_t = __uint32_t;
+pub type u_int64_t = __uint64_t;
+pub type register_t = ::std::os::raw::c_long;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __sigset_t {
+    pub __val: [::std::os::raw::c_ulong; 16usize],
+}
+#[test]
+fn bindgen_test_layout___sigset_t() {
+    assert_eq!(
+        ::std::mem::size_of::<__sigset_t>(),
+        128usize,
+        concat!("Size of: ", stringify!(__sigset_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__sigset_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__sigset_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__sigset_t>())).__val as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__sigset_t),
+            "::",
+            stringify!(__val)
+        )
+    );
+}
+pub type sigset_t = __sigset_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timeval {
+    pub tv_sec: __time_t,
+    pub tv_usec: __suseconds_t,
+}
+#[test]
+fn bindgen_test_layout_timeval() {
+    assert_eq!(
+        ::std::mem::size_of::<timeval>(),
+        16usize,
+        concat!("Size of: ", stringify!(timeval))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<timeval>(),
+        8usize,
+        concat!("Alignment of ", stringify!(timeval))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<timeval>())).tv_sec as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(timeval),
+            "::",
+            stringify!(tv_sec)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<timeval>())).tv_usec as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(timeval),
+            "::",
+            stringify!(tv_usec)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct timespec {
+    pub tv_sec: __time_t,
+    pub tv_nsec: __syscall_slong_t,
+}
+#[test]
+fn bindgen_test_layout_timespec() {
+    assert_eq!(
+        ::std::mem::size_of::<timespec>(),
+        16usize,
+        concat!("Size of: ", stringify!(timespec))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<timespec>(),
+        8usize,
+        concat!("Alignment of ", stringify!(timespec))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<timespec>())).tv_sec as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(timespec),
+            "::",
+            stringify!(tv_sec)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<timespec>())).tv_nsec as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(timespec),
+            "::",
+            stringify!(tv_nsec)
+        )
+    );
+}
+pub type suseconds_t = __suseconds_t;
+pub type __fd_mask = ::std::os::raw::c_long;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fd_set {
+    pub __fds_bits: [__fd_mask; 16usize],
+}
+#[test]
+fn bindgen_test_layout_fd_set() {
+    assert_eq!(
+        ::std::mem::size_of::<fd_set>(),
+        128usize,
+        concat!("Size of: ", stringify!(fd_set))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<fd_set>(),
+        8usize,
+        concat!("Alignment of ", stringify!(fd_set))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<fd_set>())).__fds_bits as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(fd_set),
+            "::",
+            stringify!(__fds_bits)
+        )
+    );
+}
+pub type fd_mask = __fd_mask;
+extern "C" {
+    pub fn select(
+        __nfds: ::std::os::raw::c_int,
+        __readfds: *mut fd_set,
+        __writefds: *mut fd_set,
+        __exceptfds: *mut fd_set,
+        __timeout: *mut timeval,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn pselect(
+        __nfds: ::std::os::raw::c_int,
+        __readfds: *mut fd_set,
+        __writefds: *mut fd_set,
+        __exceptfds: *mut fd_set,
+        __timeout: *const timespec,
+        __sigmask: *const __sigset_t,
+    ) -> ::std::os::raw::c_int;
+}
+pub type blksize_t = __blksize_t;
+pub type blkcnt_t = __blkcnt_t;
+pub type fsblkcnt_t = __fsblkcnt_t;
+pub type fsfilcnt_t = __fsfilcnt_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_internal_list {
+    pub __prev: *mut __pthread_internal_list,
+    pub __next: *mut __pthread_internal_list,
+}
+#[test]
+fn bindgen_test_layout___pthread_internal_list() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_internal_list>(),
+        16usize,
+        concat!("Size of: ", stringify!(__pthread_internal_list))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_internal_list>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_internal_list))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_internal_list>())).__prev as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_internal_list),
+            "::",
+            stringify!(__prev)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_internal_list>())).__next as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_internal_list),
+            "::",
+            stringify!(__next)
+        )
+    );
+}
+pub type __pthread_list_t = __pthread_internal_list;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_internal_slist {
+    pub __next: *mut __pthread_internal_slist,
+}
+#[test]
+fn bindgen_test_layout___pthread_internal_slist() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_internal_slist>(),
+        8usize,
+        concat!("Size of: ", stringify!(__pthread_internal_slist))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_internal_slist>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_internal_slist))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_internal_slist>())).__next as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_internal_slist),
+            "::",
+            stringify!(__next)
+        )
+    );
+}
+pub type __pthread_slist_t = __pthread_internal_slist;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_mutex_s {
+    pub __lock: ::std::os::raw::c_int,
+    pub __count: ::std::os::raw::c_uint,
+    pub __owner: ::std::os::raw::c_int,
+    pub __nusers: ::std::os::raw::c_uint,
+    pub __kind: ::std::os::raw::c_int,
+    pub __spins: ::std::os::raw::c_short,
+    pub __elision: ::std::os::raw::c_short,
+    pub __list: __pthread_list_t,
+}
+#[test]
+fn bindgen_test_layout___pthread_mutex_s() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_mutex_s>(),
+        40usize,
+        concat!("Size of: ", stringify!(__pthread_mutex_s))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_mutex_s>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_mutex_s))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__lock as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__lock)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__count as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__count)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__owner as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__owner)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__nusers as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__nusers)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__kind as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__kind)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__spins as *const _ as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__spins)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__elision as *const _ as usize },
+        22usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__elision)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_mutex_s>())).__list as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_mutex_s),
+            "::",
+            stringify!(__list)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_rwlock_arch_t {
+    pub __readers: ::std::os::raw::c_uint,
+    pub __writers: ::std::os::raw::c_uint,
+    pub __wrphase_futex: ::std::os::raw::c_uint,
+    pub __writers_futex: ::std::os::raw::c_uint,
+    pub __pad3: ::std::os::raw::c_uint,
+    pub __pad4: ::std::os::raw::c_uint,
+    pub __cur_writer: ::std::os::raw::c_int,
+    pub __shared: ::std::os::raw::c_int,
+    pub __rwelision: ::std::os::raw::c_schar,
+    pub __pad1: [::std::os::raw::c_uchar; 7usize],
+    pub __pad2: ::std::os::raw::c_ulong,
+    pub __flags: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout___pthread_rwlock_arch_t() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_rwlock_arch_t>(),
+        56usize,
+        concat!("Size of: ", stringify!(__pthread_rwlock_arch_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_rwlock_arch_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_rwlock_arch_t))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__readers as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__readers)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__writers as *const _ as usize
+        },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__writers)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__wrphase_futex as *const _ as usize
+        },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__wrphase_futex)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__writers_futex as *const _ as usize
+        },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__writers_futex)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad3 as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__pad3)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad4 as *const _ as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__pad4)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__cur_writer as *const _ as usize
+        },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__cur_writer)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__shared as *const _ as usize
+        },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__shared)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__rwelision as *const _ as usize
+        },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__rwelision)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad1 as *const _ as usize },
+        33usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__pad1)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__pad2 as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__pad2)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_rwlock_arch_t>())).__flags as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_rwlock_arch_t),
+            "::",
+            stringify!(__flags)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct __pthread_cond_s {
+    pub __bindgen_anon_1: __pthread_cond_s__bindgen_ty_1,
+    pub __bindgen_anon_2: __pthread_cond_s__bindgen_ty_2,
+    pub __g_refs: [::std::os::raw::c_uint; 2usize],
+    pub __g_size: [::std::os::raw::c_uint; 2usize],
+    pub __g1_orig_size: ::std::os::raw::c_uint,
+    pub __wrefs: ::std::os::raw::c_uint,
+    pub __g_signals: [::std::os::raw::c_uint; 2usize],
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union __pthread_cond_s__bindgen_ty_1 {
+    pub __wseq: ::std::os::raw::c_ulonglong,
+    pub __wseq32: __pthread_cond_s__bindgen_ty_1__bindgen_ty_1,
+    _bindgen_union_align: u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 {
+    pub __low: ::std::os::raw::c_uint,
+    pub __high: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout___pthread_cond_s__bindgen_ty_1__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>(),
+        8usize,
+        concat!(
+            "Size of: ",
+            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>(),
+        4usize,
+        concat!(
+            "Alignment of ",
+            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>())).__low
+                as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1),
+            "::",
+            stringify!(__low)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1__bindgen_ty_1>())).__high
+                as *const _ as usize
+        },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_1__bindgen_ty_1),
+            "::",
+            stringify!(__high)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout___pthread_cond_s__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_1>(),
+        8usize,
+        concat!("Size of: ", stringify!(__pthread_cond_s__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_1>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_cond_s__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1>())).__wseq as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_1),
+            "::",
+            stringify!(__wseq)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_1>())).__wseq32 as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_1),
+            "::",
+            stringify!(__wseq32)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union __pthread_cond_s__bindgen_ty_2 {
+    pub __g1_start: ::std::os::raw::c_ulonglong,
+    pub __g1_start32: __pthread_cond_s__bindgen_ty_2__bindgen_ty_1,
+    _bindgen_union_align: u64,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 {
+    pub __low: ::std::os::raw::c_uint,
+    pub __high: ::std::os::raw::c_uint,
+}
+#[test]
+fn bindgen_test_layout___pthread_cond_s__bindgen_ty_2__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>(),
+        8usize,
+        concat!(
+            "Size of: ",
+            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>(),
+        4usize,
+        concat!(
+            "Alignment of ",
+            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>())).__low
+                as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1),
+            "::",
+            stringify!(__low)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2__bindgen_ty_1>())).__high
+                as *const _ as usize
+        },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_2__bindgen_ty_1),
+            "::",
+            stringify!(__high)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout___pthread_cond_s__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_cond_s__bindgen_ty_2>(),
+        8usize,
+        concat!("Size of: ", stringify!(__pthread_cond_s__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_cond_s__bindgen_ty_2>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_cond_s__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2>())).__g1_start as *const _
+                as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_2),
+            "::",
+            stringify!(__g1_start)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__pthread_cond_s__bindgen_ty_2>())).__g1_start32 as *const _
+                as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s__bindgen_ty_2),
+            "::",
+            stringify!(__g1_start32)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout___pthread_cond_s() {
+    assert_eq!(
+        ::std::mem::size_of::<__pthread_cond_s>(),
+        48usize,
+        concat!("Size of: ", stringify!(__pthread_cond_s))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__pthread_cond_s>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__pthread_cond_s))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g_refs as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s),
+            "::",
+            stringify!(__g_refs)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g_size as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s),
+            "::",
+            stringify!(__g_size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g1_orig_size as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s),
+            "::",
+            stringify!(__g1_orig_size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__wrefs as *const _ as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s),
+            "::",
+            stringify!(__wrefs)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__pthread_cond_s>())).__g_signals as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__pthread_cond_s),
+            "::",
+            stringify!(__g_signals)
+        )
+    );
+}
+pub type pthread_t = ::std::os::raw::c_ulong;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_mutexattr_t {
+    pub __size: [::std::os::raw::c_char; 4usize],
+    pub __align: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
+}
+#[test]
+fn bindgen_test_layout_pthread_mutexattr_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_mutexattr_t>(),
+        4usize,
+        concat!("Size of: ", stringify!(pthread_mutexattr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_mutexattr_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(pthread_mutexattr_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_mutexattr_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_mutexattr_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_mutexattr_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_mutexattr_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_condattr_t {
+    pub __size: [::std::os::raw::c_char; 4usize],
+    pub __align: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
+}
+#[test]
+fn bindgen_test_layout_pthread_condattr_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_condattr_t>(),
+        4usize,
+        concat!("Size of: ", stringify!(pthread_condattr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_condattr_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(pthread_condattr_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_condattr_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_condattr_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_condattr_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_condattr_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+pub type pthread_key_t = ::std::os::raw::c_uint;
+pub type pthread_once_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_attr_t {
+    pub __size: [::std::os::raw::c_char; 56usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 7usize],
+}
+#[test]
+fn bindgen_test_layout_pthread_attr_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_attr_t>(),
+        56usize,
+        concat!("Size of: ", stringify!(pthread_attr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_attr_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(pthread_attr_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_attr_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_attr_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_attr_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_attr_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_mutex_t {
+    pub __data: __pthread_mutex_s,
+    pub __size: [::std::os::raw::c_char; 40usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 5usize],
+}
+#[test]
+fn bindgen_test_layout_pthread_mutex_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_mutex_t>(),
+        40usize,
+        concat!("Size of: ", stringify!(pthread_mutex_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_mutex_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(pthread_mutex_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_mutex_t>())).__data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_mutex_t),
+            "::",
+            stringify!(__data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_mutex_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_mutex_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_mutex_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_mutex_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_cond_t {
+    pub __data: __pthread_cond_s,
+    pub __size: [::std::os::raw::c_char; 48usize],
+    pub __align: ::std::os::raw::c_longlong,
+    _bindgen_union_align: [u64; 6usize],
+}
+#[test]
+fn bindgen_test_layout_pthread_cond_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_cond_t>(),
+        48usize,
+        concat!("Size of: ", stringify!(pthread_cond_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_cond_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(pthread_cond_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_cond_t>())).__data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_cond_t),
+            "::",
+            stringify!(__data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_cond_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_cond_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_cond_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_cond_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_rwlock_t {
+    pub __data: __pthread_rwlock_arch_t,
+    pub __size: [::std::os::raw::c_char; 56usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 7usize],
+}
+#[test]
+fn bindgen_test_layout_pthread_rwlock_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_rwlock_t>(),
+        56usize,
+        concat!("Size of: ", stringify!(pthread_rwlock_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_rwlock_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(pthread_rwlock_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_rwlock_t>())).__data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_rwlock_t),
+            "::",
+            stringify!(__data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_rwlock_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_rwlock_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_rwlock_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_rwlock_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_rwlockattr_t {
+    pub __size: [::std::os::raw::c_char; 8usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_pthread_rwlockattr_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_rwlockattr_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(pthread_rwlockattr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_rwlockattr_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(pthread_rwlockattr_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_rwlockattr_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_rwlockattr_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_rwlockattr_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_rwlockattr_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+pub type pthread_spinlock_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_barrier_t {
+    pub __size: [::std::os::raw::c_char; 32usize],
+    pub __align: ::std::os::raw::c_long,
+    _bindgen_union_align: [u64; 4usize],
+}
+#[test]
+fn bindgen_test_layout_pthread_barrier_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_barrier_t>(),
+        32usize,
+        concat!("Size of: ", stringify!(pthread_barrier_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_barrier_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(pthread_barrier_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_barrier_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_barrier_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_barrier_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_barrier_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union pthread_barrierattr_t {
+    pub __size: [::std::os::raw::c_char; 4usize],
+    pub __align: ::std::os::raw::c_int,
+    _bindgen_union_align: u32,
+}
+#[test]
+fn bindgen_test_layout_pthread_barrierattr_t() {
+    assert_eq!(
+        ::std::mem::size_of::<pthread_barrierattr_t>(),
+        4usize,
+        concat!("Size of: ", stringify!(pthread_barrierattr_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<pthread_barrierattr_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(pthread_barrierattr_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_barrierattr_t>())).__size as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_barrierattr_t),
+            "::",
+            stringify!(__size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<pthread_barrierattr_t>())).__align as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pthread_barrierattr_t),
+            "::",
+            stringify!(__align)
+        )
+    );
+}
+extern "C" {
+    pub fn random() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn srandom(__seed: ::std::os::raw::c_uint);
+}
+extern "C" {
+    pub fn initstate(
+        __seed: ::std::os::raw::c_uint,
+        __statebuf: *mut ::std::os::raw::c_char,
+        __statelen: size_t,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn setstate(__statebuf: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct random_data {
+    pub fptr: *mut i32,
+    pub rptr: *mut i32,
+    pub state: *mut i32,
+    pub rand_type: ::std::os::raw::c_int,
+    pub rand_deg: ::std::os::raw::c_int,
+    pub rand_sep: ::std::os::raw::c_int,
+    pub end_ptr: *mut i32,
+}
+#[test]
+fn bindgen_test_layout_random_data() {
+    assert_eq!(
+        ::std::mem::size_of::<random_data>(),
+        48usize,
+        concat!("Size of: ", stringify!(random_data))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<random_data>(),
+        8usize,
+        concat!("Alignment of ", stringify!(random_data))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).fptr as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(fptr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).rptr as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rptr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).state as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(state)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).rand_type as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rand_type)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).rand_deg as *const _ as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rand_deg)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).rand_sep as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(rand_sep)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<random_data>())).end_ptr as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(random_data),
+            "::",
+            stringify!(end_ptr)
+        )
+    );
+}
+extern "C" {
+    pub fn random_r(__buf: *mut random_data, __result: *mut i32) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn srandom_r(
+        __seed: ::std::os::raw::c_uint,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn initstate_r(
+        __seed: ::std::os::raw::c_uint,
+        __statebuf: *mut ::std::os::raw::c_char,
+        __statelen: size_t,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setstate_r(
+        __statebuf: *mut ::std::os::raw::c_char,
+        __buf: *mut random_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn rand() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn srand(__seed: ::std::os::raw::c_uint);
+}
+extern "C" {
+    pub fn rand_r(__seed: *mut ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn drand48() -> f64;
+}
+extern "C" {
+    pub fn erand48(__xsubi: *mut ::std::os::raw::c_ushort) -> f64;
+}
+extern "C" {
+    pub fn lrand48() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn nrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn mrand48() -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn jrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn srand48(__seedval: ::std::os::raw::c_long);
+}
+extern "C" {
+    pub fn seed48(__seed16v: *mut ::std::os::raw::c_ushort) -> *mut ::std::os::raw::c_ushort;
+}
+extern "C" {
+    pub fn lcong48(__param: *mut ::std::os::raw::c_ushort);
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct drand48_data {
+    pub __x: [::std::os::raw::c_ushort; 3usize],
+    pub __old_x: [::std::os::raw::c_ushort; 3usize],
+    pub __c: ::std::os::raw::c_ushort,
+    pub __init: ::std::os::raw::c_ushort,
+    pub __a: ::std::os::raw::c_ulonglong,
+}
+#[test]
+fn bindgen_test_layout_drand48_data() {
+    assert_eq!(
+        ::std::mem::size_of::<drand48_data>(),
+        24usize,
+        concat!("Size of: ", stringify!(drand48_data))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<drand48_data>(),
+        8usize,
+        concat!("Alignment of ", stringify!(drand48_data))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<drand48_data>())).__x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<drand48_data>())).__old_x as *const _ as usize },
+        6usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__old_x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<drand48_data>())).__c as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__c)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<drand48_data>())).__init as *const _ as usize },
+        14usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__init)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<drand48_data>())).__a as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(drand48_data),
+            "::",
+            stringify!(__a)
+        )
+    );
+}
+extern "C" {
+    pub fn drand48_r(__buffer: *mut drand48_data, __result: *mut f64) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn erand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut f64,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn lrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn nrand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mrand48_r(
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn jrand48_r(
+        __xsubi: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+        __result: *mut ::std::os::raw::c_long,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn srand48_r(
+        __seedval: ::std::os::raw::c_long,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn seed48_r(
+        __seed16v: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn lcong48_r(
+        __param: *mut ::std::os::raw::c_ushort,
+        __buffer: *mut drand48_data,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn malloc(__size: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn calloc(
+        __nmemb: ::std::os::raw::c_ulong,
+        __size: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn realloc(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn reallocarray(
+        __ptr: *mut ::std::os::raw::c_void,
+        __nmemb: size_t,
+        __size: size_t,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn free(__ptr: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    pub fn alloca(__size: ::std::os::raw::c_ulong) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn valloc(__size: size_t) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn posix_memalign(
+        __memptr: *mut *mut ::std::os::raw::c_void,
+        __alignment: size_t,
+        __size: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn aligned_alloc(__alignment: size_t, __size: size_t) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn abort();
+}
+extern "C" {
+    pub fn atexit(__func: ::std::option::Option<unsafe extern "C" fn()>) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn at_quick_exit(
+        __func: ::std::option::Option<unsafe extern "C" fn()>,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn on_exit(
+        __func: ::std::option::Option<
+            unsafe extern "C" fn(
+                __status: ::std::os::raw::c_int,
+                __arg: *mut ::std::os::raw::c_void,
+            ),
+        >,
+        __arg: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn exit(__status: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn quick_exit(__status: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn _Exit(__status: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn getenv(__name: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn putenv(__string: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setenv(
+        __name: *const ::std::os::raw::c_char,
+        __value: *const ::std::os::raw::c_char,
+        __replace: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn unsetenv(__name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn clearenv() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mktemp(__template: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn mkstemp(__template: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mkstemps(
+        __template: *mut ::std::os::raw::c_char,
+        __suffixlen: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mkdtemp(__template: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn system(__command: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn realpath(
+        __name: *const ::std::os::raw::c_char,
+        __resolved: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+pub type __compar_fn_t = ::std::option::Option<
+    unsafe extern "C" fn(
+        arg1: *const ::std::os::raw::c_void,
+        arg2: *const ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+extern "C" {
+    pub fn bsearch(
+        __key: *const ::std::os::raw::c_void,
+        __base: *const ::std::os::raw::c_void,
+        __nmemb: size_t,
+        __size: size_t,
+        __compar: __compar_fn_t,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn qsort(
+        __base: *mut ::std::os::raw::c_void,
+        __nmemb: size_t,
+        __size: size_t,
+        __compar: __compar_fn_t,
+    );
+}
+extern "C" {
+    pub fn abs(__x: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn labs(__x: ::std::os::raw::c_long) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn llabs(__x: ::std::os::raw::c_longlong) -> ::std::os::raw::c_longlong;
+}
+extern "C" {
+    pub fn div(__numer: ::std::os::raw::c_int, __denom: ::std::os::raw::c_int) -> div_t;
+}
+extern "C" {
+    pub fn ldiv(__numer: ::std::os::raw::c_long, __denom: ::std::os::raw::c_long) -> ldiv_t;
+}
+extern "C" {
+    pub fn lldiv(
+        __numer: ::std::os::raw::c_longlong,
+        __denom: ::std::os::raw::c_longlong,
+    ) -> lldiv_t;
+}
+extern "C" {
+    pub fn ecvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn fcvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn gcvt(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn qecvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn qfcvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn qgcvt(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn ecvt_r(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fcvt_r(
+        __value: f64,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn qecvt_r(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn qfcvt_r(
+        __value: u128,
+        __ndigit: ::std::os::raw::c_int,
+        __decpt: *mut ::std::os::raw::c_int,
+        __sign: *mut ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __len: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mblen(__s: *const ::std::os::raw::c_char, __n: size_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mbtowc(
+        __pwc: *mut wchar_t,
+        __s: *const ::std::os::raw::c_char,
+        __n: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn wctomb(__s: *mut ::std::os::raw::c_char, __wchar: wchar_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn mbstowcs(
+        __pwcs: *mut wchar_t,
+        __s: *const ::std::os::raw::c_char,
+        __n: size_t,
+    ) -> size_t;
+}
+extern "C" {
+    pub fn wcstombs(
+        __s: *mut ::std::os::raw::c_char,
+        __pwcs: *const wchar_t,
+        __n: size_t,
+    ) -> size_t;
+}
+extern "C" {
+    pub fn rpmatch(__response: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getsubopt(
+        __optionp: *mut *mut ::std::os::raw::c_char,
+        __tokens: *const *mut ::std::os::raw::c_char,
+        __valuep: *mut *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getloadavg(__loadavg: *mut f64, __nelem: ::std::os::raw::c_int)
+        -> ::std::os::raw::c_int;
+}
+pub type int_least8_t = __int_least8_t;
+pub type int_least16_t = __int_least16_t;
+pub type int_least32_t = __int_least32_t;
+pub type int_least64_t = __int_least64_t;
+pub type uint_least8_t = __uint_least8_t;
+pub type uint_least16_t = __uint_least16_t;
+pub type uint_least32_t = __uint_least32_t;
+pub type uint_least64_t = __uint_least64_t;
+pub type int_fast8_t = ::std::os::raw::c_schar;
+pub type int_fast16_t = ::std::os::raw::c_long;
+pub type int_fast32_t = ::std::os::raw::c_long;
+pub type int_fast64_t = ::std::os::raw::c_long;
+pub type uint_fast8_t = ::std::os::raw::c_uchar;
+pub type uint_fast16_t = ::std::os::raw::c_ulong;
+pub type uint_fast32_t = ::std::os::raw::c_ulong;
+pub type uint_fast64_t = ::std::os::raw::c_ulong;
+pub type intmax_t = __intmax_t;
+pub type uintmax_t = __uintmax_t;
+#[repr(C)]
+#[repr(align(16))]
+#[derive(Debug, Copy, Clone)]
+pub struct max_align_t {
+    pub __clang_max_align_nonce1: ::std::os::raw::c_longlong,
+    pub __bindgen_padding_0: u64,
+    pub __clang_max_align_nonce2: u128,
+}
+#[test]
+fn bindgen_test_layout_max_align_t() {
+    assert_eq!(
+        ::std::mem::size_of::<max_align_t>(),
+        32usize,
+        concat!("Size of: ", stringify!(max_align_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<max_align_t>(),
+        16usize,
+        concat!("Alignment of ", stringify!(max_align_t))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<max_align_t>())).__clang_max_align_nonce1 as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(max_align_t),
+            "::",
+            stringify!(__clang_max_align_nonce1)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<max_align_t>())).__clang_max_align_nonce2 as *const _ as usize
+        },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(max_align_t),
+            "::",
+            stringify!(__clang_max_align_nonce2)
+        )
+    );
+}
+extern "C" {
+    pub fn memcpy(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn memmove(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn memccpy(
+        __dest: *mut ::std::os::raw::c_void,
+        __src: *const ::std::os::raw::c_void,
+        __c: ::std::os::raw::c_int,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn memset(
+        __s: *mut ::std::os::raw::c_void,
+        __c: ::std::os::raw::c_int,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn memcmp(
+        __s1: *const ::std::os::raw::c_void,
+        __s2: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn memchr(
+        __s: *const ::std::os::raw::c_void,
+        __c: ::std::os::raw::c_int,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn strcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strncpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strcat(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strncat(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strcmp(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strncmp(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strcoll(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strxfrm(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __locale_struct {
+    pub __locales: [*mut __locale_data; 13usize],
+    pub __ctype_b: *const ::std::os::raw::c_ushort,
+    pub __ctype_tolower: *const ::std::os::raw::c_int,
+    pub __ctype_toupper: *const ::std::os::raw::c_int,
+    pub __names: [*const ::std::os::raw::c_char; 13usize],
+}
+#[test]
+fn bindgen_test_layout___locale_struct() {
+    assert_eq!(
+        ::std::mem::size_of::<__locale_struct>(),
+        232usize,
+        concat!("Size of: ", stringify!(__locale_struct))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__locale_struct>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__locale_struct))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__locale_struct>())).__locales as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__locale_struct),
+            "::",
+            stringify!(__locales)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__locale_struct>())).__ctype_b as *const _ as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__locale_struct),
+            "::",
+            stringify!(__ctype_b)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__locale_struct>())).__ctype_tolower as *const _ as usize },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__locale_struct),
+            "::",
+            stringify!(__ctype_tolower)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__locale_struct>())).__ctype_toupper as *const _ as usize },
+        120usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__locale_struct),
+            "::",
+            stringify!(__ctype_toupper)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__locale_struct>())).__names as *const _ as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__locale_struct),
+            "::",
+            stringify!(__names)
+        )
+    );
+}
+pub type __locale_t = *mut __locale_struct;
+pub type locale_t = __locale_t;
+extern "C" {
+    pub fn strcoll_l(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __l: locale_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strxfrm_l(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: size_t,
+        __l: locale_t,
+    ) -> size_t;
+}
+extern "C" {
+    pub fn strdup(__s: *const ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strndup(
+        __string: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strchr(
+        __s: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strrchr(
+        __s: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strcspn(
+        __s: *const ::std::os::raw::c_char,
+        __reject: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn strspn(
+        __s: *const ::std::os::raw::c_char,
+        __accept: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn strpbrk(
+        __s: *const ::std::os::raw::c_char,
+        __accept: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strstr(
+        __haystack: *const ::std::os::raw::c_char,
+        __needle: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strtok(
+        __s: *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn __strtok_r(
+        __s: *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
+        __save_ptr: *mut *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strtok_r(
+        __s: *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
+        __save_ptr: *mut *mut ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strlen(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn strnlen(__string: *const ::std::os::raw::c_char, __maxlen: size_t) -> size_t;
+}
+extern "C" {
+    pub fn strerror(__errnum: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    #[link_name = "\u{1}__xpg_strerror_r"]
+    pub fn strerror_r(
+        __errnum: ::std::os::raw::c_int,
+        __buf: *mut ::std::os::raw::c_char,
+        __buflen: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strerror_l(
+        __errnum: ::std::os::raw::c_int,
+        __l: locale_t,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn bcmp(
+        __s1: *const ::std::os::raw::c_void,
+        __s2: *const ::std::os::raw::c_void,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn bcopy(
+        __src: *const ::std::os::raw::c_void,
+        __dest: *mut ::std::os::raw::c_void,
+        __n: size_t,
+    );
+}
+extern "C" {
+    pub fn bzero(__s: *mut ::std::os::raw::c_void, __n: ::std::os::raw::c_ulong);
+}
+extern "C" {
+    pub fn index(
+        __s: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn rindex(
+        __s: *const ::std::os::raw::c_char,
+        __c: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn ffs(__i: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ffsl(__l: ::std::os::raw::c_long) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ffsll(__ll: ::std::os::raw::c_longlong) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strcasecmp(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strncasecmp(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strcasecmp_l(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __loc: locale_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn strncasecmp_l(
+        __s1: *const ::std::os::raw::c_char,
+        __s2: *const ::std::os::raw::c_char,
+        __n: size_t,
+        __loc: locale_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn explicit_bzero(__s: *mut ::std::os::raw::c_void, __n: size_t);
+}
+extern "C" {
+    pub fn strsep(
+        __stringp: *mut *mut ::std::os::raw::c_char,
+        __delim: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn strsignal(__sig: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn __stpcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn stpcpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn __stpncpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: size_t,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn stpncpy(
+        __dest: *mut ::std::os::raw::c_char,
+        __src: *const ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_char;
+}
+pub type va_list = __builtin_va_list;
+pub type __gnuc_va_list = __builtin_va_list;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct __mbstate_t {
+    pub __count: ::std::os::raw::c_int,
+    pub __value: __mbstate_t__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union __mbstate_t__bindgen_ty_1 {
+    pub __wch: ::std::os::raw::c_uint,
+    pub __wchb: [::std::os::raw::c_char; 4usize],
+    _bindgen_union_align: u32,
+}
+#[test]
+fn bindgen_test_layout___mbstate_t__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<__mbstate_t__bindgen_ty_1>(),
+        4usize,
+        concat!("Size of: ", stringify!(__mbstate_t__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__mbstate_t__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__mbstate_t__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__mbstate_t__bindgen_ty_1>())).__wch as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t__bindgen_ty_1),
+            "::",
+            stringify!(__wch)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<__mbstate_t__bindgen_ty_1>())).__wchb as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t__bindgen_ty_1),
+            "::",
+            stringify!(__wchb)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout___mbstate_t() {
+    assert_eq!(
+        ::std::mem::size_of::<__mbstate_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(__mbstate_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__mbstate_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(__mbstate_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__mbstate_t>())).__count as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t),
+            "::",
+            stringify!(__count)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__mbstate_t>())).__value as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__mbstate_t),
+            "::",
+            stringify!(__value)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct _G_fpos_t {
+    pub __pos: __off_t,
+    pub __state: __mbstate_t,
+}
+#[test]
+fn bindgen_test_layout__G_fpos_t() {
+    assert_eq!(
+        ::std::mem::size_of::<_G_fpos_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(_G_fpos_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<_G_fpos_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(_G_fpos_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_G_fpos_t>())).__pos as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos_t),
+            "::",
+            stringify!(__pos)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_G_fpos_t>())).__state as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos_t),
+            "::",
+            stringify!(__state)
+        )
+    );
+}
+pub type __fpos_t = _G_fpos_t;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct _G_fpos64_t {
+    pub __pos: __off64_t,
+    pub __state: __mbstate_t,
+}
+#[test]
+fn bindgen_test_layout__G_fpos64_t() {
+    assert_eq!(
+        ::std::mem::size_of::<_G_fpos64_t>(),
+        16usize,
+        concat!("Size of: ", stringify!(_G_fpos64_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<_G_fpos64_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(_G_fpos64_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_G_fpos64_t>())).__pos as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos64_t),
+            "::",
+            stringify!(__pos)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_G_fpos64_t>())).__state as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_G_fpos64_t),
+            "::",
+            stringify!(__state)
+        )
+    );
+}
+pub type __fpos64_t = _G_fpos64_t;
+pub type __FILE = _IO_FILE;
+pub type FILE = _IO_FILE;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_marker {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_codecvt {
+    _unused: [u8; 0],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_wide_data {
+    _unused: [u8; 0],
+}
+pub type _IO_lock_t = ::std::os::raw::c_void;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _IO_FILE {
+    pub _flags: ::std::os::raw::c_int,
+    pub _IO_read_ptr: *mut ::std::os::raw::c_char,
+    pub _IO_read_end: *mut ::std::os::raw::c_char,
+    pub _IO_read_base: *mut ::std::os::raw::c_char,
+    pub _IO_write_base: *mut ::std::os::raw::c_char,
+    pub _IO_write_ptr: *mut ::std::os::raw::c_char,
+    pub _IO_write_end: *mut ::std::os::raw::c_char,
+    pub _IO_buf_base: *mut ::std::os::raw::c_char,
+    pub _IO_buf_end: *mut ::std::os::raw::c_char,
+    pub _IO_save_base: *mut ::std::os::raw::c_char,
+    pub _IO_backup_base: *mut ::std::os::raw::c_char,
+    pub _IO_save_end: *mut ::std::os::raw::c_char,
+    pub _markers: *mut _IO_marker,
+    pub _chain: *mut _IO_FILE,
+    pub _fileno: ::std::os::raw::c_int,
+    pub _flags2: ::std::os::raw::c_int,
+    pub _old_offset: __off_t,
+    pub _cur_column: ::std::os::raw::c_ushort,
+    pub _vtable_offset: ::std::os::raw::c_schar,
+    pub _shortbuf: [::std::os::raw::c_char; 1usize],
+    pub _lock: *mut _IO_lock_t,
+    pub _offset: __off64_t,
+    pub _codecvt: *mut _IO_codecvt,
+    pub _wide_data: *mut _IO_wide_data,
+    pub _freeres_list: *mut _IO_FILE,
+    pub _freeres_buf: *mut ::std::os::raw::c_void,
+    pub __pad5: size_t,
+    pub _mode: ::std::os::raw::c_int,
+    pub _unused2: [::std::os::raw::c_char; 20usize],
+}
+#[test]
+fn bindgen_test_layout__IO_FILE() {
+    assert_eq!(
+        ::std::mem::size_of::<_IO_FILE>(),
+        216usize,
+        concat!("Size of: ", stringify!(_IO_FILE))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<_IO_FILE>(),
+        8usize,
+        concat!("Alignment of ", stringify!(_IO_FILE))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_read_ptr as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_read_ptr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_read_end as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_read_end)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_read_base as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_read_base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_write_base as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_write_base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_write_ptr as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_write_ptr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_write_end as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_write_end)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_buf_base as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_buf_base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_buf_end as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_buf_end)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_save_base as *const _ as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_save_base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_backup_base as *const _ as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_backup_base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._IO_save_end as *const _ as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_IO_save_end)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._markers as *const _ as usize },
+        96usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_markers)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._chain as *const _ as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_chain)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._fileno as *const _ as usize },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_fileno)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._flags2 as *const _ as usize },
+        116usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_flags2)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._old_offset as *const _ as usize },
+        120usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_old_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._cur_column as *const _ as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_cur_column)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._vtable_offset as *const _ as usize },
+        130usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_vtable_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._shortbuf as *const _ as usize },
+        131usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_shortbuf)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._lock as *const _ as usize },
+        136usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_lock)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._offset as *const _ as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._codecvt as *const _ as usize },
+        152usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_codecvt)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._wide_data as *const _ as usize },
+        160usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_wide_data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._freeres_list as *const _ as usize },
+        168usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_freeres_list)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._freeres_buf as *const _ as usize },
+        176usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_freeres_buf)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>())).__pad5 as *const _ as usize },
+        184usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(__pad5)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._mode as *const _ as usize },
+        192usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<_IO_FILE>()))._unused2 as *const _ as usize },
+        196usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(_IO_FILE),
+            "::",
+            stringify!(_unused2)
+        )
+    );
+}
+pub type fpos_t = __fpos_t;
+extern "C" {
+    pub static mut stdin: *mut FILE;
+}
+extern "C" {
+    pub static mut stdout: *mut FILE;
+}
+extern "C" {
+    pub static mut stderr: *mut FILE;
+}
+extern "C" {
+    pub fn remove(__filename: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn rename(
+        __old: *const ::std::os::raw::c_char,
+        __new: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn renameat(
+        __oldfd: ::std::os::raw::c_int,
+        __old: *const ::std::os::raw::c_char,
+        __newfd: ::std::os::raw::c_int,
+        __new: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn tmpfile() -> *mut FILE;
+}
+extern "C" {
+    pub fn tmpnam(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn tmpnam_r(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn tempnam(
+        __dir: *const ::std::os::raw::c_char,
+        __pfx: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn fclose(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fflush(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fflush_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fopen(
+        __filename: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn freopen(
+        __filename: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+        __stream: *mut FILE,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn fdopen(__fd: ::std::os::raw::c_int, __modes: *const ::std::os::raw::c_char)
+        -> *mut FILE;
+}
+extern "C" {
+    pub fn fmemopen(
+        __s: *mut ::std::os::raw::c_void,
+        __len: size_t,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn open_memstream(
+        __bufloc: *mut *mut ::std::os::raw::c_char,
+        __sizeloc: *mut size_t,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn setbuf(__stream: *mut FILE, __buf: *mut ::std::os::raw::c_char);
+}
+extern "C" {
+    pub fn setvbuf(
+        __stream: *mut FILE,
+        __buf: *mut ::std::os::raw::c_char,
+        __modes: ::std::os::raw::c_int,
+        __n: size_t,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn setbuffer(__stream: *mut FILE, __buf: *mut ::std::os::raw::c_char, __size: size_t);
+}
+extern "C" {
+    pub fn setlinebuf(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn fprintf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn printf(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vfprintf(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vprintf(
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vsprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn snprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __maxlen: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vsnprintf(
+        __s: *mut ::std::os::raw::c_char,
+        __maxlen: ::std::os::raw::c_ulong,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vdprintf(
+        __fd: ::std::os::raw::c_int,
+        __fmt: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn dprintf(
+        __fd: ::std::os::raw::c_int,
+        __fmt: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fscanf(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn scanf(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn sscanf(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_fscanf"]
+    pub fn fscanf1(
+        __stream: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_scanf"]
+    pub fn scanf1(__format: *const ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_sscanf"]
+    pub fn sscanf1(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        ...
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vfscanf(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vscanf(
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn vsscanf(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_vfscanf"]
+    pub fn vfscanf1(
+        __s: *mut FILE,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_vscanf"]
+    pub fn vscanf1(
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[link_name = "\u{1}__isoc99_vsscanf"]
+    pub fn vsscanf1(
+        __s: *const ::std::os::raw::c_char,
+        __format: *const ::std::os::raw::c_char,
+        __arg: *mut __va_list_tag,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fgetc(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getc(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getchar() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getc_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fgetc_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fputc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putchar(__c: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fputc_unlocked(__c: ::std::os::raw::c_int, __stream: *mut FILE)
+        -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putc_unlocked(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putchar_unlocked(__c: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn getw(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn putw(__w: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fgets(
+        __s: *mut ::std::os::raw::c_char,
+        __n: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn __getdelim(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut size_t,
+        __delimiter: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
+}
+extern "C" {
+    pub fn getdelim(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut size_t,
+        __delimiter: ::std::os::raw::c_int,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
+}
+extern "C" {
+    pub fn getline(
+        __lineptr: *mut *mut ::std::os::raw::c_char,
+        __n: *mut size_t,
+        __stream: *mut FILE,
+    ) -> __ssize_t;
+}
+extern "C" {
+    pub fn fputs(__s: *const ::std::os::raw::c_char, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn puts(__s: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ungetc(__c: ::std::os::raw::c_int, __stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fread(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __n: ::std::os::raw::c_ulong,
+        __stream: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn fwrite(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: ::std::os::raw::c_ulong,
+        __n: ::std::os::raw::c_ulong,
+        __s: *mut FILE,
+    ) -> ::std::os::raw::c_ulong;
+}
+extern "C" {
+    pub fn fread_unlocked(
+        __ptr: *mut ::std::os::raw::c_void,
+        __size: size_t,
+        __n: size_t,
+        __stream: *mut FILE,
+    ) -> size_t;
+}
+extern "C" {
+    pub fn fwrite_unlocked(
+        __ptr: *const ::std::os::raw::c_void,
+        __size: size_t,
+        __n: size_t,
+        __stream: *mut FILE,
+    ) -> size_t;
+}
+extern "C" {
+    pub fn fseek(
+        __stream: *mut FILE,
+        __off: ::std::os::raw::c_long,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ftell(__stream: *mut FILE) -> ::std::os::raw::c_long;
+}
+extern "C" {
+    pub fn rewind(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn fseeko(
+        __stream: *mut FILE,
+        __off: __off_t,
+        __whence: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ftello(__stream: *mut FILE) -> __off_t;
+}
+extern "C" {
+    pub fn fgetpos(__stream: *mut FILE, __pos: *mut fpos_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fsetpos(__stream: *mut FILE, __pos: *const fpos_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn clearerr(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn feof(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ferror(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn clearerr_unlocked(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn feof_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ferror_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn perror(__s: *const ::std::os::raw::c_char);
+}
+extern "C" {
+    pub static mut sys_nerr: ::std::os::raw::c_int;
+}
+extern "C" {
+    pub static mut sys_errlist: [*const ::std::os::raw::c_char; 0usize];
+}
+extern "C" {
+    pub fn fileno(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn fileno_unlocked(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn popen(
+        __command: *const ::std::os::raw::c_char,
+        __modes: *const ::std::os::raw::c_char,
+    ) -> *mut FILE;
+}
+extern "C" {
+    pub fn pclose(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn ctermid(__s: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+}
+extern "C" {
+    pub fn flockfile(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn ftrylockfile(__stream: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn funlockfile(__stream: *mut FILE);
+}
+extern "C" {
+    pub fn __uflow(arg1: *mut FILE) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn __overflow(arg1: *mut FILE, arg2: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+pub type __jmp_buf = [::std::os::raw::c_long; 8usize];
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __jmp_buf_tag {
+    pub __jmpbuf: __jmp_buf,
+    pub __mask_was_saved: ::std::os::raw::c_int,
+    pub __saved_mask: __sigset_t,
+}
+#[test]
+fn bindgen_test_layout___jmp_buf_tag() {
+    assert_eq!(
+        ::std::mem::size_of::<__jmp_buf_tag>(),
+        200usize,
+        concat!("Size of: ", stringify!(__jmp_buf_tag))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__jmp_buf_tag>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__jmp_buf_tag))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__jmp_buf_tag>())).__jmpbuf as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__jmp_buf_tag),
+            "::",
+            stringify!(__jmpbuf)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__jmp_buf_tag>())).__mask_was_saved as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__jmp_buf_tag),
+            "::",
+            stringify!(__mask_was_saved)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__jmp_buf_tag>())).__saved_mask as *const _ as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__jmp_buf_tag),
+            "::",
+            stringify!(__saved_mask)
+        )
+    );
+}
+pub type jmp_buf = [__jmp_buf_tag; 1usize];
+extern "C" {
+    pub fn setjmp(__env: *mut __jmp_buf_tag) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn __sigsetjmp(
+        __env: *mut __jmp_buf_tag,
+        __savemask: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn _setjmp(__env: *mut __jmp_buf_tag) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn longjmp(__env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn _longjmp(__env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int);
+}
+pub type sigjmp_buf = [__jmp_buf_tag; 1usize];
+extern "C" {
+    pub fn siglongjmp(__env: *mut __jmp_buf_tag, __val: ::std::os::raw::c_int);
+}
+#[doc = " @type:"]
+#[doc = "   FT_Int16"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for a 16bit signed integer type."]
+pub type FT_Int16 = ::std::os::raw::c_short;
+#[doc = " @type:"]
+#[doc = "   FT_UInt16"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for a 16bit unsigned integer type."]
+pub type FT_UInt16 = ::std::os::raw::c_ushort;
+pub type FT_Int32 = ::std::os::raw::c_int;
+pub type FT_UInt32 = ::std::os::raw::c_uint;
+pub type FT_Fast = ::std::os::raw::c_int;
+pub type FT_UFast = ::std::os::raw::c_uint;
+pub type FT_Int64 = ::std::os::raw::c_long;
+pub type FT_UInt64 = ::std::os::raw::c_ulong;
+#[doc = " @type:"]
+#[doc = "   FT_Memory"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a given memory manager object, defined with an"]
+#[doc = "   @FT_MemoryRec structure."]
+#[doc = ""]
+pub type FT_Memory = *mut FT_MemoryRec_;
+#[doc = " @functype:"]
+#[doc = "   FT_Alloc_Func"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to allocate `size` bytes from `memory`."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   memory ::"]
+#[doc = "     A handle to the source memory manager."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The size in bytes to allocate."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Address of new memory block.  0~in case of failure."]
+#[doc = ""]
+pub type FT_Alloc_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        memory: FT_Memory,
+        size: ::std::os::raw::c_long,
+    ) -> *mut ::std::os::raw::c_void,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Free_Func"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to release a given block of memory."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   memory ::"]
+#[doc = "     A handle to the source memory manager."]
+#[doc = ""]
+#[doc = "   block ::"]
+#[doc = "     The address of the target memory block."]
+#[doc = ""]
+pub type FT_Free_Func = ::std::option::Option<
+    unsafe extern "C" fn(memory: FT_Memory, block: *mut ::std::os::raw::c_void),
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Realloc_Func"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to re-allocate a given block of memory."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   memory ::"]
+#[doc = "     A handle to the source memory manager."]
+#[doc = ""]
+#[doc = "   cur_size ::"]
+#[doc = "     The block's current size in bytes."]
+#[doc = ""]
+#[doc = "   new_size ::"]
+#[doc = "     The block's requested new size."]
+#[doc = ""]
+#[doc = "   block ::"]
+#[doc = "     The block's current address."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   New block address.  0~in case of memory shortage."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   In case of error, the old block must still be available."]
+#[doc = ""]
+pub type FT_Realloc_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        memory: FT_Memory,
+        cur_size: ::std::os::raw::c_long,
+        new_size: ::std::os::raw::c_long,
+        block: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void,
+>;
+#[doc = " @struct:"]
+#[doc = "   FT_MemoryRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to describe a given memory manager to FreeType~2."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   user ::"]
+#[doc = "     A generic typeless pointer for user data."]
+#[doc = ""]
+#[doc = "   alloc ::"]
+#[doc = "     A pointer type to an allocation function."]
+#[doc = ""]
+#[doc = "   free ::"]
+#[doc = "     A pointer type to an memory freeing function."]
+#[doc = ""]
+#[doc = "   realloc ::"]
+#[doc = "     A pointer type to a reallocation function."]
+#[doc = ""]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_MemoryRec_ {
+    pub user: *mut ::std::os::raw::c_void,
+    pub alloc: FT_Alloc_Func,
+    pub free: FT_Free_Func,
+    pub realloc: FT_Realloc_Func,
+}
+#[test]
+fn bindgen_test_layout_FT_MemoryRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_MemoryRec_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_MemoryRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_MemoryRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_MemoryRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_MemoryRec_>())).user as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_MemoryRec_),
+            "::",
+            stringify!(user)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_MemoryRec_>())).alloc as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_MemoryRec_),
+            "::",
+            stringify!(alloc)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_MemoryRec_>())).free as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_MemoryRec_),
+            "::",
+            stringify!(free)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_MemoryRec_>())).realloc as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_MemoryRec_),
+            "::",
+            stringify!(realloc)
+        )
+    );
+}
+#[doc = " @type:"]
+#[doc = "   FT_Stream"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to an input stream."]
+#[doc = ""]
+#[doc = " @also:"]
+#[doc = "   See @FT_StreamRec for the publicly accessible fields of a given stream"]
+#[doc = "   object."]
+#[doc = ""]
+pub type FT_Stream = *mut FT_StreamRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_StreamDesc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A union type used to store either a long or a pointer.  This is used"]
+#[doc = "   to store a file descriptor or a `FILE*` in an input stream."]
+#[doc = ""]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union FT_StreamDesc_ {
+    pub value: ::std::os::raw::c_long,
+    pub pointer: *mut ::std::os::raw::c_void,
+    _bindgen_union_align: u64,
+}
+#[test]
+fn bindgen_test_layout_FT_StreamDesc_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_StreamDesc_>(),
+        8usize,
+        concat!("Size of: ", stringify!(FT_StreamDesc_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_StreamDesc_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_StreamDesc_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamDesc_>())).value as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamDesc_),
+            "::",
+            stringify!(value)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamDesc_>())).pointer as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamDesc_),
+            "::",
+            stringify!(pointer)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_StreamDesc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A union type used to store either a long or a pointer.  This is used"]
+#[doc = "   to store a file descriptor or a `FILE*` in an input stream."]
+#[doc = ""]
+pub type FT_StreamDesc = FT_StreamDesc_;
+#[doc = " @functype:"]
+#[doc = "   FT_Stream_IoFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to seek and read data from a given input stream."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   stream ::"]
+#[doc = "     A handle to the source stream."]
+#[doc = ""]
+#[doc = "   offset ::"]
+#[doc = "     The offset of read in stream (always from start)."]
+#[doc = ""]
+#[doc = "   buffer ::"]
+#[doc = "     The address of the read buffer."]
+#[doc = ""]
+#[doc = "   count ::"]
+#[doc = "     The number of bytes to read from the stream."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   The number of bytes effectively read by the stream."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   This function might be called to perform a seek or skip operation with"]
+#[doc = "   a `count` of~0.  A non-zero return value then indicates an error."]
+#[doc = ""]
+pub type FT_Stream_IoFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        stream: FT_Stream,
+        offset: ::std::os::raw::c_ulong,
+        buffer: *mut ::std::os::raw::c_uchar,
+        count: ::std::os::raw::c_ulong,
+    ) -> ::std::os::raw::c_ulong,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Stream_CloseFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to close a given input stream."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "  stream ::"]
+#[doc = "    A handle to the target stream."]
+#[doc = ""]
+pub type FT_Stream_CloseFunc = ::std::option::Option<unsafe extern "C" fn(stream: FT_Stream)>;
+#[doc = " @struct:"]
+#[doc = "   FT_StreamRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to describe an input stream."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   base ::"]
+#[doc = "     For memory-based streams, this is the address of the first stream"]
+#[doc = "     byte in memory.  This field should always be set to `NULL` for"]
+#[doc = "     disk-based streams."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The stream size in bytes."]
+#[doc = ""]
+#[doc = "     In case of compressed streams where the size is unknown before"]
+#[doc = "     actually doing the decompression, the value is set to 0x7FFFFFFF."]
+#[doc = "     (Note that this size value can occur for normal streams also; it is"]
+#[doc = "     thus just a hint.)"]
+#[doc = ""]
+#[doc = "   pos ::"]
+#[doc = "     The current position within the stream."]
+#[doc = ""]
+#[doc = "   descriptor ::"]
+#[doc = "     This field is a union that can hold an integer or a pointer.  It is"]
+#[doc = "     used by stream implementations to store file descriptors or `FILE*`"]
+#[doc = "     pointers."]
+#[doc = ""]
+#[doc = "   pathname ::"]
+#[doc = "     This field is completely ignored by FreeType.  However, it is often"]
+#[doc = "     useful during debugging to use it to store the stream's filename"]
+#[doc = "     (where available)."]
+#[doc = ""]
+#[doc = "   read ::"]
+#[doc = "     The stream's input function."]
+#[doc = ""]
+#[doc = "   close ::"]
+#[doc = "     The stream's close function."]
+#[doc = ""]
+#[doc = "   memory ::"]
+#[doc = "     The memory manager to use to preload frames.  This is set internally"]
+#[doc = "     by FreeType and shouldn't be touched by stream implementations."]
+#[doc = ""]
+#[doc = "   cursor ::"]
+#[doc = "     This field is set and used internally by FreeType when parsing"]
+#[doc = "     frames.  In particular, the `FT_GET_XXX` macros use this instead of"]
+#[doc = "     the `pos` field."]
+#[doc = ""]
+#[doc = "   limit ::"]
+#[doc = "     This field is set and used internally by FreeType when parsing"]
+#[doc = "     frames."]
+#[doc = ""]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct FT_StreamRec_ {
+    pub base: *mut ::std::os::raw::c_uchar,
+    pub size: ::std::os::raw::c_ulong,
+    pub pos: ::std::os::raw::c_ulong,
+    pub descriptor: FT_StreamDesc,
+    pub pathname: FT_StreamDesc,
+    pub read: FT_Stream_IoFunc,
+    pub close: FT_Stream_CloseFunc,
+    pub memory: FT_Memory,
+    pub cursor: *mut ::std::os::raw::c_uchar,
+    pub limit: *mut ::std::os::raw::c_uchar,
+}
+#[test]
+fn bindgen_test_layout_FT_StreamRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_StreamRec_>(),
+        80usize,
+        concat!("Size of: ", stringify!(FT_StreamRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_StreamRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_StreamRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).base as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).size as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).pos as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(pos)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).descriptor as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(descriptor)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).pathname as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(pathname)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).read as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(read)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).close as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(close)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).memory as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(memory)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).cursor as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(cursor)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_StreamRec_>())).limit as *const _ as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_StreamRec_),
+            "::",
+            stringify!(limit)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_StreamRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to describe an input stream."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   base ::"]
+#[doc = "     For memory-based streams, this is the address of the first stream"]
+#[doc = "     byte in memory.  This field should always be set to `NULL` for"]
+#[doc = "     disk-based streams."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The stream size in bytes."]
+#[doc = ""]
+#[doc = "     In case of compressed streams where the size is unknown before"]
+#[doc = "     actually doing the decompression, the value is set to 0x7FFFFFFF."]
+#[doc = "     (Note that this size value can occur for normal streams also; it is"]
+#[doc = "     thus just a hint.)"]
+#[doc = ""]
+#[doc = "   pos ::"]
+#[doc = "     The current position within the stream."]
+#[doc = ""]
+#[doc = "   descriptor ::"]
+#[doc = "     This field is a union that can hold an integer or a pointer.  It is"]
+#[doc = "     used by stream implementations to store file descriptors or `FILE*`"]
+#[doc = "     pointers."]
+#[doc = ""]
+#[doc = "   pathname ::"]
+#[doc = "     This field is completely ignored by FreeType.  However, it is often"]
+#[doc = "     useful during debugging to use it to store the stream's filename"]
+#[doc = "     (where available)."]
+#[doc = ""]
+#[doc = "   read ::"]
+#[doc = "     The stream's input function."]
+#[doc = ""]
+#[doc = "   close ::"]
+#[doc = "     The stream's close function."]
+#[doc = ""]
+#[doc = "   memory ::"]
+#[doc = "     The memory manager to use to preload frames.  This is set internally"]
+#[doc = "     by FreeType and shouldn't be touched by stream implementations."]
+#[doc = ""]
+#[doc = "   cursor ::"]
+#[doc = "     This field is set and used internally by FreeType when parsing"]
+#[doc = "     frames.  In particular, the `FT_GET_XXX` macros use this instead of"]
+#[doc = "     the `pos` field."]
+#[doc = ""]
+#[doc = "   limit ::"]
+#[doc = "     This field is set and used internally by FreeType when parsing"]
+#[doc = "     frames."]
+#[doc = ""]
+pub type FT_StreamRec = FT_StreamRec_;
+#[doc = " @type:"]
+#[doc = "   FT_Pos"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The type FT_Pos is used to store vectorial coordinates.  Depending on"]
+#[doc = "   the context, these can represent distances in integer font units, or"]
+#[doc = "   16.16, or 26.6 fixed-point pixel coordinates."]
+pub type FT_Pos = ::std::os::raw::c_long;
+#[doc = " @struct:"]
+#[doc = "   FT_Vector"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure used to store a 2D vector; coordinates are of the"]
+#[doc = "   FT_Pos type."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x ::"]
+#[doc = "     The horizontal coordinate."]
+#[doc = "   y ::"]
+#[doc = "     The vertical coordinate."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Vector_ {
+    pub x: FT_Pos,
+    pub y: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Vector_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Vector_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_Vector_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Vector_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Vector_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Vector_>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Vector_),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Vector_>())).y as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Vector_),
+            "::",
+            stringify!(y)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Vector"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure used to store a 2D vector; coordinates are of the"]
+#[doc = "   FT_Pos type."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x ::"]
+#[doc = "     The horizontal coordinate."]
+#[doc = "   y ::"]
+#[doc = "     The vertical coordinate."]
+pub type FT_Vector = FT_Vector_;
+#[doc = " @struct:"]
+#[doc = "   FT_BBox"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to hold an outline's bounding box, i.e., the"]
+#[doc = "   coordinates of its extrema in the horizontal and vertical directions."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   xMin ::"]
+#[doc = "     The horizontal minimum (left-most)."]
+#[doc = ""]
+#[doc = "   yMin ::"]
+#[doc = "     The vertical minimum (bottom-most)."]
+#[doc = ""]
+#[doc = "   xMax ::"]
+#[doc = "     The horizontal maximum (right-most)."]
+#[doc = ""]
+#[doc = "   yMax ::"]
+#[doc = "     The vertical maximum (top-most)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The bounding box is specified with the coordinates of the lower left"]
+#[doc = "   and the upper right corner.  In PostScript, those values are often"]
+#[doc = "   called (llx,lly) and (urx,ury), respectively."]
+#[doc = ""]
+#[doc = "   If `yMin` is negative, this value gives the glyph's descender."]
+#[doc = "   Otherwise, the glyph doesn't descend below the baseline.  Similarly,"]
+#[doc = "   if `ymax` is positive, this value gives the glyph's ascender."]
+#[doc = ""]
+#[doc = "   `xMin` gives the horizontal distance from the glyph's origin to the"]
+#[doc = "   left edge of the glyph's bounding box.  If `xMin` is negative, the"]
+#[doc = "   glyph extends to the left of the origin."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_BBox_ {
+    pub xMin: FT_Pos,
+    pub yMin: FT_Pos,
+    pub xMax: FT_Pos,
+    pub yMax: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_BBox_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_BBox_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_BBox_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_BBox_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_BBox_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_BBox_>())).xMin as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(xMin)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_BBox_>())).yMin as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(yMin)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_BBox_>())).xMax as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(xMax)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_BBox_>())).yMax as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_BBox_),
+            "::",
+            stringify!(yMax)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_BBox"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to hold an outline's bounding box, i.e., the"]
+#[doc = "   coordinates of its extrema in the horizontal and vertical directions."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   xMin ::"]
+#[doc = "     The horizontal minimum (left-most)."]
+#[doc = ""]
+#[doc = "   yMin ::"]
+#[doc = "     The vertical minimum (bottom-most)."]
+#[doc = ""]
+#[doc = "   xMax ::"]
+#[doc = "     The horizontal maximum (right-most)."]
+#[doc = ""]
+#[doc = "   yMax ::"]
+#[doc = "     The vertical maximum (top-most)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The bounding box is specified with the coordinates of the lower left"]
+#[doc = "   and the upper right corner.  In PostScript, those values are often"]
+#[doc = "   called (llx,lly) and (urx,ury), respectively."]
+#[doc = ""]
+#[doc = "   If `yMin` is negative, this value gives the glyph's descender."]
+#[doc = "   Otherwise, the glyph doesn't descend below the baseline.  Similarly,"]
+#[doc = "   if `ymax` is positive, this value gives the glyph's ascender."]
+#[doc = ""]
+#[doc = "   `xMin` gives the horizontal distance from the glyph's origin to the"]
+#[doc = "   left edge of the glyph's bounding box.  If `xMin` is negative, the"]
+#[doc = "   glyph extends to the left of the origin."]
+pub type FT_BBox = FT_BBox_;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_NONE: FT_Pixel_Mode_ = 0;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_MONO: FT_Pixel_Mode_ = 1;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_GRAY: FT_Pixel_Mode_ = 2;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_GRAY2: FT_Pixel_Mode_ = 3;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_GRAY4: FT_Pixel_Mode_ = 4;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_LCD: FT_Pixel_Mode_ = 5;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_LCD_V: FT_Pixel_Mode_ = 6;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_BGRA: FT_Pixel_Mode_ = 7;
+pub const FT_Pixel_Mode__FT_PIXEL_MODE_MAX: FT_Pixel_Mode_ = 8;
+#[doc = " @enum:"]
+#[doc = "   FT_Pixel_Mode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration type used to describe the format of pixels in a given"]
+#[doc = "   bitmap.  Note that additional formats may be added in the future."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_PIXEL_MODE_NONE ::"]
+#[doc = "     Value~0 is reserved."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_MONO ::"]
+#[doc = "     A monochrome bitmap, using 1~bit per pixel.  Note that pixels are"]
+#[doc = "     stored in most-significant order (MSB), which means that the"]
+#[doc = "     left-most pixel in a byte has value 128."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_GRAY ::"]
+#[doc = "     An 8-bit bitmap, generally used to represent anti-aliased glyph"]
+#[doc = "     images.  Each pixel is stored in one byte.  Note that the number of"]
+#[doc = "     'gray' levels is stored in the `num_grays` field of the @FT_Bitmap"]
+#[doc = "     structure (it generally is 256)."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_GRAY2 ::"]
+#[doc = "     A 2-bit per pixel bitmap, used to represent embedded anti-aliased"]
+#[doc = "     bitmaps in font files according to the OpenType specification.  We"]
+#[doc = "     haven't found a single font using this format, however."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_GRAY4 ::"]
+#[doc = "     A 4-bit per pixel bitmap, representing embedded anti-aliased bitmaps"]
+#[doc = "     in font files according to the OpenType specification.  We haven't"]
+#[doc = "     found a single font using this format, however."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_LCD ::"]
+#[doc = "     An 8-bit bitmap, representing RGB or BGR decimated glyph images used"]
+#[doc = "     for display on LCD displays; the bitmap is three times wider than"]
+#[doc = "     the original glyph image.  See also @FT_RENDER_MODE_LCD."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_LCD_V ::"]
+#[doc = "     An 8-bit bitmap, representing RGB or BGR decimated glyph images used"]
+#[doc = "     for display on rotated LCD displays; the bitmap is three times"]
+#[doc = "     taller than the original glyph image.  See also"]
+#[doc = "     @FT_RENDER_MODE_LCD_V."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_BGRA ::"]
+#[doc = "     [Since 2.5] An image with four 8-bit channels per pixel,"]
+#[doc = "     representing a color image (such as emoticons) with alpha channel."]
+#[doc = "     For each pixel, the format is BGRA, which means, the blue channel"]
+#[doc = "     comes first in memory.  The color channels are pre-multiplied and in"]
+#[doc = "     the sRGB colorspace.  For example, full red at half-translucent"]
+#[doc = "     opacity will be represented as '00,00,80,80', not '00,00,FF,80'."]
+#[doc = "     See also @FT_LOAD_COLOR."]
+pub type FT_Pixel_Mode_ = u32;
+#[doc = " @enum:"]
+#[doc = "   FT_Pixel_Mode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration type used to describe the format of pixels in a given"]
+#[doc = "   bitmap.  Note that additional formats may be added in the future."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_PIXEL_MODE_NONE ::"]
+#[doc = "     Value~0 is reserved."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_MONO ::"]
+#[doc = "     A monochrome bitmap, using 1~bit per pixel.  Note that pixels are"]
+#[doc = "     stored in most-significant order (MSB), which means that the"]
+#[doc = "     left-most pixel in a byte has value 128."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_GRAY ::"]
+#[doc = "     An 8-bit bitmap, generally used to represent anti-aliased glyph"]
+#[doc = "     images.  Each pixel is stored in one byte.  Note that the number of"]
+#[doc = "     'gray' levels is stored in the `num_grays` field of the @FT_Bitmap"]
+#[doc = "     structure (it generally is 256)."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_GRAY2 ::"]
+#[doc = "     A 2-bit per pixel bitmap, used to represent embedded anti-aliased"]
+#[doc = "     bitmaps in font files according to the OpenType specification.  We"]
+#[doc = "     haven't found a single font using this format, however."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_GRAY4 ::"]
+#[doc = "     A 4-bit per pixel bitmap, representing embedded anti-aliased bitmaps"]
+#[doc = "     in font files according to the OpenType specification.  We haven't"]
+#[doc = "     found a single font using this format, however."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_LCD ::"]
+#[doc = "     An 8-bit bitmap, representing RGB or BGR decimated glyph images used"]
+#[doc = "     for display on LCD displays; the bitmap is three times wider than"]
+#[doc = "     the original glyph image.  See also @FT_RENDER_MODE_LCD."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_LCD_V ::"]
+#[doc = "     An 8-bit bitmap, representing RGB or BGR decimated glyph images used"]
+#[doc = "     for display on rotated LCD displays; the bitmap is three times"]
+#[doc = "     taller than the original glyph image.  See also"]
+#[doc = "     @FT_RENDER_MODE_LCD_V."]
+#[doc = ""]
+#[doc = "   FT_PIXEL_MODE_BGRA ::"]
+#[doc = "     [Since 2.5] An image with four 8-bit channels per pixel,"]
+#[doc = "     representing a color image (such as emoticons) with alpha channel."]
+#[doc = "     For each pixel, the format is BGRA, which means, the blue channel"]
+#[doc = "     comes first in memory.  The color channels are pre-multiplied and in"]
+#[doc = "     the sRGB colorspace.  For example, full red at half-translucent"]
+#[doc = "     opacity will be represented as '00,00,80,80', not '00,00,FF,80'."]
+#[doc = "     See also @FT_LOAD_COLOR."]
+pub use self::FT_Pixel_Mode_ as FT_Pixel_Mode;
+#[doc = " @struct:"]
+#[doc = "   FT_Bitmap"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to describe a bitmap or pixmap to the raster.  Note"]
+#[doc = "   that we now manage pixmaps of various depths through the `pixel_mode`"]
+#[doc = "   field."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   rows ::"]
+#[doc = "     The number of bitmap rows."]
+#[doc = ""]
+#[doc = "   width ::"]
+#[doc = "     The number of pixels in bitmap row."]
+#[doc = ""]
+#[doc = "   pitch ::"]
+#[doc = "     The pitch's absolute value is the number of bytes taken by one"]
+#[doc = "     bitmap row, including padding.  However, the pitch is positive when"]
+#[doc = "     the bitmap has a 'down' flow, and negative when it has an 'up' flow."]
+#[doc = "     In all cases, the pitch is an offset to add to a bitmap pointer in"]
+#[doc = "     order to go down one row."]
+#[doc = ""]
+#[doc = "     Note that 'padding' means the alignment of a bitmap to a byte"]
+#[doc = "     border, and FreeType functions normally align to the smallest"]
+#[doc = "     possible integer value."]
+#[doc = ""]
+#[doc = "     For the B/W rasterizer, `pitch` is always an even number."]
+#[doc = ""]
+#[doc = "     To change the pitch of a bitmap (say, to make it a multiple of 4),"]
+#[doc = "     use @FT_Bitmap_Convert.  Alternatively, you might use callback"]
+#[doc = "     functions to directly render to the application's surface; see the"]
+#[doc = "     file `example2.cpp` in the tutorial for a demonstration."]
+#[doc = ""]
+#[doc = "   buffer ::"]
+#[doc = "     A typeless pointer to the bitmap buffer.  This value should be"]
+#[doc = "     aligned on 32-bit boundaries in most cases."]
+#[doc = ""]
+#[doc = "   num_grays ::"]
+#[doc = "     This field is only used with @FT_PIXEL_MODE_GRAY; it gives the"]
+#[doc = "     number of gray levels used in the bitmap."]
+#[doc = ""]
+#[doc = "   pixel_mode ::"]
+#[doc = "     The pixel mode, i.e., how pixel bits are stored.  See @FT_Pixel_Mode"]
+#[doc = "     for possible values."]
+#[doc = ""]
+#[doc = "   palette_mode ::"]
+#[doc = "     This field is intended for paletted pixel modes; it indicates how"]
+#[doc = "     the palette is stored.  Not used currently."]
+#[doc = ""]
+#[doc = "   palette ::"]
+#[doc = "     A typeless pointer to the bitmap palette; this field is intended for"]
+#[doc = "     paletted pixel modes.  Not used currently."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Bitmap_ {
+    pub rows: ::std::os::raw::c_uint,
+    pub width: ::std::os::raw::c_uint,
+    pub pitch: ::std::os::raw::c_int,
+    pub buffer: *mut ::std::os::raw::c_uchar,
+    pub num_grays: ::std::os::raw::c_ushort,
+    pub pixel_mode: ::std::os::raw::c_uchar,
+    pub palette_mode: ::std::os::raw::c_uchar,
+    pub palette: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_FT_Bitmap_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Bitmap_>(),
+        40usize,
+        concat!("Size of: ", stringify!(FT_Bitmap_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Bitmap_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Bitmap_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).rows as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(rows)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).width as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).pitch as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(pitch)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).buffer as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(buffer)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).num_grays as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(num_grays)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).pixel_mode as *const _ as usize },
+        26usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(pixel_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).palette_mode as *const _ as usize },
+        27usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(palette_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_>())).palette as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_),
+            "::",
+            stringify!(palette)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Bitmap"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to describe a bitmap or pixmap to the raster.  Note"]
+#[doc = "   that we now manage pixmaps of various depths through the `pixel_mode`"]
+#[doc = "   field."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   rows ::"]
+#[doc = "     The number of bitmap rows."]
+#[doc = ""]
+#[doc = "   width ::"]
+#[doc = "     The number of pixels in bitmap row."]
+#[doc = ""]
+#[doc = "   pitch ::"]
+#[doc = "     The pitch's absolute value is the number of bytes taken by one"]
+#[doc = "     bitmap row, including padding.  However, the pitch is positive when"]
+#[doc = "     the bitmap has a 'down' flow, and negative when it has an 'up' flow."]
+#[doc = "     In all cases, the pitch is an offset to add to a bitmap pointer in"]
+#[doc = "     order to go down one row."]
+#[doc = ""]
+#[doc = "     Note that 'padding' means the alignment of a bitmap to a byte"]
+#[doc = "     border, and FreeType functions normally align to the smallest"]
+#[doc = "     possible integer value."]
+#[doc = ""]
+#[doc = "     For the B/W rasterizer, `pitch` is always an even number."]
+#[doc = ""]
+#[doc = "     To change the pitch of a bitmap (say, to make it a multiple of 4),"]
+#[doc = "     use @FT_Bitmap_Convert.  Alternatively, you might use callback"]
+#[doc = "     functions to directly render to the application's surface; see the"]
+#[doc = "     file `example2.cpp` in the tutorial for a demonstration."]
+#[doc = ""]
+#[doc = "   buffer ::"]
+#[doc = "     A typeless pointer to the bitmap buffer.  This value should be"]
+#[doc = "     aligned on 32-bit boundaries in most cases."]
+#[doc = ""]
+#[doc = "   num_grays ::"]
+#[doc = "     This field is only used with @FT_PIXEL_MODE_GRAY; it gives the"]
+#[doc = "     number of gray levels used in the bitmap."]
+#[doc = ""]
+#[doc = "   pixel_mode ::"]
+#[doc = "     The pixel mode, i.e., how pixel bits are stored.  See @FT_Pixel_Mode"]
+#[doc = "     for possible values."]
+#[doc = ""]
+#[doc = "   palette_mode ::"]
+#[doc = "     This field is intended for paletted pixel modes; it indicates how"]
+#[doc = "     the palette is stored.  Not used currently."]
+#[doc = ""]
+#[doc = "   palette ::"]
+#[doc = "     A typeless pointer to the bitmap palette; this field is intended for"]
+#[doc = "     paletted pixel modes.  Not used currently."]
+pub type FT_Bitmap = FT_Bitmap_;
+#[doc = " @struct:"]
+#[doc = "   FT_Outline"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This structure is used to describe an outline to the scan-line"]
+#[doc = "   converter."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   n_contours ::"]
+#[doc = "     The number of contours in the outline."]
+#[doc = ""]
+#[doc = "   n_points ::"]
+#[doc = "     The number of points in the outline."]
+#[doc = ""]
+#[doc = "   points ::"]
+#[doc = "     A pointer to an array of `n_points` @FT_Vector elements, giving the"]
+#[doc = "     outline's point coordinates."]
+#[doc = ""]
+#[doc = "   tags ::"]
+#[doc = "     A pointer to an array of `n_points` chars, giving each outline"]
+#[doc = "     point's type."]
+#[doc = ""]
+#[doc = "     If bit~0 is unset, the point is 'off' the curve, i.e., a Bezier"]
+#[doc = "     control point, while it is 'on' if set."]
+#[doc = ""]
+#[doc = "     Bit~1 is meaningful for 'off' points only.  If set, it indicates a"]
+#[doc = "     third-order Bezier arc control point; and a second-order control"]
+#[doc = "     point if unset."]
+#[doc = ""]
+#[doc = "     If bit~2 is set, bits 5-7 contain the drop-out mode (as defined in"]
+#[doc = "     the OpenType specification; the value is the same as the argument to"]
+#[doc = "     the 'SCANMODE' instruction)."]
+#[doc = ""]
+#[doc = "     Bits 3 and~4 are reserved for internal purposes."]
+#[doc = ""]
+#[doc = "   contours ::"]
+#[doc = "     An array of `n_contours` shorts, giving the end point of each"]
+#[doc = "     contour within the outline.  For example, the first contour is"]
+#[doc = "     defined by the points '0' to `contours[0]`, the second one is"]
+#[doc = "     defined by the points `contours[0]+1` to `contours[1]`, etc."]
+#[doc = ""]
+#[doc = "   flags ::"]
+#[doc = "     A set of bit flags used to characterize the outline and give hints"]
+#[doc = "     to the scan-converter and hinter on how to convert/grid-fit it.  See"]
+#[doc = "     @FT_OUTLINE_XXX."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The B/W rasterizer only checks bit~2 in the `tags` array for the first"]
+#[doc = "   point of each contour.  The drop-out mode as given with"]
+#[doc = "   @FT_OUTLINE_IGNORE_DROPOUTS, @FT_OUTLINE_SMART_DROPOUTS, and"]
+#[doc = "   @FT_OUTLINE_INCLUDE_STUBS in `flags` is then overridden."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Outline_ {
+    pub n_contours: ::std::os::raw::c_short,
+    pub n_points: ::std::os::raw::c_short,
+    pub points: *mut FT_Vector,
+    pub tags: *mut ::std::os::raw::c_char,
+    pub contours: *mut ::std::os::raw::c_short,
+    pub flags: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_FT_Outline_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Outline_>(),
+        40usize,
+        concat!("Size of: ", stringify!(FT_Outline_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Outline_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Outline_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_>())).n_contours as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(n_contours)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_>())).n_points as *const _ as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(n_points)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_>())).points as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(points)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_>())).tags as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(tags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_>())).contours as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(contours)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_>())).flags as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_),
+            "::",
+            stringify!(flags)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Outline"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This structure is used to describe an outline to the scan-line"]
+#[doc = "   converter."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   n_contours ::"]
+#[doc = "     The number of contours in the outline."]
+#[doc = ""]
+#[doc = "   n_points ::"]
+#[doc = "     The number of points in the outline."]
+#[doc = ""]
+#[doc = "   points ::"]
+#[doc = "     A pointer to an array of `n_points` @FT_Vector elements, giving the"]
+#[doc = "     outline's point coordinates."]
+#[doc = ""]
+#[doc = "   tags ::"]
+#[doc = "     A pointer to an array of `n_points` chars, giving each outline"]
+#[doc = "     point's type."]
+#[doc = ""]
+#[doc = "     If bit~0 is unset, the point is 'off' the curve, i.e., a Bezier"]
+#[doc = "     control point, while it is 'on' if set."]
+#[doc = ""]
+#[doc = "     Bit~1 is meaningful for 'off' points only.  If set, it indicates a"]
+#[doc = "     third-order Bezier arc control point; and a second-order control"]
+#[doc = "     point if unset."]
+#[doc = ""]
+#[doc = "     If bit~2 is set, bits 5-7 contain the drop-out mode (as defined in"]
+#[doc = "     the OpenType specification; the value is the same as the argument to"]
+#[doc = "     the 'SCANMODE' instruction)."]
+#[doc = ""]
+#[doc = "     Bits 3 and~4 are reserved for internal purposes."]
+#[doc = ""]
+#[doc = "   contours ::"]
+#[doc = "     An array of `n_contours` shorts, giving the end point of each"]
+#[doc = "     contour within the outline.  For example, the first contour is"]
+#[doc = "     defined by the points '0' to `contours[0]`, the second one is"]
+#[doc = "     defined by the points `contours[0]+1` to `contours[1]`, etc."]
+#[doc = ""]
+#[doc = "   flags ::"]
+#[doc = "     A set of bit flags used to characterize the outline and give hints"]
+#[doc = "     to the scan-converter and hinter on how to convert/grid-fit it.  See"]
+#[doc = "     @FT_OUTLINE_XXX."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The B/W rasterizer only checks bit~2 in the `tags` array for the first"]
+#[doc = "   point of each contour.  The drop-out mode as given with"]
+#[doc = "   @FT_OUTLINE_IGNORE_DROPOUTS, @FT_OUTLINE_SMART_DROPOUTS, and"]
+#[doc = "   @FT_OUTLINE_INCLUDE_STUBS in `flags` is then overridden."]
+pub type FT_Outline = FT_Outline_;
+#[doc = " @functype:"]
+#[doc = "   FT_Outline_MoveToFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function pointer type used to describe the signature of a 'move to'"]
+#[doc = "   function during outline walking/decomposition."]
+#[doc = ""]
+#[doc = "   A 'move to' is emitted to start a new contour in an outline."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   to ::"]
+#[doc = "     A pointer to the target point of the 'move to'."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     A typeless pointer, which is passed from the caller of the"]
+#[doc = "     decomposition function."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Error code.  0~means success."]
+pub type FT_Outline_MoveToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Outline_LineToFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function pointer type used to describe the signature of a 'line to'"]
+#[doc = "   function during outline walking/decomposition."]
+#[doc = ""]
+#[doc = "   A 'line to' is emitted to indicate a segment in the outline."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   to ::"]
+#[doc = "     A pointer to the target point of the 'line to'."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     A typeless pointer, which is passed from the caller of the"]
+#[doc = "     decomposition function."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Error code.  0~means success."]
+pub type FT_Outline_LineToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Outline_ConicToFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function pointer type used to describe the signature of a 'conic to'"]
+#[doc = "   function during outline walking or decomposition."]
+#[doc = ""]
+#[doc = "   A 'conic to' is emitted to indicate a second-order Bezier arc in the"]
+#[doc = "   outline."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   control ::"]
+#[doc = "     An intermediate control point between the last position and the new"]
+#[doc = "     target in `to`."]
+#[doc = ""]
+#[doc = "   to ::"]
+#[doc = "     A pointer to the target end point of the conic arc."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     A typeless pointer, which is passed from the caller of the"]
+#[doc = "     decomposition function."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Error code.  0~means success."]
+pub type FT_Outline_ConicToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        control: *const FT_Vector,
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Outline_CubicToFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function pointer type used to describe the signature of a 'cubic to'"]
+#[doc = "   function during outline walking or decomposition."]
+#[doc = ""]
+#[doc = "   A 'cubic to' is emitted to indicate a third-order Bezier arc."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   control1 ::"]
+#[doc = "     A pointer to the first Bezier control point."]
+#[doc = ""]
+#[doc = "   control2 ::"]
+#[doc = "     A pointer to the second Bezier control point."]
+#[doc = ""]
+#[doc = "   to ::"]
+#[doc = "     A pointer to the target end point."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     A typeless pointer, which is passed from the caller of the"]
+#[doc = "     decomposition function."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Error code.  0~means success."]
+pub type FT_Outline_CubicToFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        control1: *const FT_Vector,
+        control2: *const FT_Vector,
+        to: *const FT_Vector,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @struct:"]
+#[doc = "   FT_Outline_Funcs"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to hold various function pointers used during outline"]
+#[doc = "   decomposition in order to emit segments, conic, and cubic Beziers."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   move_to ::"]
+#[doc = "     The 'move to' emitter."]
+#[doc = ""]
+#[doc = "   line_to ::"]
+#[doc = "     The segment emitter."]
+#[doc = ""]
+#[doc = "   conic_to ::"]
+#[doc = "     The second-order Bezier arc emitter."]
+#[doc = ""]
+#[doc = "   cubic_to ::"]
+#[doc = "     The third-order Bezier arc emitter."]
+#[doc = ""]
+#[doc = "   shift ::"]
+#[doc = "     The shift that is applied to coordinates before they are sent to the"]
+#[doc = "     emitter."]
+#[doc = ""]
+#[doc = "   delta ::"]
+#[doc = "     The delta that is applied to coordinates before they are sent to the"]
+#[doc = "     emitter, but after the shift."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The point coordinates sent to the emitters are the transformed version"]
+#[doc = "   of the original coordinates (this is important for high accuracy"]
+#[doc = "   during scan-conversion).  The transformation is simple:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     x' = (x << shift) - delta"]
+#[doc = "     y' = (y << shift) - delta"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   Set the values of `shift` and `delta` to~0 to get the original point"]
+#[doc = "   coordinates."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Outline_Funcs_ {
+    pub move_to: FT_Outline_MoveToFunc,
+    pub line_to: FT_Outline_LineToFunc,
+    pub conic_to: FT_Outline_ConicToFunc,
+    pub cubic_to: FT_Outline_CubicToFunc,
+    pub shift: ::std::os::raw::c_int,
+    pub delta: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Outline_Funcs_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Outline_Funcs_>(),
+        48usize,
+        concat!("Size of: ", stringify!(FT_Outline_Funcs_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Outline_Funcs_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Outline_Funcs_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_Funcs_>())).move_to as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(move_to)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_Funcs_>())).line_to as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(line_to)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_Funcs_>())).conic_to as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(conic_to)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_Funcs_>())).cubic_to as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(cubic_to)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_Funcs_>())).shift as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(shift)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Outline_Funcs_>())).delta as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Outline_Funcs_),
+            "::",
+            stringify!(delta)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Outline_Funcs"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to hold various function pointers used during outline"]
+#[doc = "   decomposition in order to emit segments, conic, and cubic Beziers."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   move_to ::"]
+#[doc = "     The 'move to' emitter."]
+#[doc = ""]
+#[doc = "   line_to ::"]
+#[doc = "     The segment emitter."]
+#[doc = ""]
+#[doc = "   conic_to ::"]
+#[doc = "     The second-order Bezier arc emitter."]
+#[doc = ""]
+#[doc = "   cubic_to ::"]
+#[doc = "     The third-order Bezier arc emitter."]
+#[doc = ""]
+#[doc = "   shift ::"]
+#[doc = "     The shift that is applied to coordinates before they are sent to the"]
+#[doc = "     emitter."]
+#[doc = ""]
+#[doc = "   delta ::"]
+#[doc = "     The delta that is applied to coordinates before they are sent to the"]
+#[doc = "     emitter, but after the shift."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The point coordinates sent to the emitters are the transformed version"]
+#[doc = "   of the original coordinates (this is important for high accuracy"]
+#[doc = "   during scan-conversion).  The transformation is simple:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     x' = (x << shift) - delta"]
+#[doc = "     y' = (y << shift) - delta"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   Set the values of `shift` and `delta` to~0 to get the original point"]
+#[doc = "   coordinates."]
+pub type FT_Outline_Funcs = FT_Outline_Funcs_;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_NONE: FT_Glyph_Format_ = 0;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_COMPOSITE: FT_Glyph_Format_ = 1668246896;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_BITMAP: FT_Glyph_Format_ = 1651078259;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_OUTLINE: FT_Glyph_Format_ = 1869968492;
+pub const FT_Glyph_Format__FT_GLYPH_FORMAT_PLOTTER: FT_Glyph_Format_ = 1886154612;
+#[doc = " @enum:"]
+#[doc = "   FT_Glyph_Format"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration type used to describe the format of a given glyph"]
+#[doc = "   image.  Note that this version of FreeType only supports two image"]
+#[doc = "   formats, even though future font drivers will be able to register"]
+#[doc = "   their own format."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_GLYPH_FORMAT_NONE ::"]
+#[doc = "     The value~0 is reserved."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_COMPOSITE ::"]
+#[doc = "     The glyph image is a composite of several other images.  This format"]
+#[doc = "     is _only_ used with @FT_LOAD_NO_RECURSE, and is used to report"]
+#[doc = "     compound glyphs (like accented characters)."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_BITMAP ::"]
+#[doc = "     The glyph image is a bitmap, and can be described as an @FT_Bitmap."]
+#[doc = "     You generally need to access the `bitmap` field of the"]
+#[doc = "     @FT_GlyphSlotRec structure to read it."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_OUTLINE ::"]
+#[doc = "     The glyph image is a vectorial outline made of line segments and"]
+#[doc = "     Bezier arcs; it can be described as an @FT_Outline; you generally"]
+#[doc = "     want to access the `outline` field of the @FT_GlyphSlotRec structure"]
+#[doc = "     to read it."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_PLOTTER ::"]
+#[doc = "     The glyph image is a vectorial path with no inside and outside"]
+#[doc = "     contours.  Some Type~1 fonts, like those in the Hershey family,"]
+#[doc = "     contain glyphs in this format.  These are described as @FT_Outline,"]
+#[doc = "     but FreeType isn't currently capable of rendering them correctly."]
+pub type FT_Glyph_Format_ = u32;
+#[doc = " @enum:"]
+#[doc = "   FT_Glyph_Format"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration type used to describe the format of a given glyph"]
+#[doc = "   image.  Note that this version of FreeType only supports two image"]
+#[doc = "   formats, even though future font drivers will be able to register"]
+#[doc = "   their own format."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_GLYPH_FORMAT_NONE ::"]
+#[doc = "     The value~0 is reserved."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_COMPOSITE ::"]
+#[doc = "     The glyph image is a composite of several other images.  This format"]
+#[doc = "     is _only_ used with @FT_LOAD_NO_RECURSE, and is used to report"]
+#[doc = "     compound glyphs (like accented characters)."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_BITMAP ::"]
+#[doc = "     The glyph image is a bitmap, and can be described as an @FT_Bitmap."]
+#[doc = "     You generally need to access the `bitmap` field of the"]
+#[doc = "     @FT_GlyphSlotRec structure to read it."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_OUTLINE ::"]
+#[doc = "     The glyph image is a vectorial outline made of line segments and"]
+#[doc = "     Bezier arcs; it can be described as an @FT_Outline; you generally"]
+#[doc = "     want to access the `outline` field of the @FT_GlyphSlotRec structure"]
+#[doc = "     to read it."]
+#[doc = ""]
+#[doc = "   FT_GLYPH_FORMAT_PLOTTER ::"]
+#[doc = "     The glyph image is a vectorial path with no inside and outside"]
+#[doc = "     contours.  Some Type~1 fonts, like those in the Hershey family,"]
+#[doc = "     contain glyphs in this format.  These are described as @FT_Outline,"]
+#[doc = "     but FreeType isn't currently capable of rendering them correctly."]
+pub use self::FT_Glyph_Format_ as FT_Glyph_Format;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_RasterRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Raster"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An opaque handle (pointer) to a raster object.  Each object can be"]
+#[doc = "   used independently to convert an outline into a bitmap or pixmap."]
+pub type FT_Raster = *mut FT_RasterRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_Span"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to model a single span of gray pixels when rendering"]
+#[doc = "   an anti-aliased bitmap."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x ::"]
+#[doc = "     The span's horizontal start position."]
+#[doc = ""]
+#[doc = "   len ::"]
+#[doc = "     The span's length in pixels."]
+#[doc = ""]
+#[doc = "   coverage ::"]
+#[doc = "     The span color/coverage, ranging from 0 (background) to 255"]
+#[doc = "     (foreground)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   This structure is used by the span drawing callback type named"]
+#[doc = "   @FT_SpanFunc that takes the y~coordinate of the span as a parameter."]
+#[doc = ""]
+#[doc = "   The coverage value is always between 0 and 255.  If you want less gray"]
+#[doc = "   values, the callback function has to reduce them."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Span_ {
+    pub x: ::std::os::raw::c_short,
+    pub len: ::std::os::raw::c_ushort,
+    pub coverage: ::std::os::raw::c_uchar,
+}
+#[test]
+fn bindgen_test_layout_FT_Span_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Span_>(),
+        6usize,
+        concat!("Size of: ", stringify!(FT_Span_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Span_>(),
+        2usize,
+        concat!("Alignment of ", stringify!(FT_Span_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Span_>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Span_),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Span_>())).len as *const _ as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Span_),
+            "::",
+            stringify!(len)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Span_>())).coverage as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Span_),
+            "::",
+            stringify!(coverage)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Span"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to model a single span of gray pixels when rendering"]
+#[doc = "   an anti-aliased bitmap."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x ::"]
+#[doc = "     The span's horizontal start position."]
+#[doc = ""]
+#[doc = "   len ::"]
+#[doc = "     The span's length in pixels."]
+#[doc = ""]
+#[doc = "   coverage ::"]
+#[doc = "     The span color/coverage, ranging from 0 (background) to 255"]
+#[doc = "     (foreground)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   This structure is used by the span drawing callback type named"]
+#[doc = "   @FT_SpanFunc that takes the y~coordinate of the span as a parameter."]
+#[doc = ""]
+#[doc = "   The coverage value is always between 0 and 255.  If you want less gray"]
+#[doc = "   values, the callback function has to reduce them."]
+pub type FT_Span = FT_Span_;
+#[doc = " @functype:"]
+#[doc = "   FT_SpanFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used as a call-back by the anti-aliased renderer in order"]
+#[doc = "   to let client applications draw themselves the gray pixel spans on"]
+#[doc = "   each scan line."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   y ::"]
+#[doc = "     The scanline's upward y~coordinate."]
+#[doc = ""]
+#[doc = "   count ::"]
+#[doc = "     The number of spans to draw on this scanline."]
+#[doc = ""]
+#[doc = "   spans ::"]
+#[doc = "     A table of `count` spans to draw on the scanline."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     User-supplied data that is passed to the callback."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   This callback allows client applications to directly render the gray"]
+#[doc = "   spans of the anti-aliased bitmap to any kind of surfaces."]
+#[doc = ""]
+#[doc = "   This can be used to write anti-aliased outlines directly to a given"]
+#[doc = "   background bitmap, and even perform translucency."]
+pub type FT_SpanFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        y: ::std::os::raw::c_int,
+        count: ::std::os::raw::c_int,
+        spans: *const FT_Span,
+        user: *mut ::std::os::raw::c_void,
+    ),
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_BitTest_Func"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Deprecated, unimplemented."]
+pub type FT_Raster_BitTest_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        y: ::std::os::raw::c_int,
+        x: ::std::os::raw::c_int,
+        user: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_BitSet_Func"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Deprecated, unimplemented."]
+pub type FT_Raster_BitSet_Func = ::std::option::Option<
+    unsafe extern "C" fn(
+        y: ::std::os::raw::c_int,
+        x: ::std::os::raw::c_int,
+        user: *mut ::std::os::raw::c_void,
+    ),
+>;
+#[doc = " @struct:"]
+#[doc = "   FT_Raster_Params"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to hold the parameters used by a raster's render function,"]
+#[doc = "   passed as an argument to @FT_Outline_Render."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   target ::"]
+#[doc = "     The target bitmap."]
+#[doc = ""]
+#[doc = "   source ::"]
+#[doc = "     A pointer to the source glyph image (e.g., an @FT_Outline)."]
+#[doc = ""]
+#[doc = "   flags ::"]
+#[doc = "     The rendering flags."]
+#[doc = ""]
+#[doc = "   gray_spans ::"]
+#[doc = "     The gray span drawing callback."]
+#[doc = ""]
+#[doc = "   black_spans ::"]
+#[doc = "     Unused."]
+#[doc = ""]
+#[doc = "   bit_test ::"]
+#[doc = "     Unused."]
+#[doc = ""]
+#[doc = "   bit_set ::"]
+#[doc = "     Unused."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     User-supplied data that is passed to each drawing callback."]
+#[doc = ""]
+#[doc = "   clip_box ::"]
+#[doc = "     An optional clipping box.  It is only used in direct rendering mode."]
+#[doc = "     Note that coordinates here should be expressed in _integer_ pixels"]
+#[doc = "     (and not in 26.6 fixed-point units)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   An anti-aliased glyph bitmap is drawn if the @FT_RASTER_FLAG_AA bit"]
+#[doc = "   flag is set in the `flags` field, otherwise a monochrome bitmap is"]
+#[doc = "   generated."]
+#[doc = ""]
+#[doc = "   If the @FT_RASTER_FLAG_DIRECT bit flag is set in `flags`, the raster"]
+#[doc = "   will call the `gray_spans` callback to draw gray pixel spans.  This"]
+#[doc = "   allows direct composition over a pre-existing bitmap through"]
+#[doc = "   user-provided callbacks to perform the span drawing and composition."]
+#[doc = "   Not supported by the monochrome rasterizer."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Raster_Params_ {
+    pub target: *const FT_Bitmap,
+    pub source: *const ::std::os::raw::c_void,
+    pub flags: ::std::os::raw::c_int,
+    pub gray_spans: FT_SpanFunc,
+    pub black_spans: FT_SpanFunc,
+    pub bit_test: FT_Raster_BitTest_Func,
+    pub bit_set: FT_Raster_BitSet_Func,
+    pub user: *mut ::std::os::raw::c_void,
+    pub clip_box: FT_BBox,
+}
+#[test]
+fn bindgen_test_layout_FT_Raster_Params_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Raster_Params_>(),
+        96usize,
+        concat!("Size of: ", stringify!(FT_Raster_Params_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Raster_Params_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Raster_Params_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).target as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(target)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).source as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(source)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).flags as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).gray_spans as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(gray_spans)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).black_spans as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(black_spans)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).bit_test as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(bit_test)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).bit_set as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(bit_set)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).user as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(user)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Params_>())).clip_box as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Params_),
+            "::",
+            stringify!(clip_box)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Raster_Params"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to hold the parameters used by a raster's render function,"]
+#[doc = "   passed as an argument to @FT_Outline_Render."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   target ::"]
+#[doc = "     The target bitmap."]
+#[doc = ""]
+#[doc = "   source ::"]
+#[doc = "     A pointer to the source glyph image (e.g., an @FT_Outline)."]
+#[doc = ""]
+#[doc = "   flags ::"]
+#[doc = "     The rendering flags."]
+#[doc = ""]
+#[doc = "   gray_spans ::"]
+#[doc = "     The gray span drawing callback."]
+#[doc = ""]
+#[doc = "   black_spans ::"]
+#[doc = "     Unused."]
+#[doc = ""]
+#[doc = "   bit_test ::"]
+#[doc = "     Unused."]
+#[doc = ""]
+#[doc = "   bit_set ::"]
+#[doc = "     Unused."]
+#[doc = ""]
+#[doc = "   user ::"]
+#[doc = "     User-supplied data that is passed to each drawing callback."]
+#[doc = ""]
+#[doc = "   clip_box ::"]
+#[doc = "     An optional clipping box.  It is only used in direct rendering mode."]
+#[doc = "     Note that coordinates here should be expressed in _integer_ pixels"]
+#[doc = "     (and not in 26.6 fixed-point units)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   An anti-aliased glyph bitmap is drawn if the @FT_RASTER_FLAG_AA bit"]
+#[doc = "   flag is set in the `flags` field, otherwise a monochrome bitmap is"]
+#[doc = "   generated."]
+#[doc = ""]
+#[doc = "   If the @FT_RASTER_FLAG_DIRECT bit flag is set in `flags`, the raster"]
+#[doc = "   will call the `gray_spans` callback to draw gray pixel spans.  This"]
+#[doc = "   allows direct composition over a pre-existing bitmap through"]
+#[doc = "   user-provided callbacks to perform the span drawing and composition."]
+#[doc = "   Not supported by the monochrome rasterizer."]
+pub type FT_Raster_Params = FT_Raster_Params_;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_NewFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to create a new raster object."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   memory ::"]
+#[doc = "     A handle to the memory allocator."]
+#[doc = ""]
+#[doc = " @output:"]
+#[doc = "   raster ::"]
+#[doc = "     A handle to the new raster object."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Error code.  0~means success."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The `memory` parameter is a typeless pointer in order to avoid"]
+#[doc = "   un-wanted dependencies on the rest of the FreeType code.  In practice,"]
+#[doc = "   it is an @FT_Memory object, i.e., a handle to the standard FreeType"]
+#[doc = "   memory allocator.  However, this field can be completely ignored by a"]
+#[doc = "   given raster implementation."]
+pub type FT_Raster_NewFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        memory: *mut ::std::os::raw::c_void,
+        raster: *mut FT_Raster,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_DoneFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A function used to destroy a given raster object."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   raster ::"]
+#[doc = "     A handle to the raster object."]
+pub type FT_Raster_DoneFunc = ::std::option::Option<unsafe extern "C" fn(raster: FT_Raster)>;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_ResetFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType used to provide an area of memory called the 'render pool'"]
+#[doc = "   available to all registered rasterizers.  This was not thread safe,"]
+#[doc = "   however, and now FreeType never allocates this pool."]
+#[doc = ""]
+#[doc = "   This function is called after a new raster object is created."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   raster ::"]
+#[doc = "     A handle to the new raster object."]
+#[doc = ""]
+#[doc = "   pool_base ::"]
+#[doc = "     Previously, the address in memory of the render pool.  Set this to"]
+#[doc = "     `NULL`."]
+#[doc = ""]
+#[doc = "   pool_size ::"]
+#[doc = "     Previously, the size in bytes of the render pool.  Set this to 0."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Rasterizers should rely on dynamic or stack allocation if they want to"]
+#[doc = "   (a handle to the memory allocator is passed to the rasterizer"]
+#[doc = "   constructor)."]
+pub type FT_Raster_ResetFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        raster: FT_Raster,
+        pool_base: *mut ::std::os::raw::c_uchar,
+        pool_size: ::std::os::raw::c_ulong,
+    ),
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_SetModeFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This function is a generic facility to change modes or attributes in a"]
+#[doc = "   given raster.  This can be used for debugging purposes, or simply to"]
+#[doc = "   allow implementation-specific 'features' in a given raster module."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   raster ::"]
+#[doc = "     A handle to the new raster object."]
+#[doc = ""]
+#[doc = "   mode ::"]
+#[doc = "     A 4-byte tag used to name the mode or property."]
+#[doc = ""]
+#[doc = "   args ::"]
+#[doc = "     A pointer to the new mode/property to use."]
+pub type FT_Raster_SetModeFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        raster: FT_Raster,
+        mode: ::std::os::raw::c_ulong,
+        args: *mut ::std::os::raw::c_void,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @functype:"]
+#[doc = "   FT_Raster_RenderFunc"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Invoke a given raster to scan-convert a given glyph image into a"]
+#[doc = "   target bitmap."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   raster ::"]
+#[doc = "     A handle to the raster object."]
+#[doc = ""]
+#[doc = "   params ::"]
+#[doc = "     A pointer to an @FT_Raster_Params structure used to store the"]
+#[doc = "     rendering parameters."]
+#[doc = ""]
+#[doc = " @return:"]
+#[doc = "   Error code.  0~means success."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The exact format of the source image depends on the raster's glyph"]
+#[doc = "   format defined in its @FT_Raster_Funcs structure.  It can be an"]
+#[doc = "   @FT_Outline or anything else in order to support a large array of"]
+#[doc = "   glyph formats."]
+#[doc = ""]
+#[doc = "   Note also that the render function can fail and return a"]
+#[doc = "   `FT_Err_Unimplemented_Feature` error code if the raster used does not"]
+#[doc = "   support direct composition."]
+pub type FT_Raster_RenderFunc = ::std::option::Option<
+    unsafe extern "C" fn(
+        raster: FT_Raster,
+        params: *const FT_Raster_Params,
+    ) -> ::std::os::raw::c_int,
+>;
+#[doc = " @struct:"]
+#[doc = "   FT_Raster_Funcs"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "  A structure used to describe a given raster class to the library."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   glyph_format ::"]
+#[doc = "     The supported glyph format for this raster."]
+#[doc = ""]
+#[doc = "   raster_new ::"]
+#[doc = "     The raster constructor."]
+#[doc = ""]
+#[doc = "   raster_reset ::"]
+#[doc = "     Used to reset the render pool within the raster."]
+#[doc = ""]
+#[doc = "   raster_render ::"]
+#[doc = "     A function to render a glyph into a given bitmap."]
+#[doc = ""]
+#[doc = "   raster_done ::"]
+#[doc = "     The raster destructor."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Raster_Funcs_ {
+    pub glyph_format: FT_Glyph_Format,
+    pub raster_new: FT_Raster_NewFunc,
+    pub raster_reset: FT_Raster_ResetFunc,
+    pub raster_set_mode: FT_Raster_SetModeFunc,
+    pub raster_render: FT_Raster_RenderFunc,
+    pub raster_done: FT_Raster_DoneFunc,
+}
+#[test]
+fn bindgen_test_layout_FT_Raster_Funcs_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Raster_Funcs_>(),
+        48usize,
+        concat!("Size of: ", stringify!(FT_Raster_Funcs_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Raster_Funcs_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Raster_Funcs_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Funcs_>())).glyph_format as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(glyph_format)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Funcs_>())).raster_new as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_new)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Funcs_>())).raster_reset as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_reset)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<FT_Raster_Funcs_>())).raster_set_mode as *const _ as usize
+        },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_set_mode)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Funcs_>())).raster_render as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_render)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Raster_Funcs_>())).raster_done as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Raster_Funcs_),
+            "::",
+            stringify!(raster_done)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Raster_Funcs"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "  A structure used to describe a given raster class to the library."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   glyph_format ::"]
+#[doc = "     The supported glyph format for this raster."]
+#[doc = ""]
+#[doc = "   raster_new ::"]
+#[doc = "     The raster constructor."]
+#[doc = ""]
+#[doc = "   raster_reset ::"]
+#[doc = "     Used to reset the render pool within the raster."]
+#[doc = ""]
+#[doc = "   raster_render ::"]
+#[doc = "     A function to render a glyph into a given bitmap."]
+#[doc = ""]
+#[doc = "   raster_done ::"]
+#[doc = "     The raster destructor."]
+pub type FT_Raster_Funcs = FT_Raster_Funcs_;
+#[doc = " @type:"]
+#[doc = "   FT_Bool"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef of unsigned char, used for simple booleans.  As usual,"]
+#[doc = "   values 1 and~0 represent true and false, respectively."]
+pub type FT_Bool = ::std::os::raw::c_uchar;
+#[doc = " @type:"]
+#[doc = "   FT_FWord"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A signed 16-bit integer used to store a distance in original font"]
+#[doc = "   units."]
+pub type FT_FWord = ::std::os::raw::c_short;
+#[doc = " @type:"]
+#[doc = "   FT_UFWord"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An unsigned 16-bit integer used to store a distance in original font"]
+#[doc = "   units."]
+pub type FT_UFWord = ::std::os::raw::c_ushort;
+#[doc = " @type:"]
+#[doc = "   FT_Char"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple typedef for the _signed_ char type."]
+pub type FT_Char = ::std::os::raw::c_schar;
+#[doc = " @type:"]
+#[doc = "   FT_Byte"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple typedef for the _unsigned_ char type."]
+pub type FT_Byte = ::std::os::raw::c_uchar;
+#[doc = " @type:"]
+#[doc = "   FT_Bytes"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for constant memory areas."]
+pub type FT_Bytes = *const FT_Byte;
+#[doc = " @type:"]
+#[doc = "   FT_Tag"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for 32-bit tags (as used in the SFNT format)."]
+pub type FT_Tag = FT_UInt32;
+#[doc = " @type:"]
+#[doc = "   FT_String"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple typedef for the char type, usually used for strings."]
+pub type FT_String = ::std::os::raw::c_char;
+#[doc = " @type:"]
+#[doc = "   FT_Short"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for signed short."]
+pub type FT_Short = ::std::os::raw::c_short;
+#[doc = " @type:"]
+#[doc = "   FT_UShort"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for unsigned short."]
+pub type FT_UShort = ::std::os::raw::c_ushort;
+#[doc = " @type:"]
+#[doc = "   FT_Int"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for the int type."]
+pub type FT_Int = ::std::os::raw::c_int;
+#[doc = " @type:"]
+#[doc = "   FT_UInt"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for the unsigned int type."]
+pub type FT_UInt = ::std::os::raw::c_uint;
+#[doc = " @type:"]
+#[doc = "   FT_Long"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for signed long."]
+pub type FT_Long = ::std::os::raw::c_long;
+#[doc = " @type:"]
+#[doc = "   FT_ULong"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A typedef for unsigned long."]
+pub type FT_ULong = ::std::os::raw::c_ulong;
+#[doc = " @type:"]
+#[doc = "   FT_F2Dot14"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A signed 2.14 fixed-point type used for unit vectors."]
+pub type FT_F2Dot14 = ::std::os::raw::c_short;
+#[doc = " @type:"]
+#[doc = "   FT_F26Dot6"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A signed 26.6 fixed-point type used for vectorial pixel coordinates."]
+pub type FT_F26Dot6 = ::std::os::raw::c_long;
+#[doc = " @type:"]
+#[doc = "   FT_Fixed"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This type is used to store 16.16 fixed-point values, like scaling"]
+#[doc = "   values or matrix coefficients."]
+pub type FT_Fixed = ::std::os::raw::c_long;
+#[doc = " @type:"]
+#[doc = "   FT_Error"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The FreeType error code type.  A value of~0 is always interpreted as a"]
+#[doc = "   successful operation."]
+pub type FT_Error = ::std::os::raw::c_int;
+#[doc = " @type:"]
+#[doc = "   FT_Pointer"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple typedef for a typeless pointer."]
+pub type FT_Pointer = *mut ::std::os::raw::c_void;
+#[doc = " @type:"]
+#[doc = "   FT_Offset"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This is equivalent to the ANSI~C `size_t` type, i.e., the largest"]
+#[doc = "   _unsigned_ integer type used to express a file size or position, or a"]
+#[doc = "   memory block size."]
+pub type FT_Offset = size_t;
+#[doc = " @type:"]
+#[doc = "   FT_PtrDist"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This is equivalent to the ANSI~C `ptrdiff_t` type, i.e., the largest"]
+#[doc = "   _signed_ integer type used to express the distance between two"]
+#[doc = "   pointers."]
+pub type FT_PtrDist = isize;
+#[doc = " @struct:"]
+#[doc = "   FT_UnitVector"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure used to store a 2D vector unit vector.  Uses"]
+#[doc = "   FT_F2Dot14 types."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x ::"]
+#[doc = "     Horizontal coordinate."]
+#[doc = ""]
+#[doc = "   y ::"]
+#[doc = "     Vertical coordinate."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_UnitVector_ {
+    pub x: FT_F2Dot14,
+    pub y: FT_F2Dot14,
+}
+#[test]
+fn bindgen_test_layout_FT_UnitVector_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_UnitVector_>(),
+        4usize,
+        concat!("Size of: ", stringify!(FT_UnitVector_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_UnitVector_>(),
+        2usize,
+        concat!("Alignment of ", stringify!(FT_UnitVector_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_UnitVector_>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_UnitVector_),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_UnitVector_>())).y as *const _ as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_UnitVector_),
+            "::",
+            stringify!(y)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_UnitVector"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure used to store a 2D vector unit vector.  Uses"]
+#[doc = "   FT_F2Dot14 types."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x ::"]
+#[doc = "     Horizontal coordinate."]
+#[doc = ""]
+#[doc = "   y ::"]
+#[doc = "     Vertical coordinate."]
+pub type FT_UnitVector = FT_UnitVector_;
+#[doc = " @struct:"]
+#[doc = "   FT_Matrix"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure used to store a 2x2 matrix.  Coefficients are in"]
+#[doc = "   16.16 fixed-point format.  The computation performed is:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     x' = x*xx + y*xy"]
+#[doc = "     y' = x*yx + y*yy"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   xx ::"]
+#[doc = "     Matrix coefficient."]
+#[doc = ""]
+#[doc = "   xy ::"]
+#[doc = "     Matrix coefficient."]
+#[doc = ""]
+#[doc = "   yx ::"]
+#[doc = "     Matrix coefficient."]
+#[doc = ""]
+#[doc = "   yy ::"]
+#[doc = "     Matrix coefficient."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Matrix_ {
+    pub xx: FT_Fixed,
+    pub xy: FT_Fixed,
+    pub yx: FT_Fixed,
+    pub yy: FT_Fixed,
+}
+#[test]
+fn bindgen_test_layout_FT_Matrix_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Matrix_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_Matrix_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Matrix_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Matrix_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Matrix_>())).xx as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(xx)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Matrix_>())).xy as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(xy)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Matrix_>())).yx as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(yx)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Matrix_>())).yy as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Matrix_),
+            "::",
+            stringify!(yy)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Matrix"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure used to store a 2x2 matrix.  Coefficients are in"]
+#[doc = "   16.16 fixed-point format.  The computation performed is:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     x' = x*xx + y*xy"]
+#[doc = "     y' = x*yx + y*yy"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   xx ::"]
+#[doc = "     Matrix coefficient."]
+#[doc = ""]
+#[doc = "   xy ::"]
+#[doc = "     Matrix coefficient."]
+#[doc = ""]
+#[doc = "   yx ::"]
+#[doc = "     Matrix coefficient."]
+#[doc = ""]
+#[doc = "   yy ::"]
+#[doc = "     Matrix coefficient."]
+pub type FT_Matrix = FT_Matrix_;
+#[doc = " @struct:"]
+#[doc = "   FT_Data"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Read-only binary data represented as a pointer and a length."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   pointer ::"]
+#[doc = "     The data."]
+#[doc = ""]
+#[doc = "   length ::"]
+#[doc = "     The length of the data in bytes."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Data_ {
+    pub pointer: *const FT_Byte,
+    pub length: FT_Int,
+}
+#[test]
+fn bindgen_test_layout_FT_Data_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Data_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_Data_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Data_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Data_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Data_>())).pointer as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Data_),
+            "::",
+            stringify!(pointer)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Data_>())).length as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Data_),
+            "::",
+            stringify!(length)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Data"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Read-only binary data represented as a pointer and a length."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   pointer ::"]
+#[doc = "     The data."]
+#[doc = ""]
+#[doc = "   length ::"]
+#[doc = "     The length of the data in bytes."]
+pub type FT_Data = FT_Data_;
+#[doc = " @functype:"]
+#[doc = "   FT_Generic_Finalizer"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Describe a function used to destroy the 'client' data of any FreeType"]
+#[doc = "   object.  See the description of the @FT_Generic type for details of"]
+#[doc = "   usage."]
+#[doc = ""]
+#[doc = " @input:"]
+#[doc = "   The address of the FreeType object that is under finalization.  Its"]
+#[doc = "   client data is accessed through its `generic` field."]
+pub type FT_Generic_Finalizer =
+    ::std::option::Option<unsafe extern "C" fn(object: *mut ::std::os::raw::c_void)>;
+#[doc = " @struct:"]
+#[doc = "   FT_Generic"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Client applications often need to associate their own data to a"]
+#[doc = "   variety of FreeType core objects.  For example, a text layout API"]
+#[doc = "   might want to associate a glyph cache to a given size object."]
+#[doc = ""]
+#[doc = "   Some FreeType object contains a `generic` field, of type `FT_Generic`,"]
+#[doc = "   which usage is left to client applications and font servers."]
+#[doc = ""]
+#[doc = "   It can be used to store a pointer to client-specific data, as well as"]
+#[doc = "   the address of a 'finalizer' function, which will be called by"]
+#[doc = "   FreeType when the object is destroyed (for example, the previous"]
+#[doc = "   client example would put the address of the glyph cache destructor in"]
+#[doc = "   the `finalizer` field)."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   data ::"]
+#[doc = "     A typeless pointer to any client-specified data. This field is"]
+#[doc = "     completely ignored by the FreeType library."]
+#[doc = ""]
+#[doc = "   finalizer ::"]
+#[doc = "     A pointer to a 'generic finalizer' function, which will be called"]
+#[doc = "     when the object is destroyed.  If this field is set to `NULL`, no"]
+#[doc = "     code will be called."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Generic_ {
+    pub data: *mut ::std::os::raw::c_void,
+    pub finalizer: FT_Generic_Finalizer,
+}
+#[test]
+fn bindgen_test_layout_FT_Generic_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Generic_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_Generic_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Generic_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Generic_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Generic_>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Generic_),
+            "::",
+            stringify!(data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Generic_>())).finalizer as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Generic_),
+            "::",
+            stringify!(finalizer)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Generic"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Client applications often need to associate their own data to a"]
+#[doc = "   variety of FreeType core objects.  For example, a text layout API"]
+#[doc = "   might want to associate a glyph cache to a given size object."]
+#[doc = ""]
+#[doc = "   Some FreeType object contains a `generic` field, of type `FT_Generic`,"]
+#[doc = "   which usage is left to client applications and font servers."]
+#[doc = ""]
+#[doc = "   It can be used to store a pointer to client-specific data, as well as"]
+#[doc = "   the address of a 'finalizer' function, which will be called by"]
+#[doc = "   FreeType when the object is destroyed (for example, the previous"]
+#[doc = "   client example would put the address of the glyph cache destructor in"]
+#[doc = "   the `finalizer` field)."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   data ::"]
+#[doc = "     A typeless pointer to any client-specified data. This field is"]
+#[doc = "     completely ignored by the FreeType library."]
+#[doc = ""]
+#[doc = "   finalizer ::"]
+#[doc = "     A pointer to a 'generic finalizer' function, which will be called"]
+#[doc = "     when the object is destroyed.  If this field is set to `NULL`, no"]
+#[doc = "     code will be called."]
+pub type FT_Generic = FT_Generic_;
+#[doc = " @type:"]
+#[doc = "   FT_ListNode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "    Many elements and objects in FreeType are listed through an @FT_List"]
+#[doc = "    record (see @FT_ListRec).  As its name suggests, an FT_ListNode is a"]
+#[doc = "    handle to a single list element."]
+pub type FT_ListNode = *mut FT_ListNodeRec_;
+#[doc = " @type:"]
+#[doc = "   FT_List"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a list record (see @FT_ListRec)."]
+pub type FT_List = *mut FT_ListRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_ListNodeRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to hold a single list element."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   prev ::"]
+#[doc = "     The previous element in the list.  `NULL` if first."]
+#[doc = ""]
+#[doc = "   next ::"]
+#[doc = "     The next element in the list.  `NULL` if last."]
+#[doc = ""]
+#[doc = "   data ::"]
+#[doc = "     A typeless pointer to the listed object."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_ListNodeRec_ {
+    pub prev: FT_ListNode,
+    pub next: FT_ListNode,
+    pub data: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout_FT_ListNodeRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_ListNodeRec_>(),
+        24usize,
+        concat!("Size of: ", stringify!(FT_ListNodeRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_ListNodeRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_ListNodeRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_ListNodeRec_>())).prev as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListNodeRec_),
+            "::",
+            stringify!(prev)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_ListNodeRec_>())).next as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListNodeRec_),
+            "::",
+            stringify!(next)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_ListNodeRec_>())).data as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListNodeRec_),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_ListNodeRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to hold a single list element."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   prev ::"]
+#[doc = "     The previous element in the list.  `NULL` if first."]
+#[doc = ""]
+#[doc = "   next ::"]
+#[doc = "     The next element in the list.  `NULL` if last."]
+#[doc = ""]
+#[doc = "   data ::"]
+#[doc = "     A typeless pointer to the listed object."]
+pub type FT_ListNodeRec = FT_ListNodeRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_ListRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to hold a simple doubly-linked list.  These are used"]
+#[doc = "   in many parts of FreeType."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   head ::"]
+#[doc = "     The head (first element) of doubly-linked list."]
+#[doc = ""]
+#[doc = "   tail ::"]
+#[doc = "     The tail (last element) of doubly-linked list."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_ListRec_ {
+    pub head: FT_ListNode,
+    pub tail: FT_ListNode,
+}
+#[test]
+fn bindgen_test_layout_FT_ListRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_ListRec_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_ListRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_ListRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_ListRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_ListRec_>())).head as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListRec_),
+            "::",
+            stringify!(head)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_ListRec_>())).tail as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_ListRec_),
+            "::",
+            stringify!(tail)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_ListRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure used to hold a simple doubly-linked list.  These are used"]
+#[doc = "   in many parts of FreeType."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   head ::"]
+#[doc = "     The head (first element) of doubly-linked list."]
+#[doc = ""]
+#[doc = "   tail ::"]
+#[doc = "     The tail (last element) of doubly-linked list."]
+pub type FT_ListRec = FT_ListRec_;
+pub const FT_Mod_Err_Base: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Autofit: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_BDF: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Bzip2: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Cache: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_CFF: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_CID: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Gzip: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_LZW: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_OTvalid: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_PCF: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_PFR: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_PSaux: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_PShinter: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_PSnames: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Raster: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_SFNT: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Smooth: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_TrueType: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Type1: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Type42: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Winfonts: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_GXvalid: _bindgen_ty_1 = 0;
+pub const FT_Mod_Err_Max: _bindgen_ty_1 = 1;
+pub type _bindgen_ty_1 = u32;
+pub const FT_Err_Ok: _bindgen_ty_2 = 0;
+pub const FT_Err_Cannot_Open_Resource: _bindgen_ty_2 = 1;
+pub const FT_Err_Unknown_File_Format: _bindgen_ty_2 = 2;
+pub const FT_Err_Invalid_File_Format: _bindgen_ty_2 = 3;
+pub const FT_Err_Invalid_Version: _bindgen_ty_2 = 4;
+pub const FT_Err_Lower_Module_Version: _bindgen_ty_2 = 5;
+pub const FT_Err_Invalid_Argument: _bindgen_ty_2 = 6;
+pub const FT_Err_Unimplemented_Feature: _bindgen_ty_2 = 7;
+pub const FT_Err_Invalid_Table: _bindgen_ty_2 = 8;
+pub const FT_Err_Invalid_Offset: _bindgen_ty_2 = 9;
+pub const FT_Err_Array_Too_Large: _bindgen_ty_2 = 10;
+pub const FT_Err_Missing_Module: _bindgen_ty_2 = 11;
+pub const FT_Err_Missing_Property: _bindgen_ty_2 = 12;
+pub const FT_Err_Invalid_Glyph_Index: _bindgen_ty_2 = 16;
+pub const FT_Err_Invalid_Character_Code: _bindgen_ty_2 = 17;
+pub const FT_Err_Invalid_Glyph_Format: _bindgen_ty_2 = 18;
+pub const FT_Err_Cannot_Render_Glyph: _bindgen_ty_2 = 19;
+pub const FT_Err_Invalid_Outline: _bindgen_ty_2 = 20;
+pub const FT_Err_Invalid_Composite: _bindgen_ty_2 = 21;
+pub const FT_Err_Too_Many_Hints: _bindgen_ty_2 = 22;
+pub const FT_Err_Invalid_Pixel_Size: _bindgen_ty_2 = 23;
+pub const FT_Err_Invalid_Handle: _bindgen_ty_2 = 32;
+pub const FT_Err_Invalid_Library_Handle: _bindgen_ty_2 = 33;
+pub const FT_Err_Invalid_Driver_Handle: _bindgen_ty_2 = 34;
+pub const FT_Err_Invalid_Face_Handle: _bindgen_ty_2 = 35;
+pub const FT_Err_Invalid_Size_Handle: _bindgen_ty_2 = 36;
+pub const FT_Err_Invalid_Slot_Handle: _bindgen_ty_2 = 37;
+pub const FT_Err_Invalid_CharMap_Handle: _bindgen_ty_2 = 38;
+pub const FT_Err_Invalid_Cache_Handle: _bindgen_ty_2 = 39;
+pub const FT_Err_Invalid_Stream_Handle: _bindgen_ty_2 = 40;
+pub const FT_Err_Too_Many_Drivers: _bindgen_ty_2 = 48;
+pub const FT_Err_Too_Many_Extensions: _bindgen_ty_2 = 49;
+pub const FT_Err_Out_Of_Memory: _bindgen_ty_2 = 64;
+pub const FT_Err_Unlisted_Object: _bindgen_ty_2 = 65;
+pub const FT_Err_Cannot_Open_Stream: _bindgen_ty_2 = 81;
+pub const FT_Err_Invalid_Stream_Seek: _bindgen_ty_2 = 82;
+pub const FT_Err_Invalid_Stream_Skip: _bindgen_ty_2 = 83;
+pub const FT_Err_Invalid_Stream_Read: _bindgen_ty_2 = 84;
+pub const FT_Err_Invalid_Stream_Operation: _bindgen_ty_2 = 85;
+pub const FT_Err_Invalid_Frame_Operation: _bindgen_ty_2 = 86;
+pub const FT_Err_Nested_Frame_Access: _bindgen_ty_2 = 87;
+pub const FT_Err_Invalid_Frame_Read: _bindgen_ty_2 = 88;
+pub const FT_Err_Raster_Uninitialized: _bindgen_ty_2 = 96;
+pub const FT_Err_Raster_Corrupted: _bindgen_ty_2 = 97;
+pub const FT_Err_Raster_Overflow: _bindgen_ty_2 = 98;
+pub const FT_Err_Raster_Negative_Height: _bindgen_ty_2 = 99;
+pub const FT_Err_Too_Many_Caches: _bindgen_ty_2 = 112;
+pub const FT_Err_Invalid_Opcode: _bindgen_ty_2 = 128;
+pub const FT_Err_Too_Few_Arguments: _bindgen_ty_2 = 129;
+pub const FT_Err_Stack_Overflow: _bindgen_ty_2 = 130;
+pub const FT_Err_Code_Overflow: _bindgen_ty_2 = 131;
+pub const FT_Err_Bad_Argument: _bindgen_ty_2 = 132;
+pub const FT_Err_Divide_By_Zero: _bindgen_ty_2 = 133;
+pub const FT_Err_Invalid_Reference: _bindgen_ty_2 = 134;
+pub const FT_Err_Debug_OpCode: _bindgen_ty_2 = 135;
+pub const FT_Err_ENDF_In_Exec_Stream: _bindgen_ty_2 = 136;
+pub const FT_Err_Nested_DEFS: _bindgen_ty_2 = 137;
+pub const FT_Err_Invalid_CodeRange: _bindgen_ty_2 = 138;
+pub const FT_Err_Execution_Too_Long: _bindgen_ty_2 = 139;
+pub const FT_Err_Too_Many_Function_Defs: _bindgen_ty_2 = 140;
+pub const FT_Err_Too_Many_Instruction_Defs: _bindgen_ty_2 = 141;
+pub const FT_Err_Table_Missing: _bindgen_ty_2 = 142;
+pub const FT_Err_Horiz_Header_Missing: _bindgen_ty_2 = 143;
+pub const FT_Err_Locations_Missing: _bindgen_ty_2 = 144;
+pub const FT_Err_Name_Table_Missing: _bindgen_ty_2 = 145;
+pub const FT_Err_CMap_Table_Missing: _bindgen_ty_2 = 146;
+pub const FT_Err_Hmtx_Table_Missing: _bindgen_ty_2 = 147;
+pub const FT_Err_Post_Table_Missing: _bindgen_ty_2 = 148;
+pub const FT_Err_Invalid_Horiz_Metrics: _bindgen_ty_2 = 149;
+pub const FT_Err_Invalid_CharMap_Format: _bindgen_ty_2 = 150;
+pub const FT_Err_Invalid_PPem: _bindgen_ty_2 = 151;
+pub const FT_Err_Invalid_Vert_Metrics: _bindgen_ty_2 = 152;
+pub const FT_Err_Could_Not_Find_Context: _bindgen_ty_2 = 153;
+pub const FT_Err_Invalid_Post_Table_Format: _bindgen_ty_2 = 154;
+pub const FT_Err_Invalid_Post_Table: _bindgen_ty_2 = 155;
+pub const FT_Err_DEF_In_Glyf_Bytecode: _bindgen_ty_2 = 156;
+pub const FT_Err_Missing_Bitmap: _bindgen_ty_2 = 157;
+pub const FT_Err_Syntax_Error: _bindgen_ty_2 = 160;
+pub const FT_Err_Stack_Underflow: _bindgen_ty_2 = 161;
+pub const FT_Err_Ignore: _bindgen_ty_2 = 162;
+pub const FT_Err_No_Unicode_Glyph_Name: _bindgen_ty_2 = 163;
+pub const FT_Err_Glyph_Too_Big: _bindgen_ty_2 = 164;
+pub const FT_Err_Missing_Startfont_Field: _bindgen_ty_2 = 176;
+pub const FT_Err_Missing_Font_Field: _bindgen_ty_2 = 177;
+pub const FT_Err_Missing_Size_Field: _bindgen_ty_2 = 178;
+pub const FT_Err_Missing_Fontboundingbox_Field: _bindgen_ty_2 = 179;
+pub const FT_Err_Missing_Chars_Field: _bindgen_ty_2 = 180;
+pub const FT_Err_Missing_Startchar_Field: _bindgen_ty_2 = 181;
+pub const FT_Err_Missing_Encoding_Field: _bindgen_ty_2 = 182;
+pub const FT_Err_Missing_Bbx_Field: _bindgen_ty_2 = 183;
+pub const FT_Err_Bbx_Too_Big: _bindgen_ty_2 = 184;
+pub const FT_Err_Corrupted_Font_Header: _bindgen_ty_2 = 185;
+pub const FT_Err_Corrupted_Font_Glyphs: _bindgen_ty_2 = 186;
+pub const FT_Err_Max: _bindgen_ty_2 = 187;
+pub type _bindgen_ty_2 = u32;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Error_String"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Retrieve the description of a valid FreeType error code."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   error_code ::"]
+    #[doc = "     A valid FreeType error code."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   A C~string or `NULL`, if any error occurred."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   FreeType has to be compiled with `FT_CONFIG_OPTION_ERROR_STRINGS` or"]
+    #[doc = "   `FT_DEBUG_LEVEL_ERROR` to get meaningful descriptions."]
+    #[doc = "   'error_string' will be `NULL` otherwise."]
+    #[doc = ""]
+    #[doc = "   Module identification will be ignored:"]
+    #[doc = ""]
+    #[doc = "   ```c"]
+    #[doc = "     strcmp( FT_Error_String(  FT_Err_Unknown_File_Format ),"]
+    #[doc = "             FT_Error_String( BDF_Err_Unknown_File_Format ) ) == 0;"]
+    #[doc = "   ```"]
+    pub fn FT_Error_String(error_code: FT_Error) -> *const ::std::os::raw::c_char;
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Glyph_Metrics"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to model the metrics of a single glyph.  The values are"]
+#[doc = "   expressed in 26.6 fractional pixel format; if the flag"]
+#[doc = "   @FT_LOAD_NO_SCALE has been used while loading the glyph, values are"]
+#[doc = "   expressed in font units instead."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   width ::"]
+#[doc = "     The glyph's width."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     The glyph's height."]
+#[doc = ""]
+#[doc = "   horiBearingX ::"]
+#[doc = "     Left side bearing for horizontal layout."]
+#[doc = ""]
+#[doc = "   horiBearingY ::"]
+#[doc = "     Top side bearing for horizontal layout."]
+#[doc = ""]
+#[doc = "   horiAdvance ::"]
+#[doc = "     Advance width for horizontal layout."]
+#[doc = ""]
+#[doc = "   vertBearingX ::"]
+#[doc = "     Left side bearing for vertical layout."]
+#[doc = ""]
+#[doc = "   vertBearingY ::"]
+#[doc = "     Top side bearing for vertical layout.  Larger positive values mean"]
+#[doc = "     further below the vertical glyph origin."]
+#[doc = ""]
+#[doc = "   vertAdvance ::"]
+#[doc = "     Advance height for vertical layout.  Positive values mean the glyph"]
+#[doc = "     has a positive advance downward."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   If not disabled with @FT_LOAD_NO_HINTING, the values represent"]
+#[doc = "   dimensions of the hinted glyph (in case hinting is applicable)."]
+#[doc = ""]
+#[doc = "   Stroking a glyph with an outside border does not increase"]
+#[doc = "   `horiAdvance` or `vertAdvance`; you have to manually adjust these"]
+#[doc = "   values to account for the added width and height."]
+#[doc = ""]
+#[doc = "   FreeType doesn't use the 'VORG' table data for CFF fonts because it"]
+#[doc = "   doesn't have an interface to quickly retrieve the glyph height.  The"]
+#[doc = "   y~coordinate of the vertical origin can be simply computed as"]
+#[doc = "   `vertBearingY + height` after loading a glyph."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Glyph_Metrics_ {
+    pub width: FT_Pos,
+    pub height: FT_Pos,
+    pub horiBearingX: FT_Pos,
+    pub horiBearingY: FT_Pos,
+    pub horiAdvance: FT_Pos,
+    pub vertBearingX: FT_Pos,
+    pub vertBearingY: FT_Pos,
+    pub vertAdvance: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Glyph_Metrics_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Glyph_Metrics_>(),
+        64usize,
+        concat!("Size of: ", stringify!(FT_Glyph_Metrics_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Glyph_Metrics_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Glyph_Metrics_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).width as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).height as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).horiBearingX as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(horiBearingX)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).horiBearingY as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(horiBearingY)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).horiAdvance as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(horiAdvance)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).vertBearingX as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(vertBearingX)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).vertBearingY as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(vertBearingY)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Glyph_Metrics_>())).vertAdvance as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Glyph_Metrics_),
+            "::",
+            stringify!(vertAdvance)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Glyph_Metrics"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to model the metrics of a single glyph.  The values are"]
+#[doc = "   expressed in 26.6 fractional pixel format; if the flag"]
+#[doc = "   @FT_LOAD_NO_SCALE has been used while loading the glyph, values are"]
+#[doc = "   expressed in font units instead."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   width ::"]
+#[doc = "     The glyph's width."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     The glyph's height."]
+#[doc = ""]
+#[doc = "   horiBearingX ::"]
+#[doc = "     Left side bearing for horizontal layout."]
+#[doc = ""]
+#[doc = "   horiBearingY ::"]
+#[doc = "     Top side bearing for horizontal layout."]
+#[doc = ""]
+#[doc = "   horiAdvance ::"]
+#[doc = "     Advance width for horizontal layout."]
+#[doc = ""]
+#[doc = "   vertBearingX ::"]
+#[doc = "     Left side bearing for vertical layout."]
+#[doc = ""]
+#[doc = "   vertBearingY ::"]
+#[doc = "     Top side bearing for vertical layout.  Larger positive values mean"]
+#[doc = "     further below the vertical glyph origin."]
+#[doc = ""]
+#[doc = "   vertAdvance ::"]
+#[doc = "     Advance height for vertical layout.  Positive values mean the glyph"]
+#[doc = "     has a positive advance downward."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   If not disabled with @FT_LOAD_NO_HINTING, the values represent"]
+#[doc = "   dimensions of the hinted glyph (in case hinting is applicable)."]
+#[doc = ""]
+#[doc = "   Stroking a glyph with an outside border does not increase"]
+#[doc = "   `horiAdvance` or `vertAdvance`; you have to manually adjust these"]
+#[doc = "   values to account for the added width and height."]
+#[doc = ""]
+#[doc = "   FreeType doesn't use the 'VORG' table data for CFF fonts because it"]
+#[doc = "   doesn't have an interface to quickly retrieve the glyph height.  The"]
+#[doc = "   y~coordinate of the vertical origin can be simply computed as"]
+#[doc = "   `vertBearingY + height` after loading a glyph."]
+pub type FT_Glyph_Metrics = FT_Glyph_Metrics_;
+#[doc = " @struct:"]
+#[doc = "   FT_Bitmap_Size"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This structure models the metrics of a bitmap strike (i.e., a set of"]
+#[doc = "   glyphs for a given point size and resolution) in a bitmap font.  It is"]
+#[doc = "   used for the `available_sizes` field of @FT_Face."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   height ::"]
+#[doc = "     The vertical distance, in pixels, between two consecutive baselines."]
+#[doc = "     It is always positive."]
+#[doc = ""]
+#[doc = "   width ::"]
+#[doc = "     The average width, in pixels, of all glyphs in the strike."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The nominal size of the strike in 26.6 fractional points.  This"]
+#[doc = "     field is not very useful."]
+#[doc = ""]
+#[doc = "   x_ppem ::"]
+#[doc = "     The horizontal ppem (nominal width) in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = "   y_ppem ::"]
+#[doc = "     The vertical ppem (nominal height) in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Windows FNT:"]
+#[doc = "     The nominal size given in a FNT font is not reliable.  If the driver"]
+#[doc = "     finds it incorrect, it sets `size` to some calculated values, and"]
+#[doc = "     `x_ppem` and `y_ppem` to the pixel width and height given in the"]
+#[doc = "     font, respectively."]
+#[doc = ""]
+#[doc = "   TrueType embedded bitmaps:"]
+#[doc = "     `size`, `width`, and `height` values are not contained in the bitmap"]
+#[doc = "     strike itself.  They are computed from the global font parameters."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Bitmap_Size_ {
+    pub height: FT_Short,
+    pub width: FT_Short,
+    pub size: FT_Pos,
+    pub x_ppem: FT_Pos,
+    pub y_ppem: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Bitmap_Size_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Bitmap_Size_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_Bitmap_Size_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Bitmap_Size_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Bitmap_Size_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_Size_>())).height as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_Size_>())).width as *const _ as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_Size_>())).size as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_Size_>())).x_ppem as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(x_ppem)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Bitmap_Size_>())).y_ppem as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Bitmap_Size_),
+            "::",
+            stringify!(y_ppem)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Bitmap_Size"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This structure models the metrics of a bitmap strike (i.e., a set of"]
+#[doc = "   glyphs for a given point size and resolution) in a bitmap font.  It is"]
+#[doc = "   used for the `available_sizes` field of @FT_Face."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   height ::"]
+#[doc = "     The vertical distance, in pixels, between two consecutive baselines."]
+#[doc = "     It is always positive."]
+#[doc = ""]
+#[doc = "   width ::"]
+#[doc = "     The average width, in pixels, of all glyphs in the strike."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The nominal size of the strike in 26.6 fractional points.  This"]
+#[doc = "     field is not very useful."]
+#[doc = ""]
+#[doc = "   x_ppem ::"]
+#[doc = "     The horizontal ppem (nominal width) in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = "   y_ppem ::"]
+#[doc = "     The vertical ppem (nominal height) in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Windows FNT:"]
+#[doc = "     The nominal size given in a FNT font is not reliable.  If the driver"]
+#[doc = "     finds it incorrect, it sets `size` to some calculated values, and"]
+#[doc = "     `x_ppem` and `y_ppem` to the pixel width and height given in the"]
+#[doc = "     font, respectively."]
+#[doc = ""]
+#[doc = "   TrueType embedded bitmaps:"]
+#[doc = "     `size`, `width`, and `height` values are not contained in the bitmap"]
+#[doc = "     strike itself.  They are computed from the global font parameters."]
+pub type FT_Bitmap_Size = FT_Bitmap_Size_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_LibraryRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Library"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a FreeType library instance.  Each 'library' is completely"]
+#[doc = "   independent from the others; it is the 'root' of a set of objects like"]
+#[doc = "   fonts, faces, sizes, etc."]
+#[doc = ""]
+#[doc = "   It also embeds a memory manager (see @FT_Memory), as well as a"]
+#[doc = "   scan-line converter object (see @FT_Raster)."]
+#[doc = ""]
+#[doc = "   [Since 2.5.6] In multi-threaded applications it is easiest to use one"]
+#[doc = "   `FT_Library` object per thread.  In case this is too cumbersome, a"]
+#[doc = "   single `FT_Library` object across threads is possible also, as long as"]
+#[doc = "   a mutex lock is used around @FT_New_Face and @FT_Done_Face."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Library objects are normally created by @FT_Init_FreeType, and"]
+#[doc = "   destroyed with @FT_Done_FreeType.  If you need reference-counting"]
+#[doc = "   (cf. @FT_Reference_Library), use @FT_New_Library and @FT_Done_Library."]
+pub type FT_Library = *mut FT_LibraryRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_ModuleRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Module"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a given FreeType module object.  A module can be a font"]
+#[doc = "   driver, a renderer, or anything else that provides services to the"]
+#[doc = "   former."]
+pub type FT_Module = *mut FT_ModuleRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_DriverRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Driver"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a given FreeType font driver object.  A font driver is a"]
+#[doc = "   module capable of creating faces from font files."]
+pub type FT_Driver = *mut FT_DriverRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_RendererRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Renderer"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a given FreeType renderer.  A renderer is a module in"]
+#[doc = "   charge of converting a glyph's outline image to a bitmap.  It supports"]
+#[doc = "   a single glyph image format, and one or more target surface depths."]
+pub type FT_Renderer = *mut FT_RendererRec_;
+#[doc = " @type:"]
+#[doc = "   FT_Face"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a typographic face object.  A face object models a given"]
+#[doc = "   typeface, in a given style."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   A face object also owns a single @FT_GlyphSlot object, as well as one"]
+#[doc = "   or more @FT_Size objects."]
+#[doc = ""]
+#[doc = "   Use @FT_New_Face or @FT_Open_Face to create a new face object from a"]
+#[doc = "   given filepath or a custom input stream."]
+#[doc = ""]
+#[doc = "   Use @FT_Done_Face to destroy it (along with its slot and sizes)."]
+#[doc = ""]
+#[doc = "   An `FT_Face` object can only be safely used from one thread at a time."]
+#[doc = "   Similarly, creation and destruction of `FT_Face` with the same"]
+#[doc = "   @FT_Library object can only be done from one thread at a time.  On the"]
+#[doc = "   other hand, functions like @FT_Load_Glyph and its siblings are"]
+#[doc = "   thread-safe and do not need the lock to be held as long as the same"]
+#[doc = "   `FT_Face` object is not used from multiple threads at the same time."]
+#[doc = ""]
+#[doc = " @also:"]
+#[doc = "   See @FT_FaceRec for the publicly accessible fields of a given face"]
+#[doc = "   object."]
+pub type FT_Face = *mut FT_FaceRec_;
+#[doc = " @type:"]
+#[doc = "   FT_Size"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to an object that models a face scaled to a given character"]
+#[doc = "   size."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   An @FT_Face has one _active_ @FT_Size object that is used by functions"]
+#[doc = "   like @FT_Load_Glyph to determine the scaling transformation that in"]
+#[doc = "   turn is used to load and hint glyphs and metrics."]
+#[doc = ""]
+#[doc = "   You can use @FT_Set_Char_Size, @FT_Set_Pixel_Sizes, @FT_Request_Size"]
+#[doc = "   or even @FT_Select_Size to change the content (i.e., the scaling"]
+#[doc = "   values) of the active @FT_Size."]
+#[doc = ""]
+#[doc = "   You can use @FT_New_Size to create additional size objects for a given"]
+#[doc = "   @FT_Face, but they won't be used by other functions until you activate"]
+#[doc = "   it through @FT_Activate_Size.  Only one size can be activated at any"]
+#[doc = "   given time per face."]
+#[doc = ""]
+#[doc = " @also:"]
+#[doc = "   See @FT_SizeRec for the publicly accessible fields of a given size"]
+#[doc = "   object."]
+pub type FT_Size = *mut FT_SizeRec_;
+#[doc = " @type:"]
+#[doc = "   FT_GlyphSlot"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a given 'glyph slot'.  A slot is a container that can hold"]
+#[doc = "   any of the glyphs contained in its parent face."]
+#[doc = ""]
+#[doc = "   In other words, each time you call @FT_Load_Glyph or @FT_Load_Char,"]
+#[doc = "   the slot's content is erased by the new glyph data, i.e., the glyph's"]
+#[doc = "   metrics, its image (bitmap or outline), and other control information."]
+#[doc = ""]
+#[doc = " @also:"]
+#[doc = "   See @FT_GlyphSlotRec for the publicly accessible glyph fields."]
+pub type FT_GlyphSlot = *mut FT_GlyphSlotRec_;
+#[doc = " @type:"]
+#[doc = "   FT_CharMap"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a character map (usually abbreviated to 'charmap').  A"]
+#[doc = "   charmap is used to translate character codes in a given encoding into"]
+#[doc = "   glyph indexes for its parent's face.  Some font formats may provide"]
+#[doc = "   several charmaps per font."]
+#[doc = ""]
+#[doc = "   Each face object owns zero or more charmaps, but only one of them can"]
+#[doc = "   be 'active', providing the data used by @FT_Get_Char_Index or"]
+#[doc = "   @FT_Load_Char."]
+#[doc = ""]
+#[doc = "   The list of available charmaps in a face is available through the"]
+#[doc = "   `face->num_charmaps` and `face->charmaps` fields of @FT_FaceRec."]
+#[doc = ""]
+#[doc = "   The currently active charmap is available as `face->charmap`.  You"]
+#[doc = "   should call @FT_Set_Charmap to change it."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   When a new face is created (either through @FT_New_Face or"]
+#[doc = "   @FT_Open_Face), the library looks for a Unicode charmap within the"]
+#[doc = "   list and automatically activates it.  If there is no Unicode charmap,"]
+#[doc = "   FreeType doesn't set an 'active' charmap."]
+#[doc = ""]
+#[doc = " @also:"]
+#[doc = "   See @FT_CharMapRec for the publicly accessible fields of a given"]
+#[doc = "   character map."]
+pub type FT_CharMap = *mut FT_CharMapRec_;
+pub const FT_Encoding__FT_ENCODING_NONE: FT_Encoding_ = 0;
+pub const FT_Encoding__FT_ENCODING_MS_SYMBOL: FT_Encoding_ = 1937337698;
+pub const FT_Encoding__FT_ENCODING_UNICODE: FT_Encoding_ = 1970170211;
+pub const FT_Encoding__FT_ENCODING_SJIS: FT_Encoding_ = 1936353651;
+pub const FT_Encoding__FT_ENCODING_PRC: FT_Encoding_ = 1734484000;
+pub const FT_Encoding__FT_ENCODING_BIG5: FT_Encoding_ = 1651074869;
+pub const FT_Encoding__FT_ENCODING_WANSUNG: FT_Encoding_ = 2002873971;
+pub const FT_Encoding__FT_ENCODING_JOHAB: FT_Encoding_ = 1785686113;
+pub const FT_Encoding__FT_ENCODING_GB2312: FT_Encoding_ = 1734484000;
+pub const FT_Encoding__FT_ENCODING_MS_SJIS: FT_Encoding_ = 1936353651;
+pub const FT_Encoding__FT_ENCODING_MS_GB2312: FT_Encoding_ = 1734484000;
+pub const FT_Encoding__FT_ENCODING_MS_BIG5: FT_Encoding_ = 1651074869;
+pub const FT_Encoding__FT_ENCODING_MS_WANSUNG: FT_Encoding_ = 2002873971;
+pub const FT_Encoding__FT_ENCODING_MS_JOHAB: FT_Encoding_ = 1785686113;
+pub const FT_Encoding__FT_ENCODING_ADOBE_STANDARD: FT_Encoding_ = 1094995778;
+pub const FT_Encoding__FT_ENCODING_ADOBE_EXPERT: FT_Encoding_ = 1094992453;
+pub const FT_Encoding__FT_ENCODING_ADOBE_CUSTOM: FT_Encoding_ = 1094992451;
+pub const FT_Encoding__FT_ENCODING_ADOBE_LATIN_1: FT_Encoding_ = 1818326065;
+pub const FT_Encoding__FT_ENCODING_OLD_LATIN_2: FT_Encoding_ = 1818326066;
+pub const FT_Encoding__FT_ENCODING_APPLE_ROMAN: FT_Encoding_ = 1634889070;
+#[doc = " @enum:"]
+#[doc = "   FT_Encoding"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration to specify character sets supported by charmaps.  Used"]
+#[doc = "   in the @FT_Select_Charmap API function."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Despite the name, this enumeration lists specific character"]
+#[doc = "   repertories (i.e., charsets), and not text encoding methods (e.g.,"]
+#[doc = "   UTF-8, UTF-16, etc.)."]
+#[doc = ""]
+#[doc = "   Other encodings might be defined in the future."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_ENCODING_NONE ::"]
+#[doc = "     The encoding value~0 is reserved for all formats except BDF, PCF,"]
+#[doc = "     and Windows FNT; see below for more information."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_UNICODE ::"]
+#[doc = "     The Unicode character set.  This value covers all versions of the"]
+#[doc = "     Unicode repertoire, including ASCII and Latin-1.  Most fonts include"]
+#[doc = "     a Unicode charmap, but not all of them."]
+#[doc = ""]
+#[doc = "     For example, if you want to access Unicode value U+1F028 (and the"]
+#[doc = "     font contains it), use value 0x1F028 as the input value for"]
+#[doc = "     @FT_Get_Char_Index."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_SYMBOL ::"]
+#[doc = "     Microsoft Symbol encoding, used to encode mathematical symbols and"]
+#[doc = "     wingdings.  For more information, see"]
+#[doc = "     'https://www.microsoft.com/typography/otspec/recom.htm#non-standard-symbol-fonts',"]
+#[doc = "     'http://www.kostis.net/charsets/symbol.htm', and"]
+#[doc = "     'http://www.kostis.net/charsets/wingding.htm'."]
+#[doc = ""]
+#[doc = "     This encoding uses character codes from the PUA (Private Unicode"]
+#[doc = "     Area) in the range U+F020-U+F0FF."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_SJIS ::"]
+#[doc = "     Shift JIS encoding for Japanese.  More info at"]
+#[doc = "     'https://en.wikipedia.org/wiki/Shift_JIS'.  See note on multi-byte"]
+#[doc = "     encodings below."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_PRC ::"]
+#[doc = "     Corresponds to encoding systems mainly for Simplified Chinese as"]
+#[doc = "     used in People's Republic of China (PRC).  The encoding layout is"]
+#[doc = "     based on GB~2312 and its supersets GBK and GB~18030."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_BIG5 ::"]
+#[doc = "     Corresponds to an encoding system for Traditional Chinese as used in"]
+#[doc = "     Taiwan and Hong Kong."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_WANSUNG ::"]
+#[doc = "     Corresponds to the Korean encoding system known as Extended Wansung"]
+#[doc = "     (MS Windows code page 949).  For more information see"]
+#[doc = "     'https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/bestfit949.txt'."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_JOHAB ::"]
+#[doc = "     The Korean standard character set (KS~C 5601-1992), which"]
+#[doc = "     corresponds to MS Windows code page 1361.  This character set"]
+#[doc = "     includes all possible Hangul character combinations."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_LATIN_1 ::"]
+#[doc = "     Corresponds to a Latin-1 encoding as defined in a Type~1 PostScript"]
+#[doc = "     font.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_STANDARD ::"]
+#[doc = "     Adobe Standard encoding, as found in Type~1, CFF, and OpenType/CFF"]
+#[doc = "     fonts.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_EXPERT ::"]
+#[doc = "     Adobe Expert encoding, as found in Type~1, CFF, and OpenType/CFF"]
+#[doc = "     fonts.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_CUSTOM ::"]
+#[doc = "     Corresponds to a custom encoding, as found in Type~1, CFF, and"]
+#[doc = "     OpenType/CFF fonts.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_APPLE_ROMAN ::"]
+#[doc = "     Apple roman encoding.  Many TrueType and OpenType fonts contain a"]
+#[doc = "     charmap for this 8-bit encoding, since older versions of Mac OS are"]
+#[doc = "     able to use it."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_OLD_LATIN_2 ::"]
+#[doc = "     This value is deprecated and was neither used nor reported by"]
+#[doc = "     FreeType.  Don't use or test for it."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_SJIS ::"]
+#[doc = "     Same as FT_ENCODING_SJIS.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_GB2312 ::"]
+#[doc = "     Same as FT_ENCODING_PRC.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_BIG5 ::"]
+#[doc = "     Same as FT_ENCODING_BIG5.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_WANSUNG ::"]
+#[doc = "     Same as FT_ENCODING_WANSUNG.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_JOHAB ::"]
+#[doc = "     Same as FT_ENCODING_JOHAB.  Deprecated."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   By default, FreeType enables a Unicode charmap and tags it with"]
+#[doc = "   `FT_ENCODING_UNICODE` when it is either provided or can be generated"]
+#[doc = "   from PostScript glyph name dictionaries in the font file.  All other"]
+#[doc = "   encodings are considered legacy and tagged only if explicitly defined"]
+#[doc = "   in the font file.  Otherwise, `FT_ENCODING_NONE` is used."]
+#[doc = ""]
+#[doc = "   `FT_ENCODING_NONE` is set by the BDF and PCF drivers if the charmap is"]
+#[doc = "   neither Unicode nor ISO-8859-1 (otherwise it is set to"]
+#[doc = "   `FT_ENCODING_UNICODE`).  Use @FT_Get_BDF_Charset_ID to find out which"]
+#[doc = "   encoding is really present.  If, for example, the `cs_registry` field"]
+#[doc = "   is 'KOI8' and the `cs_encoding` field is 'R', the font is encoded in"]
+#[doc = "   KOI8-R."]
+#[doc = ""]
+#[doc = "   `FT_ENCODING_NONE` is always set (with a single exception) by the"]
+#[doc = "   winfonts driver.  Use @FT_Get_WinFNT_Header and examine the `charset`"]
+#[doc = "   field of the @FT_WinFNT_HeaderRec structure to find out which encoding"]
+#[doc = "   is really present.  For example, @FT_WinFNT_ID_CP1251 (204) means"]
+#[doc = "   Windows code page 1251 (for Russian)."]
+#[doc = ""]
+#[doc = "   `FT_ENCODING_NONE` is set if `platform_id` is @TT_PLATFORM_MACINTOSH"]
+#[doc = "   and `encoding_id` is not `TT_MAC_ID_ROMAN` (otherwise it is set to"]
+#[doc = "   `FT_ENCODING_APPLE_ROMAN`)."]
+#[doc = ""]
+#[doc = "   If `platform_id` is @TT_PLATFORM_MACINTOSH, use the function"]
+#[doc = "   @FT_Get_CMap_Language_ID to query the Mac language ID that may be"]
+#[doc = "   needed to be able to distinguish Apple encoding variants.  See"]
+#[doc = ""]
+#[doc = "     https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/Readme.txt"]
+#[doc = ""]
+#[doc = "   to get an idea how to do that.  Basically, if the language ID is~0,"]
+#[doc = "   don't use it, otherwise subtract 1 from the language ID.  Then examine"]
+#[doc = "   `encoding_id`.  If, for example, `encoding_id` is `TT_MAC_ID_ROMAN`"]
+#[doc = "   and the language ID (minus~1) is `TT_MAC_LANGID_GREEK`, it is the"]
+#[doc = "   Greek encoding, not Roman.  `TT_MAC_ID_ARABIC` with"]
+#[doc = "   `TT_MAC_LANGID_FARSI` means the Farsi variant the Arabic encoding."]
+pub type FT_Encoding_ = u32;
+#[doc = " @enum:"]
+#[doc = "   FT_Encoding"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration to specify character sets supported by charmaps.  Used"]
+#[doc = "   in the @FT_Select_Charmap API function."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Despite the name, this enumeration lists specific character"]
+#[doc = "   repertories (i.e., charsets), and not text encoding methods (e.g.,"]
+#[doc = "   UTF-8, UTF-16, etc.)."]
+#[doc = ""]
+#[doc = "   Other encodings might be defined in the future."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_ENCODING_NONE ::"]
+#[doc = "     The encoding value~0 is reserved for all formats except BDF, PCF,"]
+#[doc = "     and Windows FNT; see below for more information."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_UNICODE ::"]
+#[doc = "     The Unicode character set.  This value covers all versions of the"]
+#[doc = "     Unicode repertoire, including ASCII and Latin-1.  Most fonts include"]
+#[doc = "     a Unicode charmap, but not all of them."]
+#[doc = ""]
+#[doc = "     For example, if you want to access Unicode value U+1F028 (and the"]
+#[doc = "     font contains it), use value 0x1F028 as the input value for"]
+#[doc = "     @FT_Get_Char_Index."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_SYMBOL ::"]
+#[doc = "     Microsoft Symbol encoding, used to encode mathematical symbols and"]
+#[doc = "     wingdings.  For more information, see"]
+#[doc = "     'https://www.microsoft.com/typography/otspec/recom.htm#non-standard-symbol-fonts',"]
+#[doc = "     'http://www.kostis.net/charsets/symbol.htm', and"]
+#[doc = "     'http://www.kostis.net/charsets/wingding.htm'."]
+#[doc = ""]
+#[doc = "     This encoding uses character codes from the PUA (Private Unicode"]
+#[doc = "     Area) in the range U+F020-U+F0FF."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_SJIS ::"]
+#[doc = "     Shift JIS encoding for Japanese.  More info at"]
+#[doc = "     'https://en.wikipedia.org/wiki/Shift_JIS'.  See note on multi-byte"]
+#[doc = "     encodings below."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_PRC ::"]
+#[doc = "     Corresponds to encoding systems mainly for Simplified Chinese as"]
+#[doc = "     used in People's Republic of China (PRC).  The encoding layout is"]
+#[doc = "     based on GB~2312 and its supersets GBK and GB~18030."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_BIG5 ::"]
+#[doc = "     Corresponds to an encoding system for Traditional Chinese as used in"]
+#[doc = "     Taiwan and Hong Kong."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_WANSUNG ::"]
+#[doc = "     Corresponds to the Korean encoding system known as Extended Wansung"]
+#[doc = "     (MS Windows code page 949).  For more information see"]
+#[doc = "     'https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/bestfit949.txt'."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_JOHAB ::"]
+#[doc = "     The Korean standard character set (KS~C 5601-1992), which"]
+#[doc = "     corresponds to MS Windows code page 1361.  This character set"]
+#[doc = "     includes all possible Hangul character combinations."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_LATIN_1 ::"]
+#[doc = "     Corresponds to a Latin-1 encoding as defined in a Type~1 PostScript"]
+#[doc = "     font.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_STANDARD ::"]
+#[doc = "     Adobe Standard encoding, as found in Type~1, CFF, and OpenType/CFF"]
+#[doc = "     fonts.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_EXPERT ::"]
+#[doc = "     Adobe Expert encoding, as found in Type~1, CFF, and OpenType/CFF"]
+#[doc = "     fonts.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_ADOBE_CUSTOM ::"]
+#[doc = "     Corresponds to a custom encoding, as found in Type~1, CFF, and"]
+#[doc = "     OpenType/CFF fonts.  It is limited to 256 character codes."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_APPLE_ROMAN ::"]
+#[doc = "     Apple roman encoding.  Many TrueType and OpenType fonts contain a"]
+#[doc = "     charmap for this 8-bit encoding, since older versions of Mac OS are"]
+#[doc = "     able to use it."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_OLD_LATIN_2 ::"]
+#[doc = "     This value is deprecated and was neither used nor reported by"]
+#[doc = "     FreeType.  Don't use or test for it."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_SJIS ::"]
+#[doc = "     Same as FT_ENCODING_SJIS.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_GB2312 ::"]
+#[doc = "     Same as FT_ENCODING_PRC.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_BIG5 ::"]
+#[doc = "     Same as FT_ENCODING_BIG5.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_WANSUNG ::"]
+#[doc = "     Same as FT_ENCODING_WANSUNG.  Deprecated."]
+#[doc = ""]
+#[doc = "   FT_ENCODING_MS_JOHAB ::"]
+#[doc = "     Same as FT_ENCODING_JOHAB.  Deprecated."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   By default, FreeType enables a Unicode charmap and tags it with"]
+#[doc = "   `FT_ENCODING_UNICODE` when it is either provided or can be generated"]
+#[doc = "   from PostScript glyph name dictionaries in the font file.  All other"]
+#[doc = "   encodings are considered legacy and tagged only if explicitly defined"]
+#[doc = "   in the font file.  Otherwise, `FT_ENCODING_NONE` is used."]
+#[doc = ""]
+#[doc = "   `FT_ENCODING_NONE` is set by the BDF and PCF drivers if the charmap is"]
+#[doc = "   neither Unicode nor ISO-8859-1 (otherwise it is set to"]
+#[doc = "   `FT_ENCODING_UNICODE`).  Use @FT_Get_BDF_Charset_ID to find out which"]
+#[doc = "   encoding is really present.  If, for example, the `cs_registry` field"]
+#[doc = "   is 'KOI8' and the `cs_encoding` field is 'R', the font is encoded in"]
+#[doc = "   KOI8-R."]
+#[doc = ""]
+#[doc = "   `FT_ENCODING_NONE` is always set (with a single exception) by the"]
+#[doc = "   winfonts driver.  Use @FT_Get_WinFNT_Header and examine the `charset`"]
+#[doc = "   field of the @FT_WinFNT_HeaderRec structure to find out which encoding"]
+#[doc = "   is really present.  For example, @FT_WinFNT_ID_CP1251 (204) means"]
+#[doc = "   Windows code page 1251 (for Russian)."]
+#[doc = ""]
+#[doc = "   `FT_ENCODING_NONE` is set if `platform_id` is @TT_PLATFORM_MACINTOSH"]
+#[doc = "   and `encoding_id` is not `TT_MAC_ID_ROMAN` (otherwise it is set to"]
+#[doc = "   `FT_ENCODING_APPLE_ROMAN`)."]
+#[doc = ""]
+#[doc = "   If `platform_id` is @TT_PLATFORM_MACINTOSH, use the function"]
+#[doc = "   @FT_Get_CMap_Language_ID to query the Mac language ID that may be"]
+#[doc = "   needed to be able to distinguish Apple encoding variants.  See"]
+#[doc = ""]
+#[doc = "     https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/Readme.txt"]
+#[doc = ""]
+#[doc = "   to get an idea how to do that.  Basically, if the language ID is~0,"]
+#[doc = "   don't use it, otherwise subtract 1 from the language ID.  Then examine"]
+#[doc = "   `encoding_id`.  If, for example, `encoding_id` is `TT_MAC_ID_ROMAN`"]
+#[doc = "   and the language ID (minus~1) is `TT_MAC_LANGID_GREEK`, it is the"]
+#[doc = "   Greek encoding, not Roman.  `TT_MAC_ID_ARABIC` with"]
+#[doc = "   `TT_MAC_LANGID_FARSI` means the Farsi variant the Arabic encoding."]
+pub use self::FT_Encoding_ as FT_Encoding;
+#[doc = " @struct:"]
+#[doc = "   FT_CharMapRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The base charmap structure."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   face ::"]
+#[doc = "     A handle to the parent face object."]
+#[doc = ""]
+#[doc = "   encoding ::"]
+#[doc = "     An @FT_Encoding tag identifying the charmap.  Use this with"]
+#[doc = "     @FT_Select_Charmap."]
+#[doc = ""]
+#[doc = "   platform_id ::"]
+#[doc = "     An ID number describing the platform for the following encoding ID."]
+#[doc = "     This comes directly from the TrueType specification and gets"]
+#[doc = "     emulated for other formats."]
+#[doc = ""]
+#[doc = "   encoding_id ::"]
+#[doc = "     A platform-specific encoding number.  This also comes from the"]
+#[doc = "     TrueType specification and gets emulated similarly."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_CharMapRec_ {
+    pub face: FT_Face,
+    pub encoding: FT_Encoding,
+    pub platform_id: FT_UShort,
+    pub encoding_id: FT_UShort,
+}
+#[test]
+fn bindgen_test_layout_FT_CharMapRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_CharMapRec_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_CharMapRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_CharMapRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_CharMapRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_CharMapRec_>())).face as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(face)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_CharMapRec_>())).encoding as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(encoding)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_CharMapRec_>())).platform_id as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(platform_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_CharMapRec_>())).encoding_id as *const _ as usize },
+        14usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_CharMapRec_),
+            "::",
+            stringify!(encoding_id)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_CharMapRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The base charmap structure."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   face ::"]
+#[doc = "     A handle to the parent face object."]
+#[doc = ""]
+#[doc = "   encoding ::"]
+#[doc = "     An @FT_Encoding tag identifying the charmap.  Use this with"]
+#[doc = "     @FT_Select_Charmap."]
+#[doc = ""]
+#[doc = "   platform_id ::"]
+#[doc = "     An ID number describing the platform for the following encoding ID."]
+#[doc = "     This comes directly from the TrueType specification and gets"]
+#[doc = "     emulated for other formats."]
+#[doc = ""]
+#[doc = "   encoding_id ::"]
+#[doc = "     A platform-specific encoding number.  This also comes from the"]
+#[doc = "     TrueType specification and gets emulated similarly."]
+pub type FT_CharMapRec = FT_CharMapRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Face_InternalRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Face_Internal"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An opaque handle to an `FT_Face_InternalRec` structure that models the"]
+#[doc = "   private data of a given @FT_Face object."]
+#[doc = ""]
+#[doc = "   This structure might change between releases of FreeType~2 and is not"]
+#[doc = "   generally available to client applications."]
+pub type FT_Face_Internal = *mut FT_Face_InternalRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_FaceRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType root face class structure.  A face object models a typeface"]
+#[doc = "   in a font file."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   num_faces ::"]
+#[doc = "     The number of faces in the font file.  Some font formats can have"]
+#[doc = "     multiple faces in a single font file."]
+#[doc = ""]
+#[doc = "   face_index ::"]
+#[doc = "     This field holds two different values.  Bits 0-15 are the index of"]
+#[doc = "     the face in the font file (starting with value~0).  They are set"]
+#[doc = "     to~0 if there is only one face in the font file."]
+#[doc = ""]
+#[doc = "     [Since 2.6.1] Bits 16-30 are relevant to GX and OpenType variation"]
+#[doc = "     fonts only, holding the named instance index for the current face"]
+#[doc = "     index (starting with value~1; value~0 indicates font access without"]
+#[doc = "     a named instance).  For non-variation fonts, bits 16-30 are ignored."]
+#[doc = "     If we have the third named instance of face~4, say, `face_index` is"]
+#[doc = "     set to 0x00030004."]
+#[doc = ""]
+#[doc = "     Bit 31 is always zero (this is, `face_index` is always a positive"]
+#[doc = "     value)."]
+#[doc = ""]
+#[doc = "     [Since 2.9] Changing the design coordinates with"]
+#[doc = "     @FT_Set_Var_Design_Coordinates or @FT_Set_Var_Blend_Coordinates does"]
+#[doc = "     not influence the named instance index value (only"]
+#[doc = "     @FT_Set_Named_Instance does that)."]
+#[doc = ""]
+#[doc = "   face_flags ::"]
+#[doc = "     A set of bit flags that give important information about the face;"]
+#[doc = "     see @FT_FACE_FLAG_XXX for the details."]
+#[doc = ""]
+#[doc = "   style_flags ::"]
+#[doc = "     The lower 16~bits contain a set of bit flags indicating the style of"]
+#[doc = "     the face; see @FT_STYLE_FLAG_XXX for the details."]
+#[doc = ""]
+#[doc = "     [Since 2.6.1] Bits 16-30 hold the number of named instances"]
+#[doc = "     available for the current face if we have a GX or OpenType variation"]
+#[doc = "     (sub)font.  Bit 31 is always zero (this is, `style_flags` is always"]
+#[doc = "     a positive value).  Note that a variation font has always at least"]
+#[doc = "     one named instance, namely the default instance."]
+#[doc = ""]
+#[doc = "   num_glyphs ::"]
+#[doc = "     The number of glyphs in the face.  If the face is scalable and has"]
+#[doc = "     sbits (see `num_fixed_sizes`), it is set to the number of outline"]
+#[doc = "     glyphs."]
+#[doc = ""]
+#[doc = "     For CID-keyed fonts (not in an SFNT wrapper) this value gives the"]
+#[doc = "     highest CID used in the font."]
+#[doc = ""]
+#[doc = "   family_name ::"]
+#[doc = "     The face's family name.  This is an ASCII string, usually in"]
+#[doc = "     English, that describes the typeface's family (like 'Times New"]
+#[doc = "     Roman', 'Bodoni', 'Garamond', etc).  This is a least common"]
+#[doc = "     denominator used to list fonts.  Some formats (TrueType & OpenType)"]
+#[doc = "     provide localized and Unicode versions of this string.  Applications"]
+#[doc = "     should use the format-specific interface to access them.  Can be"]
+#[doc = "     `NULL` (e.g., in fonts embedded in a PDF file)."]
+#[doc = ""]
+#[doc = "     In case the font doesn't provide a specific family name entry,"]
+#[doc = "     FreeType tries to synthesize one, deriving it from other name"]
+#[doc = "     entries."]
+#[doc = ""]
+#[doc = "   style_name ::"]
+#[doc = "     The face's style name.  This is an ASCII string, usually in English,"]
+#[doc = "     that describes the typeface's style (like 'Italic', 'Bold',"]
+#[doc = "     'Condensed', etc).  Not all font formats provide a style name, so"]
+#[doc = "     this field is optional, and can be set to `NULL`.  As for"]
+#[doc = "     `family_name`, some formats provide localized and Unicode versions"]
+#[doc = "     of this string.  Applications should use the format-specific"]
+#[doc = "     interface to access them."]
+#[doc = ""]
+#[doc = "   num_fixed_sizes ::"]
+#[doc = "     The number of bitmap strikes in the face.  Even if the face is"]
+#[doc = "     scalable, there might still be bitmap strikes, which are called"]
+#[doc = "     'sbits' in that case."]
+#[doc = ""]
+#[doc = "   available_sizes ::"]
+#[doc = "     An array of @FT_Bitmap_Size for all bitmap strikes in the face.  It"]
+#[doc = "     is set to `NULL` if there is no bitmap strike."]
+#[doc = ""]
+#[doc = "     Note that FreeType tries to sanitize the strike data since they are"]
+#[doc = "     sometimes sloppy or incorrect, but this can easily fail."]
+#[doc = ""]
+#[doc = "   num_charmaps ::"]
+#[doc = "     The number of charmaps in the face."]
+#[doc = ""]
+#[doc = "   charmaps ::"]
+#[doc = "     An array of the charmaps of the face."]
+#[doc = ""]
+#[doc = "   generic ::"]
+#[doc = "     A field reserved for client uses.  See the @FT_Generic type"]
+#[doc = "     description."]
+#[doc = ""]
+#[doc = "   bbox ::"]
+#[doc = "     The font bounding box.  Coordinates are expressed in font units (see"]
+#[doc = "     `units_per_EM`).  The box is large enough to contain any glyph from"]
+#[doc = "     the font.  Thus, `bbox.yMax` can be seen as the 'maximum ascender',"]
+#[doc = "     and `bbox.yMin` as the 'minimum descender'.  Only relevant for"]
+#[doc = "     scalable formats."]
+#[doc = ""]
+#[doc = "     Note that the bounding box might be off by (at least) one pixel for"]
+#[doc = "     hinted fonts.  See @FT_Size_Metrics for further discussion."]
+#[doc = ""]
+#[doc = "   units_per_EM ::"]
+#[doc = "     The number of font units per EM square for this face.  This is"]
+#[doc = "     typically 2048 for TrueType fonts, and 1000 for Type~1 fonts.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   ascender ::"]
+#[doc = "     The typographic ascender of the face, expressed in font units.  For"]
+#[doc = "     font formats not having this information, it is set to `bbox.yMax`."]
+#[doc = "     Only relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   descender ::"]
+#[doc = "     The typographic descender of the face, expressed in font units.  For"]
+#[doc = "     font formats not having this information, it is set to `bbox.yMin`."]
+#[doc = "     Note that this field is negative for values below the baseline."]
+#[doc = "     Only relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     This value is the vertical distance between two consecutive"]
+#[doc = "     baselines, expressed in font units.  It is always positive.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "     If you want the global glyph height, use `ascender - descender`."]
+#[doc = ""]
+#[doc = "   max_advance_width ::"]
+#[doc = "     The maximum advance width, in font units, for all glyphs in this"]
+#[doc = "     face.  This can be used to make word wrapping computations faster."]
+#[doc = "     Only relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   max_advance_height ::"]
+#[doc = "     The maximum advance height, in font units, for all glyphs in this"]
+#[doc = "     face.  This is only relevant for vertical layouts, and is set to"]
+#[doc = "     `height` for fonts that do not provide vertical metrics.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   underline_position ::"]
+#[doc = "     The position, in font units, of the underline line for this face."]
+#[doc = "     It is the center of the underlining stem.  Only relevant for"]
+#[doc = "     scalable formats."]
+#[doc = ""]
+#[doc = "   underline_thickness ::"]
+#[doc = "     The thickness, in font units, of the underline for this face.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   glyph ::"]
+#[doc = "     The face's associated glyph slot(s)."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The current active size for this face."]
+#[doc = ""]
+#[doc = "   charmap ::"]
+#[doc = "     The current active charmap for this face."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Fields may be changed after a call to @FT_Attach_File or"]
+#[doc = "   @FT_Attach_Stream."]
+#[doc = ""]
+#[doc = "   For an OpenType variation font, the values of the following fields can"]
+#[doc = "   change after a call to @FT_Set_Var_Design_Coordinates (and friends) if"]
+#[doc = "   the font contains an 'MVAR' table: `ascender`, `descender`, `height`,"]
+#[doc = "   `underline_position`, and `underline_thickness`."]
+#[doc = ""]
+#[doc = "   Especially for TrueType fonts see also the documentation for"]
+#[doc = "   @FT_Size_Metrics."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_FaceRec_ {
+    pub num_faces: FT_Long,
+    pub face_index: FT_Long,
+    pub face_flags: FT_Long,
+    pub style_flags: FT_Long,
+    pub num_glyphs: FT_Long,
+    pub family_name: *mut FT_String,
+    pub style_name: *mut FT_String,
+    pub num_fixed_sizes: FT_Int,
+    pub available_sizes: *mut FT_Bitmap_Size,
+    pub num_charmaps: FT_Int,
+    pub charmaps: *mut FT_CharMap,
+    pub generic: FT_Generic,
+    pub bbox: FT_BBox,
+    pub units_per_EM: FT_UShort,
+    pub ascender: FT_Short,
+    pub descender: FT_Short,
+    pub height: FT_Short,
+    pub max_advance_width: FT_Short,
+    pub max_advance_height: FT_Short,
+    pub underline_position: FT_Short,
+    pub underline_thickness: FT_Short,
+    pub glyph: FT_GlyphSlot,
+    pub size: FT_Size,
+    pub charmap: FT_CharMap,
+    pub driver: FT_Driver,
+    pub memory: FT_Memory,
+    pub stream: FT_Stream,
+    pub sizes_list: FT_ListRec,
+    pub autohint: FT_Generic,
+    pub extensions: *mut ::std::os::raw::c_void,
+    pub internal: FT_Face_Internal,
+}
+#[test]
+fn bindgen_test_layout_FT_FaceRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_FaceRec_>(),
+        248usize,
+        concat!("Size of: ", stringify!(FT_FaceRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_FaceRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_FaceRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).num_faces as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_faces)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).face_index as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(face_index)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).face_flags as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(face_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).style_flags as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(style_flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).num_glyphs as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_glyphs)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).family_name as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(family_name)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).style_name as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(style_name)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).num_fixed_sizes as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_fixed_sizes)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).available_sizes as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(available_sizes)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).num_charmaps as *const _ as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(num_charmaps)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).charmaps as *const _ as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(charmaps)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).generic as *const _ as usize },
+        88usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(generic)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).bbox as *const _ as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(bbox)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).units_per_EM as *const _ as usize },
+        136usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(units_per_EM)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).ascender as *const _ as usize },
+        138usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(ascender)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).descender as *const _ as usize },
+        140usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(descender)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).height as *const _ as usize },
+        142usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).max_advance_width as *const _ as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(max_advance_width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).max_advance_height as *const _ as usize },
+        146usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(max_advance_height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).underline_position as *const _ as usize },
+        148usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(underline_position)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).underline_thickness as *const _ as usize },
+        150usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(underline_thickness)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).glyph as *const _ as usize },
+        152usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(glyph)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).size as *const _ as usize },
+        160usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).charmap as *const _ as usize },
+        168usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(charmap)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).driver as *const _ as usize },
+        176usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(driver)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).memory as *const _ as usize },
+        184usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(memory)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).stream as *const _ as usize },
+        192usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(stream)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).sizes_list as *const _ as usize },
+        200usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(sizes_list)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).autohint as *const _ as usize },
+        216usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(autohint)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).extensions as *const _ as usize },
+        232usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(extensions)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_FaceRec_>())).internal as *const _ as usize },
+        240usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_FaceRec_),
+            "::",
+            stringify!(internal)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_FaceRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType root face class structure.  A face object models a typeface"]
+#[doc = "   in a font file."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   num_faces ::"]
+#[doc = "     The number of faces in the font file.  Some font formats can have"]
+#[doc = "     multiple faces in a single font file."]
+#[doc = ""]
+#[doc = "   face_index ::"]
+#[doc = "     This field holds two different values.  Bits 0-15 are the index of"]
+#[doc = "     the face in the font file (starting with value~0).  They are set"]
+#[doc = "     to~0 if there is only one face in the font file."]
+#[doc = ""]
+#[doc = "     [Since 2.6.1] Bits 16-30 are relevant to GX and OpenType variation"]
+#[doc = "     fonts only, holding the named instance index for the current face"]
+#[doc = "     index (starting with value~1; value~0 indicates font access without"]
+#[doc = "     a named instance).  For non-variation fonts, bits 16-30 are ignored."]
+#[doc = "     If we have the third named instance of face~4, say, `face_index` is"]
+#[doc = "     set to 0x00030004."]
+#[doc = ""]
+#[doc = "     Bit 31 is always zero (this is, `face_index` is always a positive"]
+#[doc = "     value)."]
+#[doc = ""]
+#[doc = "     [Since 2.9] Changing the design coordinates with"]
+#[doc = "     @FT_Set_Var_Design_Coordinates or @FT_Set_Var_Blend_Coordinates does"]
+#[doc = "     not influence the named instance index value (only"]
+#[doc = "     @FT_Set_Named_Instance does that)."]
+#[doc = ""]
+#[doc = "   face_flags ::"]
+#[doc = "     A set of bit flags that give important information about the face;"]
+#[doc = "     see @FT_FACE_FLAG_XXX for the details."]
+#[doc = ""]
+#[doc = "   style_flags ::"]
+#[doc = "     The lower 16~bits contain a set of bit flags indicating the style of"]
+#[doc = "     the face; see @FT_STYLE_FLAG_XXX for the details."]
+#[doc = ""]
+#[doc = "     [Since 2.6.1] Bits 16-30 hold the number of named instances"]
+#[doc = "     available for the current face if we have a GX or OpenType variation"]
+#[doc = "     (sub)font.  Bit 31 is always zero (this is, `style_flags` is always"]
+#[doc = "     a positive value).  Note that a variation font has always at least"]
+#[doc = "     one named instance, namely the default instance."]
+#[doc = ""]
+#[doc = "   num_glyphs ::"]
+#[doc = "     The number of glyphs in the face.  If the face is scalable and has"]
+#[doc = "     sbits (see `num_fixed_sizes`), it is set to the number of outline"]
+#[doc = "     glyphs."]
+#[doc = ""]
+#[doc = "     For CID-keyed fonts (not in an SFNT wrapper) this value gives the"]
+#[doc = "     highest CID used in the font."]
+#[doc = ""]
+#[doc = "   family_name ::"]
+#[doc = "     The face's family name.  This is an ASCII string, usually in"]
+#[doc = "     English, that describes the typeface's family (like 'Times New"]
+#[doc = "     Roman', 'Bodoni', 'Garamond', etc).  This is a least common"]
+#[doc = "     denominator used to list fonts.  Some formats (TrueType & OpenType)"]
+#[doc = "     provide localized and Unicode versions of this string.  Applications"]
+#[doc = "     should use the format-specific interface to access them.  Can be"]
+#[doc = "     `NULL` (e.g., in fonts embedded in a PDF file)."]
+#[doc = ""]
+#[doc = "     In case the font doesn't provide a specific family name entry,"]
+#[doc = "     FreeType tries to synthesize one, deriving it from other name"]
+#[doc = "     entries."]
+#[doc = ""]
+#[doc = "   style_name ::"]
+#[doc = "     The face's style name.  This is an ASCII string, usually in English,"]
+#[doc = "     that describes the typeface's style (like 'Italic', 'Bold',"]
+#[doc = "     'Condensed', etc).  Not all font formats provide a style name, so"]
+#[doc = "     this field is optional, and can be set to `NULL`.  As for"]
+#[doc = "     `family_name`, some formats provide localized and Unicode versions"]
+#[doc = "     of this string.  Applications should use the format-specific"]
+#[doc = "     interface to access them."]
+#[doc = ""]
+#[doc = "   num_fixed_sizes ::"]
+#[doc = "     The number of bitmap strikes in the face.  Even if the face is"]
+#[doc = "     scalable, there might still be bitmap strikes, which are called"]
+#[doc = "     'sbits' in that case."]
+#[doc = ""]
+#[doc = "   available_sizes ::"]
+#[doc = "     An array of @FT_Bitmap_Size for all bitmap strikes in the face.  It"]
+#[doc = "     is set to `NULL` if there is no bitmap strike."]
+#[doc = ""]
+#[doc = "     Note that FreeType tries to sanitize the strike data since they are"]
+#[doc = "     sometimes sloppy or incorrect, but this can easily fail."]
+#[doc = ""]
+#[doc = "   num_charmaps ::"]
+#[doc = "     The number of charmaps in the face."]
+#[doc = ""]
+#[doc = "   charmaps ::"]
+#[doc = "     An array of the charmaps of the face."]
+#[doc = ""]
+#[doc = "   generic ::"]
+#[doc = "     A field reserved for client uses.  See the @FT_Generic type"]
+#[doc = "     description."]
+#[doc = ""]
+#[doc = "   bbox ::"]
+#[doc = "     The font bounding box.  Coordinates are expressed in font units (see"]
+#[doc = "     `units_per_EM`).  The box is large enough to contain any glyph from"]
+#[doc = "     the font.  Thus, `bbox.yMax` can be seen as the 'maximum ascender',"]
+#[doc = "     and `bbox.yMin` as the 'minimum descender'.  Only relevant for"]
+#[doc = "     scalable formats."]
+#[doc = ""]
+#[doc = "     Note that the bounding box might be off by (at least) one pixel for"]
+#[doc = "     hinted fonts.  See @FT_Size_Metrics for further discussion."]
+#[doc = ""]
+#[doc = "   units_per_EM ::"]
+#[doc = "     The number of font units per EM square for this face.  This is"]
+#[doc = "     typically 2048 for TrueType fonts, and 1000 for Type~1 fonts.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   ascender ::"]
+#[doc = "     The typographic ascender of the face, expressed in font units.  For"]
+#[doc = "     font formats not having this information, it is set to `bbox.yMax`."]
+#[doc = "     Only relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   descender ::"]
+#[doc = "     The typographic descender of the face, expressed in font units.  For"]
+#[doc = "     font formats not having this information, it is set to `bbox.yMin`."]
+#[doc = "     Note that this field is negative for values below the baseline."]
+#[doc = "     Only relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     This value is the vertical distance between two consecutive"]
+#[doc = "     baselines, expressed in font units.  It is always positive.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "     If you want the global glyph height, use `ascender - descender`."]
+#[doc = ""]
+#[doc = "   max_advance_width ::"]
+#[doc = "     The maximum advance width, in font units, for all glyphs in this"]
+#[doc = "     face.  This can be used to make word wrapping computations faster."]
+#[doc = "     Only relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   max_advance_height ::"]
+#[doc = "     The maximum advance height, in font units, for all glyphs in this"]
+#[doc = "     face.  This is only relevant for vertical layouts, and is set to"]
+#[doc = "     `height` for fonts that do not provide vertical metrics.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   underline_position ::"]
+#[doc = "     The position, in font units, of the underline line for this face."]
+#[doc = "     It is the center of the underlining stem.  Only relevant for"]
+#[doc = "     scalable formats."]
+#[doc = ""]
+#[doc = "   underline_thickness ::"]
+#[doc = "     The thickness, in font units, of the underline for this face.  Only"]
+#[doc = "     relevant for scalable formats."]
+#[doc = ""]
+#[doc = "   glyph ::"]
+#[doc = "     The face's associated glyph slot(s)."]
+#[doc = ""]
+#[doc = "   size ::"]
+#[doc = "     The current active size for this face."]
+#[doc = ""]
+#[doc = "   charmap ::"]
+#[doc = "     The current active charmap for this face."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Fields may be changed after a call to @FT_Attach_File or"]
+#[doc = "   @FT_Attach_Stream."]
+#[doc = ""]
+#[doc = "   For an OpenType variation font, the values of the following fields can"]
+#[doc = "   change after a call to @FT_Set_Var_Design_Coordinates (and friends) if"]
+#[doc = "   the font contains an 'MVAR' table: `ascender`, `descender`, `height`,"]
+#[doc = "   `underline_position`, and `underline_thickness`."]
+#[doc = ""]
+#[doc = "   Especially for TrueType fonts see also the documentation for"]
+#[doc = "   @FT_Size_Metrics."]
+pub type FT_FaceRec = FT_FaceRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Size_InternalRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Size_Internal"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An opaque handle to an `FT_Size_InternalRec` structure, used to model"]
+#[doc = "   private data of a given @FT_Size object."]
+pub type FT_Size_Internal = *mut FT_Size_InternalRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_Size_Metrics"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The size metrics structure gives the metrics of a size object."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x_ppem ::"]
+#[doc = "     The width of the scaled EM square in pixels, hence the term 'ppem'"]
+#[doc = "     (pixels per EM).  It is also referred to as 'nominal width'."]
+#[doc = ""]
+#[doc = "   y_ppem ::"]
+#[doc = "     The height of the scaled EM square in pixels, hence the term 'ppem'"]
+#[doc = "     (pixels per EM).  It is also referred to as 'nominal height'."]
+#[doc = ""]
+#[doc = "   x_scale ::"]
+#[doc = "     A 16.16 fractional scaling value to convert horizontal metrics from"]
+#[doc = "     font units to 26.6 fractional pixels.  Only relevant for scalable"]
+#[doc = "     font formats."]
+#[doc = ""]
+#[doc = "   y_scale ::"]
+#[doc = "     A 16.16 fractional scaling value to convert vertical metrics from"]
+#[doc = "     font units to 26.6 fractional pixels.  Only relevant for scalable"]
+#[doc = "     font formats."]
+#[doc = ""]
+#[doc = "   ascender ::"]
+#[doc = "     The ascender in 26.6 fractional pixels, rounded up to an integer"]
+#[doc = "     value.  See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = "   descender ::"]
+#[doc = "     The descender in 26.6 fractional pixels, rounded down to an integer"]
+#[doc = "     value.  See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     The height in 26.6 fractional pixels, rounded to an integer value."]
+#[doc = "     See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = "   max_advance ::"]
+#[doc = "     The maximum advance width in 26.6 fractional pixels, rounded to an"]
+#[doc = "     integer value.  See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The scaling values, if relevant, are determined first during a size"]
+#[doc = "   changing operation.  The remaining fields are then set by the driver."]
+#[doc = "   For scalable formats, they are usually set to scaled values of the"]
+#[doc = "   corresponding fields in @FT_FaceRec.  Some values like ascender or"]
+#[doc = "   descender are rounded for historical reasons; more precise values (for"]
+#[doc = "   outline fonts) can be derived by scaling the corresponding @FT_FaceRec"]
+#[doc = "   values manually, with code similar to the following."]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     scaled_ascender = FT_MulFix( face->ascender,"]
+#[doc = "                                  size_metrics->y_scale );"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   Note that due to glyph hinting and the selected rendering mode these"]
+#[doc = "   values are usually not exact; consequently, they must be treated as"]
+#[doc = "   unreliable with an error margin of at least one pixel!"]
+#[doc = ""]
+#[doc = "   Indeed, the only way to get the exact metrics is to render _all_"]
+#[doc = "   glyphs.  As this would be a definite performance hit, it is up to"]
+#[doc = "   client applications to perform such computations."]
+#[doc = ""]
+#[doc = "   The `FT_Size_Metrics` structure is valid for bitmap fonts also."]
+#[doc = ""]
+#[doc = ""]
+#[doc = "   **TrueType fonts with native bytecode hinting**"]
+#[doc = ""]
+#[doc = "   All applications that handle TrueType fonts with native hinting must"]
+#[doc = "   be aware that TTFs expect different rounding of vertical font"]
+#[doc = "   dimensions.  The application has to cater for this, especially if it"]
+#[doc = "   wants to rely on a TTF's vertical data (for example, to properly align"]
+#[doc = "   box characters vertically)."]
+#[doc = ""]
+#[doc = "   Only the application knows _in advance_ that it is going to use native"]
+#[doc = "   hinting for TTFs!  FreeType, on the other hand, selects the hinting"]
+#[doc = "   mode not at the time of creating an @FT_Size object but much later,"]
+#[doc = "   namely while calling @FT_Load_Glyph."]
+#[doc = ""]
+#[doc = "   Here is some pseudo code that illustrates a possible solution."]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     font_format = FT_Get_Font_Format( face );"]
+#[doc = ""]
+#[doc = "     if ( !strcmp( font_format, \"TrueType\" ) &&"]
+#[doc = "          do_native_bytecode_hinting         )"]
+#[doc = "     {"]
+#[doc = "       ascender  = ROUND( FT_MulFix( face->ascender,"]
+#[doc = "                                     size_metrics->y_scale ) );"]
+#[doc = "       descender = ROUND( FT_MulFix( face->descender,"]
+#[doc = "                                     size_metrics->y_scale ) );"]
+#[doc = "     }"]
+#[doc = "     else"]
+#[doc = "     {"]
+#[doc = "       ascender  = size_metrics->ascender;"]
+#[doc = "       descender = size_metrics->descender;"]
+#[doc = "     }"]
+#[doc = ""]
+#[doc = "     height      = size_metrics->height;"]
+#[doc = "     max_advance = size_metrics->max_advance;"]
+#[doc = "   ```"]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Size_Metrics_ {
+    pub x_ppem: FT_UShort,
+    pub y_ppem: FT_UShort,
+    pub x_scale: FT_Fixed,
+    pub y_scale: FT_Fixed,
+    pub ascender: FT_Pos,
+    pub descender: FT_Pos,
+    pub height: FT_Pos,
+    pub max_advance: FT_Pos,
+}
+#[test]
+fn bindgen_test_layout_FT_Size_Metrics_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Size_Metrics_>(),
+        56usize,
+        concat!("Size of: ", stringify!(FT_Size_Metrics_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Size_Metrics_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Size_Metrics_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).x_ppem as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(x_ppem)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).y_ppem as *const _ as usize },
+        2usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(y_ppem)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).x_scale as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(x_scale)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).y_scale as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(y_scale)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).ascender as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(ascender)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).descender as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(descender)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).height as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_Metrics_>())).max_advance as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_Metrics_),
+            "::",
+            stringify!(max_advance)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Size_Metrics"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The size metrics structure gives the metrics of a size object."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   x_ppem ::"]
+#[doc = "     The width of the scaled EM square in pixels, hence the term 'ppem'"]
+#[doc = "     (pixels per EM).  It is also referred to as 'nominal width'."]
+#[doc = ""]
+#[doc = "   y_ppem ::"]
+#[doc = "     The height of the scaled EM square in pixels, hence the term 'ppem'"]
+#[doc = "     (pixels per EM).  It is also referred to as 'nominal height'."]
+#[doc = ""]
+#[doc = "   x_scale ::"]
+#[doc = "     A 16.16 fractional scaling value to convert horizontal metrics from"]
+#[doc = "     font units to 26.6 fractional pixels.  Only relevant for scalable"]
+#[doc = "     font formats."]
+#[doc = ""]
+#[doc = "   y_scale ::"]
+#[doc = "     A 16.16 fractional scaling value to convert vertical metrics from"]
+#[doc = "     font units to 26.6 fractional pixels.  Only relevant for scalable"]
+#[doc = "     font formats."]
+#[doc = ""]
+#[doc = "   ascender ::"]
+#[doc = "     The ascender in 26.6 fractional pixels, rounded up to an integer"]
+#[doc = "     value.  See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = "   descender ::"]
+#[doc = "     The descender in 26.6 fractional pixels, rounded down to an integer"]
+#[doc = "     value.  See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     The height in 26.6 fractional pixels, rounded to an integer value."]
+#[doc = "     See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = "   max_advance ::"]
+#[doc = "     The maximum advance width in 26.6 fractional pixels, rounded to an"]
+#[doc = "     integer value.  See @FT_FaceRec for the details."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The scaling values, if relevant, are determined first during a size"]
+#[doc = "   changing operation.  The remaining fields are then set by the driver."]
+#[doc = "   For scalable formats, they are usually set to scaled values of the"]
+#[doc = "   corresponding fields in @FT_FaceRec.  Some values like ascender or"]
+#[doc = "   descender are rounded for historical reasons; more precise values (for"]
+#[doc = "   outline fonts) can be derived by scaling the corresponding @FT_FaceRec"]
+#[doc = "   values manually, with code similar to the following."]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     scaled_ascender = FT_MulFix( face->ascender,"]
+#[doc = "                                  size_metrics->y_scale );"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   Note that due to glyph hinting and the selected rendering mode these"]
+#[doc = "   values are usually not exact; consequently, they must be treated as"]
+#[doc = "   unreliable with an error margin of at least one pixel!"]
+#[doc = ""]
+#[doc = "   Indeed, the only way to get the exact metrics is to render _all_"]
+#[doc = "   glyphs.  As this would be a definite performance hit, it is up to"]
+#[doc = "   client applications to perform such computations."]
+#[doc = ""]
+#[doc = "   The `FT_Size_Metrics` structure is valid for bitmap fonts also."]
+#[doc = ""]
+#[doc = ""]
+#[doc = "   **TrueType fonts with native bytecode hinting**"]
+#[doc = ""]
+#[doc = "   All applications that handle TrueType fonts with native hinting must"]
+#[doc = "   be aware that TTFs expect different rounding of vertical font"]
+#[doc = "   dimensions.  The application has to cater for this, especially if it"]
+#[doc = "   wants to rely on a TTF's vertical data (for example, to properly align"]
+#[doc = "   box characters vertically)."]
+#[doc = ""]
+#[doc = "   Only the application knows _in advance_ that it is going to use native"]
+#[doc = "   hinting for TTFs!  FreeType, on the other hand, selects the hinting"]
+#[doc = "   mode not at the time of creating an @FT_Size object but much later,"]
+#[doc = "   namely while calling @FT_Load_Glyph."]
+#[doc = ""]
+#[doc = "   Here is some pseudo code that illustrates a possible solution."]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     font_format = FT_Get_Font_Format( face );"]
+#[doc = ""]
+#[doc = "     if ( !strcmp( font_format, \"TrueType\" ) &&"]
+#[doc = "          do_native_bytecode_hinting         )"]
+#[doc = "     {"]
+#[doc = "       ascender  = ROUND( FT_MulFix( face->ascender,"]
+#[doc = "                                     size_metrics->y_scale ) );"]
+#[doc = "       descender = ROUND( FT_MulFix( face->descender,"]
+#[doc = "                                     size_metrics->y_scale ) );"]
+#[doc = "     }"]
+#[doc = "     else"]
+#[doc = "     {"]
+#[doc = "       ascender  = size_metrics->ascender;"]
+#[doc = "       descender = size_metrics->descender;"]
+#[doc = "     }"]
+#[doc = ""]
+#[doc = "     height      = size_metrics->height;"]
+#[doc = "     max_advance = size_metrics->max_advance;"]
+#[doc = "   ```"]
+pub type FT_Size_Metrics = FT_Size_Metrics_;
+#[doc = " @struct:"]
+#[doc = "   FT_SizeRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType root size class structure.  A size object models a face"]
+#[doc = "   object at a given size."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   face ::"]
+#[doc = "     Handle to the parent face object."]
+#[doc = ""]
+#[doc = "   generic ::"]
+#[doc = "     A typeless pointer, unused by the FreeType library or any of its"]
+#[doc = "     drivers.  It can be used by client applications to link their own"]
+#[doc = "     data to each size object."]
+#[doc = ""]
+#[doc = "   metrics ::"]
+#[doc = "     Metrics for this size object.  This field is read-only."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_SizeRec_ {
+    pub face: FT_Face,
+    pub generic: FT_Generic,
+    pub metrics: FT_Size_Metrics,
+    pub internal: FT_Size_Internal,
+}
+#[test]
+fn bindgen_test_layout_FT_SizeRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_SizeRec_>(),
+        88usize,
+        concat!("Size of: ", stringify!(FT_SizeRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_SizeRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_SizeRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_SizeRec_>())).face as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(face)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_SizeRec_>())).generic as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(generic)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_SizeRec_>())).metrics as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(metrics)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_SizeRec_>())).internal as *const _ as usize },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_SizeRec_),
+            "::",
+            stringify!(internal)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_SizeRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType root size class structure.  A size object models a face"]
+#[doc = "   object at a given size."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   face ::"]
+#[doc = "     Handle to the parent face object."]
+#[doc = ""]
+#[doc = "   generic ::"]
+#[doc = "     A typeless pointer, unused by the FreeType library or any of its"]
+#[doc = "     drivers.  It can be used by client applications to link their own"]
+#[doc = "     data to each size object."]
+#[doc = ""]
+#[doc = "   metrics ::"]
+#[doc = "     Metrics for this size object.  This field is read-only."]
+pub type FT_SizeRec = FT_SizeRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_SubGlyphRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @struct:"]
+#[doc = "   FT_SubGlyph"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   The subglyph structure is an internal object used to describe"]
+#[doc = "   subglyphs (for example, in the case of composites)."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The subglyph implementation is not part of the high-level API, hence"]
+#[doc = "   the forward structure declaration."]
+#[doc = ""]
+#[doc = "   You can however retrieve subglyph information with"]
+#[doc = "   @FT_Get_SubGlyph_Info."]
+pub type FT_SubGlyph = *mut FT_SubGlyphRec_;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Slot_InternalRec_ {
+    _unused: [u8; 0],
+}
+#[doc = " @type:"]
+#[doc = "   FT_Slot_Internal"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An opaque handle to an `FT_Slot_InternalRec` structure, used to model"]
+#[doc = "   private data of a given @FT_GlyphSlot object."]
+pub type FT_Slot_Internal = *mut FT_Slot_InternalRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_GlyphSlotRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType root glyph slot class structure.  A glyph slot is a container"]
+#[doc = "   where individual glyphs can be loaded, be they in outline or bitmap"]
+#[doc = "   format."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   library ::"]
+#[doc = "     A handle to the FreeType library instance this slot belongs to."]
+#[doc = ""]
+#[doc = "   face ::"]
+#[doc = "     A handle to the parent face object."]
+#[doc = ""]
+#[doc = "   next ::"]
+#[doc = "     In some cases (like some font tools), several glyph slots per face"]
+#[doc = "     object can be a good thing.  As this is rare, the glyph slots are"]
+#[doc = "     listed through a direct, single-linked list using its `next` field."]
+#[doc = ""]
+#[doc = "   glyph_index ::"]
+#[doc = "     [Since 2.10] The glyph index passed as an argument to @FT_Load_Glyph"]
+#[doc = "     while initializing the glyph slot."]
+#[doc = ""]
+#[doc = "   generic ::"]
+#[doc = "     A typeless pointer unused by the FreeType library or any of its"]
+#[doc = "     drivers.  It can be used by client applications to link their own"]
+#[doc = "     data to each glyph slot object."]
+#[doc = ""]
+#[doc = "   metrics ::"]
+#[doc = "     The metrics of the last loaded glyph in the slot.  The returned"]
+#[doc = "     values depend on the last load flags (see the @FT_Load_Glyph API"]
+#[doc = "     function) and can be expressed either in 26.6 fractional pixels or"]
+#[doc = "     font units."]
+#[doc = ""]
+#[doc = "     Note that even when the glyph image is transformed, the metrics are"]
+#[doc = "     not."]
+#[doc = ""]
+#[doc = "   linearHoriAdvance ::"]
+#[doc = "     The advance width of the unhinted glyph.  Its value is expressed in"]
+#[doc = "     16.16 fractional pixels, unless @FT_LOAD_LINEAR_DESIGN is set when"]
+#[doc = "     loading the glyph.  This field can be important to perform correct"]
+#[doc = "     WYSIWYG layout.  Only relevant for outline glyphs."]
+#[doc = ""]
+#[doc = "   linearVertAdvance ::"]
+#[doc = "     The advance height of the unhinted glyph.  Its value is expressed in"]
+#[doc = "     16.16 fractional pixels, unless @FT_LOAD_LINEAR_DESIGN is set when"]
+#[doc = "     loading the glyph.  This field can be important to perform correct"]
+#[doc = "     WYSIWYG layout.  Only relevant for outline glyphs."]
+#[doc = ""]
+#[doc = "   advance ::"]
+#[doc = "     This shorthand is, depending on @FT_LOAD_IGNORE_TRANSFORM, the"]
+#[doc = "     transformed (hinted) advance width for the glyph, in 26.6 fractional"]
+#[doc = "     pixel format.  As specified with @FT_LOAD_VERTICAL_LAYOUT, it uses"]
+#[doc = "     either the `horiAdvance` or the `vertAdvance` value of `metrics`"]
+#[doc = "     field."]
+#[doc = ""]
+#[doc = "   format ::"]
+#[doc = "     This field indicates the format of the image contained in the glyph"]
+#[doc = "     slot.  Typically @FT_GLYPH_FORMAT_BITMAP, @FT_GLYPH_FORMAT_OUTLINE,"]
+#[doc = "     or @FT_GLYPH_FORMAT_COMPOSITE, but other values are possible."]
+#[doc = ""]
+#[doc = "   bitmap ::"]
+#[doc = "     This field is used as a bitmap descriptor.  Note that the address"]
+#[doc = "     and content of the bitmap buffer can change between calls of"]
+#[doc = "     @FT_Load_Glyph and a few other functions."]
+#[doc = ""]
+#[doc = "   bitmap_left ::"]
+#[doc = "     The bitmap's left bearing expressed in integer pixels."]
+#[doc = ""]
+#[doc = "   bitmap_top ::"]
+#[doc = "     The bitmap's top bearing expressed in integer pixels.  This is the"]
+#[doc = "     distance from the baseline to the top-most glyph scanline, upwards"]
+#[doc = "     y~coordinates being **positive**."]
+#[doc = ""]
+#[doc = "   outline ::"]
+#[doc = "     The outline descriptor for the current glyph image if its format is"]
+#[doc = "     @FT_GLYPH_FORMAT_OUTLINE.  Once a glyph is loaded, `outline` can be"]
+#[doc = "     transformed, distorted, emboldened, etc.  However, it must not be"]
+#[doc = "     freed."]
+#[doc = ""]
+#[doc = "     [Since 2.10.1] If @FT_LOAD_NO_SCALE is set, outline coordinates of"]
+#[doc = "     OpenType variation fonts for a selected instance are internally"]
+#[doc = "     handled as 26.6 fractional font units but returned as (rounded)"]
+#[doc = "     integers, as expected.  To get unrounded font units, don't use"]
+#[doc = "     @FT_LOAD_NO_SCALE but load the glyph with @FT_LOAD_NO_HINTING and"]
+#[doc = "     scale it, using the font's `units_per_EM` value as the ppem."]
+#[doc = ""]
+#[doc = "   num_subglyphs ::"]
+#[doc = "     The number of subglyphs in a composite glyph.  This field is only"]
+#[doc = "     valid for the composite glyph format that should normally only be"]
+#[doc = "     loaded with the @FT_LOAD_NO_RECURSE flag."]
+#[doc = ""]
+#[doc = "   subglyphs ::"]
+#[doc = "     An array of subglyph descriptors for composite glyphs.  There are"]
+#[doc = "     `num_subglyphs` elements in there.  Currently internal to FreeType."]
+#[doc = ""]
+#[doc = "   control_data ::"]
+#[doc = "     Certain font drivers can also return the control data for a given"]
+#[doc = "     glyph image (e.g.  TrueType bytecode, Type~1 charstrings, etc.)."]
+#[doc = "     This field is a pointer to such data; it is currently internal to"]
+#[doc = "     FreeType."]
+#[doc = ""]
+#[doc = "   control_len ::"]
+#[doc = "     This is the length in bytes of the control data.  Currently internal"]
+#[doc = "     to FreeType."]
+#[doc = ""]
+#[doc = "   other ::"]
+#[doc = "     Reserved."]
+#[doc = ""]
+#[doc = "   lsb_delta ::"]
+#[doc = "     The difference between hinted and unhinted left side bearing while"]
+#[doc = "     auto-hinting is active.  Zero otherwise."]
+#[doc = ""]
+#[doc = "   rsb_delta ::"]
+#[doc = "     The difference between hinted and unhinted right side bearing while"]
+#[doc = "     auto-hinting is active.  Zero otherwise."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   If @FT_Load_Glyph is called with default flags (see @FT_LOAD_DEFAULT)"]
+#[doc = "   the glyph image is loaded in the glyph slot in its native format"]
+#[doc = "   (e.g., an outline glyph for TrueType and Type~1 formats).  [Since 2.9]"]
+#[doc = "   The prospective bitmap metrics are calculated according to"]
+#[doc = "   @FT_LOAD_TARGET_XXX and other flags even for the outline glyph, even"]
+#[doc = "   if @FT_LOAD_RENDER is not set."]
+#[doc = ""]
+#[doc = "   This image can later be converted into a bitmap by calling"]
+#[doc = "   @FT_Render_Glyph.  This function searches the current renderer for the"]
+#[doc = "   native image's format, then invokes it."]
+#[doc = ""]
+#[doc = "   The renderer is in charge of transforming the native image through the"]
+#[doc = "   slot's face transformation fields, then converting it into a bitmap"]
+#[doc = "   that is returned in `slot->bitmap`."]
+#[doc = ""]
+#[doc = "   Note that `slot->bitmap_left` and `slot->bitmap_top` are also used to"]
+#[doc = "   specify the position of the bitmap relative to the current pen"]
+#[doc = "   position (e.g., coordinates (0,0) on the baseline).  Of course,"]
+#[doc = "   `slot->format` is also changed to @FT_GLYPH_FORMAT_BITMAP."]
+#[doc = ""]
+#[doc = "   Here is a small pseudo code fragment that shows how to use `lsb_delta`"]
+#[doc = "   and `rsb_delta` to do fractional positioning of glyphs:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     FT_GlyphSlot  slot     = face->glyph;"]
+#[doc = "     FT_Pos        origin_x = 0;"]
+#[doc = ""]
+#[doc = ""]
+#[doc = "     for all glyphs do"]
+#[doc = "       <load glyph with `FT_Load_Glyph'>"]
+#[doc = ""]
+#[doc = "       FT_Outline_Translate( slot->outline, origin_x & 63, 0 );"]
+#[doc = ""]
+#[doc = "       <save glyph image, or render glyph, or ...>"]
+#[doc = ""]
+#[doc = "       <compute kern between current and next glyph"]
+#[doc = "        and add it to `origin_x'>"]
+#[doc = ""]
+#[doc = "       origin_x += slot->advance.x;"]
+#[doc = "       origin_x += slot->lsb_delta - slot->rsb_delta;"]
+#[doc = "     endfor"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   Here is another small pseudo code fragment that shows how to use"]
+#[doc = "   `lsb_delta` and `rsb_delta` to improve integer positioning of glyphs:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     FT_GlyphSlot  slot           = face->glyph;"]
+#[doc = "     FT_Pos        origin_x       = 0;"]
+#[doc = "     FT_Pos        prev_rsb_delta = 0;"]
+#[doc = ""]
+#[doc = ""]
+#[doc = "     for all glyphs do"]
+#[doc = "       <compute kern between current and previous glyph"]
+#[doc = "        and add it to `origin_x'>"]
+#[doc = ""]
+#[doc = "       <load glyph with `FT_Load_Glyph'>"]
+#[doc = ""]
+#[doc = "       if ( prev_rsb_delta - slot->lsb_delta >  32 )"]
+#[doc = "         origin_x -= 64;"]
+#[doc = "       else if ( prev_rsb_delta - slot->lsb_delta < -31 )"]
+#[doc = "         origin_x += 64;"]
+#[doc = ""]
+#[doc = "       prev_rsb_delta = slot->rsb_delta;"]
+#[doc = ""]
+#[doc = "       <save glyph image, or render glyph, or ...>"]
+#[doc = ""]
+#[doc = "       origin_x += slot->advance.x;"]
+#[doc = "     endfor"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   If you use strong auto-hinting, you **must** apply these delta values!"]
+#[doc = "   Otherwise you will experience far too large inter-glyph spacing at"]
+#[doc = "   small rendering sizes in most cases.  Note that it doesn't harm to use"]
+#[doc = "   the above code for other hinting modes also, since the delta values"]
+#[doc = "   are zero then."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_GlyphSlotRec_ {
+    pub library: FT_Library,
+    pub face: FT_Face,
+    pub next: FT_GlyphSlot,
+    pub glyph_index: FT_UInt,
+    pub generic: FT_Generic,
+    pub metrics: FT_Glyph_Metrics,
+    pub linearHoriAdvance: FT_Fixed,
+    pub linearVertAdvance: FT_Fixed,
+    pub advance: FT_Vector,
+    pub format: FT_Glyph_Format,
+    pub bitmap: FT_Bitmap,
+    pub bitmap_left: FT_Int,
+    pub bitmap_top: FT_Int,
+    pub outline: FT_Outline,
+    pub num_subglyphs: FT_UInt,
+    pub subglyphs: FT_SubGlyph,
+    pub control_data: *mut ::std::os::raw::c_void,
+    pub control_len: ::std::os::raw::c_long,
+    pub lsb_delta: FT_Pos,
+    pub rsb_delta: FT_Pos,
+    pub other: *mut ::std::os::raw::c_void,
+    pub internal: FT_Slot_Internal,
+}
+#[test]
+fn bindgen_test_layout_FT_GlyphSlotRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_GlyphSlotRec_>(),
+        304usize,
+        concat!("Size of: ", stringify!(FT_GlyphSlotRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_GlyphSlotRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_GlyphSlotRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).library as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(library)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).face as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(face)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).next as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(next)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).glyph_index as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(glyph_index)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).generic as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(generic)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).metrics as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(metrics)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).linearHoriAdvance as *const _ as usize
+        },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(linearHoriAdvance)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).linearVertAdvance as *const _ as usize
+        },
+        120usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(linearVertAdvance)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).advance as *const _ as usize },
+        128usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(advance)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).format as *const _ as usize },
+        144usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(format)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).bitmap as *const _ as usize },
+        152usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(bitmap)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).bitmap_left as *const _ as usize },
+        192usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(bitmap_left)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).bitmap_top as *const _ as usize },
+        196usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(bitmap_top)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).outline as *const _ as usize },
+        200usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(outline)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).num_subglyphs as *const _ as usize },
+        240usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(num_subglyphs)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).subglyphs as *const _ as usize },
+        248usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(subglyphs)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).control_data as *const _ as usize },
+        256usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(control_data)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).control_len as *const _ as usize },
+        264usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(control_len)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).lsb_delta as *const _ as usize },
+        272usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(lsb_delta)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).rsb_delta as *const _ as usize },
+        280usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(rsb_delta)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).other as *const _ as usize },
+        288usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(other)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_GlyphSlotRec_>())).internal as *const _ as usize },
+        296usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_GlyphSlotRec_),
+            "::",
+            stringify!(internal)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_GlyphSlotRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   FreeType root glyph slot class structure.  A glyph slot is a container"]
+#[doc = "   where individual glyphs can be loaded, be they in outline or bitmap"]
+#[doc = "   format."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   library ::"]
+#[doc = "     A handle to the FreeType library instance this slot belongs to."]
+#[doc = ""]
+#[doc = "   face ::"]
+#[doc = "     A handle to the parent face object."]
+#[doc = ""]
+#[doc = "   next ::"]
+#[doc = "     In some cases (like some font tools), several glyph slots per face"]
+#[doc = "     object can be a good thing.  As this is rare, the glyph slots are"]
+#[doc = "     listed through a direct, single-linked list using its `next` field."]
+#[doc = ""]
+#[doc = "   glyph_index ::"]
+#[doc = "     [Since 2.10] The glyph index passed as an argument to @FT_Load_Glyph"]
+#[doc = "     while initializing the glyph slot."]
+#[doc = ""]
+#[doc = "   generic ::"]
+#[doc = "     A typeless pointer unused by the FreeType library or any of its"]
+#[doc = "     drivers.  It can be used by client applications to link their own"]
+#[doc = "     data to each glyph slot object."]
+#[doc = ""]
+#[doc = "   metrics ::"]
+#[doc = "     The metrics of the last loaded glyph in the slot.  The returned"]
+#[doc = "     values depend on the last load flags (see the @FT_Load_Glyph API"]
+#[doc = "     function) and can be expressed either in 26.6 fractional pixels or"]
+#[doc = "     font units."]
+#[doc = ""]
+#[doc = "     Note that even when the glyph image is transformed, the metrics are"]
+#[doc = "     not."]
+#[doc = ""]
+#[doc = "   linearHoriAdvance ::"]
+#[doc = "     The advance width of the unhinted glyph.  Its value is expressed in"]
+#[doc = "     16.16 fractional pixels, unless @FT_LOAD_LINEAR_DESIGN is set when"]
+#[doc = "     loading the glyph.  This field can be important to perform correct"]
+#[doc = "     WYSIWYG layout.  Only relevant for outline glyphs."]
+#[doc = ""]
+#[doc = "   linearVertAdvance ::"]
+#[doc = "     The advance height of the unhinted glyph.  Its value is expressed in"]
+#[doc = "     16.16 fractional pixels, unless @FT_LOAD_LINEAR_DESIGN is set when"]
+#[doc = "     loading the glyph.  This field can be important to perform correct"]
+#[doc = "     WYSIWYG layout.  Only relevant for outline glyphs."]
+#[doc = ""]
+#[doc = "   advance ::"]
+#[doc = "     This shorthand is, depending on @FT_LOAD_IGNORE_TRANSFORM, the"]
+#[doc = "     transformed (hinted) advance width for the glyph, in 26.6 fractional"]
+#[doc = "     pixel format.  As specified with @FT_LOAD_VERTICAL_LAYOUT, it uses"]
+#[doc = "     either the `horiAdvance` or the `vertAdvance` value of `metrics`"]
+#[doc = "     field."]
+#[doc = ""]
+#[doc = "   format ::"]
+#[doc = "     This field indicates the format of the image contained in the glyph"]
+#[doc = "     slot.  Typically @FT_GLYPH_FORMAT_BITMAP, @FT_GLYPH_FORMAT_OUTLINE,"]
+#[doc = "     or @FT_GLYPH_FORMAT_COMPOSITE, but other values are possible."]
+#[doc = ""]
+#[doc = "   bitmap ::"]
+#[doc = "     This field is used as a bitmap descriptor.  Note that the address"]
+#[doc = "     and content of the bitmap buffer can change between calls of"]
+#[doc = "     @FT_Load_Glyph and a few other functions."]
+#[doc = ""]
+#[doc = "   bitmap_left ::"]
+#[doc = "     The bitmap's left bearing expressed in integer pixels."]
+#[doc = ""]
+#[doc = "   bitmap_top ::"]
+#[doc = "     The bitmap's top bearing expressed in integer pixels.  This is the"]
+#[doc = "     distance from the baseline to the top-most glyph scanline, upwards"]
+#[doc = "     y~coordinates being **positive**."]
+#[doc = ""]
+#[doc = "   outline ::"]
+#[doc = "     The outline descriptor for the current glyph image if its format is"]
+#[doc = "     @FT_GLYPH_FORMAT_OUTLINE.  Once a glyph is loaded, `outline` can be"]
+#[doc = "     transformed, distorted, emboldened, etc.  However, it must not be"]
+#[doc = "     freed."]
+#[doc = ""]
+#[doc = "     [Since 2.10.1] If @FT_LOAD_NO_SCALE is set, outline coordinates of"]
+#[doc = "     OpenType variation fonts for a selected instance are internally"]
+#[doc = "     handled as 26.6 fractional font units but returned as (rounded)"]
+#[doc = "     integers, as expected.  To get unrounded font units, don't use"]
+#[doc = "     @FT_LOAD_NO_SCALE but load the glyph with @FT_LOAD_NO_HINTING and"]
+#[doc = "     scale it, using the font's `units_per_EM` value as the ppem."]
+#[doc = ""]
+#[doc = "   num_subglyphs ::"]
+#[doc = "     The number of subglyphs in a composite glyph.  This field is only"]
+#[doc = "     valid for the composite glyph format that should normally only be"]
+#[doc = "     loaded with the @FT_LOAD_NO_RECURSE flag."]
+#[doc = ""]
+#[doc = "   subglyphs ::"]
+#[doc = "     An array of subglyph descriptors for composite glyphs.  There are"]
+#[doc = "     `num_subglyphs` elements in there.  Currently internal to FreeType."]
+#[doc = ""]
+#[doc = "   control_data ::"]
+#[doc = "     Certain font drivers can also return the control data for a given"]
+#[doc = "     glyph image (e.g.  TrueType bytecode, Type~1 charstrings, etc.)."]
+#[doc = "     This field is a pointer to such data; it is currently internal to"]
+#[doc = "     FreeType."]
+#[doc = ""]
+#[doc = "   control_len ::"]
+#[doc = "     This is the length in bytes of the control data.  Currently internal"]
+#[doc = "     to FreeType."]
+#[doc = ""]
+#[doc = "   other ::"]
+#[doc = "     Reserved."]
+#[doc = ""]
+#[doc = "   lsb_delta ::"]
+#[doc = "     The difference between hinted and unhinted left side bearing while"]
+#[doc = "     auto-hinting is active.  Zero otherwise."]
+#[doc = ""]
+#[doc = "   rsb_delta ::"]
+#[doc = "     The difference between hinted and unhinted right side bearing while"]
+#[doc = "     auto-hinting is active.  Zero otherwise."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   If @FT_Load_Glyph is called with default flags (see @FT_LOAD_DEFAULT)"]
+#[doc = "   the glyph image is loaded in the glyph slot in its native format"]
+#[doc = "   (e.g., an outline glyph for TrueType and Type~1 formats).  [Since 2.9]"]
+#[doc = "   The prospective bitmap metrics are calculated according to"]
+#[doc = "   @FT_LOAD_TARGET_XXX and other flags even for the outline glyph, even"]
+#[doc = "   if @FT_LOAD_RENDER is not set."]
+#[doc = ""]
+#[doc = "   This image can later be converted into a bitmap by calling"]
+#[doc = "   @FT_Render_Glyph.  This function searches the current renderer for the"]
+#[doc = "   native image's format, then invokes it."]
+#[doc = ""]
+#[doc = "   The renderer is in charge of transforming the native image through the"]
+#[doc = "   slot's face transformation fields, then converting it into a bitmap"]
+#[doc = "   that is returned in `slot->bitmap`."]
+#[doc = ""]
+#[doc = "   Note that `slot->bitmap_left` and `slot->bitmap_top` are also used to"]
+#[doc = "   specify the position of the bitmap relative to the current pen"]
+#[doc = "   position (e.g., coordinates (0,0) on the baseline).  Of course,"]
+#[doc = "   `slot->format` is also changed to @FT_GLYPH_FORMAT_BITMAP."]
+#[doc = ""]
+#[doc = "   Here is a small pseudo code fragment that shows how to use `lsb_delta`"]
+#[doc = "   and `rsb_delta` to do fractional positioning of glyphs:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     FT_GlyphSlot  slot     = face->glyph;"]
+#[doc = "     FT_Pos        origin_x = 0;"]
+#[doc = ""]
+#[doc = ""]
+#[doc = "     for all glyphs do"]
+#[doc = "       <load glyph with `FT_Load_Glyph'>"]
+#[doc = ""]
+#[doc = "       FT_Outline_Translate( slot->outline, origin_x & 63, 0 );"]
+#[doc = ""]
+#[doc = "       <save glyph image, or render glyph, or ...>"]
+#[doc = ""]
+#[doc = "       <compute kern between current and next glyph"]
+#[doc = "        and add it to `origin_x'>"]
+#[doc = ""]
+#[doc = "       origin_x += slot->advance.x;"]
+#[doc = "       origin_x += slot->lsb_delta - slot->rsb_delta;"]
+#[doc = "     endfor"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   Here is another small pseudo code fragment that shows how to use"]
+#[doc = "   `lsb_delta` and `rsb_delta` to improve integer positioning of glyphs:"]
+#[doc = ""]
+#[doc = "   ```"]
+#[doc = "     FT_GlyphSlot  slot           = face->glyph;"]
+#[doc = "     FT_Pos        origin_x       = 0;"]
+#[doc = "     FT_Pos        prev_rsb_delta = 0;"]
+#[doc = ""]
+#[doc = ""]
+#[doc = "     for all glyphs do"]
+#[doc = "       <compute kern between current and previous glyph"]
+#[doc = "        and add it to `origin_x'>"]
+#[doc = ""]
+#[doc = "       <load glyph with `FT_Load_Glyph'>"]
+#[doc = ""]
+#[doc = "       if ( prev_rsb_delta - slot->lsb_delta >  32 )"]
+#[doc = "         origin_x -= 64;"]
+#[doc = "       else if ( prev_rsb_delta - slot->lsb_delta < -31 )"]
+#[doc = "         origin_x += 64;"]
+#[doc = ""]
+#[doc = "       prev_rsb_delta = slot->rsb_delta;"]
+#[doc = ""]
+#[doc = "       <save glyph image, or render glyph, or ...>"]
+#[doc = ""]
+#[doc = "       origin_x += slot->advance.x;"]
+#[doc = "     endfor"]
+#[doc = "   ```"]
+#[doc = ""]
+#[doc = "   If you use strong auto-hinting, you **must** apply these delta values!"]
+#[doc = "   Otherwise you will experience far too large inter-glyph spacing at"]
+#[doc = "   small rendering sizes in most cases.  Note that it doesn't harm to use"]
+#[doc = "   the above code for other hinting modes also, since the delta values"]
+#[doc = "   are zero then."]
+pub type FT_GlyphSlotRec = FT_GlyphSlotRec_;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Init_FreeType"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Initialize a new FreeType library object.  The set of modules that are"]
+    #[doc = "   registered by this function is determined at build time."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   alibrary ::"]
+    #[doc = "     A handle to a new library object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   In case you want to provide your own memory allocating routines, use"]
+    #[doc = "   @FT_New_Library instead, followed by a call to @FT_Add_Default_Modules"]
+    #[doc = "   (or a series of calls to @FT_Add_Module) and"]
+    #[doc = "   @FT_Set_Default_Properties."]
+    #[doc = ""]
+    #[doc = "   See the documentation of @FT_Library and @FT_Face for multi-threading"]
+    #[doc = "   issues."]
+    #[doc = ""]
+    #[doc = "   If you need reference-counting (cf. @FT_Reference_Library), use"]
+    #[doc = "   @FT_New_Library and @FT_Done_Library."]
+    #[doc = ""]
+    #[doc = "   If compilation option `FT_CONFIG_OPTION_ENVIRONMENT_PROPERTIES` is"]
+    #[doc = "   set, this function reads the `FREETYPE_PROPERTIES` environment"]
+    #[doc = "   variable to control driver properties.  See section @properties for"]
+    #[doc = "   more."]
+    pub fn FT_Init_FreeType(alibrary: *mut FT_Library) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Done_FreeType"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Destroy a given FreeType library object and all of its children,"]
+    #[doc = "   including resources, drivers, faces, sizes, etc."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   library ::"]
+    #[doc = "     A handle to the target library object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    pub fn FT_Done_FreeType(library: FT_Library) -> FT_Error;
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Parameter"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure to pass more or less generic parameters to"]
+#[doc = "   @FT_Open_Face and @FT_Face_Properties."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   tag ::"]
+#[doc = "     A four-byte identification tag."]
+#[doc = ""]
+#[doc = "   data ::"]
+#[doc = "     A pointer to the parameter data."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The ID and function of parameters are driver-specific.  See section"]
+#[doc = "   @parameter_tags for more information."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Parameter_ {
+    pub tag: FT_ULong,
+    pub data: FT_Pointer,
+}
+#[test]
+fn bindgen_test_layout_FT_Parameter_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Parameter_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_Parameter_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Parameter_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Parameter_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Parameter_>())).tag as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Parameter_),
+            "::",
+            stringify!(tag)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Parameter_>())).data as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Parameter_),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Parameter"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A simple structure to pass more or less generic parameters to"]
+#[doc = "   @FT_Open_Face and @FT_Face_Properties."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   tag ::"]
+#[doc = "     A four-byte identification tag."]
+#[doc = ""]
+#[doc = "   data ::"]
+#[doc = "     A pointer to the parameter data."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The ID and function of parameters are driver-specific.  See section"]
+#[doc = "   @parameter_tags for more information."]
+pub type FT_Parameter = FT_Parameter_;
+#[doc = " @struct:"]
+#[doc = "   FT_Open_Args"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to indicate how to open a new font file or stream.  A"]
+#[doc = "   pointer to such a structure can be used as a parameter for the"]
+#[doc = "   functions @FT_Open_Face and @FT_Attach_Stream."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   flags ::"]
+#[doc = "     A set of bit flags indicating how to use the structure."]
+#[doc = ""]
+#[doc = "   memory_base ::"]
+#[doc = "     The first byte of the file in memory."]
+#[doc = ""]
+#[doc = "   memory_size ::"]
+#[doc = "     The size in bytes of the file in memory."]
+#[doc = ""]
+#[doc = "   pathname ::"]
+#[doc = "     A pointer to an 8-bit file pathname."]
+#[doc = ""]
+#[doc = "   stream ::"]
+#[doc = "     A handle to a source stream object."]
+#[doc = ""]
+#[doc = "   driver ::"]
+#[doc = "     This field is exclusively used by @FT_Open_Face; it simply specifies"]
+#[doc = "     the font driver to use for opening the face.  If set to `NULL`,"]
+#[doc = "     FreeType tries to load the face with each one of the drivers in its"]
+#[doc = "     list."]
+#[doc = ""]
+#[doc = "   num_params ::"]
+#[doc = "     The number of extra parameters."]
+#[doc = ""]
+#[doc = "   params ::"]
+#[doc = "     Extra parameters passed to the font driver when opening a new face."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The stream type is determined by the contents of `flags` that are"]
+#[doc = "   tested in the following order by @FT_Open_Face:"]
+#[doc = ""]
+#[doc = "   If the @FT_OPEN_MEMORY bit is set, assume that this is a memory file"]
+#[doc = "   of `memory_size` bytes, located at `memory_address`.  The data are not"]
+#[doc = "   copied, and the client is responsible for releasing and destroying"]
+#[doc = "   them _after_ the corresponding call to @FT_Done_Face."]
+#[doc = ""]
+#[doc = "   Otherwise, if the @FT_OPEN_STREAM bit is set, assume that a custom"]
+#[doc = "   input stream `stream` is used."]
+#[doc = ""]
+#[doc = "   Otherwise, if the @FT_OPEN_PATHNAME bit is set, assume that this is a"]
+#[doc = "   normal file and use `pathname` to open it."]
+#[doc = ""]
+#[doc = "   If the @FT_OPEN_DRIVER bit is set, @FT_Open_Face only tries to open"]
+#[doc = "   the file with the driver whose handler is in `driver`."]
+#[doc = ""]
+#[doc = "   If the @FT_OPEN_PARAMS bit is set, the parameters given by"]
+#[doc = "   `num_params` and `params` is used.  They are ignored otherwise."]
+#[doc = ""]
+#[doc = "   Ideally, both the `pathname` and `params` fields should be tagged as"]
+#[doc = "   'const'; this is missing for API backward compatibility.  In other"]
+#[doc = "   words, applications should treat them as read-only."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Open_Args_ {
+    pub flags: FT_UInt,
+    pub memory_base: *const FT_Byte,
+    pub memory_size: FT_Long,
+    pub pathname: *mut FT_String,
+    pub stream: FT_Stream,
+    pub driver: FT_Module,
+    pub num_params: FT_Int,
+    pub params: *mut FT_Parameter,
+}
+#[test]
+fn bindgen_test_layout_FT_Open_Args_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Open_Args_>(),
+        64usize,
+        concat!("Size of: ", stringify!(FT_Open_Args_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Open_Args_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Open_Args_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).flags as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(flags)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).memory_base as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(memory_base)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).memory_size as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(memory_size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).pathname as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(pathname)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).stream as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(stream)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).driver as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(driver)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).num_params as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(num_params)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Open_Args_>())).params as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Open_Args_),
+            "::",
+            stringify!(params)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Open_Args"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to indicate how to open a new font file or stream.  A"]
+#[doc = "   pointer to such a structure can be used as a parameter for the"]
+#[doc = "   functions @FT_Open_Face and @FT_Attach_Stream."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   flags ::"]
+#[doc = "     A set of bit flags indicating how to use the structure."]
+#[doc = ""]
+#[doc = "   memory_base ::"]
+#[doc = "     The first byte of the file in memory."]
+#[doc = ""]
+#[doc = "   memory_size ::"]
+#[doc = "     The size in bytes of the file in memory."]
+#[doc = ""]
+#[doc = "   pathname ::"]
+#[doc = "     A pointer to an 8-bit file pathname."]
+#[doc = ""]
+#[doc = "   stream ::"]
+#[doc = "     A handle to a source stream object."]
+#[doc = ""]
+#[doc = "   driver ::"]
+#[doc = "     This field is exclusively used by @FT_Open_Face; it simply specifies"]
+#[doc = "     the font driver to use for opening the face.  If set to `NULL`,"]
+#[doc = "     FreeType tries to load the face with each one of the drivers in its"]
+#[doc = "     list."]
+#[doc = ""]
+#[doc = "   num_params ::"]
+#[doc = "     The number of extra parameters."]
+#[doc = ""]
+#[doc = "   params ::"]
+#[doc = "     Extra parameters passed to the font driver when opening a new face."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The stream type is determined by the contents of `flags` that are"]
+#[doc = "   tested in the following order by @FT_Open_Face:"]
+#[doc = ""]
+#[doc = "   If the @FT_OPEN_MEMORY bit is set, assume that this is a memory file"]
+#[doc = "   of `memory_size` bytes, located at `memory_address`.  The data are not"]
+#[doc = "   copied, and the client is responsible for releasing and destroying"]
+#[doc = "   them _after_ the corresponding call to @FT_Done_Face."]
+#[doc = ""]
+#[doc = "   Otherwise, if the @FT_OPEN_STREAM bit is set, assume that a custom"]
+#[doc = "   input stream `stream` is used."]
+#[doc = ""]
+#[doc = "   Otherwise, if the @FT_OPEN_PATHNAME bit is set, assume that this is a"]
+#[doc = "   normal file and use `pathname` to open it."]
+#[doc = ""]
+#[doc = "   If the @FT_OPEN_DRIVER bit is set, @FT_Open_Face only tries to open"]
+#[doc = "   the file with the driver whose handler is in `driver`."]
+#[doc = ""]
+#[doc = "   If the @FT_OPEN_PARAMS bit is set, the parameters given by"]
+#[doc = "   `num_params` and `params` is used.  They are ignored otherwise."]
+#[doc = ""]
+#[doc = "   Ideally, both the `pathname` and `params` fields should be tagged as"]
+#[doc = "   'const'; this is missing for API backward compatibility.  In other"]
+#[doc = "   words, applications should treat them as read-only."]
+pub type FT_Open_Args = FT_Open_Args_;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_New_Face"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Call @FT_Open_Face to open a font by its pathname."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   library ::"]
+    #[doc = "     A handle to the library resource."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   pathname ::"]
+    #[doc = "     A path to the font file."]
+    #[doc = ""]
+    #[doc = "   face_index ::"]
+    #[doc = "     See @FT_Open_Face for a detailed description of this parameter."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   aface ::"]
+    #[doc = "     A handle to a new face object.  If `face_index` is greater than or"]
+    #[doc = "     equal to zero, it must be non-`NULL`."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Use @FT_Done_Face to destroy the created @FT_Face object (along with"]
+    #[doc = "   its slot and sizes)."]
+    pub fn FT_New_Face(
+        library: FT_Library,
+        filepathname: *const ::std::os::raw::c_char,
+        face_index: FT_Long,
+        aface: *mut FT_Face,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_New_Memory_Face"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Call @FT_Open_Face to open a font that has been loaded into memory."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   library ::"]
+    #[doc = "     A handle to the library resource."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   file_base ::"]
+    #[doc = "     A pointer to the beginning of the font data."]
+    #[doc = ""]
+    #[doc = "   file_size ::"]
+    #[doc = "     The size of the memory chunk used by the font data."]
+    #[doc = ""]
+    #[doc = "   face_index ::"]
+    #[doc = "     See @FT_Open_Face for a detailed description of this parameter."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   aface ::"]
+    #[doc = "     A handle to a new face object.  If `face_index` is greater than or"]
+    #[doc = "     equal to zero, it must be non-`NULL`."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   You must not deallocate the memory before calling @FT_Done_Face."]
+    pub fn FT_New_Memory_Face(
+        library: FT_Library,
+        file_base: *const FT_Byte,
+        file_size: FT_Long,
+        face_index: FT_Long,
+        aface: *mut FT_Face,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Open_Face"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Create a face object from a given resource described by @FT_Open_Args."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   library ::"]
+    #[doc = "     A handle to the library resource."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   args ::"]
+    #[doc = "     A pointer to an `FT_Open_Args` structure that must be filled by the"]
+    #[doc = "     caller."]
+    #[doc = ""]
+    #[doc = "   face_index ::"]
+    #[doc = "     This field holds two different values.  Bits 0-15 are the index of"]
+    #[doc = "     the face in the font file (starting with value~0).  Set it to~0 if"]
+    #[doc = "     there is only one face in the font file."]
+    #[doc = ""]
+    #[doc = "     [Since 2.6.1] Bits 16-30 are relevant to GX and OpenType variation"]
+    #[doc = "     fonts only, specifying the named instance index for the current face"]
+    #[doc = "     index (starting with value~1; value~0 makes FreeType ignore named"]
+    #[doc = "     instances).  For non-variation fonts, bits 16-30 are ignored."]
+    #[doc = "     Assuming that you want to access the third named instance in face~4,"]
+    #[doc = "     `face_index` should be set to 0x00030004.  If you want to access"]
+    #[doc = "     face~4 without variation handling, simply set `face_index` to"]
+    #[doc = "     value~4."]
+    #[doc = ""]
+    #[doc = "     `FT_Open_Face` and its siblings can be used to quickly check whether"]
+    #[doc = "     the font format of a given font resource is supported by FreeType."]
+    #[doc = "     In general, if the `face_index` argument is negative, the function's"]
+    #[doc = "     return value is~0 if the font format is recognized, or non-zero"]
+    #[doc = "     otherwise.  The function allocates a more or less empty face handle"]
+    #[doc = "     in `*aface` (if `aface` isn't `NULL`); the only two useful fields in"]
+    #[doc = "     this special case are `face->num_faces` and `face->style_flags`."]
+    #[doc = "     For any negative value of `face_index`, `face->num_faces` gives the"]
+    #[doc = "     number of faces within the font file.  For the negative value"]
+    #[doc = "     '-(N+1)' (with 'N' a non-negative 16-bit value), bits 16-30 in"]
+    #[doc = "     `face->style_flags` give the number of named instances in face 'N'"]
+    #[doc = "     if we have a variation font (or zero otherwise).  After examination,"]
+    #[doc = "     the returned @FT_Face structure should be deallocated with a call to"]
+    #[doc = "     @FT_Done_Face."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   aface ::"]
+    #[doc = "     A handle to a new face object.  If `face_index` is greater than or"]
+    #[doc = "     equal to zero, it must be non-`NULL`."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Unlike FreeType 1.x, this function automatically creates a glyph slot"]
+    #[doc = "   for the face object that can be accessed directly through"]
+    #[doc = "   `face->glyph`."]
+    #[doc = ""]
+    #[doc = "   Each new face object created with this function also owns a default"]
+    #[doc = "   @FT_Size object, accessible as `face->size`."]
+    #[doc = ""]
+    #[doc = "   One @FT_Library instance can have multiple face objects, this is,"]
+    #[doc = "   @FT_Open_Face and its siblings can be called multiple times using the"]
+    #[doc = "   same `library` argument."]
+    #[doc = ""]
+    #[doc = "   See the discussion of reference counters in the description of"]
+    #[doc = "   @FT_Reference_Face."]
+    #[doc = ""]
+    #[doc = " @example:"]
+    #[doc = "   To loop over all faces, use code similar to the following snippet"]
+    #[doc = "   (omitting the error handling)."]
+    #[doc = ""]
+    #[doc = "   ```"]
+    #[doc = "     ..."]
+    #[doc = "     FT_Face  face;"]
+    #[doc = "     FT_Long  i, num_faces;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "     error = FT_Open_Face( library, args, -1, &face );"]
+    #[doc = "     if ( error ) { ... }"]
+    #[doc = ""]
+    #[doc = "     num_faces = face->num_faces;"]
+    #[doc = "     FT_Done_Face( face );"]
+    #[doc = ""]
+    #[doc = "     for ( i = 0; i < num_faces; i++ )"]
+    #[doc = "     {"]
+    #[doc = "       ..."]
+    #[doc = "       error = FT_Open_Face( library, args, i, &face );"]
+    #[doc = "       ..."]
+    #[doc = "       FT_Done_Face( face );"]
+    #[doc = "       ..."]
+    #[doc = "     }"]
+    #[doc = "   ```"]
+    #[doc = ""]
+    #[doc = "   To loop over all valid values for `face_index`, use something similar"]
+    #[doc = "   to the following snippet, again without error handling.  The code"]
+    #[doc = "   accesses all faces immediately (thus only a single call of"]
+    #[doc = "   `FT_Open_Face` within the do-loop), with and without named instances."]
+    #[doc = ""]
+    #[doc = "   ```"]
+    #[doc = "     ..."]
+    #[doc = "     FT_Face  face;"]
+    #[doc = ""]
+    #[doc = "     FT_Long  num_faces     = 0;"]
+    #[doc = "     FT_Long  num_instances = 0;"]
+    #[doc = ""]
+    #[doc = "     FT_Long  face_idx     = 0;"]
+    #[doc = "     FT_Long  instance_idx = 0;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "     do"]
+    #[doc = "     {"]
+    #[doc = "       FT_Long  id = ( instance_idx << 16 ) + face_idx;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "       error = FT_Open_Face( library, args, id, &face );"]
+    #[doc = "       if ( error ) { ... }"]
+    #[doc = ""]
+    #[doc = "       num_faces     = face->num_faces;"]
+    #[doc = "       num_instances = face->style_flags >> 16;"]
+    #[doc = ""]
+    #[doc = "       ..."]
+    #[doc = ""]
+    #[doc = "       FT_Done_Face( face );"]
+    #[doc = ""]
+    #[doc = "       if ( instance_idx < num_instances )"]
+    #[doc = "         instance_idx++;"]
+    #[doc = "       else"]
+    #[doc = "       {"]
+    #[doc = "         face_idx++;"]
+    #[doc = "         instance_idx = 0;"]
+    #[doc = "       }"]
+    #[doc = ""]
+    #[doc = "     } while ( face_idx < num_faces )"]
+    #[doc = "   ```"]
+    pub fn FT_Open_Face(
+        library: FT_Library,
+        args: *const FT_Open_Args,
+        face_index: FT_Long,
+        aface: *mut FT_Face,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Attach_File"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Call @FT_Attach_Stream to attach a file."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     The target face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   filepathname ::"]
+    #[doc = "     The pathname."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    pub fn FT_Attach_File(face: FT_Face, filepathname: *const ::std::os::raw::c_char) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Attach_Stream"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   'Attach' data to a face object.  Normally, this is used to read"]
+    #[doc = "   additional information for the face object.  For example, you can"]
+    #[doc = "   attach an AFM file that comes with a Type~1 font to get the kerning"]
+    #[doc = "   values and other metrics."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     The target face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   parameters ::"]
+    #[doc = "     A pointer to @FT_Open_Args that must be filled by the caller."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The meaning of the 'attach' (i.e., what really happens when the new"]
+    #[doc = "   file is read) is not fixed by FreeType itself.  It really depends on"]
+    #[doc = "   the font format (and thus the font driver)."]
+    #[doc = ""]
+    #[doc = "   Client applications are expected to know what they are doing when"]
+    #[doc = "   invoking this function.  Most drivers simply do not implement file or"]
+    #[doc = "   stream attachments."]
+    pub fn FT_Attach_Stream(face: FT_Face, parameters: *mut FT_Open_Args) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Reference_Face"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   A counter gets initialized to~1 at the time an @FT_Face structure is"]
+    #[doc = "   created.  This function increments the counter.  @FT_Done_Face then"]
+    #[doc = "   only destroys a face if the counter is~1, otherwise it simply"]
+    #[doc = "   decrements the counter."]
+    #[doc = ""]
+    #[doc = "   This function helps in managing life-cycles of structures that"]
+    #[doc = "   reference @FT_Face objects."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a target face object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.4.2"]
+    pub fn FT_Reference_Face(face: FT_Face) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Done_Face"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Discard a given face object, as well as all of its child slots and"]
+    #[doc = "   sizes."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a target face object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   See the discussion of reference counters in the description of"]
+    #[doc = "   @FT_Reference_Face."]
+    pub fn FT_Done_Face(face: FT_Face) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Select_Size"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Select a bitmap strike.  To be more precise, this function sets the"]
+    #[doc = "   scaling factors of the active @FT_Size object in a face so that"]
+    #[doc = "   bitmaps from this particular strike are taken by @FT_Load_Glyph and"]
+    #[doc = "   friends."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a target face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   strike_index ::"]
+    #[doc = "     The index of the bitmap strike in the `available_sizes` field of"]
+    #[doc = "     @FT_FaceRec structure."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   For bitmaps embedded in outline fonts it is common that only a subset"]
+    #[doc = "   of the available glyphs at a given ppem value is available.  FreeType"]
+    #[doc = "   silently uses outlines if there is no bitmap for a given glyph index."]
+    #[doc = ""]
+    #[doc = "   For GX and OpenType variation fonts, a bitmap strike makes sense only"]
+    #[doc = "   if the default instance is active (this is, no glyph variation takes"]
+    #[doc = "   place); otherwise, FreeType simply ignores bitmap strikes.  The same"]
+    #[doc = "   is true for all named instances that are different from the default"]
+    #[doc = "   instance."]
+    #[doc = ""]
+    #[doc = "   Don't use this function if you are using the FreeType cache API."]
+    pub fn FT_Select_Size(face: FT_Face, strike_index: FT_Int) -> FT_Error;
+}
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_NOMINAL: FT_Size_Request_Type_ = 0;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_REAL_DIM: FT_Size_Request_Type_ = 1;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_BBOX: FT_Size_Request_Type_ = 2;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_CELL: FT_Size_Request_Type_ = 3;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_SCALES: FT_Size_Request_Type_ = 4;
+pub const FT_Size_Request_Type__FT_SIZE_REQUEST_TYPE_MAX: FT_Size_Request_Type_ = 5;
+#[doc = " @enum:"]
+#[doc = "   FT_Size_Request_Type"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration type that lists the supported size request types, i.e.,"]
+#[doc = "   what input size (in font units) maps to the requested output size (in"]
+#[doc = "   pixels, as computed from the arguments of @FT_Size_Request)."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_SIZE_REQUEST_TYPE_NOMINAL ::"]
+#[doc = "     The nominal size.  The `units_per_EM` field of @FT_FaceRec is used"]
+#[doc = "     to determine both scaling values."]
+#[doc = ""]
+#[doc = "     This is the standard scaling found in most applications.  In"]
+#[doc = "     particular, use this size request type for TrueType fonts if they"]
+#[doc = "     provide optical scaling or something similar.  Note, however, that"]
+#[doc = "     `units_per_EM` is a rather abstract value which bears no relation to"]
+#[doc = "     the actual size of the glyphs in a font."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_REAL_DIM ::"]
+#[doc = "     The real dimension.  The sum of the `ascender` and (minus of) the"]
+#[doc = "     `descender` fields of @FT_FaceRec is used to determine both scaling"]
+#[doc = "     values."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_BBOX ::"]
+#[doc = "     The font bounding box.  The width and height of the `bbox` field of"]
+#[doc = "     @FT_FaceRec are used to determine the horizontal and vertical"]
+#[doc = "     scaling value, respectively."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_CELL ::"]
+#[doc = "     The `max_advance_width` field of @FT_FaceRec is used to determine"]
+#[doc = "     the horizontal scaling value; the vertical scaling value is"]
+#[doc = "     determined the same way as @FT_SIZE_REQUEST_TYPE_REAL_DIM does."]
+#[doc = "     Finally, both scaling values are set to the smaller one.  This type"]
+#[doc = "     is useful if you want to specify the font size for, say, a window of"]
+#[doc = "     a given dimension and 80x24 cells."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_SCALES ::"]
+#[doc = "     Specify the scaling values directly."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The above descriptions only apply to scalable formats.  For bitmap"]
+#[doc = "   formats, the behaviour is up to the driver."]
+#[doc = ""]
+#[doc = "   See the note section of @FT_Size_Metrics if you wonder how size"]
+#[doc = "   requesting relates to scaling values."]
+pub type FT_Size_Request_Type_ = u32;
+#[doc = " @enum:"]
+#[doc = "   FT_Size_Request_Type"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration type that lists the supported size request types, i.e.,"]
+#[doc = "   what input size (in font units) maps to the requested output size (in"]
+#[doc = "   pixels, as computed from the arguments of @FT_Size_Request)."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_SIZE_REQUEST_TYPE_NOMINAL ::"]
+#[doc = "     The nominal size.  The `units_per_EM` field of @FT_FaceRec is used"]
+#[doc = "     to determine both scaling values."]
+#[doc = ""]
+#[doc = "     This is the standard scaling found in most applications.  In"]
+#[doc = "     particular, use this size request type for TrueType fonts if they"]
+#[doc = "     provide optical scaling or something similar.  Note, however, that"]
+#[doc = "     `units_per_EM` is a rather abstract value which bears no relation to"]
+#[doc = "     the actual size of the glyphs in a font."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_REAL_DIM ::"]
+#[doc = "     The real dimension.  The sum of the `ascender` and (minus of) the"]
+#[doc = "     `descender` fields of @FT_FaceRec is used to determine both scaling"]
+#[doc = "     values."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_BBOX ::"]
+#[doc = "     The font bounding box.  The width and height of the `bbox` field of"]
+#[doc = "     @FT_FaceRec are used to determine the horizontal and vertical"]
+#[doc = "     scaling value, respectively."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_CELL ::"]
+#[doc = "     The `max_advance_width` field of @FT_FaceRec is used to determine"]
+#[doc = "     the horizontal scaling value; the vertical scaling value is"]
+#[doc = "     determined the same way as @FT_SIZE_REQUEST_TYPE_REAL_DIM does."]
+#[doc = "     Finally, both scaling values are set to the smaller one.  This type"]
+#[doc = "     is useful if you want to specify the font size for, say, a window of"]
+#[doc = "     a given dimension and 80x24 cells."]
+#[doc = ""]
+#[doc = "   FT_SIZE_REQUEST_TYPE_SCALES ::"]
+#[doc = "     Specify the scaling values directly."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   The above descriptions only apply to scalable formats.  For bitmap"]
+#[doc = "   formats, the behaviour is up to the driver."]
+#[doc = ""]
+#[doc = "   See the note section of @FT_Size_Metrics if you wonder how size"]
+#[doc = "   requesting relates to scaling values."]
+pub use self::FT_Size_Request_Type_ as FT_Size_Request_Type;
+#[doc = " @struct:"]
+#[doc = "   FT_Size_RequestRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to model a size request."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   type ::"]
+#[doc = "     See @FT_Size_Request_Type."]
+#[doc = ""]
+#[doc = "   width ::"]
+#[doc = "     The desired width, given as a 26.6 fractional point value (with 72pt"]
+#[doc = "     = 1in)."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     The desired height, given as a 26.6 fractional point value (with"]
+#[doc = "     72pt = 1in)."]
+#[doc = ""]
+#[doc = "   horiResolution ::"]
+#[doc = "     The horizontal resolution (dpi, i.e., pixels per inch).  If set to"]
+#[doc = "     zero, `width` is treated as a 26.6 fractional **pixel** value, which"]
+#[doc = "     gets internally rounded to an integer."]
+#[doc = ""]
+#[doc = "   vertResolution ::"]
+#[doc = "     The vertical resolution (dpi, i.e., pixels per inch).  If set to"]
+#[doc = "     zero, `height` is treated as a 26.6 fractional **pixel** value,"]
+#[doc = "     which gets internally rounded to an integer."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   If `width` is zero, the horizontal scaling value is set equal to the"]
+#[doc = "   vertical scaling value, and vice versa."]
+#[doc = ""]
+#[doc = "   If `type` is `FT_SIZE_REQUEST_TYPE_SCALES`, `width` and `height` are"]
+#[doc = "   interpreted directly as 16.16 fractional scaling values, without any"]
+#[doc = "   further modification, and both `horiResolution` and `vertResolution`"]
+#[doc = "   are ignored."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_Size_RequestRec_ {
+    pub type_: FT_Size_Request_Type,
+    pub width: FT_Long,
+    pub height: FT_Long,
+    pub horiResolution: FT_UInt,
+    pub vertResolution: FT_UInt,
+}
+#[test]
+fn bindgen_test_layout_FT_Size_RequestRec_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_Size_RequestRec_>(),
+        32usize,
+        concat!("Size of: ", stringify!(FT_Size_RequestRec_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_Size_RequestRec_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_Size_RequestRec_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_RequestRec_>())).type_ as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_RequestRec_),
+            "::",
+            stringify!(type_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_RequestRec_>())).width as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_RequestRec_),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_Size_RequestRec_>())).height as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_RequestRec_),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<FT_Size_RequestRec_>())).horiResolution as *const _ as usize
+        },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_RequestRec_),
+            "::",
+            stringify!(horiResolution)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<FT_Size_RequestRec_>())).vertResolution as *const _ as usize
+        },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_Size_RequestRec_),
+            "::",
+            stringify!(vertResolution)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_Size_RequestRec"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A structure to model a size request."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   type ::"]
+#[doc = "     See @FT_Size_Request_Type."]
+#[doc = ""]
+#[doc = "   width ::"]
+#[doc = "     The desired width, given as a 26.6 fractional point value (with 72pt"]
+#[doc = "     = 1in)."]
+#[doc = ""]
+#[doc = "   height ::"]
+#[doc = "     The desired height, given as a 26.6 fractional point value (with"]
+#[doc = "     72pt = 1in)."]
+#[doc = ""]
+#[doc = "   horiResolution ::"]
+#[doc = "     The horizontal resolution (dpi, i.e., pixels per inch).  If set to"]
+#[doc = "     zero, `width` is treated as a 26.6 fractional **pixel** value, which"]
+#[doc = "     gets internally rounded to an integer."]
+#[doc = ""]
+#[doc = "   vertResolution ::"]
+#[doc = "     The vertical resolution (dpi, i.e., pixels per inch).  If set to"]
+#[doc = "     zero, `height` is treated as a 26.6 fractional **pixel** value,"]
+#[doc = "     which gets internally rounded to an integer."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   If `width` is zero, the horizontal scaling value is set equal to the"]
+#[doc = "   vertical scaling value, and vice versa."]
+#[doc = ""]
+#[doc = "   If `type` is `FT_SIZE_REQUEST_TYPE_SCALES`, `width` and `height` are"]
+#[doc = "   interpreted directly as 16.16 fractional scaling values, without any"]
+#[doc = "   further modification, and both `horiResolution` and `vertResolution`"]
+#[doc = "   are ignored."]
+pub type FT_Size_RequestRec = FT_Size_RequestRec_;
+#[doc = " @struct:"]
+#[doc = "   FT_Size_Request"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   A handle to a size request structure."]
+pub type FT_Size_Request = *mut FT_Size_RequestRec_;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Request_Size"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Resize the scale of the active @FT_Size object in a face."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a target face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   req ::"]
+    #[doc = "     A pointer to a @FT_Size_RequestRec."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Although drivers may select the bitmap strike matching the request,"]
+    #[doc = "   you should not rely on this if you intend to select a particular"]
+    #[doc = "   bitmap strike.  Use @FT_Select_Size instead in that case."]
+    #[doc = ""]
+    #[doc = "   The relation between the requested size and the resulting glyph size"]
+    #[doc = "   is dependent entirely on how the size is defined in the source face."]
+    #[doc = "   The font designer chooses the final size of each glyph relative to"]
+    #[doc = "   this size.  For more information refer to"]
+    #[doc = "   'https://www.freetype.org/freetype2/docs/glyphs/glyphs-2.html'."]
+    #[doc = ""]
+    #[doc = "   Contrary to @FT_Set_Char_Size, this function doesn't have special code"]
+    #[doc = "   to normalize zero-valued widths, heights, or resolutions (which lead"]
+    #[doc = "   to errors in most cases)."]
+    #[doc = ""]
+    #[doc = "   Don't use this function if you are using the FreeType cache API."]
+    pub fn FT_Request_Size(face: FT_Face, req: FT_Size_Request) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Set_Char_Size"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Call @FT_Request_Size to request the nominal size (in points)."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a target face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   char_width ::"]
+    #[doc = "     The nominal width, in 26.6 fractional points."]
+    #[doc = ""]
+    #[doc = "   char_height ::"]
+    #[doc = "     The nominal height, in 26.6 fractional points."]
+    #[doc = ""]
+    #[doc = "   horz_resolution ::"]
+    #[doc = "     The horizontal resolution in dpi."]
+    #[doc = ""]
+    #[doc = "   vert_resolution ::"]
+    #[doc = "     The vertical resolution in dpi."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   While this function allows fractional points as input values, the"]
+    #[doc = "   resulting ppem value for the given resolution is always rounded to the"]
+    #[doc = "   nearest integer."]
+    #[doc = ""]
+    #[doc = "   If either the character width or height is zero, it is set equal to"]
+    #[doc = "   the other value."]
+    #[doc = ""]
+    #[doc = "   If either the horizontal or vertical resolution is zero, it is set"]
+    #[doc = "   equal to the other value."]
+    #[doc = ""]
+    #[doc = "   A character width or height smaller than 1pt is set to 1pt; if both"]
+    #[doc = "   resolution values are zero, they are set to 72dpi."]
+    #[doc = ""]
+    #[doc = "   Don't use this function if you are using the FreeType cache API."]
+    pub fn FT_Set_Char_Size(
+        face: FT_Face,
+        char_width: FT_F26Dot6,
+        char_height: FT_F26Dot6,
+        horz_resolution: FT_UInt,
+        vert_resolution: FT_UInt,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Set_Pixel_Sizes"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Call @FT_Request_Size to request the nominal size (in pixels)."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the target face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   pixel_width ::"]
+    #[doc = "     The nominal width, in pixels."]
+    #[doc = ""]
+    #[doc = "   pixel_height ::"]
+    #[doc = "     The nominal height, in pixels."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   You should not rely on the resulting glyphs matching or being"]
+    #[doc = "   constrained to this pixel size.  Refer to @FT_Request_Size to"]
+    #[doc = "   understand how requested sizes relate to actual sizes."]
+    #[doc = ""]
+    #[doc = "   Don't use this function if you are using the FreeType cache API."]
+    pub fn FT_Set_Pixel_Sizes(
+        face: FT_Face,
+        pixel_width: FT_UInt,
+        pixel_height: FT_UInt,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Load_Glyph"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Load a glyph into the glyph slot of a face object."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the target face object where the glyph is loaded."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   glyph_index ::"]
+    #[doc = "     The index of the glyph in the font file.  For CID-keyed fonts"]
+    #[doc = "     (either in PS or in CFF format) this argument specifies the CID"]
+    #[doc = "     value."]
+    #[doc = ""]
+    #[doc = "   load_flags ::"]
+    #[doc = "     A flag indicating what to load for this glyph.  The @FT_LOAD_XXX"]
+    #[doc = "     constants can be used to control the glyph loading process (e.g.,"]
+    #[doc = "     whether the outline should be scaled, whether to load bitmaps or"]
+    #[doc = "     not, whether to hint the outline, etc)."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The loaded glyph may be transformed.  See @FT_Set_Transform for the"]
+    #[doc = "   details."]
+    #[doc = ""]
+    #[doc = "   For subsetted CID-keyed fonts, `FT_Err_Invalid_Argument` is returned"]
+    #[doc = "   for invalid CID values (this is, for CID values that don't have a"]
+    #[doc = "   corresponding glyph in the font).  See the discussion of the"]
+    #[doc = "   @FT_FACE_FLAG_CID_KEYED flag for more details."]
+    #[doc = ""]
+    #[doc = "   If you receive `FT_Err_Glyph_Too_Big`, try getting the glyph outline"]
+    #[doc = "   at EM size, then scale it manually and fill it as a graphics"]
+    #[doc = "   operation."]
+    pub fn FT_Load_Glyph(face: FT_Face, glyph_index: FT_UInt, load_flags: FT_Int32) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Load_Char"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Load a glyph into the glyph slot of a face object, accessed by its"]
+    #[doc = "   character code."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a target face object where the glyph is loaded."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   char_code ::"]
+    #[doc = "     The glyph's character code, according to the current charmap used in"]
+    #[doc = "     the face."]
+    #[doc = ""]
+    #[doc = "   load_flags ::"]
+    #[doc = "     A flag indicating what to load for this glyph.  The @FT_LOAD_XXX"]
+    #[doc = "     constants can be used to control the glyph loading process (e.g.,"]
+    #[doc = "     whether the outline should be scaled, whether to load bitmaps or"]
+    #[doc = "     not, whether to hint the outline, etc)."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   This function simply calls @FT_Get_Char_Index and @FT_Load_Glyph."]
+    #[doc = ""]
+    #[doc = "   Many fonts contain glyphs that can't be loaded by this function since"]
+    #[doc = "   its glyph indices are not listed in any of the font's charmaps."]
+    #[doc = ""]
+    #[doc = "   If no active cmap is set up (i.e., `face->charmap` is zero), the call"]
+    #[doc = "   to @FT_Get_Char_Index is omitted, and the function behaves identically"]
+    #[doc = "   to @FT_Load_Glyph."]
+    pub fn FT_Load_Char(face: FT_Face, char_code: FT_ULong, load_flags: FT_Int32) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Set_Transform"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Set the transformation that is applied to glyph images when they are"]
+    #[doc = "   loaded into a glyph slot through @FT_Load_Glyph."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   matrix ::"]
+    #[doc = "     A pointer to the transformation's 2x2 matrix.  Use `NULL` for the"]
+    #[doc = "     identity matrix."]
+    #[doc = "   delta ::"]
+    #[doc = "     A pointer to the translation vector.  Use `NULL` for the null vector."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The transformation is only applied to scalable image formats after the"]
+    #[doc = "   glyph has been loaded.  It means that hinting is unaltered by the"]
+    #[doc = "   transformation and is performed on the character size given in the"]
+    #[doc = "   last call to @FT_Set_Char_Size or @FT_Set_Pixel_Sizes."]
+    #[doc = ""]
+    #[doc = "   Note that this also transforms the `face.glyph.advance` field, but"]
+    #[doc = "   **not** the values in `face.glyph.metrics`."]
+    pub fn FT_Set_Transform(face: FT_Face, matrix: *mut FT_Matrix, delta: *mut FT_Vector);
+}
+pub const FT_Render_Mode__FT_RENDER_MODE_NORMAL: FT_Render_Mode_ = 0;
+pub const FT_Render_Mode__FT_RENDER_MODE_LIGHT: FT_Render_Mode_ = 1;
+pub const FT_Render_Mode__FT_RENDER_MODE_MONO: FT_Render_Mode_ = 2;
+pub const FT_Render_Mode__FT_RENDER_MODE_LCD: FT_Render_Mode_ = 3;
+pub const FT_Render_Mode__FT_RENDER_MODE_LCD_V: FT_Render_Mode_ = 4;
+pub const FT_Render_Mode__FT_RENDER_MODE_MAX: FT_Render_Mode_ = 5;
+#[doc = " @enum:"]
+#[doc = "   FT_Render_Mode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Render modes supported by FreeType~2.  Each mode corresponds to a"]
+#[doc = "   specific type of scanline conversion performed on the outline."]
+#[doc = ""]
+#[doc = "   For bitmap fonts and embedded bitmaps the `bitmap->pixel_mode` field"]
+#[doc = "   in the @FT_GlyphSlotRec structure gives the format of the returned"]
+#[doc = "   bitmap."]
+#[doc = ""]
+#[doc = "   All modes except @FT_RENDER_MODE_MONO use 256 levels of opacity,"]
+#[doc = "   indicating pixel coverage.  Use linear alpha blending and gamma"]
+#[doc = "   correction to correctly render non-monochrome glyph bitmaps onto a"]
+#[doc = "   surface; see @FT_Render_Glyph."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_RENDER_MODE_NORMAL ::"]
+#[doc = "     Default render mode; it corresponds to 8-bit anti-aliased bitmaps."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_LIGHT ::"]
+#[doc = "     This is equivalent to @FT_RENDER_MODE_NORMAL.  It is only defined as"]
+#[doc = "     a separate value because render modes are also used indirectly to"]
+#[doc = "     define hinting algorithm selectors.  See @FT_LOAD_TARGET_XXX for"]
+#[doc = "     details."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_MONO ::"]
+#[doc = "     This mode corresponds to 1-bit bitmaps (with 2~levels of opacity)."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_LCD ::"]
+#[doc = "     This mode corresponds to horizontal RGB and BGR subpixel displays"]
+#[doc = "     like LCD screens.  It produces 8-bit bitmaps that are 3~times the"]
+#[doc = "     width of the original glyph outline in pixels, and which use the"]
+#[doc = "     @FT_PIXEL_MODE_LCD mode."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_LCD_V ::"]
+#[doc = "     This mode corresponds to vertical RGB and BGR subpixel displays"]
+#[doc = "     (like PDA screens, rotated LCD displays, etc.).  It produces 8-bit"]
+#[doc = "     bitmaps that are 3~times the height of the original glyph outline in"]
+#[doc = "     pixels and use the @FT_PIXEL_MODE_LCD_V mode."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Should you define `FT_CONFIG_OPTION_SUBPIXEL_RENDERING` in your"]
+#[doc = "   `ftoption.h`, which enables patented ClearType-style rendering, the"]
+#[doc = "   LCD-optimized glyph bitmaps should be filtered to reduce color fringes"]
+#[doc = "   inherent to this technology.  You can either set up LCD filtering with"]
+#[doc = "   @FT_Library_SetLcdFilter or @FT_Face_Properties, or do the filtering"]
+#[doc = "   yourself.  The default FreeType LCD rendering technology does not"]
+#[doc = "   require filtering."]
+#[doc = ""]
+#[doc = "   The selected render mode only affects vector glyphs of a font."]
+#[doc = "   Embedded bitmaps often have a different pixel mode like"]
+#[doc = "   @FT_PIXEL_MODE_MONO.  You can use @FT_Bitmap_Convert to transform them"]
+#[doc = "   into 8-bit pixmaps."]
+pub type FT_Render_Mode_ = u32;
+#[doc = " @enum:"]
+#[doc = "   FT_Render_Mode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   Render modes supported by FreeType~2.  Each mode corresponds to a"]
+#[doc = "   specific type of scanline conversion performed on the outline."]
+#[doc = ""]
+#[doc = "   For bitmap fonts and embedded bitmaps the `bitmap->pixel_mode` field"]
+#[doc = "   in the @FT_GlyphSlotRec structure gives the format of the returned"]
+#[doc = "   bitmap."]
+#[doc = ""]
+#[doc = "   All modes except @FT_RENDER_MODE_MONO use 256 levels of opacity,"]
+#[doc = "   indicating pixel coverage.  Use linear alpha blending and gamma"]
+#[doc = "   correction to correctly render non-monochrome glyph bitmaps onto a"]
+#[doc = "   surface; see @FT_Render_Glyph."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_RENDER_MODE_NORMAL ::"]
+#[doc = "     Default render mode; it corresponds to 8-bit anti-aliased bitmaps."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_LIGHT ::"]
+#[doc = "     This is equivalent to @FT_RENDER_MODE_NORMAL.  It is only defined as"]
+#[doc = "     a separate value because render modes are also used indirectly to"]
+#[doc = "     define hinting algorithm selectors.  See @FT_LOAD_TARGET_XXX for"]
+#[doc = "     details."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_MONO ::"]
+#[doc = "     This mode corresponds to 1-bit bitmaps (with 2~levels of opacity)."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_LCD ::"]
+#[doc = "     This mode corresponds to horizontal RGB and BGR subpixel displays"]
+#[doc = "     like LCD screens.  It produces 8-bit bitmaps that are 3~times the"]
+#[doc = "     width of the original glyph outline in pixels, and which use the"]
+#[doc = "     @FT_PIXEL_MODE_LCD mode."]
+#[doc = ""]
+#[doc = "   FT_RENDER_MODE_LCD_V ::"]
+#[doc = "     This mode corresponds to vertical RGB and BGR subpixel displays"]
+#[doc = "     (like PDA screens, rotated LCD displays, etc.).  It produces 8-bit"]
+#[doc = "     bitmaps that are 3~times the height of the original glyph outline in"]
+#[doc = "     pixels and use the @FT_PIXEL_MODE_LCD_V mode."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   Should you define `FT_CONFIG_OPTION_SUBPIXEL_RENDERING` in your"]
+#[doc = "   `ftoption.h`, which enables patented ClearType-style rendering, the"]
+#[doc = "   LCD-optimized glyph bitmaps should be filtered to reduce color fringes"]
+#[doc = "   inherent to this technology.  You can either set up LCD filtering with"]
+#[doc = "   @FT_Library_SetLcdFilter or @FT_Face_Properties, or do the filtering"]
+#[doc = "   yourself.  The default FreeType LCD rendering technology does not"]
+#[doc = "   require filtering."]
+#[doc = ""]
+#[doc = "   The selected render mode only affects vector glyphs of a font."]
+#[doc = "   Embedded bitmaps often have a different pixel mode like"]
+#[doc = "   @FT_PIXEL_MODE_MONO.  You can use @FT_Bitmap_Convert to transform them"]
+#[doc = "   into 8-bit pixmaps."]
+pub use self::FT_Render_Mode_ as FT_Render_Mode;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Render_Glyph"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Convert a given glyph image to a bitmap.  It does so by inspecting the"]
+    #[doc = "   glyph image format, finding the relevant renderer, and invoking it."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   slot ::"]
+    #[doc = "     A handle to the glyph slot containing the image to convert."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   render_mode ::"]
+    #[doc = "     The render mode used to render the glyph image into a bitmap.  See"]
+    #[doc = "     @FT_Render_Mode for a list of possible values."]
+    #[doc = ""]
+    #[doc = "     If @FT_RENDER_MODE_NORMAL is used, a previous call of @FT_Load_Glyph"]
+    #[doc = "     with flag @FT_LOAD_COLOR makes FT_Render_Glyph provide a default"]
+    #[doc = "     blending of colored glyph layers associated with the current glyph"]
+    #[doc = "     slot (provided the font contains such layers) instead of rendering"]
+    #[doc = "     the glyph slot's outline.  This is an experimental feature; see"]
+    #[doc = "     @FT_LOAD_COLOR for more information."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   To get meaningful results, font scaling values must be set with"]
+    #[doc = "   functions like @FT_Set_Char_Size before calling `FT_Render_Glyph`."]
+    #[doc = ""]
+    #[doc = "   When FreeType outputs a bitmap of a glyph, it really outputs an alpha"]
+    #[doc = "   coverage map.  If a pixel is completely covered by a filled-in"]
+    #[doc = "   outline, the bitmap contains 0xFF at that pixel, meaning that"]
+    #[doc = "   0xFF/0xFF fraction of that pixel is covered, meaning the pixel is 100%"]
+    #[doc = "   black (or 0% bright).  If a pixel is only 50% covered (value 0x80),"]
+    #[doc = "   the pixel is made 50% black (50% bright or a middle shade of grey)."]
+    #[doc = "   0% covered means 0% black (100% bright or white)."]
+    #[doc = ""]
+    #[doc = "   On high-DPI screens like on smartphones and tablets, the pixels are so"]
+    #[doc = "   small that their chance of being completely covered and therefore"]
+    #[doc = "   completely black are fairly good.  On the low-DPI screens, however,"]
+    #[doc = "   the situation is different.  The pixels are too large for most of the"]
+    #[doc = "   details of a glyph and shades of gray are the norm rather than the"]
+    #[doc = "   exception."]
+    #[doc = ""]
+    #[doc = "   This is relevant because all our screens have a second problem: they"]
+    #[doc = "   are not linear.  1~+~1 is not~2.  Twice the value does not result in"]
+    #[doc = "   twice the brightness.  When a pixel is only 50% covered, the coverage"]
+    #[doc = "   map says 50% black, and this translates to a pixel value of 128 when"]
+    #[doc = "   you use 8~bits per channel (0-255).  However, this does not translate"]
+    #[doc = "   to 50% brightness for that pixel on our sRGB and gamma~2.2 screens."]
+    #[doc = "   Due to their non-linearity, they dwell longer in the darks and only a"]
+    #[doc = "   pixel value of about 186 results in 50% brightness -- 128 ends up too"]
+    #[doc = "   dark on both bright and dark backgrounds.  The net result is that dark"]
+    #[doc = "   text looks burnt-out, pixely and blotchy on bright background, bright"]
+    #[doc = "   text too frail on dark backgrounds, and colored text on colored"]
+    #[doc = "   background (for example, red on green) seems to have dark halos or"]
+    #[doc = "   'dirt' around it.  The situation is especially ugly for diagonal stems"]
+    #[doc = "   like in 'w' glyph shapes where the quality of FreeType's anti-aliasing"]
+    #[doc = "   depends on the correct display of grays.  On high-DPI screens where"]
+    #[doc = "   smaller, fully black pixels reign supreme, this doesn't matter, but on"]
+    #[doc = "   our low-DPI screens with all the gray shades, it does.  0% and 100%"]
+    #[doc = "   brightness are the same things in linear and non-linear space, just"]
+    #[doc = "   all the shades in-between aren't."]
+    #[doc = ""]
+    #[doc = "   The blending function for placing text over a background is"]
+    #[doc = ""]
+    #[doc = "   ```"]
+    #[doc = "     dst = alpha * src + (1 - alpha) * dst    ,"]
+    #[doc = "   ```"]
+    #[doc = ""]
+    #[doc = "   which is known as the OVER operator."]
+    #[doc = ""]
+    #[doc = "   To correctly composite an antialiased pixel of a glyph onto a surface,"]
+    #[doc = ""]
+    #[doc = "   1. take the foreground and background colors (e.g., in sRGB space)"]
+    #[doc = "      and apply gamma to get them in a linear space,"]
+    #[doc = ""]
+    #[doc = "   2. use OVER to blend the two linear colors using the glyph pixel"]
+    #[doc = "      as the alpha value (remember, the glyph bitmap is an alpha coverage"]
+    #[doc = "      bitmap), and"]
+    #[doc = ""]
+    #[doc = "   3. apply inverse gamma to the blended pixel and write it back to"]
+    #[doc = "      the image."]
+    #[doc = ""]
+    #[doc = "   Internal testing at Adobe found that a target inverse gamma of~1.8 for"]
+    #[doc = "   step~3 gives good results across a wide range of displays with an sRGB"]
+    #[doc = "   gamma curve or a similar one."]
+    #[doc = ""]
+    #[doc = "   This process can cost performance.  There is an approximation that"]
+    #[doc = "   does not need to know about the background color; see"]
+    #[doc = "   https://bel.fi/alankila/lcd/ and"]
+    #[doc = "   https://bel.fi/alankila/lcd/alpcor.html for details."]
+    #[doc = ""]
+    #[doc = "   **ATTENTION**: Linear blending is even more important when dealing"]
+    #[doc = "   with subpixel-rendered glyphs to prevent color-fringing!  A"]
+    #[doc = "   subpixel-rendered glyph must first be filtered with a filter that"]
+    #[doc = "   gives equal weight to the three color primaries and does not exceed a"]
+    #[doc = "   sum of 0x100, see section @lcd_rendering.  Then the only difference to"]
+    #[doc = "   gray linear blending is that subpixel-rendered linear blending is done"]
+    #[doc = "   3~times per pixel: red foreground subpixel to red background subpixel"]
+    #[doc = "   and so on for green and blue."]
+    pub fn FT_Render_Glyph(slot: FT_GlyphSlot, render_mode: FT_Render_Mode) -> FT_Error;
+}
+pub const FT_Kerning_Mode__FT_KERNING_DEFAULT: FT_Kerning_Mode_ = 0;
+pub const FT_Kerning_Mode__FT_KERNING_UNFITTED: FT_Kerning_Mode_ = 1;
+pub const FT_Kerning_Mode__FT_KERNING_UNSCALED: FT_Kerning_Mode_ = 2;
+#[doc = " @enum:"]
+#[doc = "   FT_Kerning_Mode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration to specify the format of kerning values returned by"]
+#[doc = "   @FT_Get_Kerning."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_KERNING_DEFAULT ::"]
+#[doc = "     Return grid-fitted kerning distances in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = "   FT_KERNING_UNFITTED ::"]
+#[doc = "     Return un-grid-fitted kerning distances in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = "   FT_KERNING_UNSCALED ::"]
+#[doc = "     Return the kerning vector in original font units."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   `FT_KERNING_DEFAULT` returns full pixel values; it also makes FreeType"]
+#[doc = "   heuristically scale down kerning distances at small ppem values so"]
+#[doc = "   that they don't become too big."]
+#[doc = ""]
+#[doc = "   Both `FT_KERNING_DEFAULT` and `FT_KERNING_UNFITTED` use the current"]
+#[doc = "   horizontal scaling factor (as set e.g. with @FT_Set_Char_Size) to"]
+#[doc = "   convert font units to pixels."]
+pub type FT_Kerning_Mode_ = u32;
+#[doc = " @enum:"]
+#[doc = "   FT_Kerning_Mode"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   An enumeration to specify the format of kerning values returned by"]
+#[doc = "   @FT_Get_Kerning."]
+#[doc = ""]
+#[doc = " @values:"]
+#[doc = "   FT_KERNING_DEFAULT ::"]
+#[doc = "     Return grid-fitted kerning distances in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = "   FT_KERNING_UNFITTED ::"]
+#[doc = "     Return un-grid-fitted kerning distances in 26.6 fractional pixels."]
+#[doc = ""]
+#[doc = "   FT_KERNING_UNSCALED ::"]
+#[doc = "     Return the kerning vector in original font units."]
+#[doc = ""]
+#[doc = " @note:"]
+#[doc = "   `FT_KERNING_DEFAULT` returns full pixel values; it also makes FreeType"]
+#[doc = "   heuristically scale down kerning distances at small ppem values so"]
+#[doc = "   that they don't become too big."]
+#[doc = ""]
+#[doc = "   Both `FT_KERNING_DEFAULT` and `FT_KERNING_UNFITTED` use the current"]
+#[doc = "   horizontal scaling factor (as set e.g. with @FT_Set_Char_Size) to"]
+#[doc = "   convert font units to pixels."]
+pub use self::FT_Kerning_Mode_ as FT_Kerning_Mode;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Kerning"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the kerning vector between two glyphs of the same face."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a source face object."]
+    #[doc = ""]
+    #[doc = "   left_glyph ::"]
+    #[doc = "     The index of the left glyph in the kern pair."]
+    #[doc = ""]
+    #[doc = "   right_glyph ::"]
+    #[doc = "     The index of the right glyph in the kern pair."]
+    #[doc = ""]
+    #[doc = "   kern_mode ::"]
+    #[doc = "     See @FT_Kerning_Mode for more information.  Determines the scale and"]
+    #[doc = "     dimension of the returned kerning vector."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   akerning ::"]
+    #[doc = "     The kerning vector.  This is either in font units, fractional pixels"]
+    #[doc = "     (26.6 format), or pixels for scalable formats, and in pixels for"]
+    #[doc = "     fixed-sizes formats."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Only horizontal layouts (left-to-right & right-to-left) are supported"]
+    #[doc = "   by this method.  Other layouts, or more sophisticated kernings, are"]
+    #[doc = "   out of the scope of this API function -- they can be implemented"]
+    #[doc = "   through format-specific interfaces."]
+    #[doc = ""]
+    #[doc = "   Kerning for OpenType fonts implemented in a 'GPOS' table is not"]
+    #[doc = "   supported; use @FT_HAS_KERNING to find out whether a font has data"]
+    #[doc = "   that can be extracted with `FT_Get_Kerning`."]
+    pub fn FT_Get_Kerning(
+        face: FT_Face,
+        left_glyph: FT_UInt,
+        right_glyph: FT_UInt,
+        kern_mode: FT_UInt,
+        akerning: *mut FT_Vector,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Track_Kerning"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the track kerning for a given face object at a given size."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a source face object."]
+    #[doc = ""]
+    #[doc = "   point_size ::"]
+    #[doc = "     The point size in 16.16 fractional points."]
+    #[doc = ""]
+    #[doc = "   degree ::"]
+    #[doc = "     The degree of tightness.  Increasingly negative values represent"]
+    #[doc = "     tighter track kerning, while increasingly positive values represent"]
+    #[doc = "     looser track kerning.  Value zero means no track kerning."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   akerning ::"]
+    #[doc = "     The kerning in 16.16 fractional points, to be uniformly applied"]
+    #[doc = "     between all glyphs."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Currently, only the Type~1 font driver supports track kerning, using"]
+    #[doc = "   data from AFM files (if attached with @FT_Attach_File or"]
+    #[doc = "   @FT_Attach_Stream)."]
+    #[doc = ""]
+    #[doc = "   Only very few AFM files come with track kerning data; please refer to"]
+    #[doc = "   Adobe's AFM specification for more details."]
+    pub fn FT_Get_Track_Kerning(
+        face: FT_Face,
+        point_size: FT_Fixed,
+        degree: FT_Int,
+        akerning: *mut FT_Fixed,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Glyph_Name"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Retrieve the ASCII name of a given glyph in a face.  This only works"]
+    #[doc = "   for those faces where @FT_HAS_GLYPH_NAMES(face) returns~1."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to a source face object."]
+    #[doc = ""]
+    #[doc = "   glyph_index ::"]
+    #[doc = "     The glyph index."]
+    #[doc = ""]
+    #[doc = "   buffer_max ::"]
+    #[doc = "     The maximum number of bytes available in the buffer."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   buffer ::"]
+    #[doc = "     A pointer to a target buffer where the name is copied to."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   An error is returned if the face doesn't provide glyph names or if the"]
+    #[doc = "   glyph index is invalid.  In all cases of failure, the first byte of"]
+    #[doc = "   `buffer` is set to~0 to indicate an empty name."]
+    #[doc = ""]
+    #[doc = "   The glyph name is truncated to fit within the buffer if it is too"]
+    #[doc = "   long.  The returned string is always zero-terminated."]
+    #[doc = ""]
+    #[doc = "   Be aware that FreeType reorders glyph indices internally so that glyph"]
+    #[doc = "   index~0 always corresponds to the 'missing glyph' (called '.notdef')."]
+    #[doc = ""]
+    #[doc = "   This function always returns an error if the config macro"]
+    #[doc = "   `FT_CONFIG_OPTION_NO_GLYPH_NAMES` is not defined in `ftoption.h`."]
+    pub fn FT_Get_Glyph_Name(
+        face: FT_Face,
+        glyph_index: FT_UInt,
+        buffer: FT_Pointer,
+        buffer_max: FT_UInt,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Postscript_Name"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Retrieve the ASCII PostScript name of a given face, if available."]
+    #[doc = "   This only works with PostScript, TrueType, and OpenType fonts."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   A pointer to the face's PostScript name.  `NULL` if unavailable."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The returned pointer is owned by the face and is destroyed with it."]
+    #[doc = ""]
+    #[doc = "   For variation fonts, this string changes if you select a different"]
+    #[doc = "   instance, and you have to call `FT_Get_PostScript_Name` again to"]
+    #[doc = "   retrieve it.  FreeType follows Adobe TechNote #5902, 'Generating"]
+    #[doc = "   PostScript Names for Fonts Using OpenType Font Variations'."]
+    #[doc = ""]
+    #[doc = "     https://download.macromedia.com/pub/developer/opentype/tech-notes/5902.AdobePSNameGeneration.html"]
+    #[doc = ""]
+    #[doc = "   [Since 2.9] Special PostScript names for named instances are only"]
+    #[doc = "   returned if the named instance is set with @FT_Set_Named_Instance (and"]
+    #[doc = "   the font has corresponding entries in its 'fvar' table).  If"]
+    #[doc = "   @FT_IS_VARIATION returns true, the algorithmically derived PostScript"]
+    #[doc = "   name is provided, not looking up special entries for named instances."]
+    pub fn FT_Get_Postscript_Name(face: FT_Face) -> *const ::std::os::raw::c_char;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Select_Charmap"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Select a given charmap by its encoding tag (as listed in"]
+    #[doc = "   `freetype.h`)."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   encoding ::"]
+    #[doc = "     A handle to the selected encoding."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   This function returns an error if no charmap in the face corresponds"]
+    #[doc = "   to the encoding queried here."]
+    #[doc = ""]
+    #[doc = "   Because many fonts contain more than a single cmap for Unicode"]
+    #[doc = "   encoding, this function has some special code to select the one that"]
+    #[doc = "   covers Unicode best ('best' in the sense that a UCS-4 cmap is"]
+    #[doc = "   preferred to a UCS-2 cmap).  It is thus preferable to @FT_Set_Charmap"]
+    #[doc = "   in this case."]
+    pub fn FT_Select_Charmap(face: FT_Face, encoding: FT_Encoding) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Set_Charmap"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Select a given charmap for character code to glyph index mapping."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   charmap ::"]
+    #[doc = "     A handle to the selected charmap."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   This function returns an error if the charmap is not part of the face"]
+    #[doc = "   (i.e., if it is not listed in the `face->charmaps` table)."]
+    #[doc = ""]
+    #[doc = "   It also fails if an OpenType type~14 charmap is selected (which"]
+    #[doc = "   doesn't map character codes to glyph indices at all)."]
+    pub fn FT_Set_Charmap(face: FT_Face, charmap: FT_CharMap) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Charmap_Index"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Retrieve index of a given charmap."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   charmap ::"]
+    #[doc = "     A handle to a charmap."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The index into the array of character maps within the face to which"]
+    #[doc = "   `charmap` belongs.  If an error occurs, -1 is returned."]
+    #[doc = ""]
+    pub fn FT_Get_Charmap_Index(charmap: FT_CharMap) -> FT_Int;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Char_Index"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the glyph index of a given character code.  This function uses"]
+    #[doc = "   the currently selected charmap to do the mapping."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   charcode ::"]
+    #[doc = "     The character code."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The glyph index.  0~means 'undefined character code'."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   If you use FreeType to manipulate the contents of font files directly,"]
+    #[doc = "   be aware that the glyph index returned by this function doesn't always"]
+    #[doc = "   correspond to the internal indices used within the file.  This is done"]
+    #[doc = "   to ensure that value~0 always corresponds to the 'missing glyph'.  If"]
+    #[doc = "   the first glyph is not named '.notdef', then for Type~1 and Type~42"]
+    #[doc = "   fonts, '.notdef' will be moved into the glyph ID~0 position, and"]
+    #[doc = "   whatever was there will be moved to the position '.notdef' had.  For"]
+    #[doc = "   Type~1 fonts, if there is no '.notdef' glyph at all, then one will be"]
+    #[doc = "   created at index~0 and whatever was there will be moved to the last"]
+    #[doc = "   index -- Type~42 fonts are considered invalid under this condition."]
+    pub fn FT_Get_Char_Index(face: FT_Face, charcode: FT_ULong) -> FT_UInt;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_First_Char"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the first character code in the current charmap of a given"]
+    #[doc = "   face, together with its corresponding glyph index."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   agindex ::"]
+    #[doc = "     Glyph index of first character code.  0~if charmap is empty."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The charmap's first character code."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   You should use this function together with @FT_Get_Next_Char to parse"]
+    #[doc = "   all character codes available in a given charmap.  The code should"]
+    #[doc = "   look like this:"]
+    #[doc = ""]
+    #[doc = "   ```"]
+    #[doc = "     FT_ULong  charcode;"]
+    #[doc = "     FT_UInt   gindex;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "     charcode = FT_Get_First_Char( face, &gindex );"]
+    #[doc = "     while ( gindex != 0 )"]
+    #[doc = "     {"]
+    #[doc = "       ... do something with (charcode,gindex) pair ..."]
+    #[doc = ""]
+    #[doc = "       charcode = FT_Get_Next_Char( face, charcode, &gindex );"]
+    #[doc = "     }"]
+    #[doc = "   ```"]
+    #[doc = ""]
+    #[doc = "   Be aware that character codes can have values up to 0xFFFFFFFF; this"]
+    #[doc = "   might happen for non-Unicode or malformed cmaps.  However, even with"]
+    #[doc = "   regular Unicode encoding, so-called 'last resort fonts' (using SFNT"]
+    #[doc = "   cmap format 13, see function @FT_Get_CMap_Format) normally have"]
+    #[doc = "   entries for all Unicode characters up to 0x1FFFFF, which can cause *a"]
+    #[doc = "   lot* of iterations."]
+    #[doc = ""]
+    #[doc = "   Note that `*agindex` is set to~0 if the charmap is empty.  The result"]
+    #[doc = "   itself can be~0 in two cases: if the charmap is empty or if the"]
+    #[doc = "   value~0 is the first valid character code."]
+    pub fn FT_Get_First_Char(face: FT_Face, agindex: *mut FT_UInt) -> FT_ULong;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Next_Char"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the next character code in the current charmap of a given face"]
+    #[doc = "   following the value `char_code`, as well as the corresponding glyph"]
+    #[doc = "   index."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   char_code ::"]
+    #[doc = "     The starting character code."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   agindex ::"]
+    #[doc = "     Glyph index of next character code.  0~if charmap is empty."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The charmap's next character code."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   You should use this function with @FT_Get_First_Char to walk over all"]
+    #[doc = "   character codes available in a given charmap.  See the note for that"]
+    #[doc = "   function for a simple code example."]
+    #[doc = ""]
+    #[doc = "   Note that `*agindex` is set to~0 when there are no more codes in the"]
+    #[doc = "   charmap."]
+    pub fn FT_Get_Next_Char(face: FT_Face, char_code: FT_ULong, agindex: *mut FT_UInt) -> FT_ULong;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_Properties"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Set or override certain (library or module-wide) properties on a"]
+    #[doc = "   face-by-face basis.  Useful for finer-grained control and avoiding"]
+    #[doc = "   locks on shared structures (threads can modify their own faces as they"]
+    #[doc = "   see fit)."]
+    #[doc = ""]
+    #[doc = "   Contrary to @FT_Property_Set, this function uses @FT_Parameter so that"]
+    #[doc = "   you can pass multiple properties to the target face in one call.  Note"]
+    #[doc = "   that only a subset of the available properties can be controlled."]
+    #[doc = ""]
+    #[doc = "   * @FT_PARAM_TAG_STEM_DARKENING (stem darkening, corresponding to the"]
+    #[doc = "     property `no-stem-darkening` provided by the 'autofit', 'cff',"]
+    #[doc = "     'type1', and 't1cid' modules; see @no-stem-darkening)."]
+    #[doc = ""]
+    #[doc = "   * @FT_PARAM_TAG_LCD_FILTER_WEIGHTS (LCD filter weights, corresponding"]
+    #[doc = "     to function @FT_Library_SetLcdFilterWeights)."]
+    #[doc = ""]
+    #[doc = "   * @FT_PARAM_TAG_RANDOM_SEED (seed value for the CFF, Type~1, and CID"]
+    #[doc = "     'random' operator, corresponding to the `random-seed` property"]
+    #[doc = "     provided by the 'cff', 'type1', and 't1cid' modules; see"]
+    #[doc = "     @random-seed)."]
+    #[doc = ""]
+    #[doc = "   Pass `NULL` as `data` in @FT_Parameter for a given tag to reset the"]
+    #[doc = "   option and use the library or module default again."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   num_properties ::"]
+    #[doc = "     The number of properties that follow."]
+    #[doc = ""]
+    #[doc = "   properties ::"]
+    #[doc = "     A handle to an @FT_Parameter array with `num_properties` elements."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @example:"]
+    #[doc = "   Here is an example that sets three properties.  You must define"]
+    #[doc = "   `FT_CONFIG_OPTION_SUBPIXEL_RENDERING` to make the LCD filter examples"]
+    #[doc = "   work."]
+    #[doc = ""]
+    #[doc = "   ```"]
+    #[doc = "     FT_Parameter         property1;"]
+    #[doc = "     FT_Bool              darken_stems = 1;"]
+    #[doc = ""]
+    #[doc = "     FT_Parameter         property2;"]
+    #[doc = "     FT_LcdFiveTapFilter  custom_weight ="]
+    #[doc = "                            { 0x11, 0x44, 0x56, 0x44, 0x11 };"]
+    #[doc = ""]
+    #[doc = "     FT_Parameter         property3;"]
+    #[doc = "     FT_Int32             random_seed = 314159265;"]
+    #[doc = ""]
+    #[doc = "     FT_Parameter         properties[3] = { property1,"]
+    #[doc = "                                            property2,"]
+    #[doc = "                                            property3 };"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "     property1.tag  = FT_PARAM_TAG_STEM_DARKENING;"]
+    #[doc = "     property1.data = &darken_stems;"]
+    #[doc = ""]
+    #[doc = "     property2.tag  = FT_PARAM_TAG_LCD_FILTER_WEIGHTS;"]
+    #[doc = "     property2.data = custom_weight;"]
+    #[doc = ""]
+    #[doc = "     property3.tag  = FT_PARAM_TAG_RANDOM_SEED;"]
+    #[doc = "     property3.data = &random_seed;"]
+    #[doc = ""]
+    #[doc = "     FT_Face_Properties( face, 3, properties );"]
+    #[doc = "   ```"]
+    #[doc = ""]
+    #[doc = "   The next example resets a single property to its default value."]
+    #[doc = ""]
+    #[doc = "   ```"]
+    #[doc = "     FT_Parameter  property;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "     property.tag  = FT_PARAM_TAG_LCD_FILTER_WEIGHTS;"]
+    #[doc = "     property.data = NULL;"]
+    #[doc = ""]
+    #[doc = "     FT_Face_Properties( face, 1, &property );"]
+    #[doc = "   ```"]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.8"]
+    #[doc = ""]
+    pub fn FT_Face_Properties(
+        face: FT_Face,
+        num_properties: FT_UInt,
+        properties: *mut FT_Parameter,
+    ) -> FT_Error;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Name_Index"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the glyph index of a given glyph name."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   glyph_name ::"]
+    #[doc = "     The glyph name."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The glyph index.  0~means 'undefined character code'."]
+    pub fn FT_Get_Name_Index(face: FT_Face, glyph_name: *const FT_String) -> FT_UInt;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_SubGlyph_Info"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Retrieve a description of a given subglyph.  Only use it if"]
+    #[doc = "   `glyph->format` is @FT_GLYPH_FORMAT_COMPOSITE; an error is returned"]
+    #[doc = "   otherwise."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   glyph ::"]
+    #[doc = "     The source glyph slot."]
+    #[doc = ""]
+    #[doc = "   sub_index ::"]
+    #[doc = "     The index of the subglyph.  Must be less than"]
+    #[doc = "     `glyph->num_subglyphs`."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   p_index ::"]
+    #[doc = "     The glyph index of the subglyph."]
+    #[doc = ""]
+    #[doc = "   p_flags ::"]
+    #[doc = "     The subglyph flags, see @FT_SUBGLYPH_FLAG_XXX."]
+    #[doc = ""]
+    #[doc = "   p_arg1 ::"]
+    #[doc = "     The subglyph's first argument (if any)."]
+    #[doc = ""]
+    #[doc = "   p_arg2 ::"]
+    #[doc = "     The subglyph's second argument (if any)."]
+    #[doc = ""]
+    #[doc = "   p_transform ::"]
+    #[doc = "     The subglyph transformation (if any)."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   FreeType error code.  0~means success."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The values of `*p_arg1`, `*p_arg2`, and `*p_transform` must be"]
+    #[doc = "   interpreted depending on the flags returned in `*p_flags`.  See the"]
+    #[doc = "   OpenType specification for details."]
+    #[doc = ""]
+    #[doc = "     https://docs.microsoft.com/en-us/typography/opentype/spec/glyf#composite-glyph-description"]
+    #[doc = ""]
+    pub fn FT_Get_SubGlyph_Info(
+        glyph: FT_GlyphSlot,
+        sub_index: FT_UInt,
+        p_index: *mut FT_Int,
+        p_flags: *mut FT_UInt,
+        p_arg1: *mut FT_Int,
+        p_arg2: *mut FT_Int,
+        p_transform: *mut FT_Matrix,
+    ) -> FT_Error;
+}
+#[doc = " @struct:"]
+#[doc = "   FT_LayerIterator"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This iterator object is needed for @FT_Get_Color_Glyph_Layer."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   num_layers ::"]
+#[doc = "     The number of glyph layers for the requested glyph index.  Will be"]
+#[doc = "     set by @FT_Get_Color_Glyph_Layer."]
+#[doc = ""]
+#[doc = "   layer ::"]
+#[doc = "     The current layer.  Will be set by @FT_Get_Color_Glyph_Layer."]
+#[doc = ""]
+#[doc = "   p ::"]
+#[doc = "     An opaque pointer into 'COLR' table data.  The caller must set this"]
+#[doc = "     to `NULL` before the first call of @FT_Get_Color_Glyph_Layer."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct FT_LayerIterator_ {
+    pub num_layers: FT_UInt,
+    pub layer: FT_UInt,
+    pub p: *mut FT_Byte,
+}
+#[test]
+fn bindgen_test_layout_FT_LayerIterator_() {
+    assert_eq!(
+        ::std::mem::size_of::<FT_LayerIterator_>(),
+        16usize,
+        concat!("Size of: ", stringify!(FT_LayerIterator_))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<FT_LayerIterator_>(),
+        8usize,
+        concat!("Alignment of ", stringify!(FT_LayerIterator_))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_LayerIterator_>())).num_layers as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_LayerIterator_),
+            "::",
+            stringify!(num_layers)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_LayerIterator_>())).layer as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_LayerIterator_),
+            "::",
+            stringify!(layer)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<FT_LayerIterator_>())).p as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(FT_LayerIterator_),
+            "::",
+            stringify!(p)
+        )
+    );
+}
+#[doc = " @struct:"]
+#[doc = "   FT_LayerIterator"]
+#[doc = ""]
+#[doc = " @description:"]
+#[doc = "   This iterator object is needed for @FT_Get_Color_Glyph_Layer."]
+#[doc = ""]
+#[doc = " @fields:"]
+#[doc = "   num_layers ::"]
+#[doc = "     The number of glyph layers for the requested glyph index.  Will be"]
+#[doc = "     set by @FT_Get_Color_Glyph_Layer."]
+#[doc = ""]
+#[doc = "   layer ::"]
+#[doc = "     The current layer.  Will be set by @FT_Get_Color_Glyph_Layer."]
+#[doc = ""]
+#[doc = "   p ::"]
+#[doc = "     An opaque pointer into 'COLR' table data.  The caller must set this"]
+#[doc = "     to `NULL` before the first call of @FT_Get_Color_Glyph_Layer."]
+pub type FT_LayerIterator = FT_LayerIterator_;
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_Color_Glyph_Layer"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   This is an interface to the 'COLR' table in OpenType fonts to"]
+    #[doc = "   iteratively retrieve the colored glyph layers associated with the"]
+    #[doc = "   current glyph slot."]
+    #[doc = ""]
+    #[doc = "     https://docs.microsoft.com/en-us/typography/opentype/spec/colr"]
+    #[doc = ""]
+    #[doc = "   The glyph layer data for a given glyph index, if present, provides an"]
+    #[doc = "   alternative, multi-colour glyph representation: Instead of rendering"]
+    #[doc = "   the outline or bitmap with the given glyph index, glyphs with the"]
+    #[doc = "   indices and colors returned by this function are rendered layer by"]
+    #[doc = "   layer."]
+    #[doc = ""]
+    #[doc = "   The returned elements are ordered in the z~direction from bottom to"]
+    #[doc = "   top; the 'n'th element should be rendered with the associated palette"]
+    #[doc = "   color and blended on top of the already rendered layers (elements 0,"]
+    #[doc = "   1, ..., n-1)."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the parent face object."]
+    #[doc = ""]
+    #[doc = "   base_glyph ::"]
+    #[doc = "     The glyph index the colored glyph layers are associated with."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   iterator ::"]
+    #[doc = "     An @FT_LayerIterator object.  For the first call you should set"]
+    #[doc = "     `iterator->p` to `NULL`.  For all following calls, simply use the"]
+    #[doc = "     same object again."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   aglyph_index ::"]
+    #[doc = "     The glyph index of the current layer."]
+    #[doc = ""]
+    #[doc = "   acolor_index ::"]
+    #[doc = "     The color index into the font face's color palette of the current"]
+    #[doc = "     layer.  The value 0xFFFF is special; it doesn't reference a palette"]
+    #[doc = "     entry but indicates that the text foreground color should be used"]
+    #[doc = "     instead (to be set up by the application outside of FreeType)."]
+    #[doc = ""]
+    #[doc = "     The color palette can be retrieved with @FT_Palette_Select."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   Value~1 if everything is OK.  If there are no more layers (or if there"]
+    #[doc = "   are no layers at all), value~0 gets returned.  In case of an error,"]
+    #[doc = "   value~0 is returned also."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   This function is necessary if you want to handle glyph layers by"]
+    #[doc = "   yourself.  In particular, functions that operate with @FT_GlyphRec"]
+    #[doc = "   objects (like @FT_Get_Glyph or @FT_Glyph_To_Bitmap) don't have access"]
+    #[doc = "   to this information."]
+    #[doc = ""]
+    #[doc = "   Note that @FT_Render_Glyph is able to handle colored glyph layers"]
+    #[doc = "   automatically if the @FT_LOAD_COLOR flag is passed to a previous call"]
+    #[doc = "   to @FT_Load_Glyph.  [This is an experimental feature.]"]
+    #[doc = ""]
+    #[doc = " @example:"]
+    #[doc = "   ```"]
+    #[doc = "     FT_Color*         palette;"]
+    #[doc = "     FT_LayerIterator  iterator;"]
+    #[doc = ""]
+    #[doc = "     FT_Bool  have_layers;"]
+    #[doc = "     FT_UInt  layer_glyph_index;"]
+    #[doc = "     FT_UInt  layer_color_index;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "     error = FT_Palette_Select( face, palette_index, &palette );"]
+    #[doc = "     if ( error )"]
+    #[doc = "       palette = NULL;"]
+    #[doc = ""]
+    #[doc = "     iterator.p  = NULL;"]
+    #[doc = "     have_layers = FT_Get_Color_Glyph_Layer( face,"]
+    #[doc = "                                             glyph_index,"]
+    #[doc = "                                             &layer_glyph_index,"]
+    #[doc = "                                             &layer_color_index,"]
+    #[doc = "                                             &iterator );"]
+    #[doc = ""]
+    #[doc = "     if ( palette && have_layers )"]
+    #[doc = "     {"]
+    #[doc = "       do"]
+    #[doc = "       {"]
+    #[doc = "         FT_Color  layer_color;"]
+    #[doc = ""]
+    #[doc = ""]
+    #[doc = "         if ( layer_color_index == 0xFFFF )"]
+    #[doc = "           layer_color = text_foreground_color;"]
+    #[doc = "         else"]
+    #[doc = "           layer_color = palette[layer_color_index];"]
+    #[doc = ""]
+    #[doc = "         // Load and render glyph `layer_glyph_index', then"]
+    #[doc = "         // blend resulting pixmap (using color `layer_color')"]
+    #[doc = "         // with previously created pixmaps."]
+    #[doc = ""]
+    #[doc = "       } while ( FT_Get_Color_Glyph_Layer( face,"]
+    #[doc = "                                           glyph_index,"]
+    #[doc = "                                           &layer_glyph_index,"]
+    #[doc = "                                           &layer_color_index,"]
+    #[doc = "                                           &iterator ) );"]
+    #[doc = "     }"]
+    #[doc = "   ```"]
+    pub fn FT_Get_Color_Glyph_Layer(
+        face: FT_Face,
+        base_glyph: FT_UInt,
+        aglyph_index: *mut FT_UInt,
+        acolor_index: *mut FT_UInt,
+        iterator: *mut FT_LayerIterator,
+    ) -> FT_Bool;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Get_FSType_Flags"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the `fsType` flags for a font."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The `fsType` flags, see @FT_FSTYPE_XXX."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Use this function rather than directly reading the `fs_type` field in"]
+    #[doc = "   the @PS_FontInfoRec structure, which is only guaranteed to return the"]
+    #[doc = "   correct results for Type~1 fonts."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.8"]
+    pub fn FT_Get_FSType_Flags(face: FT_Face) -> FT_UShort;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_GetCharVariantIndex"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the glyph index of a given character code as modified by the"]
+    #[doc = "   variation selector."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   charcode ::"]
+    #[doc = "     The character code point in Unicode."]
+    #[doc = ""]
+    #[doc = "   variantSelector ::"]
+    #[doc = "     The Unicode code point of the variation selector."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The glyph index.  0~means either 'undefined character code', or"]
+    #[doc = "   'undefined selector code', or 'no variation selector cmap subtable',"]
+    #[doc = "   or 'current CharMap is not Unicode'."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   If you use FreeType to manipulate the contents of font files directly,"]
+    #[doc = "   be aware that the glyph index returned by this function doesn't always"]
+    #[doc = "   correspond to the internal indices used within the file.  This is done"]
+    #[doc = "   to ensure that value~0 always corresponds to the 'missing glyph'."]
+    #[doc = ""]
+    #[doc = "   This function is only meaningful if"]
+    #[doc = "     a) the font has a variation selector cmap sub table, and"]
+    #[doc = "     b) the current charmap has a Unicode encoding."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.6"]
+    pub fn FT_Face_GetCharVariantIndex(
+        face: FT_Face,
+        charcode: FT_ULong,
+        variantSelector: FT_ULong,
+    ) -> FT_UInt;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_GetCharVariantIsDefault"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Check whether this variation of this Unicode character is the one to"]
+    #[doc = "   be found in the charmap."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   charcode ::"]
+    #[doc = "     The character codepoint in Unicode."]
+    #[doc = ""]
+    #[doc = "   variantSelector ::"]
+    #[doc = "     The Unicode codepoint of the variation selector."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   1~if found in the standard (Unicode) cmap, 0~if found in the variation"]
+    #[doc = "   selector cmap, or -1 if it is not a variation."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   This function is only meaningful if the font has a variation selector"]
+    #[doc = "   cmap subtable."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.6"]
+    pub fn FT_Face_GetCharVariantIsDefault(
+        face: FT_Face,
+        charcode: FT_ULong,
+        variantSelector: FT_ULong,
+    ) -> FT_Int;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_GetVariantSelectors"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return a zero-terminated list of Unicode variation selectors found in"]
+    #[doc = "   the font."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   A pointer to an array of selector code points, or `NULL` if there is"]
+    #[doc = "   no valid variation selector cmap subtable."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The last item in the array is~0; the array is owned by the @FT_Face"]
+    #[doc = "   object but can be overwritten or released on the next call to a"]
+    #[doc = "   FreeType function."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.6"]
+    pub fn FT_Face_GetVariantSelectors(face: FT_Face) -> *mut FT_UInt32;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_GetVariantsOfChar"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return a zero-terminated list of Unicode variation selectors found for"]
+    #[doc = "   the specified character code."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   charcode ::"]
+    #[doc = "     The character codepoint in Unicode."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   A pointer to an array of variation selector code points that are"]
+    #[doc = "   active for the given character, or `NULL` if the corresponding list is"]
+    #[doc = "   empty."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The last item in the array is~0; the array is owned by the @FT_Face"]
+    #[doc = "   object but can be overwritten or released on the next call to a"]
+    #[doc = "   FreeType function."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.6"]
+    pub fn FT_Face_GetVariantsOfChar(face: FT_Face, charcode: FT_ULong) -> *mut FT_UInt32;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_GetCharsOfVariant"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return a zero-terminated list of Unicode character codes found for the"]
+    #[doc = "   specified variation selector."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A handle to the source face object."]
+    #[doc = ""]
+    #[doc = "   variantSelector ::"]
+    #[doc = "     The variation selector code point in Unicode."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   A list of all the code points that are specified by this selector"]
+    #[doc = "   (both default and non-default codes are returned) or `NULL` if there"]
+    #[doc = "   is no valid cmap or the variation selector is invalid."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The last item in the array is~0; the array is owned by the @FT_Face"]
+    #[doc = "   object but can be overwritten or released on the next call to a"]
+    #[doc = "   FreeType function."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.6"]
+    pub fn FT_Face_GetCharsOfVariant(face: FT_Face, variantSelector: FT_ULong) -> *mut FT_UInt32;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_MulDiv"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Compute `(a*b)/c` with maximum accuracy, using a 64-bit intermediate"]
+    #[doc = "   integer whenever necessary."]
+    #[doc = ""]
+    #[doc = "   This function isn't necessarily as fast as some processor-specific"]
+    #[doc = "   operations, but is at least completely portable."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   a ::"]
+    #[doc = "     The first multiplier."]
+    #[doc = ""]
+    #[doc = "   b ::"]
+    #[doc = "     The second multiplier."]
+    #[doc = ""]
+    #[doc = "   c ::"]
+    #[doc = "     The divisor."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The result of `(a*b)/c`.  This function never traps when trying to"]
+    #[doc = "   divide by zero; it simply returns 'MaxInt' or 'MinInt' depending on"]
+    #[doc = "   the signs of `a` and `b`."]
+    pub fn FT_MulDiv(a: FT_Long, b: FT_Long, c: FT_Long) -> FT_Long;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_MulFix"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Compute `(a*b)/0x10000` with maximum accuracy.  Its main use is to"]
+    #[doc = "   multiply a given value by a 16.16 fixed-point factor."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   a ::"]
+    #[doc = "     The first multiplier."]
+    #[doc = ""]
+    #[doc = "   b ::"]
+    #[doc = "     The second multiplier.  Use a 16.16 factor here whenever possible"]
+    #[doc = "     (see note below)."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The result of `(a*b)/0x10000`."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   This function has been optimized for the case where the absolute value"]
+    #[doc = "   of `a` is less than 2048, and `b` is a 16.16 scaling factor.  As this"]
+    #[doc = "   happens mainly when scaling from notional units to fractional pixels"]
+    #[doc = "   in FreeType, it resulted in noticeable speed improvements between"]
+    #[doc = "   versions 2.x and 1.x."]
+    #[doc = ""]
+    #[doc = "   As a conclusion, always try to place a 16.16 factor as the _second_"]
+    #[doc = "   argument of this function; this can make a great difference."]
+    pub fn FT_MulFix(a: FT_Long, b: FT_Long) -> FT_Long;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_DivFix"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Compute `(a*0x10000)/b` with maximum accuracy.  Its main use is to"]
+    #[doc = "   divide a given value by a 16.16 fixed-point factor."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   a ::"]
+    #[doc = "     The numerator."]
+    #[doc = ""]
+    #[doc = "   b ::"]
+    #[doc = "     The denominator.  Use a 16.16 factor here."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   The result of `(a*0x10000)/b`."]
+    pub fn FT_DivFix(a: FT_Long, b: FT_Long) -> FT_Long;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_RoundFix"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Round a 16.16 fixed number."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   a ::"]
+    #[doc = "     The number to be rounded."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   `a` rounded to the nearest 16.16 fixed integer, halfway cases away"]
+    #[doc = "   from zero."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The function uses wrap-around arithmetic."]
+    pub fn FT_RoundFix(a: FT_Fixed) -> FT_Fixed;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_CeilFix"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Compute the smallest following integer of a 16.16 fixed number."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   a ::"]
+    #[doc = "     The number for which the ceiling function is to be computed."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   `a` rounded towards plus infinity."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The function uses wrap-around arithmetic."]
+    pub fn FT_CeilFix(a: FT_Fixed) -> FT_Fixed;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_FloorFix"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Compute the largest previous integer of a 16.16 fixed number."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   a ::"]
+    #[doc = "     The number for which the floor function is to be computed."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   `a` rounded towards minus infinity."]
+    pub fn FT_FloorFix(a: FT_Fixed) -> FT_Fixed;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Vector_Transform"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Transform a single vector through a 2x2 matrix."]
+    #[doc = ""]
+    #[doc = " @inout:"]
+    #[doc = "   vector ::"]
+    #[doc = "     The target vector to transform."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   matrix ::"]
+    #[doc = "     A pointer to the source 2x2 matrix."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The result is undefined if either `vector` or `matrix` is invalid."]
+    pub fn FT_Vector_Transform(vector: *mut FT_Vector, matrix: *const FT_Matrix);
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Library_Version"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Return the version of the FreeType library being used.  This is useful"]
+    #[doc = "   when dynamically linking to the library, since one cannot use the"]
+    #[doc = "   macros @FREETYPE_MAJOR, @FREETYPE_MINOR, and @FREETYPE_PATCH."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   library ::"]
+    #[doc = "     A source library handle."]
+    #[doc = ""]
+    #[doc = " @output:"]
+    #[doc = "   amajor ::"]
+    #[doc = "     The major version number."]
+    #[doc = ""]
+    #[doc = "   aminor ::"]
+    #[doc = "     The minor version number."]
+    #[doc = ""]
+    #[doc = "   apatch ::"]
+    #[doc = "     The patch version number."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   The reason why this function takes a `library` argument is because"]
+    #[doc = "   certain programs implement library initialization in a custom way that"]
+    #[doc = "   doesn't use @FT_Init_FreeType."]
+    #[doc = ""]
+    #[doc = "   In such cases, the library version might not be available before the"]
+    #[doc = "   library object has been created."]
+    pub fn FT_Library_Version(
+        library: FT_Library,
+        amajor: *mut FT_Int,
+        aminor: *mut FT_Int,
+        apatch: *mut FT_Int,
+    );
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_CheckTrueTypePatents"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Deprecated, does nothing."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A face handle."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   Always returns false."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Since May 2010, TrueType hinting is no longer patented."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.5"]
+    pub fn FT_Face_CheckTrueTypePatents(face: FT_Face) -> FT_Bool;
+}
+extern "C" {
+    #[doc = " @function:"]
+    #[doc = "   FT_Face_SetUnpatentedHinting"]
+    #[doc = ""]
+    #[doc = " @description:"]
+    #[doc = "   Deprecated, does nothing."]
+    #[doc = ""]
+    #[doc = " @input:"]
+    #[doc = "   face ::"]
+    #[doc = "     A face handle."]
+    #[doc = ""]
+    #[doc = "   value ::"]
+    #[doc = "     New boolean setting."]
+    #[doc = ""]
+    #[doc = " @return:"]
+    #[doc = "   Always returns false."]
+    #[doc = ""]
+    #[doc = " @note:"]
+    #[doc = "   Since May 2010, TrueType hinting is no longer patented."]
+    #[doc = ""]
+    #[doc = " @since:"]
+    #[doc = "   2.3.5"]
+    pub fn FT_Face_SetUnpatentedHinting(face: FT_Face, value: FT_Bool) -> FT_Bool;
+}
+#[doc = "  Generic vector structure."]
+#[doc = ""]
+#[doc = " @memberof vector"]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vector_t {
+    #[doc = " Pointer to dynamically allocated items."]
+    pub items: *mut ::std::os::raw::c_void,
+    #[doc = " Number of items that can be held in currently allocated storage."]
+    pub capacity: size_t,
+    #[doc = " Number of items."]
+    pub size: size_t,
+    #[doc = " Size (in bytes) of a single item."]
+    pub item_size: size_t,
+}
+#[test]
+fn bindgen_test_layout_vector_t() {
+    assert_eq!(
+        ::std::mem::size_of::<vector_t>(),
+        32usize,
+        concat!("Size of: ", stringify!(vector_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vector_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(vector_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vector_t>())).items as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vector_t),
+            "::",
+            stringify!(items)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vector_t>())).capacity as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vector_t),
+            "::",
+            stringify!(capacity)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vector_t>())).size as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vector_t),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vector_t>())).item_size as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vector_t),
+            "::",
+            stringify!(item_size)
+        )
+    );
+}
+extern "C" {
+    #[doc = " Creates a new empty vector."]
+    #[doc = ""]
+    #[doc = " @param   item_size    item size in bytes"]
+    #[doc = " @return               a new empty vector"]
+    #[doc = ""]
+    pub fn vector_new(item_size: size_t) -> *mut vector_t;
+}
+extern "C" {
+    #[doc = "  Deletes a vector."]
+    #[doc = ""]
+    #[doc = "  @param self a vector structure"]
+    #[doc = ""]
+    pub fn vector_delete(self_: *mut vector_t);
+}
+extern "C" {
+    #[doc = "  Returns a pointer to the item located at specified index."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  index the index of the item to be returned"]
+    #[doc = "  @return       pointer on the specified item"]
+    pub fn vector_get(self_: *const vector_t, index: size_t) -> *const ::std::os::raw::c_void;
+}
+extern "C" {
+    #[doc = "  Returns a pointer to the first item."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @return       pointer on the first item"]
+    pub fn vector_front(self_: *const vector_t) -> *const ::std::os::raw::c_void;
+}
+extern "C" {
+    #[doc = "  Returns a pointer to the last item"]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @return pointer on the last item"]
+    pub fn vector_back(self_: *const vector_t) -> *const ::std::os::raw::c_void;
+}
+extern "C" {
+    #[doc = "  Check if an item is contained within the vector."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  item  item to be searched in the vector"]
+    #[doc = "  @param  cmp   a pointer a comparison function"]
+    #[doc = "  @return       1 if item is contained within the vector, 0 otherwise"]
+    pub fn vector_contains(
+        self_: *const vector_t,
+        item: *const ::std::os::raw::c_void,
+        cmp: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *const ::std::os::raw::c_void,
+                arg2: *const ::std::os::raw::c_void,
+            ) -> ::std::os::raw::c_int,
+        >,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[doc = "  Checks whether the vector is empty."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @return       1 if the vector is empty, 0 otherwise"]
+    pub fn vector_empty(self_: *const vector_t) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[doc = "  Returns the number of items"]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @return       number of items"]
+    pub fn vector_size(self_: *const vector_t) -> size_t;
+}
+extern "C" {
+    #[doc = "  Reserve storage such that it can hold at last size items."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  size  the new storage capacity"]
+    pub fn vector_reserve(self_: *mut vector_t, size: size_t);
+}
+extern "C" {
+    #[doc = "  Returns current storage capacity"]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @return       storage capacity"]
+    pub fn vector_capacity(self_: *const vector_t) -> size_t;
+}
+extern "C" {
+    #[doc = "  Decrease capacity to fit actual size."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    pub fn vector_shrink(self_: *mut vector_t);
+}
+extern "C" {
+    #[doc = "  Removes all items."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    pub fn vector_clear(self_: *mut vector_t);
+}
+extern "C" {
+    #[doc = "  Replace an item."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  index the index of the item to be replaced"]
+    #[doc = "  @param  item  the new item"]
+    pub fn vector_set(self_: *mut vector_t, index: size_t, item: *const ::std::os::raw::c_void);
+}
+extern "C" {
+    #[doc = "  Erase an item."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  index the index of the item to be erased"]
+    pub fn vector_erase(self_: *mut vector_t, index: size_t);
+}
+extern "C" {
+    #[doc = "  Erase a range of items."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  first the index of the first item to be erased"]
+    #[doc = "  @param  last  the index of the last item to be erased"]
+    pub fn vector_erase_range(self_: *mut vector_t, first: size_t, last: size_t);
+}
+extern "C" {
+    #[doc = "  Appends given item to the end of the vector."]
+    #[doc = ""]
+    #[doc = "  @param  self a vector structure"]
+    #[doc = "  @param  item the item to be inserted"]
+    pub fn vector_push_back(self_: *mut vector_t, item: *const ::std::os::raw::c_void);
+}
+extern "C" {
+    #[doc = "  Removes the last item of the vector."]
+    #[doc = ""]
+    #[doc = "  @param  self a vector structure"]
+    pub fn vector_pop_back(self_: *mut vector_t);
+}
+extern "C" {
+    #[doc = "  Resizes the vector to contain size items"]
+    #[doc = ""]
+    #[doc = "  If the current size is less than size, additional items are appended and"]
+    #[doc = "  initialized with value. If the current size is greater than size, the"]
+    #[doc = "  vector is reduced to its first size elements."]
+    #[doc = ""]
+    #[doc = "  @param  self a vector structure"]
+    #[doc = "  @param  size the new size"]
+    pub fn vector_resize(self_: *mut vector_t, size: size_t);
+}
+extern "C" {
+    #[doc = "  Insert a single item at specified index."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  index location before which to insert item"]
+    #[doc = "  @param  item  the item to be inserted"]
+    pub fn vector_insert(self_: *mut vector_t, index: size_t, item: *const ::std::os::raw::c_void);
+}
+extern "C" {
+    #[doc = "  Insert raw data at specified index."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  index location before which to insert item"]
+    #[doc = "  @param  data  a pointer to the items to be inserted"]
+    #[doc = "  @param  count the number of items to be inserted"]
+    pub fn vector_insert_data(
+        self_: *mut vector_t,
+        index: size_t,
+        data: *const ::std::os::raw::c_void,
+        count: size_t,
+    );
+}
+extern "C" {
+    #[doc = "  Append raw data to the end of the vector."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  data  a pointer to the items to be inserted"]
+    #[doc = "  @param  count the number of items to be inserted"]
+    pub fn vector_push_back_data(
+        self_: *mut vector_t,
+        data: *const ::std::os::raw::c_void,
+        count: size_t,
+    );
+}
+extern "C" {
+    #[doc = "  Sort vector items according to cmp function."]
+    #[doc = ""]
+    #[doc = "  @param  self  a vector structure"]
+    #[doc = "  @param  cmp   a pointer a comparison function"]
+    pub fn vector_sort(
+        self_: *mut vector_t,
+        cmp: ::std::option::Option<
+            unsafe extern "C" fn(
+                arg1: *const ::std::os::raw::c_void,
+                arg2: *const ::std::os::raw::c_void,
+            ) -> ::std::os::raw::c_int,
+        >,
+    );
+}
+#[doc = " Tuple of 4 ints."]
+#[doc = ""]
+#[doc = " Each field can be addressed using several aliases:"]
+#[doc = "  - First component:  <b>x</b>, <b>r</b>, <b>red</b> or <b>vstart</b>"]
+#[doc = "  - Second component: <b>y</b>, <b>g</b>, <b>green</b> or <b>vcount</b>"]
+#[doc = "  - Third component:  <b>z</b>, <b>b</b>, <b>blue</b>, <b>width</b> or <b>istart</b>"]
+#[doc = "  - Fourth component: <b>w</b>, <b>a</b>, <b>alpha</b>, <b>height</b> or <b>icount</b>"]
+#[doc = ""]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union ivec4 {
+    #[doc = "< All compoments at once"]
+    pub data: [::std::os::raw::c_int; 4usize],
+    pub __bindgen_anon_1: ivec4__bindgen_ty_1,
+    pub __bindgen_anon_2: ivec4__bindgen_ty_2,
+    pub __bindgen_anon_3: ivec4__bindgen_ty_3,
+    pub __bindgen_anon_4: ivec4__bindgen_ty_4,
+    pub __bindgen_anon_5: ivec4__bindgen_ty_5,
+    _bindgen_union_align: [u32; 4usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec4__bindgen_ty_1 {
+    #[doc = "< Alias for first component"]
+    pub x: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub y: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub z: ::std::os::raw::c_int,
+    #[doc = "< Alias for fourht component"]
+    pub w: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec4__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec4__bindgen_ty_1>(),
+        16usize,
+        concat!("Size of: ", stringify!(ivec4__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec4__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec4__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_1>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_1),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_1>())).y as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_1),
+            "::",
+            stringify!(y)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_1>())).z as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_1),
+            "::",
+            stringify!(z)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_1>())).w as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_1),
+            "::",
+            stringify!(w)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec4__bindgen_ty_2 {
+    #[doc = "< Alias for first component"]
+    pub x_: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub y_: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub width: ::std::os::raw::c_int,
+    #[doc = "< Alias for fourth component"]
+    pub height: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec4__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec4__bindgen_ty_2>(),
+        16usize,
+        concat!("Size of: ", stringify!(ivec4__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec4__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec4__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_2>())).x_ as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_2),
+            "::",
+            stringify!(x_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_2>())).y_ as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_2),
+            "::",
+            stringify!(y_)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_2>())).width as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_2),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_2>())).height as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_2),
+            "::",
+            stringify!(height)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec4__bindgen_ty_3 {
+    #[doc = "< Alias for first component"]
+    pub r: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub g: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub b: ::std::os::raw::c_int,
+    #[doc = "< Alias for fourth component"]
+    pub a: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec4__bindgen_ty_3() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec4__bindgen_ty_3>(),
+        16usize,
+        concat!("Size of: ", stringify!(ivec4__bindgen_ty_3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec4__bindgen_ty_3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec4__bindgen_ty_3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_3>())).r as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_3),
+            "::",
+            stringify!(r)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_3>())).g as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_3),
+            "::",
+            stringify!(g)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_3>())).b as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_3),
+            "::",
+            stringify!(b)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_3>())).a as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_3),
+            "::",
+            stringify!(a)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec4__bindgen_ty_4 {
+    #[doc = "< Alias for first component"]
+    pub red: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub green: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub blue: ::std::os::raw::c_int,
+    #[doc = "< Alias for fourth component"]
+    pub alpha: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec4__bindgen_ty_4() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec4__bindgen_ty_4>(),
+        16usize,
+        concat!("Size of: ", stringify!(ivec4__bindgen_ty_4))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec4__bindgen_ty_4>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec4__bindgen_ty_4))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_4>())).red as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_4),
+            "::",
+            stringify!(red)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_4>())).green as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_4),
+            "::",
+            stringify!(green)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_4>())).blue as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_4),
+            "::",
+            stringify!(blue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_4>())).alpha as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_4),
+            "::",
+            stringify!(alpha)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec4__bindgen_ty_5 {
+    #[doc = "< Alias for first component"]
+    pub vstart: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub vcount: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub istart: ::std::os::raw::c_int,
+    #[doc = "< Alias for fourth component"]
+    pub icount: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec4__bindgen_ty_5() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec4__bindgen_ty_5>(),
+        16usize,
+        concat!("Size of: ", stringify!(ivec4__bindgen_ty_5))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec4__bindgen_ty_5>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec4__bindgen_ty_5))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_5>())).vstart as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_5),
+            "::",
+            stringify!(vstart)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_5>())).vcount as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_5),
+            "::",
+            stringify!(vcount)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_5>())).istart as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_5),
+            "::",
+            stringify!(istart)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4__bindgen_ty_5>())).icount as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4__bindgen_ty_5),
+            "::",
+            stringify!(icount)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_ivec4() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec4>(),
+        16usize,
+        concat!("Size of: ", stringify!(ivec4))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec4>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec4))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec4>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec4),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " Tuple of 3 ints."]
+#[doc = ""]
+#[doc = " Each field can be addressed using several aliases:"]
+#[doc = "  - First component:  <b>x</b>, <b>r</b> or <b>red</b>"]
+#[doc = "  - Second component: <b>y</b>, <b>g</b> or <b>green</b>"]
+#[doc = "  - Third component:  <b>z</b>, <b>b</b> or <b>blue</b>"]
+#[doc = ""]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union ivec3 {
+    #[doc = "< All compoments at once"]
+    pub data: [::std::os::raw::c_int; 3usize],
+    pub __bindgen_anon_1: ivec3__bindgen_ty_1,
+    pub __bindgen_anon_2: ivec3__bindgen_ty_2,
+    pub __bindgen_anon_3: ivec3__bindgen_ty_3,
+    _bindgen_union_align: [u32; 3usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec3__bindgen_ty_1 {
+    #[doc = "< Alias for first component"]
+    pub x: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub y: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub z: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec3__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec3__bindgen_ty_1>(),
+        12usize,
+        concat!("Size of: ", stringify!(ivec3__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec3__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec3__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_1>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_1),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_1>())).y as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_1),
+            "::",
+            stringify!(y)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_1>())).z as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_1),
+            "::",
+            stringify!(z)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec3__bindgen_ty_2 {
+    #[doc = "< Alias for first component"]
+    pub r: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub g: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub b: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec3__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec3__bindgen_ty_2>(),
+        12usize,
+        concat!("Size of: ", stringify!(ivec3__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec3__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec3__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_2>())).r as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_2),
+            "::",
+            stringify!(r)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_2>())).g as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_2),
+            "::",
+            stringify!(g)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_2>())).b as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_2),
+            "::",
+            stringify!(b)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec3__bindgen_ty_3 {
+    #[doc = "< Alias for first component"]
+    pub red: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub green: ::std::os::raw::c_int,
+    #[doc = "< Alias for third component"]
+    pub blue: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec3__bindgen_ty_3() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec3__bindgen_ty_3>(),
+        12usize,
+        concat!("Size of: ", stringify!(ivec3__bindgen_ty_3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec3__bindgen_ty_3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec3__bindgen_ty_3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_3>())).red as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_3),
+            "::",
+            stringify!(red)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_3>())).green as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_3),
+            "::",
+            stringify!(green)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3__bindgen_ty_3>())).blue as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3__bindgen_ty_3),
+            "::",
+            stringify!(blue)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_ivec3() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec3>(),
+        12usize,
+        concat!("Size of: ", stringify!(ivec3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec3>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec3),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " Tuple of 2 ints."]
+#[doc = ""]
+#[doc = " Each field can be addressed using several aliases:"]
+#[doc = "  - First component: <b>x</b>, <b>s</b> or <b>start</b>"]
+#[doc = "  - Second component: <b>y</b>, <b>t</b> or <b>end</b>"]
+#[doc = ""]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union ivec2 {
+    #[doc = "< All compoments at once"]
+    pub data: [::std::os::raw::c_int; 2usize],
+    pub __bindgen_anon_1: ivec2__bindgen_ty_1,
+    pub __bindgen_anon_2: ivec2__bindgen_ty_2,
+    pub __bindgen_anon_3: ivec2__bindgen_ty_3,
+    _bindgen_union_align: [u32; 2usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec2__bindgen_ty_1 {
+    #[doc = "< Alias for first component"]
+    pub x: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub y: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec2__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec2__bindgen_ty_1>(),
+        8usize,
+        concat!("Size of: ", stringify!(ivec2__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec2__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec2__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2__bindgen_ty_1>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2__bindgen_ty_1),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2__bindgen_ty_1>())).y as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2__bindgen_ty_1),
+            "::",
+            stringify!(y)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec2__bindgen_ty_2 {
+    #[doc = "< Alias for first component"]
+    pub s: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub t: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec2__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec2__bindgen_ty_2>(),
+        8usize,
+        concat!("Size of: ", stringify!(ivec2__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec2__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec2__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2__bindgen_ty_2>())).s as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2__bindgen_ty_2),
+            "::",
+            stringify!(s)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2__bindgen_ty_2>())).t as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2__bindgen_ty_2),
+            "::",
+            stringify!(t)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ivec2__bindgen_ty_3 {
+    #[doc = "< Alias for first component"]
+    pub start: ::std::os::raw::c_int,
+    #[doc = "< Alias for second component"]
+    pub end: ::std::os::raw::c_int,
+}
+#[test]
+fn bindgen_test_layout_ivec2__bindgen_ty_3() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec2__bindgen_ty_3>(),
+        8usize,
+        concat!("Size of: ", stringify!(ivec2__bindgen_ty_3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec2__bindgen_ty_3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec2__bindgen_ty_3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2__bindgen_ty_3>())).start as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2__bindgen_ty_3),
+            "::",
+            stringify!(start)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2__bindgen_ty_3>())).end as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2__bindgen_ty_3),
+            "::",
+            stringify!(end)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_ivec2() {
+    assert_eq!(
+        ::std::mem::size_of::<ivec2>(),
+        8usize,
+        concat!("Size of: ", stringify!(ivec2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<ivec2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(ivec2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<ivec2>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(ivec2),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " Tuple of 4 floats."]
+#[doc = ""]
+#[doc = " Each field can be addressed using several aliases:"]
+#[doc = "  - First component:  <b>x</b>, <b>left</b>, <b>r</b> or <b>red</b>"]
+#[doc = "  - Second component: <b>y</b>, <b>top</b>, <b>g</b> or <b>green</b>"]
+#[doc = "  - Third component:  <b>z</b>, <b>width</b>, <b>b</b> or <b>blue</b>"]
+#[doc = "  - Fourth component: <b>w</b>, <b>height</b>, <b>a</b> or <b>alpha</b>"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union vec4 {
+    #[doc = "< All compoments at once"]
+    pub data: [f32; 4usize],
+    pub __bindgen_anon_1: vec4__bindgen_ty_1,
+    pub __bindgen_anon_2: vec4__bindgen_ty_2,
+    pub __bindgen_anon_3: vec4__bindgen_ty_3,
+    pub __bindgen_anon_4: vec4__bindgen_ty_4,
+    _bindgen_union_align: [u32; 4usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec4__bindgen_ty_1 {
+    #[doc = "< Alias for first component"]
+    pub x: f32,
+    #[doc = "< Alias for second component"]
+    pub y: f32,
+    #[doc = "< Alias for third component"]
+    pub z: f32,
+    #[doc = "< Alias for fourth component"]
+    pub w: f32,
+}
+#[test]
+fn bindgen_test_layout_vec4__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<vec4__bindgen_ty_1>(),
+        16usize,
+        concat!("Size of: ", stringify!(vec4__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec4__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec4__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_1>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_1),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_1>())).y as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_1),
+            "::",
+            stringify!(y)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_1>())).z as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_1),
+            "::",
+            stringify!(z)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_1>())).w as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_1),
+            "::",
+            stringify!(w)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec4__bindgen_ty_2 {
+    #[doc = "< Alias for first component"]
+    pub left: f32,
+    #[doc = "< Alias for second component"]
+    pub top: f32,
+    #[doc = "< Alias for third component"]
+    pub width: f32,
+    #[doc = "< Alias for fourth component"]
+    pub height: f32,
+}
+#[test]
+fn bindgen_test_layout_vec4__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<vec4__bindgen_ty_2>(),
+        16usize,
+        concat!("Size of: ", stringify!(vec4__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec4__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec4__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_2>())).left as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_2),
+            "::",
+            stringify!(left)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_2>())).top as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_2),
+            "::",
+            stringify!(top)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_2>())).width as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_2),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_2>())).height as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_2),
+            "::",
+            stringify!(height)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec4__bindgen_ty_3 {
+    #[doc = "< Alias for first component"]
+    pub r: f32,
+    #[doc = "< Alias for second component"]
+    pub g: f32,
+    #[doc = "< Alias for third component"]
+    pub b: f32,
+    #[doc = "< Alias for fourth component"]
+    pub a: f32,
+}
+#[test]
+fn bindgen_test_layout_vec4__bindgen_ty_3() {
+    assert_eq!(
+        ::std::mem::size_of::<vec4__bindgen_ty_3>(),
+        16usize,
+        concat!("Size of: ", stringify!(vec4__bindgen_ty_3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec4__bindgen_ty_3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec4__bindgen_ty_3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_3>())).r as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_3),
+            "::",
+            stringify!(r)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_3>())).g as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_3),
+            "::",
+            stringify!(g)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_3>())).b as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_3),
+            "::",
+            stringify!(b)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_3>())).a as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_3),
+            "::",
+            stringify!(a)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec4__bindgen_ty_4 {
+    #[doc = "< Alias for first component"]
+    pub red: f32,
+    #[doc = "< Alias for second component"]
+    pub green: f32,
+    #[doc = "< Alias for third component"]
+    pub blue: f32,
+    #[doc = "< Alias for fourth component"]
+    pub alpha: f32,
+}
+#[test]
+fn bindgen_test_layout_vec4__bindgen_ty_4() {
+    assert_eq!(
+        ::std::mem::size_of::<vec4__bindgen_ty_4>(),
+        16usize,
+        concat!("Size of: ", stringify!(vec4__bindgen_ty_4))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec4__bindgen_ty_4>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec4__bindgen_ty_4))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_4>())).red as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_4),
+            "::",
+            stringify!(red)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_4>())).green as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_4),
+            "::",
+            stringify!(green)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_4>())).blue as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_4),
+            "::",
+            stringify!(blue)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4__bindgen_ty_4>())).alpha as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4__bindgen_ty_4),
+            "::",
+            stringify!(alpha)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_vec4() {
+    assert_eq!(
+        ::std::mem::size_of::<vec4>(),
+        16usize,
+        concat!("Size of: ", stringify!(vec4))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec4>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec4))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec4>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec4),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " Tuple of 3 floats"]
+#[doc = ""]
+#[doc = " Each field can be addressed using several aliases:"]
+#[doc = "  - First component:  <b>x</b>, <b>r</b> or <b>red</b>"]
+#[doc = "  - Second component: <b>y</b>, <b>g</b> or <b>green</b>"]
+#[doc = "  - Third component:  <b>z</b>, <b>b</b> or <b>blue</b>"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union vec3 {
+    #[doc = "< All compoments at once"]
+    pub data: [f32; 3usize],
+    pub __bindgen_anon_1: vec3__bindgen_ty_1,
+    pub __bindgen_anon_2: vec3__bindgen_ty_2,
+    pub __bindgen_anon_3: vec3__bindgen_ty_3,
+    _bindgen_union_align: [u32; 3usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec3__bindgen_ty_1 {
+    #[doc = "< Alias for first component"]
+    pub x: f32,
+    #[doc = "< Alias fo second component"]
+    pub y: f32,
+    #[doc = "< Alias fo third component"]
+    pub z: f32,
+}
+#[test]
+fn bindgen_test_layout_vec3__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<vec3__bindgen_ty_1>(),
+        12usize,
+        concat!("Size of: ", stringify!(vec3__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec3__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec3__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_1>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_1),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_1>())).y as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_1),
+            "::",
+            stringify!(y)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_1>())).z as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_1),
+            "::",
+            stringify!(z)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec3__bindgen_ty_2 {
+    #[doc = "< Alias for first component"]
+    pub r: f32,
+    #[doc = "< Alias fo second component"]
+    pub g: f32,
+    #[doc = "< Alias fo third component"]
+    pub b: f32,
+}
+#[test]
+fn bindgen_test_layout_vec3__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<vec3__bindgen_ty_2>(),
+        12usize,
+        concat!("Size of: ", stringify!(vec3__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec3__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec3__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_2>())).r as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_2),
+            "::",
+            stringify!(r)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_2>())).g as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_2),
+            "::",
+            stringify!(g)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_2>())).b as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_2),
+            "::",
+            stringify!(b)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec3__bindgen_ty_3 {
+    #[doc = "< Alias for first component"]
+    pub red: f32,
+    #[doc = "< Alias fo second component"]
+    pub green: f32,
+    #[doc = "< Alias fo third component"]
+    pub blue: f32,
+}
+#[test]
+fn bindgen_test_layout_vec3__bindgen_ty_3() {
+    assert_eq!(
+        ::std::mem::size_of::<vec3__bindgen_ty_3>(),
+        12usize,
+        concat!("Size of: ", stringify!(vec3__bindgen_ty_3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec3__bindgen_ty_3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec3__bindgen_ty_3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_3>())).red as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_3),
+            "::",
+            stringify!(red)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_3>())).green as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_3),
+            "::",
+            stringify!(green)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3__bindgen_ty_3>())).blue as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3__bindgen_ty_3),
+            "::",
+            stringify!(blue)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_vec3() {
+    assert_eq!(
+        ::std::mem::size_of::<vec3>(),
+        12usize,
+        concat!("Size of: ", stringify!(vec3))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec3>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec3))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec3>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec3),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " Tuple of 2 floats"]
+#[doc = ""]
+#[doc = " Each field can be addressed using several aliases:"]
+#[doc = "  - First component:  <b>x</b> or <b>s</b>"]
+#[doc = "  - Second component: <b>y</b> or <b>t</b>"]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union vec2 {
+    #[doc = "< All components at once"]
+    pub data: [f32; 2usize],
+    pub __bindgen_anon_1: vec2__bindgen_ty_1,
+    pub __bindgen_anon_2: vec2__bindgen_ty_2,
+    _bindgen_union_align: [u32; 2usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec2__bindgen_ty_1 {
+    #[doc = "< Alias for first component"]
+    pub x: f32,
+    #[doc = "< Alias for second component"]
+    pub y: f32,
+}
+#[test]
+fn bindgen_test_layout_vec2__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<vec2__bindgen_ty_1>(),
+        8usize,
+        concat!("Size of: ", stringify!(vec2__bindgen_ty_1))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec2__bindgen_ty_1>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec2__bindgen_ty_1))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec2__bindgen_ty_1>())).x as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec2__bindgen_ty_1),
+            "::",
+            stringify!(x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec2__bindgen_ty_1>())).y as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec2__bindgen_ty_1),
+            "::",
+            stringify!(y)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct vec2__bindgen_ty_2 {
+    #[doc = "< Alias for first component"]
+    pub s: f32,
+    #[doc = "< Alias for second component"]
+    pub t: f32,
+}
+#[test]
+fn bindgen_test_layout_vec2__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<vec2__bindgen_ty_2>(),
+        8usize,
+        concat!("Size of: ", stringify!(vec2__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec2__bindgen_ty_2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec2__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec2__bindgen_ty_2>())).s as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec2__bindgen_ty_2),
+            "::",
+            stringify!(s)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec2__bindgen_ty_2>())).t as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec2__bindgen_ty_2),
+            "::",
+            stringify!(t)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_vec2() {
+    assert_eq!(
+        ::std::mem::size_of::<vec2>(),
+        8usize,
+        concat!("Size of: ", stringify!(vec2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<vec2>(),
+        4usize,
+        concat!("Alignment of ", stringify!(vec2))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<vec2>())).data as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(vec2),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+#[doc = " A texture atlas is used to pack several small regions into a single texture."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct texture_atlas_t {
+    #[doc = " Allocated nodes"]
+    pub nodes: *mut vector_t,
+    #[doc = "  Width (in pixels) of the underlying texture"]
+    pub width: size_t,
+    #[doc = " Height (in pixels) of the underlying texture"]
+    pub height: size_t,
+    #[doc = " Depth (in bytes) of the underlying texture"]
+    pub depth: size_t,
+    #[doc = " Allocated surface size"]
+    pub used: size_t,
+    #[doc = " Texture identity (OpenGL)"]
+    pub id: ::std::os::raw::c_uint,
+    #[doc = " Atlas data"]
+    pub data: *mut ::std::os::raw::c_uchar,
+}
+#[test]
+fn bindgen_test_layout_texture_atlas_t() {
+    assert_eq!(
+        ::std::mem::size_of::<texture_atlas_t>(),
+        56usize,
+        concat!("Size of: ", stringify!(texture_atlas_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<texture_atlas_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(texture_atlas_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).nodes as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(nodes)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).width as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).height as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).depth as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(depth)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).used as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(used)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).id as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_atlas_t>())).data as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_atlas_t),
+            "::",
+            stringify!(data)
+        )
+    );
+}
+extern "C" {
+    #[doc = " Creates a new empty texture atlas."]
+    #[doc = ""]
+    #[doc = " @param   width   width of the atlas"]
+    #[doc = " @param   height  height of the atlas"]
+    #[doc = " @param   depth   bit depth of the atlas"]
+    #[doc = " @return          a new empty texture atlas."]
+    #[doc = ""]
+    pub fn texture_atlas_new(width: size_t, height: size_t, depth: size_t) -> *mut texture_atlas_t;
+}
+extern "C" {
+    #[doc = "  Deletes a texture atlas."]
+    #[doc = ""]
+    #[doc = "  @param self a texture atlas structure"]
+    #[doc = ""]
+    pub fn texture_atlas_delete(self_: *mut texture_atlas_t);
+}
+extern "C" {
+    #[doc = "  Allocate a new region in the atlas."]
+    #[doc = ""]
+    #[doc = "  @param self   a texture atlas structure"]
+    #[doc = "  @param width  width of the region to allocate"]
+    #[doc = "  @param height height of the region to allocate"]
+    #[doc = "  @return       Coordinates of the allocated region"]
+    #[doc = ""]
+    pub fn texture_atlas_get_region(
+        self_: *mut texture_atlas_t,
+        width: size_t,
+        height: size_t,
+    ) -> ivec4;
+}
+extern "C" {
+    #[doc = "  Upload data to the specified atlas region."]
+    #[doc = ""]
+    #[doc = "  @param self   a texture atlas structure"]
+    #[doc = "  @param x      x coordinate the region"]
+    #[doc = "  @param y      y coordinate the region"]
+    #[doc = "  @param width  width of the region"]
+    #[doc = "  @param height height of the region"]
+    #[doc = "  @param data   data to be uploaded into the specified region"]
+    #[doc = "  @param stride stride of the data"]
+    #[doc = ""]
+    pub fn texture_atlas_set_region(
+        self_: *mut texture_atlas_t,
+        x: size_t,
+        y: size_t,
+        width: size_t,
+        height: size_t,
+        data: *const ::std::os::raw::c_uchar,
+        stride: size_t,
+    );
+}
+extern "C" {
+    #[doc = "  Remove all allocated regions from the atlas."]
+    #[doc = ""]
+    #[doc = "  @param self   a texture atlas structure"]
+    pub fn texture_atlas_clear(self_: *mut texture_atlas_t);
+}
+pub const rendermode_t_RENDER_NORMAL: rendermode_t = 0;
+pub const rendermode_t_RENDER_OUTLINE_EDGE: rendermode_t = 1;
+pub const rendermode_t_RENDER_OUTLINE_POSITIVE: rendermode_t = 2;
+pub const rendermode_t_RENDER_OUTLINE_NEGATIVE: rendermode_t = 3;
+pub const rendermode_t_RENDER_SIGNED_DISTANCE_FIELD: rendermode_t = 4;
+#[doc = " A list of possible ways to render a glyph."]
+pub type rendermode_t = u32;
+#[doc = " A structure that hold a kerning value relatively to a Unicode"]
+#[doc = " codepoint."]
+#[doc = ""]
+#[doc = " This structure cannot be used alone since the (necessary) right"]
+#[doc = " Unicode codepoint is implicitely held by the owner of this structure."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct kerning_t {
+    #[doc = " Left Unicode codepoint in the kern pair in UTF-32 LE encoding."]
+    pub codepoint: u32,
+    #[doc = " Kerning value (in fractional pixels)."]
+    pub kerning: f32,
+}
+#[test]
+fn bindgen_test_layout_kerning_t() {
+    assert_eq!(
+        ::std::mem::size_of::<kerning_t>(),
+        8usize,
+        concat!("Size of: ", stringify!(kerning_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<kerning_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(kerning_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<kerning_t>())).codepoint as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(kerning_t),
+            "::",
+            stringify!(codepoint)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<kerning_t>())).kerning as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(kerning_t),
+            "::",
+            stringify!(kerning)
+        )
+    );
+}
+#[doc = " A structure that describe a glyph."]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct texture_glyph_t {
+    #[doc = " Unicode codepoint this glyph represents in UTF-32 LE encoding."]
+    pub codepoint: u32,
+    #[doc = " Freetype glyphid this glyph represents as returned by FT_Get_Char_Index."]
+    pub glyph_id: u32,
+    #[doc = " Glyph's width in pixels."]
+    pub width: size_t,
+    #[doc = " Glyph's height in pixels."]
+    pub height: size_t,
+    #[doc = " Glyph's left bearing expressed in integer pixels."]
+    pub offset_x: ::std::os::raw::c_int,
+    #[doc = " Glyphs's top bearing expressed in integer pixels."]
+    #[doc = ""]
+    #[doc = " Remember that this is the distance from the baseline to the top-most"]
+    #[doc = " glyph scanline, upwards y coordinates being positive."]
+    pub offset_y: ::std::os::raw::c_int,
+    #[doc = " For horizontal text layouts, this is the horizontal distance (in"]
+    #[doc = " fractional pixels) used to increment the pen position when the glyph is"]
+    #[doc = " drawn as part of a string of text."]
+    pub advance_x: f32,
+    #[doc = " For vertical text layouts, this is the vertical distance (in fractional"]
+    #[doc = " pixels) used to increment the pen position when the glyph is drawn as"]
+    #[doc = " part of a string of text."]
+    pub advance_y: f32,
+    #[doc = " First normalized texture coordinate (x) of top-left corner"]
+    pub s0: f32,
+    #[doc = " Second normalized texture coordinate (y) of top-left corner"]
+    pub t0: f32,
+    #[doc = " First normalized texture coordinate (x) of bottom-right corner"]
+    pub s1: f32,
+    #[doc = " Second normalized texture coordinate (y) of bottom-right corner"]
+    pub t1: f32,
+    #[doc = " A vector of kerning pairs relative to this glyph."]
+    pub kerning: *mut vector_t,
+    #[doc = " Mode this glyph was rendered"]
+    pub rendermode: rendermode_t,
+    #[doc = " Glyph outline thickness"]
+    pub outline_thickness: f32,
+}
+#[test]
+fn bindgen_test_layout_texture_glyph_t() {
+    assert_eq!(
+        ::std::mem::size_of::<texture_glyph_t>(),
+        72usize,
+        concat!("Size of: ", stringify!(texture_glyph_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<texture_glyph_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(texture_glyph_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).codepoint as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(codepoint)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).glyph_id as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(glyph_id)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).width as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(width)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).height as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).offset_x as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(offset_x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).offset_y as *const _ as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(offset_y)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).advance_x as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(advance_x)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).advance_y as *const _ as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(advance_y)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).s0 as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(s0)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).t0 as *const _ as usize },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(t0)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).s1 as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(s1)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).t1 as *const _ as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(t1)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).kerning as *const _ as usize },
+        56usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(kerning)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_glyph_t>())).rendermode as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(rendermode)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_glyph_t>())).outline_thickness as *const _ as usize
+        },
+        68usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_glyph_t),
+            "::",
+            stringify!(outline_thickness)
+        )
+    );
+}
+#[doc = "  Texture font structure."]
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct texture_font_t {
+    #[doc = " This field is simply used to compute a default line spacing (i.e., the"]
+    #[doc = " baseline-to-baseline distance) when writing text with this font. Note"]
+    #[doc = " that it usually is larger than the sum of the ascender and descender"]
+    #[doc = " taken as absolute values. There is also no guarantee that no glyphs"]
+    #[doc = " extend above or below subsequent baselines when using this distance."]
+    pub height: f32,
+    #[doc = " Vector of glyphs contained in this font."]
+    pub glyphs_per_glyph_id: *mut vector_t,
+    pub glyphs_per_codepoint: *mut vector_t,
+    #[doc = " Atlas structure to store glyphs data."]
+    pub atlas: *mut texture_atlas_t,
+    #[doc = " Font size"]
+    pub size: f32,
+    #[doc = " Whether to use autohint when rendering font"]
+    pub hinting: ::std::os::raw::c_int,
+    #[doc = " Mode the font is rendering its next glyph"]
+    pub rendermode: rendermode_t,
+    #[doc = " Outline thickness"]
+    pub outline_thickness: f32,
+    #[doc = " Whether to use our own lcd filter."]
+    pub filtering: ::std::os::raw::c_int,
+    #[doc = " LCD filter weights"]
+    pub lcd_weights: [::std::os::raw::c_uchar; 5usize],
+    #[doc = " Whether to use kerning if available"]
+    pub kerning: ::std::os::raw::c_int,
+    #[doc = " This field is the distance that must be placed between two lines of"]
+    #[doc = " text. The baseline-to-baseline distance should be computed as:"]
+    #[doc = " ascender - descender + linegap"]
+    pub linegap: f32,
+    #[doc = " The ascender is the vertical distance from the horizontal baseline to"]
+    #[doc = " the highest 'character' coordinate in a font face. Unfortunately, font"]
+    #[doc = " formats define the ascender differently. For some, it represents the"]
+    #[doc = " ascent of all capital latin characters (without accents), for others it"]
+    #[doc = " is the ascent of the highest accented character, and finally, other"]
+    #[doc = " formats define it as being equal to bbox.yMax."]
+    pub ascender: f32,
+    #[doc = " The descender is the vertical distance from the horizontal baseline to"]
+    #[doc = " the lowest 'character' coordinate in a font face. Unfortunately, font"]
+    #[doc = " formats define the descender differently. For some, it represents the"]
+    #[doc = " descent of all capital latin characters (without accents), for others it"]
+    #[doc = " is the ascent of the lowest accented character, and finally, other"]
+    #[doc = " formats define it as being equal to bbox.yMin. This field is negative"]
+    #[doc = " for values below the baseline."]
+    pub descender: f32,
+    #[doc = " The position of the underline line for this face. It is the center of"]
+    #[doc = " the underlining stem. Only relevant for scalable formats."]
+    pub underline_position: f32,
+    #[doc = " The thickness of the underline for this face. Only relevant for scalable"]
+    #[doc = " formats."]
+    pub underline_thickness: f32,
+    pub location: texture_font_t__bindgen_ty_1,
+    pub __bindgen_anon_1: texture_font_t__bindgen_ty_2,
+    pub library: FT_Library,
+    pub face: FT_Face,
+}
+pub const texture_font_t_TEXTURE_FONT_FILE: texture_font_t__bindgen_ty_1 = 0;
+pub const texture_font_t_TEXTURE_FONT_MEMORY: texture_font_t__bindgen_ty_1 = 1;
+#[doc = " font location"]
+pub type texture_font_t__bindgen_ty_1 = u32;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union texture_font_t__bindgen_ty_2 {
+    #[doc = " Font filename, for when location == TEXTURE_FONT_FILE"]
+    pub filename: *mut ::std::os::raw::c_char,
+    pub memory: texture_font_t__bindgen_ty_2__bindgen_ty_1,
+    _bindgen_union_align: [u64; 2usize],
+}
+#[doc = " Font memory address, for when location == TEXTURE_FONT_MEMORY"]
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct texture_font_t__bindgen_ty_2__bindgen_ty_1 {
+    pub base: *const ::std::os::raw::c_void,
+    pub size: size_t,
+}
+#[test]
+fn bindgen_test_layout_texture_font_t__bindgen_ty_2__bindgen_ty_1() {
+    assert_eq!(
+        ::std::mem::size_of::<texture_font_t__bindgen_ty_2__bindgen_ty_1>(),
+        16usize,
+        concat!(
+            "Size of: ",
+            stringify!(texture_font_t__bindgen_ty_2__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        ::std::mem::align_of::<texture_font_t__bindgen_ty_2__bindgen_ty_1>(),
+        8usize,
+        concat!(
+            "Alignment of ",
+            stringify!(texture_font_t__bindgen_ty_2__bindgen_ty_1)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t__bindgen_ty_2__bindgen_ty_1>())).base as *const _
+                as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t__bindgen_ty_2__bindgen_ty_1),
+            "::",
+            stringify!(base)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t__bindgen_ty_2__bindgen_ty_1>())).size as *const _
+                as usize
+        },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t__bindgen_ty_2__bindgen_ty_1),
+            "::",
+            stringify!(size)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_texture_font_t__bindgen_ty_2() {
+    assert_eq!(
+        ::std::mem::size_of::<texture_font_t__bindgen_ty_2>(),
+        16usize,
+        concat!("Size of: ", stringify!(texture_font_t__bindgen_ty_2))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<texture_font_t__bindgen_ty_2>(),
+        8usize,
+        concat!("Alignment of ", stringify!(texture_font_t__bindgen_ty_2))
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t__bindgen_ty_2>())).filename as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t__bindgen_ty_2),
+            "::",
+            stringify!(filename)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t__bindgen_ty_2>())).memory as *const _ as usize
+        },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t__bindgen_ty_2),
+            "::",
+            stringify!(memory)
+        )
+    );
+}
+#[test]
+fn bindgen_test_layout_texture_font_t() {
+    assert_eq!(
+        ::std::mem::size_of::<texture_font_t>(),
+        120usize,
+        concat!("Size of: ", stringify!(texture_font_t))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<texture_font_t>(),
+        8usize,
+        concat!("Alignment of ", stringify!(texture_font_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).height as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(height)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t>())).glyphs_per_glyph_id as *const _ as usize
+        },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(glyphs_per_glyph_id)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t>())).glyphs_per_codepoint as *const _ as usize
+        },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(glyphs_per_codepoint)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).atlas as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(atlas)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).size as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(size)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).hinting as *const _ as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(hinting)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).rendermode as *const _ as usize },
+        40usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(rendermode)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t>())).outline_thickness as *const _ as usize
+        },
+        44usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(outline_thickness)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).filtering as *const _ as usize },
+        48usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(filtering)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).lcd_weights as *const _ as usize },
+        52usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(lcd_weights)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).kerning as *const _ as usize },
+        60usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(kerning)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).linegap as *const _ as usize },
+        64usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(linegap)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).ascender as *const _ as usize },
+        68usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(ascender)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).descender as *const _ as usize },
+        72usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(descender)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t>())).underline_position as *const _ as usize
+        },
+        76usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(underline_position)
+        )
+    );
+    assert_eq!(
+        unsafe {
+            &(*(::std::ptr::null::<texture_font_t>())).underline_thickness as *const _ as usize
+        },
+        80usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(underline_thickness)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).location as *const _ as usize },
+        84usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(location)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).library as *const _ as usize },
+        104usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(library)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<texture_font_t>())).face as *const _ as usize },
+        112usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(texture_font_t),
+            "::",
+            stringify!(face)
+        )
+    );
+}
+extern "C" {
+    #[doc = " This function creates a new texture font from given filename and size.  The"]
+    #[doc = " texture atlas is used to store glyph on demand. Note the depth of the atlas"]
+    #[doc = " will determine if the font is rendered as alpha channel only (depth = 1) or"]
+    #[doc = " RGB (depth = 3) that correspond to subpixel rendering (if available on your"]
+    #[doc = " freetype implementation)."]
+    #[doc = ""]
+    #[doc = " @param atlas     A texture atlas"]
+    #[doc = " @param pt_size   Size of font to be created (in points)"]
+    #[doc = " @param filename  A font filename"]
+    #[doc = ""]
+    #[doc = " @return A new empty font (no glyph inside yet)"]
+    #[doc = ""]
+    pub fn texture_font_new_from_file(
+        atlas: *mut texture_atlas_t,
+        pt_size: f32,
+        filename: *const ::std::os::raw::c_char,
+    ) -> *mut texture_font_t;
+}
+extern "C" {
+    #[doc = " This function creates a new texture font from a memory location and size."]
+    #[doc = " The texture atlas is used to store glyph on demand. Note the depth of the"]
+    #[doc = " atlas will determine if the font is rendered as alpha channel only"]
+    #[doc = " (depth = 1) or RGB (depth = 3) that correspond to subpixel rendering (if"]
+    #[doc = " available on your freetype implementation)."]
+    #[doc = ""]
+    #[doc = " @param atlas       A texture atlas"]
+    #[doc = " @param pt_size     Size of font to be created (in points)"]
+    #[doc = " @param memory_base Start of the font file in memory"]
+    #[doc = " @param memory_size Size of the font file memory region, in bytes"]
+    #[doc = ""]
+    #[doc = " @return A new empty font (no glyph inside yet)"]
+    #[doc = ""]
+    pub fn texture_font_new_from_memory(
+        atlas: *mut texture_atlas_t,
+        pt_size: f32,
+        memory_base: *const ::std::os::raw::c_void,
+        memory_size: size_t,
+    ) -> *mut texture_font_t;
+}
+extern "C" {
+    #[doc = " Delete a texture font. Note that this does not delete the glyph from the"]
+    #[doc = " texture atlas."]
+    #[doc = ""]
+    #[doc = " @param self a valid texture font"]
+    pub fn texture_font_delete(self_: *mut texture_font_t);
+}
+extern "C" {
+    #[doc = " Request a new glyph from the font. If it has not been created yet, it will"]
+    #[doc = " be."]
+    #[doc = ""]
+    #[doc = " @param self      A valid texture font"]
+    #[doc = " @param codepoint Character codepoint to be loaded in UTF-8 encoding."]
+    #[doc = ""]
+    #[doc = " @return A pointer on the new glyph or 0 if the texture atlas is not big"]
+    #[doc = "         enough"]
+    #[doc = ""]
+    pub fn texture_font_get_glyph(
+        self_: *mut texture_font_t,
+        codepoint: *const ::std::os::raw::c_char,
+    ) -> *mut texture_glyph_t;
+}
+extern "C" {
+    #[doc = " Request a new glyph from the font. If it has not been created yet, it will"]
+    #[doc = " be."]
+    #[doc = ""]
+    #[doc = " @param self      A valid texture font"]
+    #[doc = " @param codepoint Character codepoint to be loaded in UTF-8 encoding."]
+    #[doc = ""]
+    #[doc = " @return A pointer on the new glyph or 0 if the texture atlas is not big"]
+    #[doc = "         enough"]
+    #[doc = ""]
+    pub fn texture_font_get_glyph_by_id(
+        self_: *mut texture_font_t,
+        glyph_id: u32,
+    ) -> *mut texture_glyph_t;
+}
+extern "C" {
+    #[doc = " Request an already loaded glyph from the font."]
+    #[doc = ""]
+    #[doc = " @param self      A valid texture font"]
+    #[doc = " @param codepoint Character codepoint to be found in UTF-8 encoding."]
+    #[doc = ""]
+    #[doc = " @return A pointer on the glyph or 0 if the glyph is not loaded"]
+    pub fn texture_font_find_glyph(
+        self_: *mut texture_font_t,
+        codepoint: *const ::std::os::raw::c_char,
+    ) -> *mut texture_glyph_t;
+}
+extern "C" {
+    #[doc = " Request the loading of a given glyph."]
+    #[doc = ""]
+    #[doc = " @param self       A valid texture font"]
+    #[doc = " @param codepoints Character codepoint to be loaded in UTF-8 encoding."]
+    #[doc = ""]
+    #[doc = " @return One if the glyph could be loaded, zero if not."]
+    pub fn texture_font_load_glyph(
+        self_: *mut texture_font_t,
+        codepoint: *const ::std::os::raw::c_char,
+        glyph_id: u32,
+    ) -> ::std::os::raw::c_int;
+}
+extern "C" {
+    #[doc = " Request the loading of several glyphs at once."]
+    #[doc = ""]
+    #[doc = " @param self       A valid texture font"]
+    #[doc = " @param codepoints Character codepoints to be loaded in UTF-8 encoding. May"]
+    #[doc = "                   contain duplicates."]
+    #[doc = ""]
+    #[doc = " @return Number of missed glyph if the texture is not big enough to hold"]
+    #[doc = "         every glyphs."]
+    pub fn texture_font_load_glyphs(
+        self_: *mut texture_font_t,
+        codepoints: *const ::std::os::raw::c_char,
+    ) -> size_t;
+}
+extern "C" {
+    pub fn texture_font_enlarge_atlas(
+        self_: *mut texture_font_t,
+        width_new: size_t,
+        height_new: size_t,
+    );
+}
+extern "C" {
+    #[doc = " Get the kerning between two horizontal glyphs."]
+    #[doc = ""]
+    #[doc = " @param self      A valid texture glyph"]
+    #[doc = " @param codepoint Character codepoint of the peceding character in UTF-8 encoding."]
+    #[doc = ""]
+    #[doc = " @return x kerning value"]
+    pub fn texture_glyph_get_kerning(
+        self_: *const texture_glyph_t,
+        codepoint: *const ::std::os::raw::c_char,
+    ) -> f32;
+}
+extern "C" {
+    #[doc = " Creates a new empty glyph"]
+    #[doc = ""]
+    #[doc = " @return a new empty glyph (not valid)"]
+    pub fn texture_glyph_new() -> *mut texture_glyph_t;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __locale_data {
+    pub _address: u8,
+}
+pub type __builtin_va_list = [__va_list_tag; 1usize];
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __va_list_tag {
+    pub gp_offset: ::std::os::raw::c_uint,
+    pub fp_offset: ::std::os::raw::c_uint,
+    pub overflow_arg_area: *mut ::std::os::raw::c_void,
+    pub reg_save_area: *mut ::std::os::raw::c_void,
+}
+#[test]
+fn bindgen_test_layout___va_list_tag() {
+    assert_eq!(
+        ::std::mem::size_of::<__va_list_tag>(),
+        24usize,
+        concat!("Size of: ", stringify!(__va_list_tag))
+    );
+    assert_eq!(
+        ::std::mem::align_of::<__va_list_tag>(),
+        8usize,
+        concat!("Alignment of ", stringify!(__va_list_tag))
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).gp_offset as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(gp_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).fp_offset as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(fp_offset)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).overflow_arg_area as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(overflow_arg_area)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::std::ptr::null::<__va_list_tag>())).reg_save_area as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(__va_list_tag),
+            "::",
+            stringify!(reg_save_area)
+        )
+    );
 }

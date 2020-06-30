@@ -2,6 +2,7 @@ use std::ffi::CString;
 use std::os::raw::{c_char, c_void};
 use std::mem;
 use std::slice;
+use std::ptr;
 
 mod ffi;
 
@@ -11,7 +12,8 @@ mod link_windowsd;
 mod link;
 
 pub struct TextureFont{
-    font: *mut ffi::texture_font_t
+    font: *mut ffi::texture_font_t,
+    bytes: Option<Vec<u8>>,
 }
 
 impl Drop for TextureFont{
@@ -26,35 +28,49 @@ unsafe fn char_to_utf8(c: char) -> Vec<u8>{
 }
 
 impl TextureFont{
-	pub fn load(path: &str, pt_size: f32, depth: usize) -> TextureFont{
+	pub fn load(path: &str, pt_size: f32, depth: usize) -> Option<TextureFont>{
         unsafe{
-            let tex_atlas = ffi::texture_atlas_new(512, 512, depth);
+            let tex_atlas = ffi::texture_atlas_new(512, 512, depth as u64);
+            if tex_atlas == ptr::null_mut() {
+                return None
+            }
+
             // println!("allocated tex atlas  {},{}x{}", (*tex_atlas).width, (*tex_atlas).height, (*tex_atlas).depth);
             let path = CString::new(path.as_bytes()).unwrap();
             let c_path = path.as_ptr();
             let tex_font = ffi::texture_font_new_from_file( tex_atlas, pt_size, c_path);
+            if tex_font == ptr::null_mut() {
+                return None
+            }
 
             let latin1 = (32 as u8 .. 255).collect::<Vec<_>>();
             let glyphs_i32 = CString::new(latin1).unwrap();
             ffi::texture_font_load_glyphs(tex_font, glyphs_i32.into_raw());
-
             // println!("loaded {} glyphs", ffi::vector_size((*tex_font).glyphs));
 
-            TextureFont{
-                font: tex_font
-            }
+            Some(TextureFont{
+                font: tex_font,
+                bytes: None,
+            })
         }
 	}
 
-	pub fn load_from_memory(font_data: Vec<u8>, pt_size: f32, depth: usize) -> TextureFont{
+	pub fn load_from_memory(font_data: Vec<u8>, pt_size: f32, depth: usize) -> Option<TextureFont>{
         unsafe{
-            let tex_atlas = ffi::texture_atlas_new(512,512,depth);
+            let tex_atlas = ffi::texture_atlas_new(512,512, depth as u64);
+            if tex_atlas == ptr::null_mut() {
+                return None
+            }
+
             // println!("allocated tex atlas  {},{}x{}", (*tex_atlas).width, (*tex_atlas).height, (*tex_atlas).depth);
             let tex_font = ffi::texture_font_new_from_memory(
                 tex_atlas,
                 pt_size,
                 font_data.as_ptr() as *const c_void,
-                font_data.len() as usize);
+                font_data.len() as u64);
+            if tex_font == ptr::null_mut() {
+                return None
+            }
 
             let latin1 = (32 as u8 .. 255).collect::<Vec<_>>();
             let glyphs_i32 = CString::new(latin1).unwrap();
@@ -62,18 +78,37 @@ impl TextureFont{
 
             // println!("loaded {} glyphs", ffi::vector_size((*tex_font).glyphs));
 
-            TextureFont{
-                font: tex_font
+            Some(TextureFont{
+                font: tex_font,
+                bytes: Some(font_data),
+            })
+        }
+	}
+
+    #[inline]
+	pub fn glyph(&self, c: char) -> Option<TextureGlyph>{
+        unsafe{
+            let glyph = ffi::texture_font_get_glyph(self.font, char_to_utf8(c).as_ptr() as *const c_char);
+            if glyph != ptr::null_mut() {
+                Some(TextureGlyph{
+                    glyph
+                })
+            }else{
+                None
             }
         }
 	}
 
     #[inline]
-	pub fn glyph(&self, c: char) -> TextureGlyph{
+	pub fn glyph_by_freetype_id(&self, glyph_id: u32) -> Option<TextureGlyph>{
         unsafe{
-            let glyph = ffi::texture_font_get_glyph(self.font, char_to_utf8(c).as_ptr() as *const c_char);
-            TextureGlyph{
-                glyph
+            let glyph = ffi::texture_font_get_glyph_by_id(self.font, glyph_id);
+            if glyph != ptr::null_mut() {
+                Some(TextureGlyph{
+                    glyph
+                })
+            }else{
+                None
             }
         }
 	}
@@ -179,6 +214,10 @@ impl TextureFont{
     pub fn atlas(&self) -> TextureAtlas{
         TextureAtlas{ atlas: unsafe{ (*self.font).atlas } }
     }
+
+    pub unsafe fn face(&self) -> ffi::FT_Face{
+        (*self.font).face
+    }
 }
 
 #[repr(u32)]
@@ -192,6 +231,23 @@ pub enum RenderMode{
 
 pub struct TextureGlyph{
     glyph: *mut ffi::texture_glyph_t
+}
+
+impl std::fmt::Debug for TextureGlyph{
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        f.debug_struct("TextureGlyph")
+            .field("codepoint", &self.codepoint())
+            .field("glyph_id", &self.glyph_id())
+            .field("offset_x", &self.offset_x())
+            .field("offset_y", &self.offset_y())
+            .field("width", &self.width())
+            .field("height", &self.height())
+            .field("s0", &self.s0())
+            .field("t0", &self.t0())
+            .field("s1", &self.s1())
+            .field("t1", &self.t1())
+            .finish()
+    }
 }
 
 impl TextureGlyph{
@@ -208,16 +264,22 @@ impl TextureGlyph{
         unsafe{ (*self.glyph).codepoint }
     }
 
+    /// Unicode codepoint this glyph represents in UTF-32 LE encoding.
+    #[inline]
+    pub fn glyph_id(&self) -> u32 {
+        unsafe{ (*self.glyph).glyph_id }
+    }
+
     /// Glyph's width in pixels.
     #[inline]
     pub fn width(&self) ->  usize{
-        unsafe{ (*self.glyph).width }
+        unsafe{ (*self.glyph).width as usize}
     }
 
     /// Glyph's height in pixels.
     #[inline]
     pub fn height(&self) ->  usize{
-        unsafe{ (*self.glyph).height }
+        unsafe{ (*self.glyph).height as usize }
     }
 
     /// Glyph's left bearing expressed in integer pixels.
@@ -283,7 +345,7 @@ impl TextureGlyph{
 
     /// Glyph outline thickness
     #[inline]
-    pub fn outline_thickness(&self) -> f32{
+    pub fn outline_thickness(&self) -> f32 {
         unsafe{ (*self.glyph).outline_thickness }
     }
 }
@@ -297,25 +359,25 @@ impl TextureAtlas{
     /// Width (in pixels) of the underlying texture
     #[inline]
 	pub fn width(&self) -> usize{
-		unsafe{ (*self.atlas).width }
+		unsafe{ (*self.atlas).width as usize }
 	}
 
     /// Height (in pixels) of the underlying texture
     #[inline]
 	pub fn height(&self) -> usize{
-		unsafe{ (*self.atlas).height }
+		unsafe{ (*self.atlas).height as usize }
 	}
 
     /// Depth (in bytes) of the underlying texture
     #[inline]
 	pub fn depth(&self) -> usize{
-		unsafe{ (*self.atlas).depth }
+		unsafe{ (*self.atlas).depth as usize }
 	}
 
     /// Allocated surface size
     #[inline]
 	pub fn used(&self) -> usize{
-		unsafe{ (*self.atlas).used }
+		unsafe{ (*self.atlas).used as usize }
 	}
 
     /// Texture identity (OpenGL)
