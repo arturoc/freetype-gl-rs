@@ -15,5 +15,5 @@ path = "src/lib.rs"
 freetype-gl-sys = "0.2"
 freetype-src-sys = "0.1"
 
-[patch.crates-io]
-freetype-gl-sys = {git = "https://github.com/arturoc/freetype-gl-sys", rev="65c5b57136e02660ce0a294b4c4b4b21473a2691"}
+# [patch.crates-io]
+# freetype-gl-sys = {git = "https://github.com/arturoc/freetype-gl-sys", rev="65c5b57136e02660ce0a294b4c4b4b21473a2691"}
